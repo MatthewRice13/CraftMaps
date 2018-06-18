@@ -64,7 +64,7 @@ ROOT_URLCONF = 'CraftMaps.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['theCraftMapsCO/templates/theCraftMapsCO'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
