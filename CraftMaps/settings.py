@@ -88,8 +88,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'CraftMapsDB',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'USER': 'UserOne',
+        'PASSWORD': 'PassOne123#',
         'HOST': 'localhost',
         'PORT': '3306',
     }
