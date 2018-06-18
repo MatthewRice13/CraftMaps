@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        {% for brew in locations %}
+        <div><b>Name:</b> {{ brew.0 }} <b>Distance</b> {{ brew.4 }} <a href="{{ brew.3 }}">Website</a></div>
+        {% endfor %}
+</body>
+</html>
