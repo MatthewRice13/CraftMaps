@@ -64,7 +64,7 @@ ROOT_URLCONF = 'CraftMaps.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['theCraftMapsCO/templates/theCraftMapsCO'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -91,7 +91,7 @@ DATABASES = {
         'NAME': 'CraftMapsDB',
         'USER': 'UserOne',
         'PASSWORD': 'PassOne123#',
-        'HOST': 'localhost',
+        'HOST': '127.0.0.1',
         'PORT': '3306',
     }
 }
