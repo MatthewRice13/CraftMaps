@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Brewery_Table
 # Create your views here.
 def home(request):
-    brewery = Brewery_Table.objects.all()
+    brewery = Brewery_Table.objects.get(id=1)
     context = {
         'brewery': brewery
     }
