@@ -1,8 +1,9 @@
 from django.db import models
 
+
 # Create your models here.
-class Brewery_Table(models.Models):
-    Brewery_ID = models.IntegerField(max_length=2000)
+class Brewery_Table(models.Model):
+    Brewery_ID = models.IntegerField()
     Brewery_Name = models.CharField(max_length=255)
     Brewery_Town = models.CharField(max_length=255)
     Brewery_Region = models.CharField(max_length=150)
@@ -11,8 +12,8 @@ class Brewery_Table(models.Models):
     Brewery_URL = models.URLField(max_length=200, null=True, blank=True)
 
 
-class Beer_Table(models.Models):
-    Beer_ID = models.IntegerField(max_length=2000)
+class Beer_Table(models.Model):
+    Beer_ID = models.IntegerField()
     Beer_Name = models.CharField(max_length=255)
     Beer_Brewery = models.CharField(max_length=255)
     Beer_Type = models.CharField(max_length=150)
@@ -20,12 +21,10 @@ class Beer_Table(models.Models):
     Beer_Rating = models.DecimalField(max_digits=2, decimal_places=2)
 
 
-class Brewery_Types(models.Models):
-    ID = models.IntegerField(max_length=10000)
-    Brewery_ID = models.IntegerField(max_length=2000)
-    Type_ID = models.IntegerField(max_length=2000)
+class Brewery_Types(models.Model):
+    Brewery_ID = models.IntegerField()
+    Type_ID = models.IntegerField()
 
 
-class Types_Table(models.Models):
-    Type_ID = models.IntegerField(max_length=10000)
-    Type_Name = models.IntegerField(max_length=2000)
+class Types_Table(models.Model):
+    Type_Name = models.IntegerField()
