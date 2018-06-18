@@ -5,8 +5,10 @@
     <title>Craft Maps</title>
 </head>
 <body>
-    {% block content %}
-    {{ brewery }}
-    {% endblock %}
+    { % block content % }
+    {{ brewery.Brewery_Name }}
+    {{ brewery.Brewery_Longitude }}
+    {{ brewery.Brewery_Latitude }}
+    { % end block % }
 </body>
 </html>
