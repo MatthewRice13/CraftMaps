@@ -3,6 +3,7 @@ from .models import Brewery_Table
 import googlemaps
 from datetime import datetime
 import simplejson
+from operator import itemgetter
 
 ### Support Methods ###
 key = 'AIzaSyDFK8QRiUl8jx5YYQwDMQ31GMyXwXz-et8'
@@ -42,5 +43,6 @@ def routes(request):
                              simplejson.dumps(float(location.Brewery_Latitude)),
                              location.Brewery_URL,
                              float(get_distance(starting_point, latlng))])
-    context = {'locations': distance}
+    distance = sorted(distance, key=itemgetter(4))
+    context = {'locations': distance[:5]}
     return render(request, 'routes.html', context)
