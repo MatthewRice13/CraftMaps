@@ -20,7 +20,7 @@ def get_distance(start, finish):
             geocode_result = (start[0], start[1])
         # approximate radius of earth in km
         R = 6373.1
-
+        ##
         lat1 = radians(geocode_result[0])
         lon1 = radians(geocode_result[1])
         lat2 = radians(float(finish[0]))
