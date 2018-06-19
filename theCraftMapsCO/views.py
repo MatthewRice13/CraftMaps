@@ -1,8 +1,5 @@
-from jinja2 import Template
 from django.shortcuts import render
 from .models import Brewery_Table
-
-
 # Create your views here.
 def home(request):
     brewery = Brewery_Table.objects.get(id=1)
