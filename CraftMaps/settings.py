@@ -65,7 +65,7 @@ TEMPLATES = [
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
-            'environment': 'your-app.jinja2.environment'
+            'environment': 'CraftMaps.jinja2.environment'
         },
     },
     {'BACKEND': 'django.template.backends.django.DjangoTemplates', 'DIRS': ['theCraftMapsCO/templates/theCraftMapsCO'],
