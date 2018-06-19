@@ -4,6 +4,7 @@ import googlemaps
 from datetime import datetime
 import simplejson
 from operator import itemgetter
+from math import sin, cos, sqrt, atan2, radians
 
 ### Support Methods ###
 key = 'AIzaSyDFK8QRiUl8jx5YYQwDMQ31GMyXwXz-et8'
@@ -17,11 +18,24 @@ def get_distance(start, finish):
             geocode_result = gmaps.geocode(start[0], start[1])
         else:
             geocode_result = (start[0], start[1])
-        distance_result = gmaps.distance_matrix(geocode_result, finish, mode='driving', departure_time=now)
-        instructions = distance_result['rows'][0]['elements'][0]['distance']['text'][:4]
+        # approximate radius of earth in km
+        R = 6373.1
+
+        lat1 = radians(geocode_result[0])
+        lon1 = radians(geocode_result[1])
+        lat2 = radians(float(finish[0]))
+        lon2 = radians(float(finish[1]))
+
+        dlon = lon2 - lon1
+        dlat = lat2 - lat1
+
+        a = sin(dlat / 2) ** 2 + cos(lat1) * cos(lat2) * sin(dlon / 2) ** 2
+        c = 2 * atan2(sqrt(a), sqrt(1 - a))
+
+        distance = R * c
     except googlemaps.exceptions.ApiError as err:
         print(err)
-    return instructions
+    return distance
 
 # Create your views here.
 def home(request):
@@ -44,5 +58,7 @@ def routes(request):
                              location.Brewery_URL,
                              float(get_distance(starting_point, latlng))])
     distance = sorted(distance, key=itemgetter(4))
-    context = {'locations': distance[:5]}
+    context = {'locations': distance[:5],
+               'start': list(starting_point),
+               'key': key}
     return render(request, 'routes.html', context)
