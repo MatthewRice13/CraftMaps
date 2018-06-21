@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from .models import Brewery_Table
 import googlemaps
-from datetime import datetime
 import simplejson
+from datetime import datetime
 from operator import itemgetter
 from math import sin, cos, sqrt, atan2, radians
 
@@ -40,7 +40,6 @@ def get_distance(start, finish):
 
 
 # Create your views here.
-
 # Home Page
 def home(request):
     brewery = Brewery_Table.objects.get(id=1)
@@ -70,6 +69,7 @@ def routes(request):
     return render(request, 'routes.html', context)
 
 
+# about page
 def about(request):
     context = {
 
@@ -77,6 +77,7 @@ def about(request):
     return render(request, 'about.html', context)
 
 
+# contacts page
 def contact(request):
     context = {
 
