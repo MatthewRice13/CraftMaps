@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
-        <title>Routes</title>
+        <title>Contact Us</title>
     </head>
-
     <body>
-
         <style>
             .head {
                 overflow: hidden;
@@ -69,41 +66,6 @@
                     <a href="contact">Contact</a>
                 </b>
             </font>
-        </div>
-
-    <div id="map">
-
-    </div>
-
-        {% block javascript %}
-        <script type="text/javascript" >
-            function initMap() {
-                var start = {{ start }};
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 11,
-                    center: new google.maps.LatLng(start[0], start[1])
-                });
-                var locations = {{ locations|safe }};
-                locations.forEach(function(element){
-                    var marker = new google.maps.Marker({
-                        position: new google.maps.LatLng(element[1], element[2]),
-                        map: map,
-                        title: element[0]
-                    });
-                });
-            }
-        </script>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={{ key }}&callback=initMap&libraries=geometry&amp;sensor=false"/>
-        {% endblock %}
-
-        <div>
-            {% for brew in locations %}
-            <div>
-                <b>Name:</b> {{ brew.0 }}
-                <b>Distance</b> {{ brew.4 }}
-                <a href="{{ brew.3 }}">Website</a>
-            </div>
-            {% endfor %}
         </div>
 
         <div class="footer">

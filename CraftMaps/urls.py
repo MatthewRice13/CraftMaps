@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.conf.urls import url, include
 
 urlpatterns = [
-    url(r'^admin/$', admin.site.urls),
-    url(r'^$', include('theCraftMapsCO.urls')),
-    url(r'^home/$', include('theCraftMapsCO.urls')),
-    url(r'^routes/$', include('theCraftMapsCO.urls'))
+    url(r'^admin/', admin.site.urls),
+    url(r'^', include('theCraftMapsCO.urls')),
+    url(r'^home/', include('theCraftMapsCO.urls')),
+    url(r'^routes/', include('theCraftMapsCO.urls')),
+    url(r'^about/', include('theCraftMapsCO.urls')),
+    url(r'^contact/', include('theCraftMapsCO.urls')),
 ]
