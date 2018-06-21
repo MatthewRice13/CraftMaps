@@ -6,11 +6,12 @@ import simplejson
 from operator import itemgetter
 from math import sin, cos, sqrt, atan2, radians
 
-### Support Methods ###
+# Support Methods #
 key = 'AIzaSyDFK8QRiUl8jx5YYQwDMQ31GMyXwXz-et8'
 gmaps = googlemaps.Client(key=key)
 
-#Clean distance API response
+
+# Clean distance API response
 def get_distance(start, finish):
     now = datetime.now()
     try:
@@ -37,7 +38,10 @@ def get_distance(start, finish):
         print(err)
     return distance
 
+
 # Create your views here.
+
+# Home Page
 def home(request):
     brewery = Brewery_Table.objects.get(id=1)
     context = {
@@ -45,6 +49,8 @@ def home(request):
     }
     return render(request, 'homepage.html', context)
 
+
+# Routes Page
 def routes(request):
     starting_point = (53.2785327, -6.1899008)
     breweries = Brewery_Table.objects.all()
