@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 from .models import Brewery_Table
 import googlemaps
 import simplejson
@@ -6,9 +6,10 @@ from datetime import datetime
 from operator import itemgetter
 from math import sin, cos, sqrt, atan2, radians
 
+
 # Support Methods #
-key = 'AIzaSyDFK8QRiUl8jx5YYQwDMQ31GMyXwXz-et8'
-gmaps = googlemaps.Client(key=key)
+googleKey = "AIzaSyDFK8QRiUl8jx5YYQwDMQ31GMyXwXz-et8"
+gmaps = googlemaps.Client(key=googleKey)
 
 
 # Clean distance API response
@@ -44,7 +45,8 @@ def get_distance(start, finish):
 def home(request):
     brewery = Brewery_Table.objects.get(id=1)
     context = {
-        'brewery': brewery
+        'brewery': brewery,
+        'key': googleKey
     }
     return render(request, 'homepage.html', context)
 
@@ -65,7 +67,8 @@ def routes(request):
     distance = sorted(distance, key=itemgetter(4))
     context = {'locations': distance[:5],
                'start': list(starting_point),
-               'key': key}
+               'key': googleKey
+               }
     return render(request, 'routes.html', context)
 
 

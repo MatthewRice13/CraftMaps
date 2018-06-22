@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key={{ key }}"></script>
         <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
         <style>
             #map{
@@ -93,10 +93,11 @@
         <div class="scrollmenu">
             <font face="Broadway",size="4">
                 <b>
-                    <a href="home">Home</a>
-                    <a href="routes">Routes</a>
-                    <a href="about">About</a>
-                    <a href="contact">Contact</a>
+                    <a href="/home">Home</a>
+                    <a href="/routes">Routes</a>
+                    <a href="/about">About</a>
+                    <a href="/contact">Contact</a>
+                    <a href="">{{ brewery.Brewery_Name }}</a>
                 </b>
             </font>
         </div>
@@ -104,7 +105,8 @@
         <div id="map"/>
         <button id="getDirecButton">Go</button>
 
-                <script>
+                {% block javascript %}
+                <script type="text/javascript">
                     var infoWindow;
                     var currentLat;
                     var currentLng;
@@ -114,6 +116,15 @@
                     var directionsMap;
                     var start;
                     var end;
+
+                    var key = "{{ key|safe|escape }}";
+
+                    var brewName = "{{ brewery.Brewery_Name|safe|escape }}";
+                    var brewReg = "{{ brewery.Brewery_Region|safe|escape }}";
+                    var brewLong = {{ brewery.Brewery_Longitude }};
+                    var brewLati = {{ brewery.Brewery_Latitude }};
+                    var brewURL = "placeholder";
+
                     $(document).ready(function(){
                         getLocation();
                         $("#getDirecButton").on('click', function(){
@@ -161,15 +172,13 @@
                             addMarker({coords:event.latLng});
                         });*/
 
-
-
                         //breweries data
                         var breweriesJson = [
                             {
-                              name: 'Wood Key Brewing',
-                              coords:{lat:53.2989858,lng:-6.2603187},
+                              name: brewName,
+                              coords: {lat:brewLati, lng:brewLong}
                               //iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-                              content:"<h1 id='hi'>WKB</h1>"
+                              content:"<h2>"+ brewName +"</h2><h2>"+ brewReg +"</h2><h2>"+ brewURL +"</h2>"
                             },
                             {
                               name: 'Rascals Brewing',
@@ -181,9 +190,10 @@
                               name: 'Stone Barrel Brewing',
                               coords:{lat:53.3311481,lng:-6.2603187},
                              // iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-                              content:'<h1>SBB</h1>'
+                              content:"<h2>"+ brewName +"</h2><h2>"+ brewReg +"</h2>"
                             }
                         ];
+
 
 
                         // Loop through markers
@@ -209,8 +219,6 @@
 
                             // Check content
                             if(props.content){
-
-
                                 marker.addListener('click', function(){
                                     if(typeof infoWindow != 'undefined'){
                                         infoWindow.close();
@@ -256,6 +264,7 @@
                         });
                     }
                 </script>
+                {% endblock %}
 
         <style>
             .footer {
