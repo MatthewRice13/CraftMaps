@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://maps.googleapis.com/maps/api/js?key={{ key }}"></script>
+        <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <style>
+            #map{
+                position: fixed;
+                height:500px;
+                margin-top:10%;
+                width:30%;
+                margin-left:720px;
+            }
+            #hi{
+                color:blue;
+            }
+        </style>
+    </head>
+
+    <body>
+        <style>
+            div.w3-container {
+                overflow: hidden;
+                white-space: nowrap;
+                position: fixed;
+                margin-left: 235px;
+                margin-top: -190px;
+                letter-spacing: 10px;
+            }
+        </style>
+
+        <div class="w3-container ">
+            <font face="Goudy Stout", size="6">
+                <h1>CRAFT MAPS</h1>
+            </font>
+        </div>
+
+        <style>
+            div.h2 {
+                overflow: hidden;
+                white-space: nowrap;
+                position: fixed;
+                letter-spacing: 2px;
+                margin-left: 245px;
+                margin-top: 100px;
+            }
+        </style>
+
+        <div class="h2">
+            <font face="Ink free", size="3">
+                <b>
+                    <p> Enter your starting location <input type="text"> <input type="submit" value="Go"></p>
+                </b>
+            </font>
+
+            <font face="Ink free", size="2">
+                <p> Starting location should be within Ireland i.e Hotel, CO.</p>
+            </font>
+        </div>
+
+        <style>
+            div.scrollmenu {
+                background-color: #642;
+                overflow: hidden;
+                white-space: nowrap;
+                padding: 0px 40px 0px;
+                position: fixed;
+                right: 560;
+                left: 250;
+                top:18%;
+                margin-top: -2.5em;
+                webkit-border-radius: 10px;
+                moz-border-radius: 10px;
+                border-radius: 10px;
+
+            }
+            div.scrollmenu a {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 10px 40px 10px;
+                text-decoration: none;
+
+            }
+            div.scrollmenu a:hover {
+                background-color: #300;
+            }
+        </style>
+
+        <div class="scrollmenu">
+            <font face="Broadway",size="4">
+                <b>
+                    <a href="/home">Home</a>
+                    <a href="/routes">Routes</a>
+                    <a href="/about">About</a>
+                    <a href="/contact">Contact</a>
+                    <a href="">{{ brewery.Brewery_Name }}</a>
+                </b>
+            </font>
+        </div>
+
+        <div id="map"/>
+        <button id="getDirecButton">Go</button>
+
+                {% block javascript %}
+                <script type="text/javascript">
+                    var infoWindow;
+                    var currentLat;
+                    var currentLng;
+                    var map;
+                    var directionsDisplay;
+                    var directionsService = new google.maps.DirectionsService();
+                    var directionsMap;
+                    var start;
+                    var end;
+
+                    var key = "{{ key|safe|escape }}";
+
+                    var brewName = "{{ brewery.Brewery_Name|safe|escape }}";
+                    var brewReg = "{{ brewery.Brewery_Region|safe|escape }}";
+                    var brewLong = {{ brewery.Brewery_Longitude }};
+                    var brewLati = {{ brewery.Brewery_Latitude }};
+                    var brewURL = "placeholder";
+
+                    $(document).ready(function(){
+                        getLocation();
+                        $("#getDirecButton").on('click', function(){
+                            //console.log("clicked");
+                            getDirections();
+                        });
+
+                        //initMap();
+                    });
+
+                    function getLocation() {
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(showPosition);
+                        } else {
+                            console.log('error')//x.innerHTML = "Geolocation is not supported by this browser.";
+                        }
+                        //initMap();
+                    }
+                    function showPosition(position) {
+                        //console.log(position.coords.latitude);
+                        currentLat = position.coords.latitude;
+                        //console.log(position.coords.longitude);
+                        currentLng = position.coords.longitude;
+                        /*x.innerHTML = "Latitude: " + position.coords.latitude +
+                        "<br>Longitude: " + position.coords.longitude;*/
+                        startPoint = new google.maps.LatLng(currentLat, currentLng);
+                        initMap();
+                    }
+                    function initMap(){
+                        // Map options
+                        var options = {
+                            zoom:10,
+                            //center:{lat:53.3498,lng:-6.2603}
+                            //center:{lat:currentLat,lng:currentLng}
+                            center: new google.maps.LatLng(currentLat, currentLng)
+                        }
+
+                        // New map
+                        //var map = new google.maps.Map(document.getElementById('map'), options);
+                        map = new google.maps.Map(document.getElementById('map'), options);
+
+                        // Listen for click on map
+                        /*google.maps.event.addListener(map, 'click', function(event){
+                            // Add marker
+                            addMarker({coords:event.latLng});
+                        });*/
+
+                        //breweries data
+                        var breweriesJson = [
+                            {
+                              name: brewName,
+                              coords: {lat:brewLati, lng:brewLong}
+                              //iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                              content:"<h2>"+ brewName +"</h2><h2>"+ brewReg +"</h2><h2>"+ brewURL +"</h2>"
+                            },
+                            {
+                              name: 'Rascals Brewing',
+                              coords:{lat:53.2989858,lng:-6.4627311},
+                             // iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                              content:'<h1>RB</h1>'
+                            },
+                            {
+                              name: 'Stone Barrel Brewing',
+                              coords:{lat:53.3311481,lng:-6.2603187},
+                             // iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+                              content:"<h2>"+ brewName +"</h2><h2>"+ brewReg +"</h2>"
+                            }
+                        ];
+
+
+
+                        // Loop through markers
+                        for(var i = 0;i < breweriesJson.length;i++){
+                            // Add marker
+                            addMarker(breweriesJson[i]);
+                        }
+
+                        // Add Marker Function
+                        function addMarker(props){
+                            var marker = new google.maps.Marker({
+                                position:props.coords,
+                                title: props.name,
+                                map:map,
+                                //icon:props.iconImage
+                            });
+
+                            // Check for customicon
+                            if(props.iconImage){
+                                // Set icon image
+                                marker.setIcon(props.iconImage);
+                            }
+
+                            // Check content
+                            if(props.content){
+                                marker.addListener('click', function(){
+                                    if(typeof infoWindow != 'undefined'){
+                                        infoWindow.close();
+                                    }
+                                    infoWindow = new google.maps.InfoWindow({
+                                        content:props.content
+                                    });
+                                    infoWindow.open(map, marker);
+                                });
+                            }
+                        }
+
+                    }
+
+
+                    function getDirections() {
+                        //$("map").empty();
+                        //console.log('getDirections');
+                        directionsDisplay = new google.maps.DirectionsRenderer();
+                        //start = new google.maps.LatLng(directionsLatLng);
+                        var directionsOptions = {
+                            zoom:10,
+                            center: startPoint
+                        }
+                        directionsMap = new google.maps.Map(document.getElementById('map'), directionsOptions);
+                        directionsDisplay.setMap(directionsMap);
+                        calcRoute();
+                    }
+
+                    function calcRoute() {
+                        //console.log("calcRoute");
+                        start = startPoint;//directionsLatLng;
+                        end = {lat:53.2989858,lng:-6.4627311};//"50 Rue Ste-Catherine O Montréal, QC H2X 1Z6";
+                        var request = {
+                            origin:start,
+                            destination:end,
+                            travelMode: google.maps.TravelMode.TRANSIT
+                        };
+                        directionsService.route(request, function(result, status) {
+                            if (status == google.maps.DirectionsStatus.OK) {
+                            directionsDisplay.setDirections(result);
+                            }
+                        });
+                    }
+                </script>
+                {% endblock %}
+
+        <style>
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #400;
+                color: white;
+                text-align: center;
+            }
+        </style>
+
+        <div class="footer">
+            <font face="Broadway", size="2">
+                <p>© Craft Maps 2018</p>
+            </font>
+        </div>
+
+    </body>
+</html>
