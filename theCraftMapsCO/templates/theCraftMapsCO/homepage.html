@@ -3,119 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- google map API -->
-    <script src = "https://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+
     <!--<SCRIPT SRC="K:/UCD/SEM 1/INFO VIZ/ASSIGN 2/D3_DASHBOARD/JS/JQUERY-3.2.1.MIN.JS"></SCRIPT>-->
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- <script type="text/javascript" src="js/script.js" charset="utf-8"></script> -->
+
     <!-- <link href="css/style.css" rel="stylesheet" /> -->
+
     <style>
-		#map{
-		    position: fixed;
-		    height:500px;
-		    margin-top:10%;
-		    width:30%;
-		    margin-left:720px;
-		}
-		#hi{
-		    color:blue;
-		}
-	</style>
+			#map{
+			  position: fixed;
+			  height:500px;
+			  margin-top:10%;
+			  width:30%;
+			  margin-left:720px;
+			}
+			#hi{
+				color:blue;
+			}
+
+
+    </style>
 </head>
+<body> <!-- onload = 'initMap()' -->
+<!-- <h1><img src="" alt="" width="70" height="70"></h1> -->
 
-<body>
-    <!-- onload = 'initMap()' -->
-	<!-- <h1><img src="" alt="" width="70" height="70"></h1> -->
-    <style>
-        div.w3-container {
-        overflow: hidden;
-        white-space: nowrap;
-        position: fixed;
-        margin-left: 235px;
-        margin-top: -190px;
-        letter-spacing: 10px;}
-    </style>
-		<div class="w3-container ">
-			<font face="Goudy Stout"/>
-			<font size="6"/>
-			<h1>CRAFT MAPS</h1>
-		</div>
-    <style>
-        div.h2 {
-            overflow: hidden;
-            white-space: nowrap;
-            position: fixed;
-            letter-spacing: 2px;
-            margin-left: 245px;
-            margin-top: 100px;
-        }
-    </style>
-	<div class="h2">
-		<font face="Ink free"/>
-		<font size="3"/>
-		<b>
-		    <p>Enter your starting location <input type="text"> <input type="submit" value="Go">
-		</b>
-		<font size="2"/>
-		<font face="Ink free"/>
-		    <p>Starting location should be within Ireland i.e Hotel, CO.
-		<br>
-	</div>
-    <style>
-        div.scrollmenu {
-            background-color: #642;
-            overflow: hidden;
-            white-space: nowrap;
-            padding: 0px 40px 0px;
-            position: fixed;
-            right: 560;
-            left: 250;
-            top:18%;
-            margin-top: -2.5em;
-            webkit-border-radius: 10px;
-            moz-border-radius: 10px;
-            border-radius: 10px;
+<style>
+	div.w3-container {
+	overflow: hidden;
+	white-space: nowrap;
+	position: fixed;
+	margin-left: 235px;
+	margin-top: -190px;
+	letter-spacing: 10px;}
 
-        }
+</style>
+<div class="w3-container ">
+    <font face="Goudy Stout" ,"Broadway">
+    <font size="6">
+        <h1>CRAFT MAPS</h1>
+</div>
 
-        div.scrollmenu a {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding: 10px 40px 10px;
-            text-decoration: none;
+<style>
+div.h2 {
+overflow: hidden;
+white-space: nowrap;
+position: fixed;
+letter-spacing: 2px;
+margin-left: 245px;
+margin-top: 100px;
+}
 
-        }
-
-        }
-        div.scrollmenu a:hover {
-            background-color: #300;
-        }
-    </style>
-
-	<div class="scrollmenu">
-	    <font face="Broadway"/>
-	    <font size="4">
+</style>
+<div class="h2">
+    <font face="Ink free">
+        <font size="3">
             <b>
-                <a href="Home">Home</a>
-                <a href="About">About</a>
-                <a href="How to use">How to use</a>
-                <a href="Contact">Contact</a>
+                <p> Enter your starting location <input type="text"> <input type="submit" value="Go">
             </b>
-	    </font>
-	</div>
+            <font size="2">
+                <font face="Ink free">
+                    <p> Starting location should be within Ireland i.e Hotel, CO.
+                        <br>
+</div>
+<style>
+div.scrollmenu {
+    background-color: #642;
+    overflow: hidden;
+    white-space: nowrap;
+	padding: 0px 40px 0px;
+	position: fixed;
+	right: 560;
+	left: 250;
+	top:18%;
+	margin-top: -2.5em;
+	webkit-border-radius: 10px;
+    moz-border-radius: 10px;
+    border-radius: 10px;
 
-	<!--<h2><a href ""> Home</a>  <a href "">About</a>  <a href ""> How to use</a> <a href ""> Contact</a></h2>-->
-    <!--<a href="" target="_blank">visit our html tutorial!</a> -->
-	<div id="map">
+}
 
-    </div>
+div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 10px 40px 10px;
+    text-decoration: none;
 
-    <button id ="getDirecButton">Go</button>
+}
 
-        {% block scripts %}
-		<script>
+}
+div.scrollmenu a:hover {
+    background-color: #300;
+}
+
+</style>
+<div class="scrollmenu">
+    <font face="Broadway" ,"Goudy Stout">
+    <font size="4">
+        <b>
+            <a href="Home">Home</a>
+            <a href="About">About</a>
+            <a href="How to use">How to use</a>
+            <a href="Contact">Contact</a>
+        </b>
+    </font>
+</div>
+
+<!--<h2><a href ""> Home</a>  <a href "">About</a>  <a href ""> How to use</a> <a href ""> Contact</a></h2>-->
+<!--<a href="" target="_blank">visit our html tutorial!</a> -->
+<div id="map"></div>
+<button id="getDirecButton">Go</button>
+<script>
 			var infoWindow;
 			var currentLat;
 			var currentLng;
@@ -125,8 +129,6 @@
 			var directionsMap;
 			var start;
 			var end;
-
-
 			$(document).ready(function(){
 				getLocation();
 				$("#getDirecButton").on('click', function(){
@@ -174,13 +176,15 @@
 					addMarker({coords:event.latLng});
 				});*/
 
+
+
 				//breweries data
 				var breweriesJson = [
 					{
-					  name: 'nameBre',
-					  coords:{lat:53.4311481,lng:-6.3603187}
+					  name: 'Wood Key Brewing',
+					  coords:{lat:53.2989858,lng:-6.2603187},
 					  //iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-					  content:"<h1 id='hi'>'nameBre'</h1>"
+					  content:"<h1 id='hi'>WKB</h1>"
 					},
 					{
 					  name: 'Rascals Brewing',
@@ -195,6 +199,7 @@
 					  content:'<h1>SBB</h1>'
 					}
 				];
+
 
 				// Loop through markers
 				for(var i = 0;i < breweriesJson.length;i++){
@@ -219,6 +224,8 @@
 
 					// Check content
 					if(props.content){
+
+
 						marker.addListener('click', function(){
 							if(typeof infoWindow != 'undefined'){
 								infoWindow.close();
@@ -230,7 +237,10 @@
 						});
 					}
 				}
+
 			}
+
+			
 			function getDirections() {
 				//$("map").empty();
 				//console.log('getDirections');
@@ -244,6 +254,7 @@
 				directionsDisplay.setMap(directionsMap);
 				calcRoute();
 			}
+
 			function calcRoute() {
 				//console.log("calcRoute");
 				start = startPoint;//directionsLatLng;
@@ -259,23 +270,31 @@
 					}
 				});
 			}
-		</script>
-        {% endblock %}
-    <style>
-       .footer {
-       position: fixed;
-       left: 0;
-       bottom: 0;
-       width: 100%;
-       background-color: #400;
-       color: white;
-       text-align: center;
-            }
-    </style>
 
-	<div class="footer">
-		<p>© Craft Maps 2018</p>
-	</div>
+
+</script>
+
+<style>
+   .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #400;
+   color: white;
+   text-align: center;
+	}
+</style>
+
+
+<div class="footer">
+    <p>© Craft Maps 2018</p>
+    <p>
+        {{ brewery.Brewery_Name }}
+        {{ brewery.Brewery_Longitude }}
+        {{ brewery.Brewery_Latitude }}
+    </p>
+</div>
 
 </body>
 </html>
