@@ -11,16 +11,9 @@ var itenaryPoints = [];
 var wayPt = [];
 var img = "K:/UCD/sem 3/project/beermarkr.png"
 
-
-var brewName = "{{ brewery.Brewery_Name|safe|escape }}";
-var brewReg = "{{ brewery.Brewery_Region|safe|escape }}";
-var brewLong = parseFloat({{ brewery.Brewery_Longitude|safe }});
-var brewLati = parseFloat({{ brewery.Brewery_Latitude|safe }});
-var brewType = "{{ brewery.Brewery_Type|safe }}";
-var brewURL = "{{ brewery.Brewery_URL|safe|escape }}";
-
+console.log(brewName);
 console.log(brewLong);
-console.log(brewLati);
+console.log(brewURL);
 
 //breweries data
 var breweriesJson = [
@@ -29,13 +22,13 @@ var breweriesJson = [
 	  coords: {lat:brewLong, lng:brewLati},
 	  //iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
 	  //iconImage: img,
-	  //content:"<h3>"+brewName+"</h3><h3>"+brewReg+"</h3><h3><a href="+brewURL+">"+brewURL+"<a></h3><h3>"+brewType+"</h3>"
+	  content:"<h1 class='hi'>"+brewName+"</h1><h1 class='hi'>"+brewReg+"</h1><h1 class='hi'><a href="+brewURL+">"+brewURL+"<a></h1><h1 class='hi'>"+brewType+"</h1>"
 	},
 	{
 	  name: 'Rascals Brewing',
 	  coords:{lat:53.3789858,lng:-6.3627311},
 	 // iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-	  content:"<h1 class='hi'>RB</h1><h3>"+brewLong+"</h3>"
+	  content:"<h1 class='hi'>RB</h1><h1 class='hi'>"+brewName+"</h1>"
 	},
 	{
 	  name: 'Stone Barrel Brewing',

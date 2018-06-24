@@ -4,9 +4,7 @@
     <list default="true" id="e766f725-cdee-4922-a93e-b02772476c43" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/craftMaps.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/craftMaps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theCraftMapsCO/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/theCraftMapsCO/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theCraftMapsCO/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/theCraftMapsCO/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +18,8 @@
       <file leaf-file-name="homepage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/homepage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="58" column="71" lean-forward="true" selection-start-line="58" selection-start-column="71" selection-end-line="58" selection-end-column="71" />
+            <state relative-caret-position="306">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#4319#4325#0" expanded="true" />
               </folding>
@@ -32,8 +30,8 @@
       <file leaf-file-name="craftMaps.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/craftMaps.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+            <state relative-caret-position="255">
+              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -178,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529834429329</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit 24/06/2018@11:45&#10;&#10;- Merge Branches&#10;- add view and js code">
+      <created>1529837129285</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1529837129285</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -206,12 +211,16 @@
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49926794" weight="0.10015898" />
     </layout>
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge remote-tracking branch 'remotes/origin/master' into MatthewR&#10;&#10;# Conflicts:&#10;#&#9;theCraftMapsCO/models.py&#10;#&#9;theCraftMapsCO/templates/theCraftMapsCO/homepage.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'remotes/origin/master' into MatthewR&#10;&#10;# Conflicts:&#10;#&#9;theCraftMapsCO/models.py&#10;#&#9;theCraftMapsCO/templates/theCraftMapsCO/homepage.html" />
+    <MESSAGE value="Commit 24/06/2018@11:45&#10;&#10;- Merge Branches&#10;- add view and js code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 24/06/2018@11:45&#10;&#10;- Merge Branches&#10;- add view and js code" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/CraftMaps/settings.py">
@@ -512,8 +521,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/homepage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="58" column="71" lean-forward="true" selection-start-line="58" selection-start-column="71" selection-end-line="58" selection-end-column="71" />
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#4319#4325#0" expanded="true" />
           </folding>
@@ -522,8 +531,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/craftMaps.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        <state relative-caret-position="255">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
         </state>
       </provider>
     </entry>
