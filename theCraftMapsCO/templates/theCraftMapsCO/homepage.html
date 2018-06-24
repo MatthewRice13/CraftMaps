@@ -1,281 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- google map API -->
-    <script src = "https://maps.googleapis.com/maps/api/js"></script>
-    <!--<SCRIPT SRC="K:/UCD/SEM 1/INFO VIZ/ASSIGN 2/D3_DASHBOARD/JS/JQUERY-3.2.1.MIN.JS"></SCRIPT>-->
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!-- <script type="text/javascript" src="js/script.js" charset="utf-8"></script> -->
-    <!-- <link href="css/style.css" rel="stylesheet" /> -->
-    <style>
-		#map{
-		    position: fixed;
-		    height:500px;
-		    margin-top:10%;
-		    width:30%;
-		    margin-left:720px;
-		}
-		#hi{
-		    color:blue;
-		}
-	</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Craft Maps</title>
+
+    {% load static %}
+    <script>
+        var brewName = "{{ brewery.Brewery_Name|safe|escape }}";
+        var brewReg = "{{ brewery.Brewery_Region|safe|escape }}";
+        var brewLong = {{ brewery.Brewery_Longitude }};
+        var brewLati = {{ brewery.Brewery_Latitude }};
+        var brewType = "{{ brewery.Brewery_Type|safe }}";
+        var brewURL = "{{ brewery.Brewery_URL|safe|escape }}";
+        var Brewery_JSON = {{ brewery_json|safe }};
+    </script>
+
+    <!--JS files -->
+    <script src='{% static "js/jquery-3.3.1.min.js" %}'></script>
+    <!--<script src='{% static "js/new-age.min.js" %}'></script>-->
+    <script src='{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
+    <script src='{% static "vendor/jquery-easing/jquery.easing.min.js" %}'></script>
+
+
+    <!-- Google API JS-->
+    <script src="https://maps.googleapis.com/maps/api/js?key={{key}}"></script>
+    <script src='{% static "js/craftMaps.js" %}'></script>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href='{% static "vendor/bootstrap/css/bootstrap.min.css" %}'/>
+
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href='{% static "vendor/font-awesome/css/font-awesome.min.css" %}'/>
+    <link rel="stylesheet" href='{% static "vendor/simple-line-icons/css/simple-line-icons.css" %}'/>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href='{% static "css/new-age.min.css" %}'/>
+
+    <link rel="stylesheet" href='{% static "css/craftMaps.css" %}'/>
+
 </head>
 
-<body>
-    <!-- onload = 'initMap()' -->
-	<!-- <h1><img src="" alt="" width="70" height="70"></h1> -->
-    <style>
-        div.w3-container {
-        overflow: hidden;
-        white-space: nowrap;
-        position: fixed;
-        margin-left: 235px;
-        margin-top: -190px;
-        letter-spacing: 10px;}
-    </style>
-		<div class="w3-container ">
-			<font face="Goudy Stout"/>
-			<font size="6"/>
-			<h1>CRAFT MAPS</h1>
-		</div>
-    <style>
-        div.h2 {
-            overflow: hidden;
-            white-space: nowrap;
-            position: fixed;
-            letter-spacing: 2px;
-            margin-left: 245px;
-            margin-top: 100px;
-        }
-    </style>
-	<div class="h2">
-		<font face="Ink free"/>
-		<font size="3"/>
-		<b>
-		    <p>Enter your starting location <input type="text"> <input type="submit" value="Go">
-		</b>
-		<font size="2"/>
-		<font face="Ink free"/>
-		    <p>Starting location should be within Ireland i.e Hotel, CO.
-		<br>
-	</div>
-    <style>
-        div.scrollmenu {
-            background-color: #642;
-            overflow: hidden;
-            white-space: nowrap;
-            padding: 0px 40px 0px;
-            position: fixed;
-            right: 560;
-            left: 250;
-            top:18%;
-            margin-top: -2.5em;
-            webkit-border-radius: 10px;
-            moz-border-radius: 10px;
-            border-radius: 10px;
 
-        }
+<body id="page-top">
 
-        div.scrollmenu a {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding: 10px 40px 10px;
-            text-decoration: none;
-
-        }
-
-        }
-        div.scrollmenu a:hover {
-            background-color: #300;
-        }
-    </style>
-
-	<div class="scrollmenu">
-	    <font face="Broadway"/>
-	    <font size="4">
-            <b>
-                <a href="Home">Home</a>
-                <a href="About">About</a>
-                <a href="How to use">How to use</a>
-                <a href="Contact">Contact</a>
-            </b>
-	    </font>
-	</div>
-
-	<!--<h2><a href ""> Home</a>  <a href "">About</a>  <a href ""> How to use</a> <a href ""> Contact</a></h2>-->
-    <!--<a href="" target="_blank">visit our html tutorial!</a> -->
-	<div id="map">
-
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="index.html">CRAFT MAPS</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/home"> {{ brewery.Brewery_Name|safe|escape }} </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
     </div>
+</nav>
 
-    <button id ="getDirecButton">Go</button>
+<header class="masthead">
+    <div class="location-container">
+        <div class="container">
+            <small class="mb-2 d-block">Starting location should be within Ireland i.e Hotel, CO.</small>
+            <div class="input-group mb-0">
+                <input type="text" class="form-control location-input" placeholder="Enter your starting location"
+                       aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button id="getDirecButton" class="btn btn-outline" type="button">Go</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="map-container">
+        <div id="map"></div>
+    </div>
+</header>
 
-        {% block scripts %}
-		<script>
-			var infoWindow;
-			var currentLat;
-			var currentLng;
-			var map;
-			var directionsDisplay;
-			var directionsService = new google.maps.DirectionsService();
-			var directionsMap;
-			var start;
-			var end;
+<section class="contact bg-primary" id="contact">
+    <div class="container">
+        <h2>We
+            <i class="fa fa-heart"></i>
+            new friends!</h2>
+        <ul class="list-inline list-social">
+            <li class="list-inline-item social-twitter">
+                <a href="#">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+            <li class="list-inline-item social-facebook">
+                <a href="#">
+                    <i class="fa fa-facebook"></i>
+                </a>
+            </li>
+            <li class="list-inline-item social-google-plus">
+                <a href="#">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
 
-
-			$(document).ready(function(){
-				getLocation();
-				$("#getDirecButton").on('click', function(){
-					//console.log("clicked");
-					getDirections();
-				});
-
-				//initMap();
-			});
-
-			function getLocation() {
-				if (navigator.geolocation) {
-					navigator.geolocation.getCurrentPosition(showPosition);
-				} else {
-					console.log('error')//x.innerHTML = "Geolocation is not supported by this browser.";
-				}
-				//initMap();
-			}
-			function showPosition(position) {
-				//console.log(position.coords.latitude);
-				currentLat = position.coords.latitude;
-				//console.log(position.coords.longitude);
-				currentLng = position.coords.longitude;
-				/*x.innerHTML = "Latitude: " + position.coords.latitude +
-				"<br>Longitude: " + position.coords.longitude;*/
-				startPoint = new google.maps.LatLng(currentLat, currentLng);
-				initMap();
-			}
-			function initMap(){
-				// Map options
-				var options = {
-					zoom:10,
-					//center:{lat:53.3498,lng:-6.2603}
-					//center:{lat:currentLat,lng:currentLng}
-					center: new google.maps.LatLng(currentLat, currentLng)
-				}
-
-				// New map
-				//var map = new google.maps.Map(document.getElementById('map'), options);
-				map = new google.maps.Map(document.getElementById('map'), options);
-
-				// Listen for click on map
-				/*google.maps.event.addListener(map, 'click', function(event){
-					// Add marker
-					addMarker({coords:event.latLng});
-				});*/
-
-				//breweries data
-				var breweriesJson = [
-					{
-					  name: 'nameBre',
-					  coords:{lat:53.4311481,lng:-6.3603187}
-					  //iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-					  content:"<h1 id='hi'>'nameBre'</h1>"
-					},
-					{
-					  name: 'Rascals Brewing',
-					  coords:{lat:53.2989858,lng:-6.4627311},
-					 // iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-					  content:'<h1>RB</h1>'
-					},
-					{
-					  name: 'Stone Barrel Brewing',
-					  coords:{lat:53.3311481,lng:-6.2603187},
-					 // iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-					  content:'<h1>SBB</h1>'
-					}
-				];
-
-				// Loop through markers
-				for(var i = 0;i < breweriesJson.length;i++){
-					// Add marker
-					addMarker(breweriesJson[i]);
-				}
-
-				// Add Marker Function
-				function addMarker(props){
-					var marker = new google.maps.Marker({
-						position:props.coords,
-						title: props.name,
-						map:map,
-						//icon:props.iconImage
-					});
-
-					// Check for customicon
-					if(props.iconImage){
-						// Set icon image
-						marker.setIcon(props.iconImage);
-					}
-
-					// Check content
-					if(props.content){
-						marker.addListener('click', function(){
-							if(typeof infoWindow != 'undefined'){
-								infoWindow.close();
-							}
-							infoWindow = new google.maps.InfoWindow({
-								content:props.content
-							});
-							infoWindow.open(map, marker);
-						});
-					}
-				}
-			}
-			function getDirections() {
-				//$("map").empty();
-				//console.log('getDirections');
-				directionsDisplay = new google.maps.DirectionsRenderer();
-				//start = new google.maps.LatLng(directionsLatLng);
-				var directionsOptions = {
-					zoom:10,
-					center: startPoint
-				}
-				directionsMap = new google.maps.Map(document.getElementById('map'), directionsOptions);
-				directionsDisplay.setMap(directionsMap);
-				calcRoute();
-			}
-			function calcRoute() {
-				//console.log("calcRoute");
-				start = startPoint;//directionsLatLng;
-				end = {lat:53.2989858,lng:-6.4627311};//"50 Rue Ste-Catherine O Montréal, QC H2X 1Z6";
-				var request = {
-					origin:start,
-					destination:end,
-					travelMode: google.maps.TravelMode.TRANSIT
-				};
-				directionsService.route(request, function(result, status) {
-					if (status == google.maps.DirectionsStatus.OK) {
-					directionsDisplay.setDirections(result);
-					}
-				});
-			}
-		</script>
-        {% endblock %}
-    <style>
-       .footer {
-       position: fixed;
-       left: 0;
-       bottom: 0;
-       width: 100%;
-       background-color: #400;
-       color: white;
-       text-align: center;
-            }
-    </style>
-
-	<div class="footer">
-		<p>© Craft Maps 2018</p>
-	</div>
+<footer>
+    <div class="container">
+        <p>&copy; Craft Maps 2018</p>
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <a href="#">Privacy</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="#">Terms</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="#">FAQ</a>
+            </li>
+        </ul>
+    </div>
+</footer>
 
 </body>
 </html>
