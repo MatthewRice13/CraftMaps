@@ -5,27 +5,37 @@ var map;
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var directionsMap;
-//geolocation
-//var geocoder = new google.maps.Geocoder();
 var start;
 var end;
 var itenaryPoints = [];
 var wayPt = [];
 var img = "K:/UCD/sem 3/project/beermarkr.png"
+
+
+var brewName = "{{ brewery.Brewery_Name|safe|escape }}";
+var brewReg = "{{ brewery.Brewery_Region|safe|escape }}";
+var brewLong = parseFloat({{ brewery.Brewery_Longitude|safe }});
+var brewLati = parseFloat({{ brewery.Brewery_Latitude|safe }});
+var brewType = "{{ brewery.Brewery_Type|safe }}";
+var brewURL = "{{ brewery.Brewery_URL|safe|escape }}";
+
+console.log(brewLong);
+console.log(brewLati);
+
 //breweries data
 var breweriesJson = [
 	{
-	  name: 'Wood Key Brewing',
-	  coords:{lat:53.2989858,lng:-6.2603187},
+	  name: brewName,
+	  coords: {lat:brewLong, lng:brewLati},
 	  //iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
 	  //iconImage: img,
-	  content:"<h1 class='hi'>WKB</h1>"
+	  //content:"<h3>"+brewName+"</h3><h3>"+brewReg+"</h3><h3><a href="+brewURL+">"+brewURL+"<a></h3><h3>"+brewType+"</h3>"
 	},
 	{
 	  name: 'Rascals Brewing',
-	  coords:{lat:53.2989858,lng:-6.4627311},
+	  coords:{lat:53.3789858,lng:-6.3627311},
 	 // iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-	  content:"<h1 class='hi'>RB</h1>"
+	  content:"<h1 class='hi'>RB</h1><h3>"+brewLong+"</h3>"
 	},
 	{
 	  name: 'Stone Barrel Brewing',
@@ -76,6 +86,8 @@ function getLocation() {
 	}
 	//initMap();
 }
+
+
 function showPosition(position) {
 	//console.log(position.coords.latitude);
 	currentLat = position.coords.latitude;
@@ -86,6 +98,8 @@ function showPosition(position) {
 	startPoint = new google.maps.LatLng(currentLat, currentLng);
 	initMap();
 }
+
+
 function initMap(){
 	// Map options
 	var options = {
@@ -117,6 +131,7 @@ function initMap(){
 	populateBreweriesList();
 }
 
+
 // Add Marker Function
 function addMarker(props){
 	var marker = new google.maps.Marker({
@@ -147,6 +162,8 @@ function addMarker(props){
 		});
 	}
 }
+
+
 function getDirections() {
 	//$("#map").empty();
 	$("#directionsPanel").empty();
@@ -162,6 +179,7 @@ function getDirections() {
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
 	calcRoute();
 }
+
 
 function calcRoute() {
 	//console.log("calcRoute");
@@ -195,18 +213,8 @@ function getItenDirections() {
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
 	calcItenRoute();
 }
-//var wayPt = [];
-/*for(i=0; i < itenaryPoints.length-1; i++){
-	wayPt.push({"location":{"lat":itenaryPoints[i].location.lat,"lng":itenaryPoints[i].location.lng},"stopover":true});
-}*/
-//console.log(wayPt);
 
-//this is not used because it includes the last location as well
-/*for (wypoints in breweriesJson){//console.log(breweriesJson[wypoints].coords.lat);
-	wayPt.push({"location":{"lat":breweriesJson[wypoints].coords.lat,"lng":breweriesJson[wypoints].coords.lng},"stopover":true});
-	//wayPt.push({"location":{"lat":wypoints.coords.lat,"lng":wypoints.coords.lng},"stopover":true});
-}*/
-//var wayPoint = [{"location":{"lat":53.2989858,"lng":-6.2603187},"stopover":true},{"location":{"lat":53.3311481,"lng":-6.2603187},"stopover":true}];
+
 function calcItenRoute() {
 	//console.log("calcRoute");
 	//var wayPt = [];
@@ -230,6 +238,7 @@ function calcItenRoute() {
 	});
 }
 
+
 function makeItenary(){
 	wayPt = [];
 	itenaryPoints = [];
@@ -245,6 +254,8 @@ function makeItenary(){
 	});
 	getItenDirections();
 }
+
+
 function getCoords(address){
 	var startLng = 0.0;
 	var startLat = 0.0;
