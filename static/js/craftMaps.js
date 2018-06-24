@@ -11,119 +11,67 @@ var itenaryPoints = [];
 var wayPt = [];
 var img = "K:/UCD/sem 3/project/beermarkr.png"
 
-console.log(brewName);
-console.log(brewLong);
-console.log(brewURL);
-
 //breweries data
-var breweriesJson = [
-	{
-	  name: brewName,
-	  coords: {lat:brewLong, lng:brewLati},
-	  //iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-	  //iconImage: img,
-	  content:"<h1 class='hi'>"+brewName+"</h1><h1 class='hi'>"+brewReg+"</h1><h1 class='hi'><a href="+brewURL+">"+brewURL+"<a></h1><h1 class='hi'>"+brewType+"</h1>"
-	},
-	{
-	  name: 'Rascals Brewing',
-	  coords:{lat:53.3789858,lng:-6.3627311},
-	 // iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-	  content:"<h1 class='hi'>RB</h1><h1 class='hi'>"+brewName+"</h1>"
-	},
-	{
-	  name: 'Stone Barrel Brewing',
-	  coords:{lat:53.3311481,lng:-6.2603187},
-	 // iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-	  content:"<h1 class='hi'>SBB</h1>"
-	}
-];
+var breweriesJson = Brewery_JSON;
+console.log(breweriesJson);
+
 //document ready function
 $(document).ready(function(){
 	getLocation();
-	//populateBreweriesList();
 	$("#getDirecButton").on('click', function(){
-		//console.log("clicked");
 		getDirections();
 	});
 	$("#getItenDirecButton").on('click', function(){
-		//console.log("clicked");
-		//getItenDirections();
 		makeItenary();
 	});
 	$("#goToMaps").on('click', function(){
-		//console.log("clicked");
-		//getItenDirections();
 		var loc = $("#defaultAddress").val();
-		//console.log(loc);
 		getCoords(loc);
 	});
-	//initMap();
-});//ready end
-
+});
 
 function populateBreweriesList(){
-var listBrew = '';
+    var listBrew = '';
 	for(i=0; i < breweriesJson.length; i++){
-		listBrew = "<li><input type='checkbox' name="+breweriesJson[i].coords.lng+" class='checkboxList' value="+ breweriesJson[i].coords.lat+">" + breweriesJson[i].name + "</li>"
-		//console.log(listBrew);
+		listBrew = "<li><input type='checkbox' name="+breweriesJson[i].coords.lng
+		    +" class='checkboxList' value="+ breweriesJson[i].coords.lat+">"
+		    + breweriesJson[i].name + "</li>"
+		console.log(listBrew);
 		$("#listOfBreweries").append(listBrew);
 	}
 }
 
-
 function getLocation() {
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(showPosition);
-	} else { 
+	} else {
 		console.log('error')//x.innerHTML = "Geolocation is not supported by this browser.";
 	}
-	//initMap();
 }
 
-
 function showPosition(position) {
-	//console.log(position.coords.latitude);
 	currentLat = position.coords.latitude;
-	//console.log(position.coords.longitude);
 	currentLng = position.coords.longitude;
-	/*x.innerHTML = "Latitude: " + position.coords.latitude + 
-	"<br>Longitude: " + position.coords.longitude;*/
 	startPoint = new google.maps.LatLng(currentLat, currentLng);
 	initMap();
 }
-
 
 function initMap(){
 	// Map options
 	var options = {
 		zoom:10,
-		//center:{lat:53.3498,lng:-6.2603}
-		//center:{lat:currentLat,lng:currentLng}
 		center: new google.maps.LatLng(currentLat, currentLng)
 	}
-	
 	// New map
-	//var map = new google.maps.Map(document.getElementById('map'), options);
 	map = new google.maps.Map(document.getElementById('map'), options);
-	
-	// Listen for click on map
-	/*google.maps.event.addListener(map, 'click', function(event){
-		// Add marker
-		addMarker({coords:event.latLng});
-	});*/
-	
-	
+
 	// Loop through markers
 	for(var i = 0;i < breweriesJson.length;i++){
 		// Add marker
 		addMarker(breweriesJson[i]);
 	}
-
-	
-	
 	populateBreweriesList();
 }
-
 
 // Add Marker Function
 function addMarker(props){
@@ -131,7 +79,6 @@ function addMarker(props){
 		position:props.coords,
 		title: props.name,
 		map:map,
-		//icon:props.iconImage
 	});
 
 	// Check for customicon
@@ -142,8 +89,6 @@ function addMarker(props){
 
 	// Check content
 	if(props.content){
-		
-
 		marker.addListener('click', function(){
 			if(typeof infoWindow != 'undefined'){
 				infoWindow.close();
@@ -155,7 +100,6 @@ function addMarker(props){
 		});
 	}
 }
-
 
 function getDirections() {
 	//$("#map").empty();
@@ -173,7 +117,6 @@ function getDirections() {
 	calcRoute();
 }
 
-
 function calcRoute() {
 	//console.log("calcRoute");
 	start = startPoint;//directionsLatLng;
@@ -190,7 +133,6 @@ function calcRoute() {
 	});
 }
 
-
 function getItenDirections() {
 	//$("#map").empty();
 	$("#directionsPanel").empty();
@@ -206,7 +148,6 @@ function getItenDirections() {
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
 	calcItenRoute();
 }
-
 
 function calcItenRoute() {
 	//console.log("calcRoute");
@@ -231,7 +172,6 @@ function calcItenRoute() {
 	});
 }
 
-
 function makeItenary(){
 	wayPt = [];
 	itenaryPoints = [];
@@ -247,7 +187,6 @@ function makeItenary(){
 	});
 	getItenDirections();
 }
-
 
 function getCoords(address){
 	var startLng = 0.0;

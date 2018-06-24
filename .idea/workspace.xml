@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/craftMaps.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/craftMaps.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theCraftMapsCO/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/theCraftMapsCO/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +19,8 @@
       <file leaf-file-name="homepage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/homepage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="289">
+              <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
               <folding>
                 <element signature="e#4319#4325#0" expanded="true" />
               </folding>
@@ -30,8 +31,8 @@
       <file leaf-file-name="craftMaps.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/craftMaps.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+            <state relative-caret-position="136">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -57,8 +58,11 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theCraftMapsCO/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-561">
-              <caret column="35" selection-start-column="35" selection-end-column="35" />
+            <state relative-caret-position="238">
+              <caret line="23" column="62" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
+              <folding>
+                <element signature="e#0#55#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -183,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529837129285</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Commit 24/06/2018@12:00&#10;&#10;- Merge Branches&#10;- add view and js code&#10;-- fix errors">
+      <created>1529838122162</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1529838122162</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -192,8 +203,8 @@
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1522694" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.62152267" side_tool="true" visible="true" weight="0.12400636" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.3784773" visible="true" weight="0.12400636" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.62152267" side_tool="true" visible="true" weight="0.24960254" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.3784773" visible="true" weight="0.24960254" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -220,7 +231,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge remote-tracking branch 'remotes/origin/master' into MatthewR&#10;&#10;# Conflicts:&#10;#&#9;theCraftMapsCO/models.py&#10;#&#9;theCraftMapsCO/templates/theCraftMapsCO/homepage.html" />
     <MESSAGE value="Commit 24/06/2018@11:45&#10;&#10;- Merge Branches&#10;- add view and js code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 24/06/2018@11:45&#10;&#10;- Merge Branches&#10;- add view and js code" />
+    <MESSAGE value="Commit 24/06/2018@12:00&#10;&#10;- Merge Branches&#10;- add view and js code&#10;-- fix errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 24/06/2018@12:00&#10;&#10;- Merge Branches&#10;- add view and js code&#10;-- fix errors" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/CraftMaps/settings.py">
@@ -255,6 +272,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="63" column="80" lean-forward="true" selection-start-line="63" selection-start-column="80" selection-end-line="63" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -300,6 +320,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
           <caret line="65" column="15" lean-forward="true" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -342,6 +365,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -498,10 +524,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theCraftMapsCO/views.py">
+    <entry file="file://$PROJECT_DIR$/theCraftMapsCO/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-561">
-          <caret column="35" selection-start-column="35" selection-end-column="35" />
+        <state relative-caret-position="153">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -512,17 +538,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theCraftMapsCO/urls.py">
+    <entry file="file://$PROJECT_DIR$/theCraftMapsCO/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="238">
+          <caret line="23" column="62" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/homepage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="289">
+          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding>
             <element signature="e#4319#4325#0" expanded="true" />
           </folding>
@@ -531,8 +560,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/craftMaps.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+        <state relative-caret-position="136">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
