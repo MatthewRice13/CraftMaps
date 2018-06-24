@@ -75,7 +75,6 @@
                 webkit-border-radius: 10px;
                 moz-border-radius: 10px;
                 border-radius: 10px;
-
             }
             div.scrollmenu a {
                 display: inline-block;
@@ -118,7 +117,6 @@
                     var end;
 
                     var key = "{{ key|safe|escape }}";
-
                     var brewName = "{{ brewery.Brewery_Name|safe|escape }}";
                     var brewReg = "{{ brewery.Brewery_Region|safe|escape }}";
                     var brewLong = {{ brewery.Brewery_Longitude }};
@@ -179,7 +177,7 @@
                               name: brewName,
                               coords: {lat:brewLong, lng:brewLati},
                               //iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-                              content:"<h2>"+ brewName +"</h2><h2>"+ brewReg +"</h2><h2>"+ brewURL +"</h2><h2>" + brewType + "</h2>"
+                              content:"<h3>"+brewName+"</h3><h3>"+brewReg+"</h3><h3><a href="+brewURL+">"+brewURL+"<a></h3><h3>"+brewType+"</h3>"
                             },
                             {
                               name: 'Rascals Brewing',
