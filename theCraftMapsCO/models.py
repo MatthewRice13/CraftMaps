@@ -6,8 +6,9 @@ class Brewery_Table(models.Model):
     Brewery_Name = models.CharField(max_length=255)
     Brewery_Town = models.CharField(max_length=255)
     Brewery_Region = models.CharField(max_length=150)
-    Brewery_Latitude = models.DecimalField(max_digits=50, decimal_places=30)
-    Brewery_Longitude = models.DecimalField(max_digits=50, decimal_places=30)
+    Brewery_Type = models.CharField(max_length=150, default='Brewery')
+    Brewery_Latitude = models.DecimalField(max_digits=50, decimal_places=10)
+    Brewery_Longitude = models.DecimalField(max_digits=50, decimal_places=10)
     Brewery_URL = models.URLField(max_length=200, null=True, blank=True)
 
 
