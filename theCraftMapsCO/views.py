@@ -31,14 +31,14 @@ def buildjson(data):
     rtn_json = []
     count = 0
     for d in data:
-        if count > 0:
+        if count > 10:
             break
         count = count+1
         item = {
             'name': d.Brewery_Name,
             'coords': {
-                'lat': simplejson.dumps(float(d.Brewery_Longitude)),
-                'lng': simplejson.dumps(float(d.Brewery_Latitude))
+                'lat': float(d.Brewery_Longitude),
+                'lng': float(d.Brewery_Latitude)
             },
             'Content': "<h1>"+d.Brewery_Type+"</h1>"
         }
