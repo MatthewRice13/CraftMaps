@@ -162,8 +162,8 @@ function calcItenRoute() {
 	var request = {
 		origin:start,
 		destination:end,
-		waypoints: wayPt,
-		travelMode: google.maps.TravelMode.DRIVING
+		waypoints:wayPt,
+		travelMode:google.maps.TravelMode.DRIVING
 	};
 	directionsService.route(request, function(result, status) {
 		if (status == google.maps.DirectionsStatus.OK) {
