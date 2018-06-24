@@ -352,7 +352,7 @@ section.contact ul.list-social li.social-google-plus a:hover {
   background-color: #d73925;
 }
 
-#getDirecButton {
+#goToMaps {
   background-color: #222222;
   border-color: #222222;
   color: #fdcc52;
@@ -360,7 +360,7 @@ section.contact ul.list-social li.social-google-plus a:hover {
   box-shadow: none !important;
 }
 
-#getDirecButton:focus, #getDirecButton:hover {
+#goToMaps:focus, #goToMaps:hover {
   background-color: #fdcc52;
   color: #222222;
 }

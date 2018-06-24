@@ -50,8 +50,11 @@ $(document).ready(function(){
 	$("#goToMaps").on('click', function(){
 		//console.log("clicked");
 		//getItenDirections();
-		var loc = $("#defaultAddress").val();
+		var loc = $("#enterLocation").val();
 		//console.log(loc);
+		if(loc == ""){
+		    alert('No location entered! Your default location will be "The Spire Tower"');
+		}
 		getCoords(loc);
 	});
 	//initMap();
@@ -89,10 +92,12 @@ function showPosition(position) {
 function initMap(){
 	// Map options
 	var options = {
-		zoom:10,
+		zoom:9,
 		//center:{lat:53.3498,lng:-6.2603}
 		//center:{lat:currentLat,lng:currentLng}
-		center: new google.maps.LatLng(currentLat, currentLng)
+		//center: new google.maps.LatLng(currentLat, currentLng)
+		// center = the spire tower
+		center: new google.maps.LatLng(53.349722, -6.260278)
 	}
 	
 	// New map
@@ -214,7 +219,7 @@ function calcItenRoute() {
 	for(i=0; i < itenaryPoints.length-1; i++){
 		wayPt.push({"location":{"lat":itenaryPoints[i].location.lat,"lng":itenaryPoints[i].location.lng},"stopover":true});
 	}
-	console.log(wayPt);
+	//console.log(wayPt);
 	start = startPoint;//directionsLatLng;
 	end = {lat:itenaryPoints[itenaryPoints.length-1].location.lat,lng:itenaryPoints[itenaryPoints.length-1].location.lng}; //{lat:53.2989858,lng:-6.4627311};//"50 Rue Ste-Catherine O Montréal, QC H2X 1Z6";
 	var request = {
@@ -253,6 +258,8 @@ function getCoords(address){
 		startLat = 53.349722;
 		startLng = -6.260278;
 		//console.log(startLat+' '+startLng);
+		/* send cordinate to the service*/
+		//window.location ='';
 	}
 	else{
 		axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
@@ -262,12 +269,22 @@ function getCoords(address){
 			}
 		})
 		.then(function(response){
-			//console.log(response.data.status);
 			//console.log(response);
+			//console.log(response.data.status);
 			if(response.data.status === "OK"){
-				startLat = response.data.results["0"].geometry.location.lat;
+				if(response.data.results["0"].address_components[3].long_name != "Ireland"){
+					alert("Enter a more detailed Irish Location");
+				}
+				else{
+					startLat = response.data.results["0"].geometry.location.lat;
 				startLng = response.data.results["0"].geometry.location.lng;
 				//console.log(startLat+' '+startLng);
+				/* send cordinate to the service*/
+				//window.location ='';
+				}
+				/*startLat = response.data.results["0"].geometry.location.lat;
+				startLng = response.data.results["0"].geometry.location.lng;
+				console.log(startLat+' '+startLng);*/
 			}
 			else{
 				alert('Geocode was not successful for the following reason: ' + response.data.status);
