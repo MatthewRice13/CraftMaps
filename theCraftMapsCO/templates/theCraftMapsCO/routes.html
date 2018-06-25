@@ -1,38 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <header>
-        <h1>Craft Maps</h1>
-    </header>
-    <div id="map"></div>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Routes</title>
+    </head>
+
+    <body>
+
+        <style>
+            .head {
+                overflow: hidden;
+                white-space: nowrap;
+                position: fixed;
+                margin-left: 235px;
+                margin-top: -190px;
+                letter-spacing: 10px;
+            }
+            .foot {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #400;
+                color: white;
+                text-align: center;
+            }
+            .scrollmenu {
+                background-color: #642;
+                overflow: hidden;
+                white-space: nowrap;
+                padding: 0px 40px 0px;
+                position: fixed;
+                right: 560;
+                left: 250;
+                top:18%;
+                margin-top: -2.5em;
+                webkit-border-radius: 10px;
+                moz-border-radius: 10px;
+                border-radius: 10px;
+
+            }
+            .scrollmenu a {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 10px 40px 10px;
+                text-decoration: none;
+
+            }
+            .scrollmenu a:hover {
+                background-color: #300;
+            }
+        </style>
+
+        <div class="head">
+            <font face="Goudy Stout", size="6">
+                <h1>CRAFT MAPS</h1>
+            </font>
+        </div>
+
+        <div class="scrollmenu">
+            <font face="Broadway",size="4">
+                <b>
+                    <a href="/home">Home</a>
+                    <a href="/routes">Routes</a>
+                    <a href="/about">About</a>
+                    <a href="/contact">Contact</a>
+                </b>
+            </font>
+        </div>
+
+        <div>
+            {% for brew in locations %}
+            <div>
+                <b>Name:</b> {{ brew.0 }}
+                <b>Distance</b> {{ brew.4 }}
+                <a href="{{ brew.3 }}">Website</a>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div id="map"/>
+
         {% block javascript %}
         <script type="text/javascript" >
             function initMap() {
-            var start = {{ start }};
-            var map = new google.maps.Map(document.getElementById('map'), {
-              zoom: 11,
-              center: new google.maps.LatLng(start[0], start[1])
-            });
-            var locations = {{ locations|safe}};
-            locations.forEach(function(element){
+                var start = {{ start }};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 11,
+                    center: new google.maps.LatLng(start[0], start[1])
+                });
+                var locations = {{ locations|safe }};
+                locations.forEach(function(element){
                     var marker = new google.maps.Marker({
                         position: new google.maps.LatLng(element[1], element[2]),
                         map: map,
                         title: element[0]
                     });
-            });
-        }
-         </script>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={{ key }}&callback=initMap&libraries=geometry&amp;sensor=false">
+                });
+            }
         </script>
         {% endblock %}
-    <div>
-        {% for brew in locations %}
-        <div><b>Name:</b> {{ brew.0 }} <b>Distance</b> {{ brew.4 }} <a href="{{ brew.3 }}">Website</a></div>
-        {% endfor %}
-</body>
+        <script type="text/javascript"
+                src="https://maps.googleapis.com/maps/api/js?key={{ key }}&callback=initMap&libraries=geometry&amp;sensor=false">
+        </script>
+
+
+        <div class="foot">
+            <font face="Broadway", size="2">
+                <p>© Craft Maps 2018</p>
+            </font>
+        </div>
+
+    </body>
 </html>
