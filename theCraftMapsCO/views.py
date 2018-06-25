@@ -53,6 +53,10 @@ def buildjson(data):
 # Routes Page
 def routes(request):
     starting_point = (53.2785327, -6.1899008)
+    # if 'start' in request.POST:
+    #     start_location = request.POST['start']
+    # else:
+    #     start_location = ('The Spire, North City, Dublin')
     breweries = Brewery_Table.objects.all()
     distance = []
     for location in breweries:

@@ -8,3 +8,5 @@ urlpatterns = [
     url(r'^about/$', views.about, name='about'),
     url(r'^contact/$', views.contact, name='contact')
 ]
+
+#url(r'^routes/(?P<start>\w+)/$', views.routes, name='routes'),
