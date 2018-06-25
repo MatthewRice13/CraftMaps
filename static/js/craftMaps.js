@@ -13,7 +13,7 @@ var img = "K:/UCD/sem 3/project/beermarkr.png"
 
 //breweries data
 var breweriesJson = Brewery_JSON;
-console.log(breweriesJson);
+console.log(breweriesJson[0].coords.lng);
 
 //document ready function
 $(document).ready(function(){
@@ -36,7 +36,6 @@ function populateBreweriesList(){
 		listBrew = "<li><input type='checkbox' name="+breweriesJson[i].coords.lng
 		    +" class='checkboxList' value="+ breweriesJson[i].coords.lat+">"
 		    + breweriesJson[i].name + "</li>"
-		console.log(listBrew);
 		$("#listOfBreweries").append(listBrew);
 	}
 }
@@ -45,7 +44,7 @@ function getLocation() {
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(showPosition);
 	} else {
-		console.log('error')//x.innerHTML = "Geolocation is not supported by this browser.";
+		console.log('error');
 	}
 }
 
@@ -80,13 +79,11 @@ function addMarker(props){
 		title: props.name,
 		map:map,
 	});
-
 	// Check for customicon
 	if(props.iconImage){
 		// Set icon image
 		marker.setIcon(props.iconImage);
 	}
-
 	// Check content
 	if(props.content){
 		marker.addListener('click', function(){
@@ -102,11 +99,8 @@ function addMarker(props){
 }
 
 function getDirections() {
-	//$("#map").empty();
 	$("#directionsPanel").empty();
-	//console.log('getDirections');
 	directionsDisplay = new google.maps.DirectionsRenderer();
-	//start = new google.maps.LatLng(directionsLatLng);
 	var directionsOptions = {
 		zoom:10,
 		center: startPoint
@@ -118,9 +112,8 @@ function getDirections() {
 }
 
 function calcRoute() {
-	//console.log("calcRoute");
-	start = startPoint;//directionsLatLng;
-	end = {lat:53.2989858,lng:-6.4627311};//"50 Rue Ste-Catherine O Montréal, QC H2X 1Z6";
+	start = startPoint;
+	end = {lat:53.2989858,lng:-6.4627311};
 	var request = {
 		origin:start,
 		destination:end,
@@ -134,11 +127,8 @@ function calcRoute() {
 }
 
 function getItenDirections() {
-	//$("#map").empty();
 	$("#directionsPanel").empty();
-	//console.log('getDirections');
 	directionsDisplay = new google.maps.DirectionsRenderer();
-	//start = new google.maps.LatLng(directionsLatLng);
 	var directionsOptions = {
 		zoom:10,
 		center: startPoint
@@ -150,15 +140,13 @@ function getItenDirections() {
 }
 
 function calcItenRoute() {
-	//console.log("calcRoute");
-	//var wayPt = [];
 	console.log(itenaryPoints.length);
 	for(i=0; i < itenaryPoints.length-1; i++){
 		wayPt.push({"location":{"lat":itenaryPoints[i].location.lat,"lng":itenaryPoints[i].location.lng},"stopover":true});
 	}
 	console.log(wayPt);
-	start = startPoint;//directionsLatLng;
-	end = {lat:itenaryPoints[itenaryPoints.length-1].location.lat,lng:itenaryPoints[itenaryPoints.length-1].location.lng}; //{lat:53.2989858,lng:-6.4627311};//"50 Rue Ste-Catherine O Montréal, QC H2X 1Z6";
+	start = startPoint;
+	end = {lat:itenaryPoints[itenaryPoints.length-1].location.lat,lng:itenaryPoints[itenaryPoints.length-1].location.lng};
 	var request = {
 		origin:start,
 		destination:end,
@@ -176,14 +164,10 @@ function makeItenary(){
 	wayPt = [];
 	itenaryPoints = [];
 	$('input[class="checkboxList"]:checked').each(function() {
-		var lati = parseFloat(this.value);//console.log(lati);
-		var longi = parseFloat(this.name);//console.log(longi);
+		var lati = parseFloat(this.value);
+		var longi = parseFloat(this.name);
 		itenaryPoints.push({"location":{"lat":lati,"lng":longi}});
-		//itenaryPoints.push({"location":{"lat":lati,"lng":longi},"stopover":true});
 		console.log(itenaryPoints);
-		//console.log(wayPt);
-		/*console.log(this.value);
-		console.log(this.name);*/
 	});
 	getItenDirections();
 }
@@ -192,10 +176,8 @@ function getCoords(address){
 	var startLng = 0.0;
 	var startLat = 0.0;
 	if(address == ""){
-		// default for spire tower
 		startLat = 53.349722;
 		startLng = -6.260278;
-		//console.log(startLat+' '+startLng);
 	}
 	else{
 		axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
@@ -205,12 +187,9 @@ function getCoords(address){
 			}
 		})
 		.then(function(response){
-			//console.log(response.data.status);
-			//console.log(response);
 			if(response.data.status === "OK"){
 				startLat = response.data.results["0"].geometry.location.lat;
 				startLng = response.data.results["0"].geometry.location.lng;
-				//console.log(startLat+' '+startLng);
 			}
 			else{
 				alert('Geocode was not successful for the following reason: ' + response.data.status);
