@@ -14,7 +14,6 @@ from math import sin, cos, sqrt, atan2, radians
 googleKey = "AIzaSyDFK8QRiUl8jx5YYQwDMQ31GMyXwXz-et8"
 gmaps = googlemaps.Client(key=googleKey)
 
-
 # Create your views here.
 ###########################################################
 # Home Page
@@ -25,7 +24,6 @@ def home(request):
         'key': googleKey
     }
     return render(request, 'homepage.html', context)
-
 
 # builds json for map
 def buildjson(data):
@@ -48,15 +46,14 @@ def buildjson(data):
         rtn_json.append(item)
     return simplejson.dumps(rtn_json, separators=(',', ':'))
 
-
 ################################################################
 # Routes Page
 def routes(request):
-    starting_point = (53.2785327, -6.1899008)
-    # if 'start' in request.POST:
-    #     start_location = request.POST['start']
+    # if request.method == 'POST' and request.POST.get('value') is not None:
+    #     starting_point = request.POST.get('value')
     # else:
-    #     start_location = ('The Spire, North City, Dublin')
+    #     starting_point = ('The Spire, North City, Dublin')
+    starting_point = (53.2785327, -6.1899008)
     breweries = Brewery_Table.objects.all()
     distance = []
     for location in breweries:
@@ -76,7 +73,6 @@ def routes(request):
                'key': googleKey
                }
     return render(request, 'routes.html', context)
-
 
 # Clean distance API response
 def get_distance(start, finish):
@@ -105,7 +101,6 @@ def get_distance(start, finish):
         print(err)
     return distance
 
-
 #########################################################
 # about page
 def about(request):
@@ -113,7 +108,6 @@ def about(request):
 
     }
     return render(request, 'about.html', context)
-
 
 #########################################################
 # contacts page
