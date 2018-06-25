@@ -9,7 +9,7 @@ var start;
 var end;
 var itenaryPoints = [];
 var wayPt = [];
-var img = "K:/UCD/sem 3/project/beermarkr.png"
+var img = "Images/beer_PNG.png"
 
 //breweries data
 var breweriesJson = Brewery_JSON;
