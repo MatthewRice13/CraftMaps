@@ -197,8 +197,9 @@ function getCoords(address){
 		//console.log(startLat+' '+startLng);
 		/* send cordinate to the service*/
 		//window.location =staticUrl+'routes/'+startLat+','+startLng;
-		var locCord= startLat+','+startLng;
-		postRequest(locCord);
+		//var locCord= startLat+','+startLng;
+		//postRequest(locCord);
+		postRequest(startLat,startLng)
 
 	}
 	else{
@@ -225,7 +226,8 @@ function getCoords(address){
 					//window.location ='';
 					//window.location =staticUrl+'routes/'+startLat+','+startLng;
 					var locCord= startLat+','+startLng;
-					postRequest(locCord);
+					//postRequest(locCord);
+					postRequest(startLat,startLng);
 
 				}
 				/*startLat = response.data.results["0"].geometry.location.lat;
@@ -254,12 +256,13 @@ function getCookie(name) {
 	}
 	return cookieValue;
 }
-function postRequest(params){
+function postRequest(lati,longi){
 	var csrftoken = getCookie('csrftoken');
 	var url = staticUrl+'routes/';
 	//var url = staticUrl+'contact/';
 	var postdata={
-		'value':params,
+		'value1':lati,
+		'value2':longi,
 		'csrfmiddlewaretoken': csrftoken
 	};
 	$.post(url,postdata,function(data,status){

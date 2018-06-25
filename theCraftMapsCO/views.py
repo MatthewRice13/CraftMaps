@@ -57,9 +57,9 @@ def routes(request):
     if request.method == 'POST' and request.POST.get('value') is not None:
         starting_point = request.POST.get('value')
     else:
-        starting_point = ('The Spire, North City, Dublin')
+        #starting_point = ('The Spire, North City, Dublin')
+        starting_point = (53.349722, -6.260278)
 
-    #starting_point = (53.2785327, -6.1899008)
     context = {'locations': buildJsonDistance(Brewery_Table.objects.all(), starting_point),
                'start': list(starting_point),
                'key': googleKey
