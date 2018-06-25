@@ -9,11 +9,11 @@ var start;
 var end;
 var itenaryPoints = [];
 var wayPt = [];
-var img = "K:/UCD/sem 3/project/beermarkr.png"
+var img = "Images/beer_PNG.png"
 
 //breweries data
 var breweriesJson = Brewery_JSON;
-console.log(breweriesJson[0].coords.lng);
+console.log(breweriesJson[0]);
 
 //document ready function
 $(document).ready(function(){
@@ -65,7 +65,7 @@ function initMap(){
 	map = new google.maps.Map(document.getElementById('map'), options);
 
 	// Loop through markers
-	for(var i = 0;i < breweriesJson.length;i++){
+	for(var i = 0; i < breweriesJson.length; i++){
 		// Add marker
 		addMarker(breweriesJson[i]);
 	}
@@ -75,9 +75,9 @@ function initMap(){
 // Add Marker Function
 function addMarker(props){
 	var marker = new google.maps.Marker({
-		position:props.coords,
+		position: props.coords,
 		title: props.name,
-		map:map,
+		map: map,
 	});
 	// Check for customicon
 	if(props.iconImage){
@@ -91,7 +91,7 @@ function addMarker(props){
 				infoWindow.close();
 			}
 			infoWindow = new google.maps.InfoWindow({
-				content:props.content
+				content: props.content
 			});
 			infoWindow.open(map, marker);
 		});
