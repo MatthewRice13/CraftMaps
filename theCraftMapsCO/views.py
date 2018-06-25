@@ -27,11 +27,14 @@ def home(request):
     return render(request, 'homepage.html', context)
 
 
+# builds json for map
 def buildjson(data):
     rtn_json = []
     count = 0
+    start = "<h1 class='hi'>"
+    end = "</h1>"
     for d in data:
-        if count > 10:
+        if count > 17:
             break
         count = count+1
         item = {
@@ -40,7 +43,7 @@ def buildjson(data):
                 'lat': float(d.Brewery_Longitude),
                 'lng': float(d.Brewery_Latitude)
             },
-            'Content': "<h1>"+d.Brewery_Type+"</h1>"
+            'Content': start+ d.Brewery_Name +end+start+ d.Brewery_Type +end+start+ d.Brewery_URL +end
         }
         rtn_json.append(item)
     return simplejson.dumps(rtn_json, separators=(',', ':'))
