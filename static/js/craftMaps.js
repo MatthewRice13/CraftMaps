@@ -9,6 +9,7 @@ var start;
 var end;
 var itenaryPoints = [];
 var wayPt = [];
+var img = "Images/beer_PNG.png"
 //start point
 var startpoint;
 //staticurl
@@ -69,7 +70,7 @@ function initMap(){
 	// Map options
 	var options = {
 		zoom:9,
-		//center: new google.maps.LatLng(currentLat, currentLng) 
+		//center: new google.maps.LatLng(currentLat, currentLng)
 		//setting center as the spire tower
 		center: new google.maps.LatLng(53.349722, -6.260278)
 	}
@@ -87,9 +88,9 @@ function initMap(){
 // Add Marker Function
 function addMarker(props){
 	var marker = new google.maps.Marker({
-		position:props.coords,
+		position: props.coords,
 		title: props.name,
-		map:map,
+		map: map,
 	});
 	// Check for customicon
 	if(props.iconImage){
@@ -103,7 +104,7 @@ function addMarker(props){
 				infoWindow.close();
 			}
 			infoWindow = new google.maps.InfoWindow({
-				content:props.Content
+				content: props.Content
 			});
 			infoWindow.open(map, marker);
 		});
@@ -185,8 +186,8 @@ function makeItenary(){
 }
 
 function getCoords(address){
-	var startLng = '';
-	var startLat = '';
+	var startLng = 0.0;
+	var startLat = 0.0;
 	if(address == ""){
 		// default for spire tower
 		startLat = 53.349722;
@@ -198,7 +199,7 @@ function getCoords(address){
 		//window.location =staticUrl+'routes/'+startLat+','+startLng;
 		var locCord= startLat+','+startLng;
 		postRequest(locCord);
-		
+
 	}
 	else{
 		axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
@@ -225,7 +226,7 @@ function getCoords(address){
 					//window.location =staticUrl+'routes/'+startLat+','+startLng;
 					var locCord= startLat+','+startLng;
 					postRequest(locCord);
-					
+
 				}
 				/*startLat = response.data.results["0"].geometry.location.lat;
 				startLng = response.data.results["0"].geometry.location.lng;

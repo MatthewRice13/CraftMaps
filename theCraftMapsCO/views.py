@@ -8,7 +8,9 @@ import simplejson
 
 from datetime import datetime
 from operator import itemgetter
+
 from math import sin, cos, sqrt, atan2, radians
+import numpy as np
 
 # Support Methods #
 googleKey = "AIzaSyDFK8QRiUl8jx5YYQwDMQ31GMyXwXz-et8"
@@ -27,9 +29,12 @@ def home(request):
     return render(request, 'homepage.html', context)
 
 
+# builds json for map
 def buildjson(data):
     rtn_json = []
     count = 0
+    start = "<h1 class='hi'>"
+    end = "</h1>"
     for d in data:
         if count > 17:
             break
@@ -53,26 +58,51 @@ def routes(request):
         starting_point = request.POST.get('value')
     else:
         starting_point = ('The Spire, North City, Dublin')
+
     #starting_point = (53.2785327, -6.1899008)
-    breweries = Brewery_Table.objects.all()
-    distance = []
-    for location in breweries:
-        latlng = (
-            (float(simplejson.dumps(location.Brewery_Longitude))),
-            (float(simplejson.dumps(location.Brewery_Latitude)))
-        )
-        if float(get_distance(starting_point, latlng)) < 20:
-            distance.append([location.Brewery_Name,
-                             simplejson.dumps(float(location.Brewery_Longitude)),
-                             simplejson.dumps(float(location.Brewery_Latitude)),
-                             location.Brewery_URL,
-                             float(get_distance(starting_point, latlng))])
-    distance = sorted(distance, key=itemgetter(4))
-    context = {'locations': distance[:5],
+    context = {'locations': buildJsonDistance(Brewery_Table.objects.all(), starting_point),
                'start': list(starting_point),
                'key': googleKey
                }
     return render(request, 'routes.html', context)
+
+
+def buildJsonDistance(data, starting):
+    start = "<h1 class='hi'>"
+    end = "</h1>"
+
+    breweries = Brewery_Table.objects.all()
+    distance_array = []
+    countA = 0
+    for dat in breweries:
+        distance_array.append([])
+        nam = dat.Brewery_Name
+        dst = get_distance(starting, (dat.Brewery_Longitude, dat.Brewery_Latitude))
+        distance_array[countA].append(nam)
+        distance_array[countA].append(dst)
+        countA = countA+1
+
+    distance_array = sorted(distance_array, key=lambda l:l[1], reverse=False)[:5]
+
+    rtn_json = []
+    countB = 0
+    for d in data:
+        while countB < len(distance_array):
+
+            if d.Brewery_Name in distance_array[countB][0]:
+                item = {
+                    'name': d.Brewery_Name,
+                    'coords': {
+                        'lat': float(d.Brewery_Longitude),
+                        'lng': float(d.Brewery_Latitude)
+                    },
+                    'Content': start+d.Brewery_Name+end+start+d.Brewery_Type+end+start+d.Brewery_URL+end
+                }
+                rtn_json.append(item)
+
+            countB = countB + 1
+
+    return simplejson.dumps(rtn_json, separators=(',', ':'))
 
 
 # Clean distance API response
