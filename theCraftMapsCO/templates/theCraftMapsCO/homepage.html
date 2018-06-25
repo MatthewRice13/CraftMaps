@@ -9,12 +9,13 @@
 
     {% load static %}
     <script>
-        var brewName = "{{ brewery.Brewery_Name|safe|escape }}";
+/*        var brewName = "{{ brewery.Brewery_Name|safe|escape }}";
         var brewReg = "{{ brewery.Brewery_Region|safe|escape }}";
         var brewLong = {{ brewery.Brewery_Longitude }};
         var brewLati = {{ brewery.Brewery_Latitude }};
         var brewType = "{{ brewery.Brewery_Type|safe }}";
-        var brewURL = "{{ brewery.Brewery_URL|safe|escape }}";
+        var brewURL;
+        brewURL = "{{ brewery.Brewery_URL|safe|escape }}".replace("\n", "");*/
         var Brewery_JSON = {{ brewery_json|safe }};
     </script>
 

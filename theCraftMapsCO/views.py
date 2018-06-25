@@ -31,7 +31,7 @@ def buildjson(data):
     rtn_json = []
     count = 0
     for d in data:
-        if count > 10:
+        if count > 17:
             break
         count = count+1
         item = {
@@ -50,6 +50,8 @@ def buildjson(data):
 # Routes Page
 def routes(request):
     starting_point = (53.2785327, -6.1899008)
+    #start.split(",")
+    #starting_point = (start[0], start[1])
     breweries = Brewery_Table.objects.all()
     distance = []
     for location in breweries:
