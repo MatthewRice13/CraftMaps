@@ -63,9 +63,6 @@ def routes(request):
 
 
 def buildJsonDistance(data, starting):
-    start = "<h1 class='hi'>"
-    end = "</h1>"
-
     breweries = Brewery_Table.objects.all()
     distance_array = []
     countA = 0
@@ -90,7 +87,7 @@ def buildJsonDistance(data, starting):
                         'lat': float(d.Brewery_Longitude),
                         'lng': float(d.Brewery_Latitude)
                     },
-                    'Content': start+d.Brewery_Name+end+start+d.Brewery_Type+end+start+d.Brewery_URL+end
+                    'Content': '<div class="infoDiv"><div class="infoHeader"><label class="headerLabel">'+d.Brewery_Name+'</label></div><div class="infoBody"><label class="bodyLabel">'+d.Brewery_Type+'</label></div></div>'
                 }
                 rtn_json.append(item)
 
