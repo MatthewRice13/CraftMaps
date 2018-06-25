@@ -57,21 +57,7 @@ def routes(request):
     #     start_location = request.POST['start']
     # else:
     #     start_location = ('The Spire, North City, Dublin')
-    breweries = Brewery_Table.objects.all()
-    distance = []
-    for location in breweries:
-        latlng = (
-            (float(simplejson.dumps(location.Brewery_Longitude))),
-            (float(simplejson.dumps(location.Brewery_Latitude)))
-        )
-        if float(get_distance(starting_point, latlng)) < 20:
-            distance.append([location.Brewery_Name,
-                             simplejson.dumps(float(location.Brewery_Longitude)),
-                             simplejson.dumps(float(location.Brewery_Latitude)),
-                             location.Brewery_URL,
-                             float(get_distance(starting_point, latlng))])
-    distance = sorted(distance, key=itemgetter(4))
-    context = {'locations': distance[:5],
+    context = {'locations': buildjson(Brewery_Table.objects.all()),
                'start': list(starting_point),
                'key': googleKey
                }

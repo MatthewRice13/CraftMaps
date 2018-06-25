@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e766f725-cdee-4922-a93e-b02772476c43" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/beer_PNG.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/beer_PNG.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/homepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theCraftMapsCO/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/theCraftMapsCO/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,29 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="homepage.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="homepage.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/homepage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="70" column="72" selection-start-line="70" selection-start-column="72" selection-end-line="70" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/about.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="65" column="65" selection-start-line="65" selection-start-column="65" selection-end-line="65" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="craftMaps.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/craftMaps.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1275">
-              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+            <state relative-caret-position="221">
+              <caret line="52" column="64" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -46,8 +28,17 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theCraftMapsCO/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+            <state relative-caret-position="816">
+              <caret line="58" column="60" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/theCraftMapsCO/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -67,13 +58,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/theCraftMapsCO/models.py" />
-        <option value="$PROJECT_DIR$/theCraftMapsCO/views.py" />
         <option value="$PROJECT_DIR$/static/css/new-age.css" />
         <option value="$PROJECT_DIR$/static/css/new-age.min.css" />
         <option value="$PROJECT_DIR$/static/js/craftMaps.js" />
         <option value="$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/contact.html" />
-        <option value="$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/homepage.html" />
         <option value="$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/about.html" />
+        <option value="$PROJECT_DIR$/theCraftMapsCO/views.py" />
+        <option value="$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/homepage.html" />
       </list>
     </option>
   </component>
@@ -94,11 +85,6 @@
             <path>
               <item name="CraftMaps" type="b2602c69:ProjectViewProjectNode" />
               <item name="CraftMaps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CraftMaps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CraftMaps" type="462c0819:PsiDirectoryNode" />
-              <item name="Images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CraftMaps" type="b2602c69:ProjectViewProjectNode" />
@@ -150,6 +136,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\CraftMaps\CraftMaps\static\img" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -230,18 +222,25 @@
       <option name="project" value="LOCAL" />
       <updated>1529936197926</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Commit 25/06/2018@15:30&#10;&#10;- fixed contact mistake">
+      <created>1529936911785</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1529936911785</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16764276" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24524158" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.6266472" side_tool="true" weight="0.24960254" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" sideWeight="0.49926794" visible="true" weight="0.10015898" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.37335286" weight="0.24960254" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49926794" weight="0.10015898" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.37335286" visible="true" weight="0.10333864" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -289,7 +288,8 @@
     <MESSAGE value="Commit 24/06/2018@21:30&#10;&#10;- Json fixed&#10;- map data pushed" />
     <MESSAGE value="Commit 25/06/2018@14:45&#10;&#10;- added image" />
     <MESSAGE value="Commit 25/06/2018@15:15&#10;&#10;- added image&#10;- HTML changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 25/06/2018@15:15&#10;&#10;- added image&#10;- HTML changed" />
+    <MESSAGE value="Commit 25/06/2018@15:30&#10;&#10;- fixed contact mistake" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 25/06/2018@15:30&#10;&#10;- fixed contact mistake" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -548,13 +548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theCraftMapsCO/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CraftMaps/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -582,22 +575,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theCraftMapsCO/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/craftMaps.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/craftMaps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1275">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/contact.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -606,17 +585,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/homepage.html">
+    <entry file="file://$PROJECT_DIR$/static/js/craftMaps.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="70" column="72" selection-start-line="70" selection-start-column="72" selection-end-line="70" selection-end-column="72" />
+        <state relative-caret-position="153">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="1105">
           <caret line="65" column="65" selection-start-line="65" selection-start-column="65" selection-end-line="65" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/theCraftMapsCO/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/theCraftMapsCO/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="58" column="60" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/homepage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="52" column="64" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
         </state>
       </provider>
     </entry>
