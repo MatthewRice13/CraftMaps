@@ -10,403 +10,133 @@
 
     {% load static %}
     <script>
+        var starting = {{ start|safe }}
         var Brewery_JSON = {{ locations|safe }};
-
     </script>
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href='{% static "vendor/bootstrap/css/bootstrap.min.css" %}'/>
+    <!-- google api -->
+    <script src="https://maps.googleapis.com/maps/api/js?key={{key}}"></script>
 
-    <!-- Custom fonts for this template -->
+    <!-- Java Script files -->
+    <script src='{% static "js/routes_js_file.js" %}'></script>
+    <script src='{% static "js/new-age.min.js" %}'></script>
+    <script src='{% static "js/jquery-3.3.1.min.js" %}'></script>
+    <script src='{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
+    <script src='{% static "vendor/jquery-easing/jquery.easing.min.js" %}'></script>
+
+    <!-- Custom style -->
+    <link rel="stylesheet" href='{% static "vendor/bootstrap/css/bootstrap.min.css" %}'/>
     <link rel="stylesheet" href='{% static "vendor/font-awesome/css/font-awesome.min.css" %}'/>
     <link rel="stylesheet" href='{% static "vendor/simple-line-icons/css/simple-line-icons.css" %}'/>
+    <link rel="stylesheet" href='{% static "css/new-age.css" %}'/>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" href='{% static "css/new-age.css" %}'/>
 </head>
 
 <body id="page-top">
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-        <img src='{% static "img/beer_PNG.png" %}' width="28px" height="40px"/>
-        <a class="navbar-brand js-scroll-trigger" href="index.html"><font face="Goudy Stout"> CRAFT MAPS</font></a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-            Menu
-            <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<header class="masthead">
-    <div class="location-container">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
-            <a href="index.html">
-                <button id="getDirecButton" class="btn btn-outline" type="button">
-                    Go back
-                </button>
-            </a>
-
-            <button id="getItenDirecButton" class="btn btn-outline" type="button" onclick="displayHidden()">
-                Direct Me to all
+            <img src='{% static "img/beer_PNG.png" %}' width="28px" height="40px"/>
+            <a class="navbar-brand js-scroll-trigger" href="index.html"><font face="Goudy Stout"> CRAFT MAPS</font></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation"> Menu
+                <i class="fa fa-bars"></i>
             </button>
-
-            <div id="checkboxes">
-                <div class="checkboxes">
-                    <small> Select the breweries you would like to visit and we guide you to them!
-                        <br>For additional
-                            info about each brewery click each marker on the map below. When ready click the Direct me to
-                            All button.
-                        </br>
-                    </small>
-                    <font face="Muli", size="3"/>
-                </div>
-                <ul id="listOfBreweries">
-
-                    <!-- <li><input type="checkbox"> checkbox 1</li>
-                    <li><input type="checkbox"> checkbox 2</li>
-                    <li><input type="checkbox"> checkbox 3</li>
-                    <li><input type="checkbox"> checkbox 4</li> -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                    </li>
                 </ul>
             </div>
-
         </div>
-    </div>
+    </nav>
 
+    <header class="masthead">
+        <div class="location-container">
+            <div class="container">
+                <a href="index.html">
+                    <button id="getDirecButton" class="btn btn-outline" type="button">
+                        Go back
+                    </button>
+                </a>
 
-    <div class="map-container">
-        <div id="map"></div>
-    </div>
+                <button id="getItenDirecButton" class="btn btn-outline" type="button" onclick="displayHidden()">
+                    Direct Me to all
+                </button>
 
-    <div id="directionsPanel" style="display:none;"></div>
+                <div id="checkboxes">
+                    <div class="checkboxes">
+                        <small> Select the breweries you would like to visit and we guide you to them!
+                            <br>For additional
+                                info about each brewery click each marker on the map below. When ready click the Direct me to
+                                All button.
+                            </br>
+                        </small>
+                        <font face="Muli", size="3"/>
+                    </div>
+                    <ul id="listOfBreweries"/>
+                </div>
 
-    <section class="contact bg-primary" id="contact">
-        <div class="container">
-            <h2>We
-                <i class="fa fa-heart"></i>
-                new friends!</h2>
-            <ul class="list-inline list-social">
-                <li class="list-inline-item social-twitter">
-                    <a href="#">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item social-facebook">
-                    <a href="#">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item social-google-plus">
-                    <a href="#">
-                        <i class="fa fa-instagram"></i>
-                    </a>
-                </li>
-            </ul>
+            </div>
         </div>
-    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; Craft Maps 2018</p>
-            <ul class="list-inline">
-                <li class="list-inline-item">
-                    <a href="#">Privacy</a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#">Terms</a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="#">FAQ</a>
-                </li>
-            </ul>
+        <div class="map-container">
+            <div id="map"></div>
         </div>
-    </footer>
-</header>
 
+        <div id="directionsPanel" style="display:none;"></div>
 
-<!-- Bootstrap core JavaScript -->
-    <script src='{% static "js/jquery-3.3.1.min.js" %}'></script>
-    <script src='{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
+        <section class="contact bg-primary" id="contact">
+            <div class="container">
+                <h2>We
+                    <i class="fa fa-heart"></i>
+                    new friends!</h2>
+                <ul class="list-inline list-social">
+                    <li class="list-inline-item social-twitter">
+                        <a href="https://twitter.com/theCraftMaps1">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item social-facebook">
+                        <a href="https://www.facebook.com/thecraft.mapsco.1">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item social-google-plus">
+                        <a href="https://www.instagram.com/thecraftmapsco/">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-    <!-- Plugin JavaScript -->
-    <script src='{% static "vendor/jquery-easing/jquery.easing.min.js" %}'></script>
-
-    <!-- Custom scripts for this template -->
-    <script src='{% static "js/new-age.min.js" %}'></script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?language=en-GB&region=IE"></script>
-
-
-
-
-          <script>
-			var infoWindow;
-			var currentLat = 0.0;
-			var currentLng = 0.0;
-			var map;
-			var directionsDisplay;
-			var directionsService = new google.maps.DirectionsService();
-			var directionsMap;
-			var start;
-			var end;
-			var itenaryPoints = [];
-			var wayPt = [];
-			var img = "K:/UCD/sem 3/project/beermarkr.png"
-			//breweries data
-			var breweriesJson = [
-				{
-				  name: 'Wood Key Brewing',
-				  coords:{lat:53.2989858,lng:-6.2603187},
-				  //iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-				  //iconImage: img,
-				  content:"<h1 class='hi'>Wood Key Brewing</h1>"
-
-				},
-				{
-				  name: 'Rascals Brewing',
-				  coords:{lat:53.2989858,lng:-6.4627311},
-				 // iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-				  content:"<h1 class='hi'><Rascals Brewing</h1>"
-
-				},
-				{
-				  name: 'Stone Barrel Brewing',
-				  coords:{lat:53.3311481,lng:-6.2603187},
-				 // iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-				  content:"<h1 class='hi'>Stone Barrel Brewing</h1>"
-
-				}
-			];
-			//document ready function
-			$(document).ready(function(){
-				getLocation();
-				//populateBreweriesList();
-				$("#getDirecButton").on('click', function(){
-					//console.log("clicked");
-					getDirections();
-				});
-				$("#getItenDirecButton").on('click', function(){
-					//console.log("clicked");
-					//getItenDirections();
-					makeItenary();
-				});
-
-				//initMap();
-			});//ready end
-
-
-			function populateBreweriesList(){
-			var listBrew = '';
-				for(i=0; i < breweriesJson.length; i++){
-					listBrew = "<li><input type='checkbox' name="+breweriesJson[i].coords.lng+" class='checkboxList' value="+ breweriesJson[i].coords.lat+">" + breweriesJson[i].name + "</li>"
-					//console.log(listBrew);
-					$("#listOfBreweries").append(listBrew);
-				}
-			}
-
-			function displayHidden() {
-				var x = document.getElementById("directionsPanel");
-				if (x.style.display === "none") {
-				x.style.display = "block";
-				}
-			}
-
-
-			function getLocation() {
-				if (navigator.geolocation) {
-					navigator.geolocation.getCurrentPosition(showPosition);
-				} else {
-					console.log('error')//x.innerHTML = "Geolocation is not supported by this browser.";
-				}
-				//initMap();
-			}
-			function showPosition(position) {
-				//console.log(position.coords.latitude);
-				currentLat = position.coords.latitude;
-				//console.log(position.coords.longitude);
-				currentLng = position.coords.longitude;
-				/*x.innerHTML = "Latitude: " + position.coords.latitude +
-				"<br>Longitude: " + position.coords.longitude;*/
-				startPoint = new google.maps.LatLng(currentLat, currentLng);
-				initMap();
-			}
-			function initMap(){
-				// Map options
-				var options = {
-					zoom:10,
-					//center:{lat:53.3498,lng:-6.2603}
-					//center:{lat:currentLat,lng:currentLng}
-					center: new google.maps.LatLng(currentLat, currentLng)
-				}
-
-				// New map
-				//var map = new google.maps.Map(document.getElementById('map'), options);
-				map = new google.maps.Map(document.getElementById('map'), options);
-
-				// Listen for click on map
-				/*google.maps.event.addListener(map, 'click', function(event){
-					// Add
-
-					addMarker({coords:event.latLng});
-				});*/
-
-
-				// Loop through markers
-				for(var i = 0;i < breweriesJson.length;i++){
-					// Add marker
-					addMarker(breweriesJson[i]);
-				}
-
-				// Add Marker Function
-				function addMarker(props){
-					var marker = new google.maps.Marker({
-						position:props.coords,
-						title: props.name,
-						map:map,
-						//icon:props.iconImage
-					});
-
-					// Check for customicon
-					if(props.iconImage){
-						// Set icon image
-						marker.setIcon(props.iconImage);
-					}
-
-					// Check content
-					if(props.content){
-
-
-						marker.addListener('click', function(){
-							if(typeof infoWindow != 'undefined'){
-								infoWindow.close();
-							}
-							infoWindow = new google.maps.InfoWindow({
-								content:props.content
-							});
-							infoWindow.open(map, marker);
-						});
-					}
-				}
-				populateBreweriesList();
-			}
-			function getDirections() {
-				//$("#map").empty();
-				$("#directionsPanel").empty();
-				//console.log('getDirections');
-				directionsDisplay = new google.maps.DirectionsRenderer();
-				//start = new google.maps.LatLng(directionsLatLng);
-				var directionsOptions = {
-					zoom:10,
-					center: startPoint
-				}
-				directionsMap = new google.maps.Map(document.getElementById('map'), directionsOptions);
-				directionsDisplay.setMap(directionsMap);
-				directionsDisplay.setPanel(document.getElementById("directionsPanel"));
-				calcRoute();
-			}
-
-			function calcRoute() {
-				//console.log("calcRoute");
-				start = startPoint;//directionsLatLng;
-				end = {lat:53.2989858,lng:-6.4627311};//"50 Rue Ste-Catherine O Montréal, QC H2X 1Z6";
-				var request = {
-					origin:start,
-					destination:end,
-					travelMode: google.maps.TravelMode.TRANSIT
-				};
-				directionsService.route(request, function(result, status) {
-					if (status == google.maps.DirectionsStatus.OK) {
-					directionsDisplay.setDirections(result);
-					}
-				});
-			}
-
-
-			function getItenDirections() {
-				//$("#map").empty();
-				$("#directionsPanel").empty();
-				//console.log('getDirections');
-				directionsDisplay = new google.maps.DirectionsRenderer();
-				//start = new google.maps.LatLng(directionsLatLng);
-				var directionsOptions = {
-					zoom:10,
-					center: startPoint
-				}
-				directionsMap = new google.maps.Map(document.getElementById('map'), directionsOptions);
-				directionsDisplay.setMap(directionsMap);
-				directionsDisplay.setPanel(document.getElementById("directionsPanel"));
-				calcItenRoute();
-			}
-			//var wayPt = [];
-			/*for(i=0; i < itenaryPoints.length-1; i++){
-				wayPt.push({"location":{"lat":itenaryPoints[i].location.lat,"lng":itenaryPoints[i].location.lng},"stopover":true});
-			}*/
-			//console.log(wayPt);
-
-			//this is not used because it includes the last location as well
-			/*for (wypoints in breweriesJson){//console.log(breweriesJson[wypoints].coords.lat);
-				wayPt.push({"location":{"lat":breweriesJson[wypoints].coords.lat,"lng":breweriesJson[wypoints].coords.lng},"stopover":true});
-				//wayPt.push({"location":{"lat":wypoints.coords.lat,"lng":wypoints.coords.lng},"stopover":true});
-			}*/
-			//var wayPoint = [{"location":{"lat":53.2989858,"lng":-6.2603187},"stopover":true},{"location":{"lat":53.3311481,"lng":-6.2603187},"stopover":true}];
-			function calcItenRoute() {
-				//console.log("calcRoute");
-				//var wayPt = [];
-				console.log(itenaryPoints.length);
-				for(i=0; i < itenaryPoints.length-1; i++){
-					wayPt.push({"location":{"lat":itenaryPoints[i].location.lat,"lng":itenaryPoints[i].location.lng},"stopover":true});
-				}
-				console.log(wayPt);
-				start = startPoint;//directionsLatLng;
-				end = {lat:itenaryPoints[itenaryPoints.length-1].location.lat,lng:itenaryPoints[itenaryPoints.length-1].location.lng}; //{lat:53.2989858,lng:-6.4627311};//"50 Rue Ste-Catherine O Montréal, QC H2X 1Z6";
-				var request = {
-					origin:start,
-					destination:end,
-					waypoints: wayPt,
-					travelMode: google.maps.TravelMode.DRIVING
-				};
-				directionsService.route(request, function(result, status) {
-					if (status == google.maps.DirectionsStatus.OK) {
-					directionsDisplay.setDirections(result);
-					}
-				});
-			}
-
-			function makeItenary(){
-				wayPt = [];
-				itenaryPoints = [];
-				$('input[class="checkboxList"]:checked').each(function() {
-					var lati = parseFloat(this.value);//console.log(lati);
-					var longi = parseFloat(this.name);//console.log(longi);
-					itenaryPoints.push({"location":{"lat":lati,"lng":longi}});
-					//itenaryPoints.push({"location":{"lat":lati,"lng":longi},"stopover":true});
-					console.log(itenaryPoints);
-					//console.log(wayPt);
-					/*console.log(this.value);
-					console.log(this.name);*/
-				});
-				getItenDirections();
-			}
-
-		</script>
+        <footer>
+            <div class="container">
+                <p>&copy; Craft Maps 2018</p>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#">Privacy</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">Terms</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </header>
 </body>
 </html>

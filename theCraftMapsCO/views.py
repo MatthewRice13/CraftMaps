@@ -56,7 +56,7 @@ def buildjson(data):
 def routes(request):
     starting_point = (53.2785327, -6.1899008)
     context = {'locations': buildJsonDistance(Brewery_Table.objects.all(), starting_point),
-               'start': list(starting_point),
+               'start': starting_point,
                'key': googleKey
                }
     return render(request, 'routes.html', context)
@@ -83,7 +83,6 @@ def buildJsonDistance(data, starting):
     countB = 0
     for d in data:
         while countB < len(distance_array):
-
             if d.Brewery_Name in distance_array[countB][0]:
                 item = {
                     'name': d.Brewery_Name,

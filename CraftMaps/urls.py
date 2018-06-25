@@ -23,8 +23,7 @@ urlpatterns = [
     url(r'^', include('theCraftMapsCO.urls')),
     url(r'^home/', include('theCraftMapsCO.urls')),
     url(r'^routes/', include('theCraftMapsCO.urls')),
-    url(r'^about/', include('theCraftMapsCO.urls')),
-    url(r'^contact/', include('theCraftMapsCO.urls')),
+    url(r'^about/', include('theCraftMapsCO.urls'))
 ]
 
 if settings.DEBUG:
