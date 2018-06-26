@@ -5,6 +5,7 @@ from django.core import serializers
 from .models import Brewery_Table
 import googlemaps
 import simplejson
+import pandas as pd
 
 from datetime import datetime
 from operator import itemgetter
@@ -54,53 +55,44 @@ def buildjson(data):
 ################################################################
 # Routes Page
 def routes(request):
-    if request.method == 'POST' and request.POST.get('value') is not None:
-        starting_point = request.POST.get('value')
+    if 'value1' in request.method:
+        lat = float(request.POST['value1'])
+        lng = float(request.POST['value2'])
+        starting_point = (lat, lng)
     else:
-        #starting_point = ('The Spire, North City, Dublin')
-        starting_point = (53.349722, -6.260278)
+        starting_point = (53.3256826, -6.2249631)
 
-    context = {'locations': buildJsonDistance(Brewery_Table.objects.all(), starting_point),
+    context = {'locations': builddistjson(Brewery_Table.objects.all(), starting_point),
                'start': list(starting_point),
                'key': googleKey
                }
     return render(request, 'routes.html', context)
 
 
-def buildJsonDistance(data, starting):
-    start = "<h1 class='hi'>"
-    end = "</h1>"
-
-    breweries = Brewery_Table.objects.all()
-    distance_array = []
-    countA = 0
+def builddistjson(mysqldata, starting):
+    breweries = mysqldata
+    data = []
+    df = pd.DataFrame(data, columns=['Name', 'Distance'])
     for dat in breweries:
-        distance_array.append([])
         nam = dat.Brewery_Name
         dst = get_distance(starting, (dat.Brewery_Longitude, dat.Brewery_Latitude))
-        distance_array[countA].append(nam)
-        distance_array[countA].append(dst)
-        countA = countA+1
+        df = df.append(pd.DataFrame([[nam, dst]], columns=['Name', 'Distance']))
 
-    distance_array = sorted(distance_array, key=lambda l:l[1], reverse=False)[:5]
+    df = df.sort_values('Distance')
+    subset = df.loc[:, 'Name']
 
     rtn_json = []
-    countB = 0
-    for d in data:
-        while countB < len(distance_array):
-
-            if d.Brewery_Name in distance_array[countB][0]:
-                item = {
-                    'name': d.Brewery_Name,
-                    'coords': {
-                        'lat': float(d.Brewery_Longitude),
-                        'lng': float(d.Brewery_Latitude)
-                    },
-                    'Content': start+d.Brewery_Name+end+start+d.Brewery_Type+end+start+d.Brewery_URL+end
-                }
-                rtn_json.append(item)
-
-            countB = countB + 1
+    for d in mysqldata:
+        if d.Brewery_Name in subset.values[:5]:
+            item = {
+                'name': d.Brewery_Name,
+                'coords': {
+                    'lat': float(d.Brewery_Longitude),
+                    'lng': float(d.Brewery_Latitude)
+                },
+                'Content': '<div class="infoDiv"><div class="infoHeader"><label class="headerLabel">'+d.Brewery_Name+'</label></div><div class="infoBody"><label class="bodyLabel">'+d.Brewery_Type+'</label></div><div class="infoFooter"><button onClick="getDirections('+str(d.Brewery_Longitude)+','+str(d.Brewery_Latitude)+');">See my Directions</button></div></div>'
+            }
+            rtn_json.append(item)
 
     return simplejson.dumps(rtn_json, separators=(',', ':'))
 
