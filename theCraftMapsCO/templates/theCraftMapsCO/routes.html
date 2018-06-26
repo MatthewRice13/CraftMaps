@@ -10,8 +10,8 @@
 
     {% load static %}
     <script>
-        var startlat = {{ start.0 }};
-        var startlng = {{ start.1 }};
+        var latstart = {{ start.0 }};
+        var lngstart = {{ start.1 }};
         var Brewery_JSON = {{ locations|safe }};
 
     </script>
@@ -64,7 +64,7 @@
 <header class="masthead">
     <div class="location-container">
         <div class="container">
-            <a href="index.html">
+            <a href="/home">
                 <button id="getDirecButton" class="btn btn-outline" type="button">
                     Go back
                 </button>
@@ -74,7 +74,7 @@
                 Direct Me to all
             </button> -->
 
-            <div id="checkboxes">
+            <!-- <div id="checkboxes">
                 <div class="checkboxes">
                     <small> Select the breweries you would like to visit and we guide you to them!
                         <br>For additional
@@ -90,8 +90,8 @@
                     <li><input type="checkbox"> checkbox 2</li>
                     <li><input type="checkbox"> checkbox 3</li>
                     <li><input type="checkbox"> checkbox 4</li> -->
-                </ul>
-            </div>
+               <!-- </ul>
+            </div> -->
 
         </div>
     </div>
@@ -110,17 +110,17 @@
                 new friends!</h2>
             <ul class="list-inline list-social">
                 <li class="list-inline-item social-twitter">
-                    <a href="#">
+                    <a href="https://twitter.com/theCraftMaps1" target="_blank">
                         <i class="fa fa-twitter"></i>
                     </a>
                 </li>
                 <li class="list-inline-item social-facebook">
-                    <a href="#">
+                    <a href="https://www.facebook.com/thecraft.mapsco.1" target="_blank">
                         <i class="fa fa-facebook"></i>
                     </a>
                 </li>
                 <li class="list-inline-item social-google-plus">
-                    <a href="#">
+                    <a href="https://www.instagram.com/thecraftmapsco/" target="_blank">
                         <i class="fa fa-instagram"></i>
                     </a>
                 </li>

@@ -55,10 +55,15 @@ def buildjson(data):
 ################################################################
 # Routes Page
 def routes(request):
-    if 'value1' in request.method:
-        lat = float(request.POST['value1'])
-        lng = float(request.POST['value2'])
-        starting_point = (lat, lng)
+    if request.method == 'POST':
+        print_test(str(request.POST.get('value1')) + "," + str(request.POST.get('value2')))
+        lat = request.POST.get('value1')
+        lng = request.POST.get('value2')
+        starting_point = (float(lat), float(lng))
+    elif request.method == 'GET':
+        start = read_data('data_dump.txt')
+        start = start.split(",")
+        starting_point = (float(start[0]), float(start[1]))
     else:
         starting_point = (53.3256826, -6.2249631)
 
@@ -141,3 +146,14 @@ def contact(request):
 
     }
     return render(request, 'contact.html', context)
+
+def print_test(test_data):
+    with open("data_dump.txt", "w") as text_file:
+        text_file.write(test_data)
+        text_file.close()
+
+def read_data(file):
+    with open(file, 'r') as text_file:
+        data = text_file.read()
+        text_file.close()
+        return data

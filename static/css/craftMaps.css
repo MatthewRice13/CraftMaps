@@ -1,3 +1,6 @@
 .headerLabel,.bodyLabel{
 	color:black;
 }
+#location-container{
+	top:-25px
+}

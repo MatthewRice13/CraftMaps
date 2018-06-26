@@ -185,7 +185,7 @@ function addMarker(props){
 	getItenDirections();
 }*/
 
-function getCoords(address){
+function getCoords(address){console.log(address)
 	var startLng = 0.0;
 	var startLat = 0.0;
 	if(address == ""){
@@ -210,7 +210,7 @@ function getCoords(address){
 			}
 		})
 		.then(function(response){
-			console.log(response);
+			//console.log(response);
 			//console.log(response.data.status);
 			if(response.data.status === "OK"){
 				if(response.data.results["0"].address_components[3].long_name != "Ireland"){
@@ -264,14 +264,23 @@ function postRequest(lati,longi){
 		'value2':longi,
 		'csrfmiddlewaretoken': csrftoken
 	};
-	$.post(url,postdata,function(data,status){
-		
+	
+	$.ajax({
+		url: url,
+		type: "POST",
+		data: postdata,
+		success: function(data) {
+			window.location = url;
+		}
+	});
+	/*$.post(url,postdata,function(data,status){
+		//console.log(url);
 		if(status == 'success')
 		{
-			//window.location = staticUrl+'routes/';
+			window.location = staticUrl+'routes/';
 		}
 		else{
 			alert(error)
 		}
-	});
+	});*/
 }
