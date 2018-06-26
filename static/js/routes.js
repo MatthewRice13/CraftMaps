@@ -10,20 +10,23 @@ var end;
 var itenaryPoints = [];
 var wayPt = [];
 var img = "Images/beer_PNG.png"
-//start point
-//var startPoint;
 //staticurl
 var staticUrl = "http://127.0.0.1:8000/";
 //var img = "K:/UCD/sem 3/project/beermarkr.png"
 
 //breweries data
 var breweriesJson = Brewery_JSON;
+var startlatitude = startlat;
+var startlongitude = startlng;
 //console.log(breweriesJson[0].coords.lng);
 //console.log(breweriesJson);
-
+console.log(startlatitude);
+console.log(startlongitude);
 //document ready function
+var startPoint = new google.maps.LatLng(startlatitude, startlongitude);
 $(document).ready(function(){
 	//getLocation(); // will give the current position
+	//console.log(startPoint);
 	initMap();
 	$("#getDirecButton").on('click', function(){
 		getDirections();
@@ -40,7 +43,7 @@ $(document).ready(function(){
 	});
 });//ready end
 
-function populateBreweriesList(){
+/*function populateBreweriesList(){
     var listBrew = '';
 	for(i=0; i < breweriesJson.length; i++){
 		listBrew = "<li><input type='checkbox' name="+breweriesJson[i].coords.lng
@@ -48,7 +51,7 @@ function populateBreweriesList(){
 		    + breweriesJson[i].name + "</li>"
 		$("#listOfBreweries").append(listBrew);
 	}
-}
+}*/
 /*get current location*/
 /*function getLocation() {
 	if (navigator.geolocation) {
@@ -72,7 +75,8 @@ function initMap(){
 		zoom:9,
 		//center: new google.maps.LatLng(currentLat, currentLng)
 		//setting center as the spire tower
-		center: new google.maps.LatLng(53.349722, -6.260278)
+		center: new google.maps.LatLng(startlatitude, startlongitude)
+		//center: startPoint
 	}
 	// New map
 	map = new google.maps.Map(document.getElementById('map'), options);
@@ -82,7 +86,7 @@ function initMap(){
 		// Add marker
 		addMarker(breweriesJson[i]);
 	}
-	populateBreweriesList();
+	//populateBreweriesList();
 }
 
 // Add Marker Function
@@ -111,24 +115,25 @@ function addMarker(props){
 	}
 }
 
-/*function getDirections(lati,longi) {
+function getDirections(lati,longi) {
 	$("#directionsPanel").empty();
+	$("#directionsPanel").attr('background-color','white');
 	directionsDisplay = new google.maps.DirectionsRenderer();
 	var directionsOptions = {
 		zoom:10,
-		center: startPoint
+		center: new google.maps.LatLng(startlatitude, startlongitude)
 	}
 	directionsMap = new google.maps.Map(document.getElementById('map'), directionsOptions);
 	directionsDisplay.setMap(directionsMap);
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
 	calcRoute(lati,longi);
-}*/
+}
 
-/*function calcRoute(lati,longi) {
-	start = startPoint;
+function calcRoute(lati,longi) {
+	//start = startPoint;
 	end = {lat:lati,lng:longi};
 	var request = {
-		origin:start,
+		origin: new google.maps.LatLng(startlatitude, startlongitude),
 		destination:end,
 		travelMode: google.maps.TravelMode.TRANSIT
 	};
@@ -137,7 +142,7 @@ function addMarker(props){
 		directionsDisplay.setDirections(result);
 		}
 	});
-}*/
+}
 
 /*function getItenDirections() {
 	$("#directionsPanel").empty();
@@ -185,7 +190,7 @@ function addMarker(props){
 	getItenDirections();
 }*/
 
-function getCoords(address){
+/*function getCoords(address){
 	var startLng = 0.0;
 	var startLat = 0.0;
 	if(address == ""){
@@ -193,9 +198,9 @@ function getCoords(address){
 		startLat = 53.349722;
 		startLng = -6.260278;
 		// set startpoint for second page
-		//startPoint = new google.maps.LatLng(startLat, startLng);
+		startPoint = new google.maps.LatLng(startLat, startLng);
 		//console.log(startLat+' '+startLng);
-		/* send cordinate to the service*/
+		// send cordinate to the service
 		//window.location =staticUrl+'routes/'+startLat+','+startLng;
 		//var locCord= startLat+','+startLng;
 		//postRequest(locCord);
@@ -210,7 +215,7 @@ function getCoords(address){
 			}
 		})
 		.then(function(response){
-			console.log(response);
+			//console.log(response);
 			//console.log(response.data.status);
 			if(response.data.status === "OK"){
 				if(response.data.results["0"].address_components[3].long_name != "Ireland"){
@@ -220,9 +225,9 @@ function getCoords(address){
 					startLat = response.data.results["0"].geometry.location.lat;
 					startLng = response.data.results["0"].geometry.location.lng;
 					// set startpoint for second page
-					//startPoint = new google.maps.LatLng(startLat, startLng);
+					startPoint = new google.maps.LatLng(startLat, startLng);
 					//console.log(startLat+' '+startLng);
-					/* send cordinate to the service*/
+					// send cordinate to the service
 					//window.location ='';
 					//window.location =staticUrl+'routes/'+startLat+','+startLng;
 					var locCord= startLat+','+startLng;
@@ -230,9 +235,9 @@ function getCoords(address){
 					postRequest(startLat,startLng);
 
 				}
-				/*startLat = response.data.results["0"].geometry.location.lat;
-				startLng = response.data.results["0"].geometry.location.lng;
-				console.log(startLat+' '+startLng);*/
+				//startLat = response.data.results["0"].geometry.location.lat;
+				//startLng = response.data.results["0"].geometry.location.lng;
+				//console.log(startLat+' '+startLng);
 			}
 			else{
 				alert('Geocode was not successful for the following reason: ' + response.data.status);
@@ -259,19 +264,21 @@ function getCookie(name) {
 function postRequest(lati,longi){
 	var csrftoken = getCookie('csrftoken');
 	var url = staticUrl+'routes/';
+	//var url = staticUrl+'contact/';
 	var postdata={
 		'value1':lati,
 		'value2':longi,
 		'csrfmiddlewaretoken': csrftoken
 	};
 	$.post(url,postdata,function(data,status){
-		
+		console.log(status);
 		if(status == 'success')
 		{
-			//window.location = staticUrl+'routes/';
+			//window.
+			location.href = url;
 		}
 		else{
 			alert(error)
 		}
 	});
-}
+}*/
