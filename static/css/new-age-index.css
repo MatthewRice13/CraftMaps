@@ -2,6 +2,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  background-color: #fdcc52;
 }
 
 body {
@@ -68,7 +69,7 @@ section h2 {
 
 #mainNav .navbar-brand {
   color: #fdcc52;
-  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Goudy Stout', 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
 }
@@ -135,12 +136,12 @@ header.masthead {
   width: 100%;
   padding-top: 150px;
   padding-bottom: 100px;
-  color: black;
+  color: white;
   background: url("../img/bg-pattern.png"), #7b4397;
   background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #7b4397, #dc2430);
   background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
-  height: 100vh;
-  min-height: 775px;
+  height: 80vh;
+  min-height: 100px;
   padding-top: 0;
   padding-bottom: 1;
 }
@@ -352,7 +353,7 @@ section.contact ul.list-social li.social-google-plus a:hover {
   background-color: #d73925;
 }
 
-#goToMaps {
+#getDirecButton {
   background-color: #222222;
   border-color: #222222;
   color: #fdcc52;
@@ -360,7 +361,7 @@ section.contact ul.list-social li.social-google-plus a:hover {
   box-shadow: none !important;
 }
 
-#goToMaps:focus, #goToMaps:hover {
+#getDirecButton:focus, #getDirecButton:hover {
   background-color: #fdcc52;
   color: #222222;
 }
@@ -399,16 +400,18 @@ section.contact ul.list-social li.social-google-plus a:hover {
 #map {
   height: 100%;
   width: 100%;
+  margin-top: 7.5%;
+  background-color: #fdcc52;
 }
 
 .map-container {
   position: relative;
   top: 0;
-  left: -30%;
+  left: 0;
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 60%;
+  height: 400px;
   padding-top: 0px;
   padding-bottom: 0px;
 }
@@ -504,16 +507,16 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 #directionsPanel{   
     direction: ltr;
     position: absolute;
-	background-color: none;
-    top: 22.5%;
+	background-color: white;
+    top: 47.5%;
 	left: 70%;
 	right: 0;
 	width: 30%;
-	height: 52.2%;
+	height: 52.5%;
 	padding-top: 0px;
 	padding-bottom: 0px;
 	overflow:auto;
-    padding:1%;
+    padding:3%;
 	
 }
     #listOfBreweries{
