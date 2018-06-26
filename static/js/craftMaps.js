@@ -264,7 +264,7 @@ function postRequest(lati,longi){
 		'value2':longi,
 		'csrfmiddlewaretoken': csrftoken
 	};
-	
+
 	$.ajax({
 		url: url,
 		type: "POST",
