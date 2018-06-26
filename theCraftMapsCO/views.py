@@ -54,7 +54,12 @@ def buildjson(data):
 ################################################################
 # Routes Page
 def routes(request):
-    starting_point = (53.2785327, -6.1899008)
+    if request.method == 'POST':
+        lat = request.POST.get('value1')
+        lng = request.POST.get('value2')
+        starting_point = (lat, lng)
+    else:
+        starting_point = (53.2785327, -6.1899008)
     context = {'locations': buildJsonDistance(Brewery_Table.objects.all(), starting_point),
                'start': list(starting_point),
                'key': googleKey
