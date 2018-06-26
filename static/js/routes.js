@@ -16,17 +16,18 @@ var staticUrl = "http://127.0.0.1:8000/";
 
 //breweries data
 var breweriesJson = Brewery_JSON;
-var startlatitude = startlat;
-var startlongitude = startlng;
+var startlatitude = latstart;
+var startlongitude = lngstart;
 //console.log(breweriesJson[0].coords.lng);
 //console.log(breweriesJson);
-console.log(startlatitude);
-console.log(startlongitude);
+//console.log(startlatitude);
+//console.log(startlongitude);
 //document ready function
 var startPoint = new google.maps.LatLng(startlatitude, startlongitude);
 $(document).ready(function(){
 	//getLocation(); // will give the current position
 	//console.log(startPoint);
+	
 	initMap();
 	$("#getDirecButton").on('click', function(){
 		getDirections();
@@ -80,7 +81,13 @@ function initMap(){
 	}
 	// New map
 	map = new google.maps.Map(document.getElementById('map'), options);
-
+	//{lat: 53.3471532, lng: -6.2603187}
+	var userMarker = new google.maps.Marker({
+		position: {lat: startlatitude, lng: startlongitude},
+		title: 'You are here',
+		map: map,
+		icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+	});
 	// Loop through for making markers
 	for(var i = 0;i < breweriesJson.length;i++){
 		// Add marker
@@ -90,7 +97,7 @@ function initMap(){
 }
 
 // Add Marker Function
-function addMarker(props){
+function addMarker(props){console.log(props.coords);
 	var marker = new google.maps.Marker({
 		position: props.coords,
 		title: props.name,
@@ -117,7 +124,7 @@ function addMarker(props){
 
 function getDirections(lati,longi) {
 	$("#directionsPanel").empty();
-	$("#directionsPanel").attr('background-color','white');
+	$("#directionsPanel").css("background-color", "white");
 	directionsDisplay = new google.maps.DirectionsRenderer();
 	var directionsOptions = {
 		zoom:10,

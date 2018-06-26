@@ -155,3 +155,14 @@ def contact(request):
 
     }
     return render(request, 'contact.html', context)
+
+def print_test(test_data):
+    with open("data_dump.txt", "w") as text_file:
+        text_file.write(test_data)
+        text_file.close()
+
+def read_data(file):
+    with open(file, 'r') as text_file:
+        data = text_file.read()
+        text_file.close()
+        return data
