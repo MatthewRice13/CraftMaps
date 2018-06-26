@@ -268,7 +268,7 @@ function postRequest(lati,longi){
 		
 		if(status == 'success')
 		{
-			//window.location = staticUrl+'routes/';
+			window.location = staticUrl+'routes/';
 		}
 		else{
 			alert(error)
