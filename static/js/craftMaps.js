@@ -185,7 +185,7 @@ function addMarker(props){
 	getItenDirections();
 }*/
 
-function getCoords(address){console.log(address)
+function getCoords(address){//console.log(address)
 	var startLng = 0.0;
 	var startLat = 0.0;
 	if(address == ""){
