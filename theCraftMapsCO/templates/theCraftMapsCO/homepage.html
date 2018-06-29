@@ -9,20 +9,11 @@
 
     {% load static %}
     <script>
-        /*
-            var brewName = "{{ brewery.Brewery_Name|safe|escape }}";
-            var brewReg = "{{ brewery.Brewery_Region|safe|escape }}";
-            var brewLong = {{ brewery.Brewery_Longitude }};
-            var brewLati = {{ brewery.Brewery_Latitude }};
-            var brewType = "{{ brewery.Brewery_Type|safe }}";
-            var brewURL = "{{ brewery.Brewery_URL|safe|escape }}".replace("\n", "");
-        */
         var Brewery_JSON = {{ brewery_json|safe }};
     </script>
 
     <!--JS files -->
     <script src='{% static "js/jquery-3.3.1.min.js" %}'></script>
-    <!--<script src='{% static "js/new-age.min.js" %}'></script>-->
     <script src='{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
     <script src='{% static "vendor/jquery-easing/jquery.easing.min.js" %}'></script>
 
@@ -88,10 +79,8 @@
           <small class="mb-2 d-block">Starting location should be within Ireland i.e Hotel, CO. You are not sure yet? Don't worry! Just click Go and your starting point will be "The Spire"  </small>
           <div class="input-group mb-0">
             <input type="text" id="defaultAddress" class="form-control location-input" placeholder="Enter your starting location" aria-label="Recipient's username" aria-describedby="basic-addon2">
-            <!-- <a href="/routes"><div class="input-group-append"> -->
                 <button id="goToMaps" class="btn btn-outline" type="button">Go</button>
             </div>
-			<!-- </a> -->
           </div>
         </div>
       </div>

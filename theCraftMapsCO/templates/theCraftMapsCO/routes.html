@@ -13,7 +13,6 @@
         var latstart = {{ start.0 }};
         var lngstart = {{ start.1 }};
         var Brewery_JSON = {{ locations|safe }};
-
     </script>
 
     <!-- Bootstrap core CSS -->
@@ -48,10 +47,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="/home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="/about">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -70,7 +69,6 @@
 			<button id="refreshButton" class="btn btn-outline" type="button">
                     See all breweries!
 			</button>
-			<!--<input id="button2" type="button" value="Show Modal">-->
 			<br>
 			<label id="labelInfo">For additional info about each brewery click each marker on the map below. When ready click the Direct me to All button.</label>
         </div>
@@ -143,10 +141,8 @@
 
     <!-- Custom scripts for this template -->
     <script src='{% static "js/new-age.min.js" %}'></script>
-
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFK8QRiUl8jx5YYQwDMQ31GMyXwXz-et8&language=en-GB&region=IE"></script>
 	<script src='{% static "js/showModalDialog.js" %}'></script>
-    <!--<script src='{% static "js/showModal.js" %}'></script>-->
     <script src='{% static "js/axios.min.js" %}'></script>
 	<script src='{% static "js/routes.js" %}'></script>
 </body>
