@@ -2,6 +2,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  background-color: #fdcc52;
 }
 
 body {
@@ -48,7 +49,7 @@ p {
 }
 
 section {
-  padding: 100px 0;
+  padding: 120px 0;
 }
 
 section h2 {
@@ -68,7 +69,7 @@ section h2 {
 
 #mainNav .navbar-brand {
   color: #fdcc52;
-  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Goudy Stout', 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
 }
@@ -135,12 +136,12 @@ header.masthead {
   width: 100%;
   padding-top: 150px;
   padding-bottom: 100px;
-  color: black;
+  color: white;
   background: url("../img/bg-pattern.png"), #7b4397;
   background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #7b4397, #dc2430);
   background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
-  height: 100vh;
-  min-height: 775px;
+  height: 80vh;
+  min-height: 100px;
   padding-top: 0;
   padding-bottom: 1;
 }
@@ -352,7 +353,7 @@ section.contact ul.list-social li.social-google-plus a:hover {
   background-color: #d73925;
 }
 
-#goBackButton {
+#getDirecButton {
   background-color: #222222;
   border-color: #222222;
   color: #fdcc52;
@@ -360,21 +361,7 @@ section.contact ul.list-social li.social-google-plus a:hover {
   box-shadow: none !important;
 }
 
-#goBackButton:focus, #goBackButton:hover {
-  background-color: #fdcc52;
-  color: #222222;
-}
-
-#refreshButton {
-    display: none;
-    background-color: #222222;
-    border-color: #222222;
-    color: #fdcc52;
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-#refreshButton:focus, #refreshButton:hover {
+#getDirecButton:focus, #getDirecButton:hover {
   background-color: #fdcc52;
   color: #222222;
 }
@@ -412,8 +399,9 @@ section.contact ul.list-social li.social-google-plus a:hover {
 
 #map {
   height: 100%;
-  width: 60%;
-  left: 20%;
+  width: 100%;
+  margin-top: 4.1%;
+  background-color: #fdcc52;
 }
 
 .map-container {
@@ -423,7 +411,7 @@ section.contact ul.list-social li.social-google-plus a:hover {
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 60%;
+  height: 400px;
   padding-top: 0px;
   padding-bottom: 0px;
 }
@@ -439,7 +427,6 @@ section.contact ul.list-social li.social-google-plus a:hover {
   z-index: 99;
   left: 0;
   right: 0;
-  height:25%;
   margin: auto;
   width: 100%;
   color: #222222;
@@ -516,49 +503,15 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   font-size: 11px;
   padding: 15px 45px;
 }
-
-#directionsPanel{   
-direction: ltr;
-position: absolute;
-background-color: none;
-top: -0.5%;
-left: 80%;
-right: 0;
-width: 20%;
-height: 100.5%;
-padding-top: 0px;
-padding-bottom: 0px;
-overflow:auto;
-padding:1%;
-}
-#listOfBreweries{
-  padding:30px 0;
-}
-#directionLabel{
-    font-size: 20px;
-    color: white;
-    padding-top: 50%;
-}
-#labelInfo{
-    padding-top:2%;
-}
-#brewList{
-    position:absolute;
-    overflow:auto;
-    width:20%;
-    height: 100%;
-    color:white;
-    font-size: 16px;
-}
-#getItenDirecButton {
-    background-color: #222222;
-    border-color: #222222;
-    color: #fdcc52;
-    outline: none !important;
-    box-shadow: none !important;
+#goToMaps {
+  background-color: #222222;
+  border-color: #222222;
+  color: #fdcc52;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-#getItenDirecButton:focus, #getItenDirecButton:hover {
-    background-color: #fdcc52;
-    color: #222222;
+#goToMaps:focus, #goToMaps:hover {
+  background-color: #fdcc52;
+  color: #222222;
 }
