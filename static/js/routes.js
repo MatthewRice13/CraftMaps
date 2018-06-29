@@ -10,30 +10,38 @@ var end;
 var itenaryPoints = [];
 var wayPt = [];
 var img = "Images/beer_PNG.png"
+
 //staticurl
-var staticUrl = "http://127.0.0.1:8000/";
+var staticUrl = "http://localhost:8000/";
 //var img = "K:/UCD/sem 3/project/beermarkr.png"
 
 //breweries data
 var breweriesJson = Brewery_JSON;
+//console.log(breweriesJson);
 var startlatitude = latstart;
 var startlongitude = lngstart;
-//console.log(breweriesJson[0].coords.lng);
-//console.log(breweriesJson);
-//console.log(startlatitude);
-//console.log(startlongitude);
-//document ready function
+
 var startPoint = new google.maps.LatLng(startlatitude, startlongitude);
+//document ready function
 $(document).ready(function(){
 	//getLocation(); // will give the current position
-	//console.log(startPoint);
-	
 	initMap();
-	$("#getDirecButton").on('click', function(){
-		getDirections();
+	$("#goBackButton").on('click', function(){
+		location.href = staticUrl;
 	});
 	$("#getItenDirecButton").on('click', function(){
-		makeItenary();
+		var listLen = $('input[class="checkboxList"]:checked').length;
+		console.log(listLen);
+		if(listLen <= 1)
+		{
+			alert('Please select 2 or more breweries');
+		}
+		else{
+			makeItenary();
+		}
+	});
+	$('#refreshButton').on('click', function(){
+		location.href = staticUrl+'routes/' ;
 	});
 	$("#goToMaps").on('click', function(){
 		var loc = $("#defaultAddress").val();
@@ -42,9 +50,13 @@ $(document).ready(function(){
 		}
 		getCoords(loc);
 	});
+	//modal function calling
+	/*$("#button2").on('click', function(){
+		var ret = window.showModalDialog("http://google.com", "", "dialogWidth:60%;dialogHeight:60%");
+	});*/
 });//ready end
 
-/*function populateBreweriesList(){
+function populateBreweriesList(){
     var listBrew = '';
 	for(i=0; i < breweriesJson.length; i++){
 		listBrew = "<li><input type='checkbox' name="+breweriesJson[i].coords.lng
@@ -52,30 +64,13 @@ $(document).ready(function(){
 		    + breweriesJson[i].name + "</li>"
 		$("#listOfBreweries").append(listBrew);
 	}
-}*/
-/*get current location*/
-/*function getLocation() {
-	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(showPosition);
-	} else {
-		console.log('error');
-	}
-}*/
-
-/*set start point*/
-/*function showPosition(position) {
-	currentLat = position.coords.latitude;
-	currentLng = position.coords.longitude;
-	startPoint = new google.maps.LatLng(currentLat, currentLng);
-	initMap();
-}*/
+}
 
 function initMap(){
 	// Map options
 	var options = {
-		zoom:9,
+		zoom:10,
 		//center: new google.maps.LatLng(currentLat, currentLng)
-		//setting center as the spire tower
 		center: new google.maps.LatLng(startlatitude, startlongitude)
 		//center: startPoint
 	}
@@ -93,11 +88,11 @@ function initMap(){
 		// Add marker
 		addMarker(breweriesJson[i]);
 	}
-	//populateBreweriesList();
+	populateBreweriesList();
 }
 
 // Add Marker Function
-function addMarker(props){console.log(props.coords);
+function addMarker(props){//console.log(props.coords);
 	var marker = new google.maps.Marker({
 		position: props.coords,
 		title: props.name,
@@ -137,7 +132,7 @@ function getDirections(lati,longi) {
 }
 
 function calcRoute(lati,longi) {
-	//start = startPoint;
+	$("#refreshButton").show();
 	end = {lat:lati,lng:longi};
 	var request = {
 		origin: new google.maps.LatLng(startlatitude, startlongitude),
@@ -151,41 +146,7 @@ function calcRoute(lati,longi) {
 	});
 }
 
-/*function getItenDirections() {
-	$("#directionsPanel").empty();
-	directionsDisplay = new google.maps.DirectionsRenderer();
-	var directionsOptions = {
-		zoom:10,
-		center: startPoint
-	}
-	directionsMap = new google.maps.Map(document.getElementById('map'), directionsOptions);
-	directionsDisplay.setMap(directionsMap);
-	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
-	calcItenRoute();
-}*/
-
-/*function calcItenRoute() {
-	console.log(itenaryPoints.length);
-	for(i=0; i < itenaryPoints.length-1; i++){
-		wayPt.push({"location":{"lat":itenaryPoints[i].location.lat,"lng":itenaryPoints[i].location.lng},"stopover":true});
-	}
-	console.log(wayPt);
-	start = startPoint;
-	end = {lat:itenaryPoints[itenaryPoints.length-1].location.lat,lng:itenaryPoints[itenaryPoints.length-1].location.lng};
-	var request = {
-		origin:start,
-		destination:end,
-		waypoints:wayPt,
-		travelMode:google.maps.TravelMode.DRIVING
-	};
-	directionsService.route(request, function(result, status) {
-		if (status == google.maps.DirectionsStatus.OK) {
-		directionsDisplay.setDirections(result);
-		}
-	});
-}*/
-
-/*function makeItenary(){
+function makeItenary(){
 	wayPt = [];
 	itenaryPoints = [];
 	$('input[class="checkboxList"]:checked').each(function() {
@@ -195,97 +156,40 @@ function calcRoute(lati,longi) {
 		//console.log(itenaryPoints);
 	});
 	getItenDirections();
-}*/
-
-/*function getCoords(address){
-	var startLng = 0.0;
-	var startLat = 0.0;
-	if(address == ""){
-		// default for spire tower
-		startLat = 53.349722;
-		startLng = -6.260278;
-		// set startpoint for second page
-		startPoint = new google.maps.LatLng(startLat, startLng);
-		//console.log(startLat+' '+startLng);
-		// send cordinate to the service
-		//window.location =staticUrl+'routes/'+startLat+','+startLng;
-		//var locCord= startLat+','+startLng;
-		//postRequest(locCord);
-		postRequest(startLat,startLng)
-
-	}
-	else{
-		axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
-			params:{
-			  address:address,
-			  key:'AIzaSyDFK8QRiUl8jx5YYQwDMQ31GMyXwXz-et8'
-			}
-		})
-		.then(function(response){
-			//console.log(response);
-			//console.log(response.data.status);
-			if(response.data.status === "OK"){
-				if(response.data.results["0"].address_components[3].long_name != "Ireland"){
-					alert("Enter a more detailed Irish Location");
-				}
-				else{
-					startLat = response.data.results["0"].geometry.location.lat;
-					startLng = response.data.results["0"].geometry.location.lng;
-					// set startpoint for second page
-					startPoint = new google.maps.LatLng(startLat, startLng);
-					//console.log(startLat+' '+startLng);
-					// send cordinate to the service
-					//window.location ='';
-					//window.location =staticUrl+'routes/'+startLat+','+startLng;
-					var locCord= startLat+','+startLng;
-					//postRequest(locCord);
-					postRequest(startLat,startLng);
-
-				}
-				//startLat = response.data.results["0"].geometry.location.lat;
-				//startLng = response.data.results["0"].geometry.location.lng;
-				//console.log(startLat+' '+startLng);
-			}
-			else{
-				alert('Geocode was not successful for the following reason: ' + response.data.status);
-			}
-		});
-	}
 }
 
-function getCookie(name) {
-	var cookieValue = null;
-	if (document.cookie && document.cookie != '') {
-		var cookies = document.cookie.split(';');
-		for (var i = 0; i < cookies.length; i++) {
-			var cookie = jQuery.trim(cookies[i]);
-			// Does this cookie string begin with the name we want?
-			if (cookie.substring(0, name.length + 1) == (name + '=')) {
-				cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-				break;
-			}
-		}
+function getItenDirections() {
+	$("#directionsPanel").empty();
+	$("#directionsPanel").css("background-color", "white");
+	directionsDisplay = new google.maps.DirectionsRenderer();
+	var directionsOptions = {
+		zoom:10,
+		center: new google.maps.LatLng(startlatitude, startlongitude)
 	}
-	return cookieValue;
+	directionsMap = new google.maps.Map(document.getElementById('map'), directionsOptions);
+	directionsDisplay.setMap(directionsMap);
+	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
+	calcItenRoute();
 }
-function postRequest(lati,longi){
-	var csrftoken = getCookie('csrftoken');
-	var url = staticUrl+'routes/';
-	//var url = staticUrl+'contact/';
-	var postdata={
-		'value1':lati,
-		'value2':longi,
-		'csrfmiddlewaretoken': csrftoken
+
+function calcItenRoute() {
+	//console.log(itenaryPoints.length);
+	$("#refreshButton").show();
+	for(i=0; i < itenaryPoints.length-1; i++){
+		wayPt.push({"location":{"lat":itenaryPoints[i].location.lat,"lng":itenaryPoints[i].location.lng},"stopover":true});
+	}
+	//console.log(wayPt);
+	start = new google.maps.LatLng(startlatitude, startlongitude);
+	end = {lat:itenaryPoints[itenaryPoints.length-1].location.lat,lng:itenaryPoints[itenaryPoints.length-1].location.lng};
+	var request = {
+		origin: start,
+		destination: end,
+		waypoints: wayPt,
+		travelMode: google.maps.TravelMode.DRIVING
 	};
-	$.post(url,postdata,function(data,status){
-		console.log(status);
-		if(status == 'success')
-		{
-			//window.
-			location.href = url;
-		}
-		else{
-			alert(error)
+	directionsService.route(request, function(result, status) {
+		if (status == google.maps.DirectionsStatus.OK) {
+		directionsDisplay.setDirections(result);
 		}
 	});
-}*/
+}

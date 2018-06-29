@@ -13,7 +13,6 @@
         var latstart = {{ start.0 }};
         var lngstart = {{ start.1 }};
         var Brewery_JSON = {{ locations|safe }};
-
     </script>
 
     <!-- Bootstrap core CSS -->
@@ -51,7 +50,7 @@
                     <a class="nav-link" href="/home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="/about">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -64,45 +63,33 @@
 <header class="masthead">
     <div class="location-container">
         <div class="container">
-            <a href="/home">
-                <button id="getDirecButton" class="btn btn-outline" type="button">
+                <button id="goBackButton" class="btn btn-outline" type="button">
                     Go back
                 </button>
-            </a>
-
-            <!-- <button id="getItenDirecButton" class="btn btn-outline" type="button" onclick="displayHidden()">
-                Direct Me to all
-            </button> -->
-
-            <!-- <div id="checkboxes">
-                <div class="checkboxes">
-                    <small> Select the breweries you would like to visit and we guide you to them!
-                        <br>For additional
-                            info about each brewery click each marker on the map below. When ready click the Direct me to
-                            All button.
-                        </br>
-                    </small>
-                    <font face="Muli", size="3"/>
-                </div>
-                <ul id="listOfBreweries">
-
-                    <!-- <li><input type="checkbox"> checkbox 1</li>
-                    <li><input type="checkbox"> checkbox 2</li>
-                    <li><input type="checkbox"> checkbox 3</li>
-                    <li><input type="checkbox"> checkbox 4</li> -->
-               <!-- </ul>
-            </div> -->
-
+			<button id="refreshButton" class="btn btn-outline" type="button">
+                    See all breweries!
+			</button>
+			<br>
+			<label id="labelInfo">For additional info about each brewery click each marker on the map below. When ready click the Direct me to All button.</label>
         </div>
     </div>
 
 
     <div class="map-container">
+        <div id="brewList">
+            <label id="listTitle">Top near by breweries from you:</label>
+            <div id="listBrew">
+                <ul id="listOfBreweries"></ul>
+                <button id="getItenDirecButton" class="btn btn-outline" type="button">
+                    Direct me to these!
+			    </button>
+            </div>
+        </div>
         <div id="map"></div>
+        <div id="directionsPanel" >
+            <label id="directionLabel"> Choose the brewery/breweries you want to visit.</label>
+        </div>
     </div>
-
-    <div id="directionsPanel" ></div>
-
     <section class="contact bg-primary" id="contact">
         <div class="container">
             <h2>We
@@ -145,8 +132,6 @@
         </div>
     </footer>
 </header>
-
-
 <!-- Bootstrap core JavaScript -->
     <script src='{% static "js/jquery-3.3.1.min.js" %}'></script>
     <script src='{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
@@ -156,14 +141,9 @@
 
     <!-- Custom scripts for this template -->
     <script src='{% static "js/new-age.min.js" %}'></script>
-
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFK8QRiUl8jx5YYQwDMQ31GMyXwXz-et8&language=en-GB&region=IE"></script>
-	<script src='{% static "js/axios.min.js" %}'></script>
+	<script src='{% static "js/showModalDialog.js" %}'></script>
+    <script src='{% static "js/axios.min.js" %}'></script>
 	<script src='{% static "js/routes.js" %}'></script>
-
-
-
-
-          
 </body>
 </html>

@@ -10,10 +10,9 @@ var end;
 var itenaryPoints = [];
 var wayPt = [];
 var img = "Images/beer_PNG.png"
-//start point
-//var startPoint;
+
 //staticurl
-var staticUrl = "http://127.0.0.1:8000/";
+var staticUrl = "http://localhost:8000/";
 //var img = "K:/UCD/sem 3/project/beermarkr.png"
 
 //breweries data
@@ -111,94 +110,13 @@ function addMarker(props){
 	}
 }
 
-/*function getDirections(lati,longi) {
-	$("#directionsPanel").empty();
-	directionsDisplay = new google.maps.DirectionsRenderer();
-	var directionsOptions = {
-		zoom:10,
-		center: startPoint
-	}
-	directionsMap = new google.maps.Map(document.getElementById('map'), directionsOptions);
-	directionsDisplay.setMap(directionsMap);
-	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
-	calcRoute(lati,longi);
-}*/
-
-/*function calcRoute(lati,longi) {
-	start = startPoint;
-	end = {lat:lati,lng:longi};
-	var request = {
-		origin:start,
-		destination:end,
-		travelMode: google.maps.TravelMode.TRANSIT
-	};
-	directionsService.route(request, function(result, status) {
-		if (status == google.maps.DirectionsStatus.OK) {
-		directionsDisplay.setDirections(result);
-		}
-	});
-}*/
-
-/*function getItenDirections() {
-	$("#directionsPanel").empty();
-	directionsDisplay = new google.maps.DirectionsRenderer();
-	var directionsOptions = {
-		zoom:10,
-		center: startPoint
-	}
-	directionsMap = new google.maps.Map(document.getElementById('map'), directionsOptions);
-	directionsDisplay.setMap(directionsMap);
-	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
-	calcItenRoute();
-}*/
-
-/*function calcItenRoute() {
-	console.log(itenaryPoints.length);
-	for(i=0; i < itenaryPoints.length-1; i++){
-		wayPt.push({"location":{"lat":itenaryPoints[i].location.lat,"lng":itenaryPoints[i].location.lng},"stopover":true});
-	}
-	console.log(wayPt);
-	start = startPoint;
-	end = {lat:itenaryPoints[itenaryPoints.length-1].location.lat,lng:itenaryPoints[itenaryPoints.length-1].location.lng};
-	var request = {
-		origin:start,
-		destination:end,
-		waypoints:wayPt,
-		travelMode:google.maps.TravelMode.DRIVING
-	};
-	directionsService.route(request, function(result, status) {
-		if (status == google.maps.DirectionsStatus.OK) {
-		directionsDisplay.setDirections(result);
-		}
-	});
-}*/
-
-/*function makeItenary(){
-	wayPt = [];
-	itenaryPoints = [];
-	$('input[class="checkboxList"]:checked').each(function() {
-		var lati = parseFloat(this.value);
-		var longi = parseFloat(this.name);
-		itenaryPoints.push({"location":{"lat":lati,"lng":longi}});
-		//console.log(itenaryPoints);
-	});
-	getItenDirections();
-}*/
-
-function getCoords(address){console.log(address)
+function getCoords(address){
 	var startLng = 0.0;
 	var startLat = 0.0;
 	if(address == ""){
 		// default for spire tower
 		startLat = 53.349722;
 		startLng = -6.260278;
-		// set startpoint for second page
-		//startPoint = new google.maps.LatLng(startLat, startLng);
-		//console.log(startLat+' '+startLng);
-		/* send cordinate to the service*/
-		//window.location =staticUrl+'routes/'+startLat+','+startLng;
-		//var locCord= startLat+','+startLng;
-		//postRequest(locCord);
 		postRequest(startLat,startLng)
 
 	}
@@ -210,8 +128,6 @@ function getCoords(address){console.log(address)
 			}
 		})
 		.then(function(response){
-			//console.log(response);
-			//console.log(response.data.status);
 			if(response.data.status === "OK"){
 				if(response.data.results["0"].address_components[3].long_name != "Ireland"){
 					alert("Enter a more detailed Irish Location");
@@ -219,20 +135,10 @@ function getCoords(address){console.log(address)
 				else{
 					startLat = response.data.results["0"].geometry.location.lat;
 					startLng = response.data.results["0"].geometry.location.lng;
-					// set startpoint for second page
-					//startPoint = new google.maps.LatLng(startLat, startLng);
-					//console.log(startLat+' '+startLng);
-					/* send cordinate to the service*/
-					//window.location ='';
-					//window.location =staticUrl+'routes/'+startLat+','+startLng;
 					var locCord= startLat+','+startLng;
-					//postRequest(locCord);
 					postRequest(startLat,startLng);
 
 				}
-				/*startLat = response.data.results["0"].geometry.location.lat;
-				startLng = response.data.results["0"].geometry.location.lng;
-				console.log(startLat+' '+startLng);*/
 			}
 			else{
 				alert('Geocode was not successful for the following reason: ' + response.data.status);
@@ -273,14 +179,4 @@ function postRequest(lati,longi){
 			window.location = url;
 		}
 	});
-	/*$.post(url,postdata,function(data,status){
-		//console.log(url);
-		if(status == 'success')
-		{
-			window.location = staticUrl+'routes/';
-		}
-		else{
-			alert(error)
-		}
-	});*/
 }
