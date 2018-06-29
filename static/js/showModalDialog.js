@@ -36,9 +36,9 @@
         if(caller.indexOf('yield') >= 0) {
             return new Promise(function(resolve, reject) {
                 dialog.addEventListener('close', function() {
-                    var returnValue = document.getElementById('dialog-body').contentWindow.returnValue;
+                    //var returnValue = document.getElementById('dialog-body').contentWindow.returnValue;
                     document.body.removeChild(dialog);
-                    resolve(returnValue);
+                    //resolve(returnValue);
                 });
             });
         }
@@ -50,10 +50,10 @@
             return false;
         });
         dialog.addEventListener('close', function() {
-            var returnValue = document.getElementById('dialog-body').contentWindow.returnValue;
+            //var returnValue = document.getElementById('dialog-body').contentWindow.returnValue;
             document.body.removeChild(dialog);
-            nextStmts[0] = nextStmts[0].replace(/(window\.)?showModalDialog\(.*\)/g, JSON.stringify(returnValue));
-            eval('{\n' + nextStmts.join('\n'));
+            //nextStmts[0] = nextStmts[0].replace(/(window\.)?showModalDialog\(.*\)/g, JSON.stringify(returnValue));
+            //eval('{\n' + nextStmts.join('\n'));
         });
         throw 'Execution stopped until showModalDialog is closed';
     };
