@@ -10,8 +10,9 @@ var end;
 var itenaryPoints = [];
 var wayPt = [];
 var img = "Images/beer_PNG.png"
+
 //staticurl
-var staticUrl = "http://127.0.0.1:8000/";
+var staticUrl = "http://localhost:8000/";
 //var img = "K:/UCD/sem 3/project/beermarkr.png"
 
 //breweries data
