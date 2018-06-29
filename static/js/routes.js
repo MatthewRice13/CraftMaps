@@ -12,7 +12,7 @@ var wayPt = [];
 var img = "Images/beer_PNG.png"
 
 //staticurl
-var staticUrl = "http://localhost:8000/";
+var staticUrl = "http://127.0.0.1:8000/";
 //var img = "K:/UCD/sem 3/project/beermarkr.png"
 
 //breweries data
@@ -198,5 +198,5 @@ function calcItenRoute() {
 
 function showModal(e){
 	var urllink = e.target.id;//console.log(urllink);
-	var ret = window.showModalDialog(urllink, "", "dialogWidth:80%;dialogHeight:80%; edge: Raised; center: Yes; help: No; resizable: Yes; status: No; scroll: Yes");
+	var ret = window.showModalDialog(urllink, "", "dialogWidth:80%;dialogHeight:80%");
 }
