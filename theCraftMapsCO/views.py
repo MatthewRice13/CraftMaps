@@ -34,8 +34,7 @@ def home(request):
 def buildjson(data):
     rtn_json = []
     count = 0
-    start = "<h1 class='hi'>"
-    end = "</h1>"
+
     for d in data:
         if count > 17:
             break
@@ -74,6 +73,7 @@ def routes(request):
     return render(request, 'routes.html', context)
 
 
+# returns brewery json
 def builddistjson(mysqldata, starting):
     breweries = mysqldata
     data = []
@@ -104,10 +104,10 @@ def builddistjson(mysqldata, starting):
 
 # Clean distance API response
 def get_distance(start, finish):
-    now = datetime.now()
     try:
         if not isinstance(start, tuple):
             geocode_result = gmaps.geocode(start[0], start[1])
+
         else:
             geocode_result = (start[0], start[1])
         # approximate radius of earth in km
@@ -127,6 +127,7 @@ def get_distance(start, finish):
         distance = R * c
     except googlemaps.exceptions.ApiError as err:
         print(err)
+
     return distance
 
 
@@ -140,17 +141,12 @@ def about(request):
 
 
 #########################################################
-# contacts page
-def contact(request):
-    context = {
-
-    }
-    return render(request, 'contact.html', context)
-
+# support methods
 def print_test(test_data):
     with open("data_dump.txt", "w") as text_file:
         text_file.write(test_data)
         text_file.close()
+
 
 def read_data(file):
     with open(file, 'r') as text_file:
