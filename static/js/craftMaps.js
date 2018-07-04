@@ -12,7 +12,8 @@ var wayPt = [];
 var img = "Images/beer_PNG.png"
 
 //staticurl
-var staticUrl = "http://127.0.0.1:8000/";
+var currentURL = window.location.href;
+//var staticUrl = "http://127.0.0.1:8000/";
 //var img = "K:/UCD/sem 3/project/beermarkr.png"
 
 //breweries data
@@ -164,7 +165,7 @@ function getCookie(name) {
 }
 function postRequest(lati,longi){
 	var csrftoken = getCookie('csrftoken');
-	var url = staticUrl+'routes/';
+	var url = currentURL+'routes/';
 	var postdata={
 		'value1':lati,
 		'value2':longi,
