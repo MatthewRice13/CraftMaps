@@ -29,7 +29,8 @@ urlpatterns = [
     url(r'^contact/', include('theCraftMapsCO.urls')),
     url(r'^signup/', views.signup, name='signup'),
     url(r'^login/', auth_views.login, {'template_name': 'login.html'}, name='login'),
-    url(r'^logout/', auth_views.logout, {'next_page': '/'}, name='logout')
+    url(r'^logout/', auth_views.logout, {'next_page': '/'}, name='logout'),
+    url(r'^mulroutes/', include('theCraftMapsCO.urls'))
 ]
 
 if settings.DEBUG:

@@ -169,6 +169,25 @@ def read_data(file):
         text_file.close()
         return data
 
+def mulroutes(request):
+    if request.method == 'POST':
+        print_test(str(request.POST.get('value1')) + "," + str(request.POST.get('value2')))
+        lat = request.POST.get('value1')
+        lng = request.POST.get('value2')
+        starting_point = (float(lat), float(lng))
+    elif request.method == 'GET':
+        start = read_data('data_dump.txt')
+        start = start.split(",")
+        starting_point = (float(start[0]), float(start[1]))
+    else:
+        starting_point = (53.3256826, -6.2249631)
+
+    context = {'locations': builddistjson(Brewery_Table.objects.all(), starting_point),
+               'start': list(starting_point),
+               'key': googleKey
+               }
+    return render(request, 'mulroutes.html', context)
+
 #########################################################
 # signup page
 def signup(request):
