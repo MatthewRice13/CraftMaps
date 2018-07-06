@@ -147,6 +147,54 @@ def contact(request):
     }
     return render(request, 'contact.html', context)
 
+################################################################
+# Routes Page
+def multiRoutes(request):
+    if request.method == 'POST':
+        print_test(str(request.POST.get('value1')) + "," + str(request.POST.get('value2')))
+        lat = request.POST.get('value1')
+        lng = request.POST.get('value2')
+        starting_point = (float(lat), float(lng))
+    elif request.method == 'GET':
+        start = read_data('data_dump.txt')
+        start = start.split(",")
+        starting_point = (float(start[0]), float(start[1]))
+    else:
+        starting_point = (53.3256826, -6.2249631)
+
+    context = {'locations': builddistmultijson(Brewery_Table.objects.all(), starting_point),
+               'start': list(starting_point),
+               'key': googleKey
+               }
+    return render(request, 'multiRoutes.html', context)
+######################################################################
+def builddistmultijson(mysqldata, starting):
+    breweries = mysqldata
+    data = []
+    df = pd.DataFrame(data, columns=['Name', 'Distance'])
+    for dat in breweries:
+        nam = dat.Brewery_Name
+        dst = get_distance(starting, (dat.Brewery_Longitude, dat.Brewery_Latitude))
+        df = df.append(pd.DataFrame([[nam, dst]], columns=['Name', 'Distance']))
+
+    df = df.sort_values('Distance')
+    subset = df.loc[:, 'Name']
+
+    rtn_json = []
+    for d in mysqldata:
+        if d.Brewery_Name in subset.values[:5]:
+            item = {
+                'name': d.Brewery_Name,
+                'coords': {
+                    'lat': float(d.Brewery_Longitude),
+                    'lng': float(d.Brewery_Latitude)
+                },
+                'Content': '<div class="infoDiv"><div class="infoHeader"><label class="headerLabel" id = "'+d.Brewery_URL+'" onClick="showModal(event);">'+d.Brewery_Name+'</label></div><div class="infoBody"><label class="bodyLabel">'+d.Brewery_Type+'</label></div><div class="infoFooter"></div></div>'
+            }
+            rtn_json.append(item)
+
+    return simplejson.dumps(rtn_json, separators=(',', ':'))
+
 def print_test(test_data):
     with open("data_dump.txt", "w") as text_file:
         text_file.write(test_data)
