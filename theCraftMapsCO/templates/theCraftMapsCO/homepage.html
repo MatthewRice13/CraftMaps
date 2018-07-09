@@ -9,14 +9,6 @@
 
     {% load static %}
     <script>
-        /*
-            var brewName = "{{ brewery.Brewery_Name|safe|escape }}";
-            var brewReg = "{{ brewery.Brewery_Region|safe|escape }}";
-            var brewLong = {{ brewery.Brewery_Longitude }};
-            var brewLati = {{ brewery.Brewery_Latitude }};
-            var brewType = "{{ brewery.Brewery_Type|safe }}";
-            var brewURL = "{{ brewery.Brewery_URL|safe|escape }}".replace("\n", "");
-        */
         var Brewery_JSON = {{ brewery_json|safe }};
     </script>
 
@@ -28,7 +20,9 @@
 
     <!-- Google API JS-->
     <script src="https://maps.googleapis.com/maps/api/js?key={{key}}"></script>
+	<script src='{% static "js/axios.min.js" %}'></script>
     <script src='{% static "js/craftMaps.js" %}'></script>
+
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href='{% static "vendor/bootstrap/css/bootstrap.min.css" %}'/>
@@ -42,6 +36,7 @@
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href='{% static "css/new-age.min.css" %}'/>
+    <link rel="stylesheet" href='{% static "css/new-age-index-home.css" %}'/>
     <link rel="stylesheet" href='{% static "css/craftMaps.css" %}'/>
 </head>
 
@@ -79,16 +74,13 @@
         <div id="map"></div>
       </div>
       <div class="location-container">
-        <div class="container">
+        <div class="container" id="location-container" >
 		<p> <b> Welcome to Craft Maps! </b>  </p>
           <small class="mb-2 d-block">Starting location should be within Ireland i.e Hotel, CO. You are not sure yet? Don't worry! Just click Go and your starting point will be "The Spire"  </small>
           <div class="input-group mb-0">
-            <input id="defaultAddress" type="text" class="form-control location-input" placeholder="Enter your starting location" aria-label="Recipient's username" aria-describedby="basic-addon2">
-              <a href="/routes">
-                 <div class="input-group-append">
-                    <button id="goToMaps" class="btn btn-outline" type="button">Go</button>
-                </div>
-              </a>
+            <input type="text" id="defaultAddress" class="form-control location-input" placeholder="Enter your starting location" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <button id="goToMaps" class="btn btn-outline" type="button">Go</button>
+            </div>
           </div>
         </div>
       </div>
@@ -101,17 +93,17 @@
                 new friends!</h2>
             <ul class="list-inline list-social">
                 <li class="list-inline-item social-twitter">
-                    <a href="https://twitter.com/theCraftMaps1">
+                    <a href="https://twitter.com/theCraftMaps1" target="_blank">
                         <i class="fa fa-twitter"></i>
                     </a>
                 </li>
                 <li class="list-inline-item social-facebook">
-                    <a href="https://www.facebook.com/thecraft.mapsco.1">
+                    <a href="https://www.facebook.com/thecraft.mapsco.1" target="_blank">
                         <i class="fa fa-facebook"></i>
                     </a>
                 </li>
                 <li class="list-inline-item social-google-plus">
-                    <a href="https://www.instagram.com/thecraftmapsco/">
+                    <a href="https://www.instagram.com/thecraftmapsco/" target="_blank">
                         <i class="fa fa-instagram"></i>
                     </a>
                 </li>
@@ -135,5 +127,6 @@
             </ul>
         </div>
     </footer>
+	<script src='{% static "js/new-age.min.js" %}'></script>
 </body>
 </html>

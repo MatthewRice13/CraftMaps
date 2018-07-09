@@ -5,12 +5,13 @@ from django.core import serializers
 from .models import Brewery_Table
 import googlemaps
 import simplejson
+import pandas as pd
 
 from datetime import datetime
 from operator import itemgetter
 
 from math import sin, cos, sqrt, atan2, radians
-import pandas as pd
+import numpy as np
 
 # Support Methods #
 googleKey = "AIzaSyDFK8QRiUl8jx5YYQwDMQ31GMyXwXz-et8"
@@ -54,13 +55,20 @@ def buildjson(data):
 ################################################################
 # Routes Page
 def routes(request):
-    if request.method == 'POST' and request.POST.get('value') is not None:
-        starting_point = request.POST.get('value')
+    if request.method == 'POST':
+        print_test(str(request.POST.get('value1')) + "," + str(request.POST.get('value2')))
+        lat = request.POST.get('value1')
+        lng = request.POST.get('value2')
+        starting_point = (float(lat), float(lng))
+    elif request.method == 'GET':
+        start = read_data('data_dump.txt')
+        start = start.split(",")
+        starting_point = (float(start[0]), float(start[1]))
     else:
-        starting_point = (53.2785327, -6.1899008)
+        starting_point = (53.3256826, -6.2249631)
 
     context = {'locations': builddistjson(Brewery_Table.objects.all(), starting_point),
-               'start': starting_point,
+               'start': list(starting_point),
                'key': googleKey
                }
     return render(request, 'routes.html', context)
@@ -87,7 +95,7 @@ def builddistjson(mysqldata, starting):
                     'lat': float(d.Brewery_Longitude),
                     'lng': float(d.Brewery_Latitude)
                 },
-                'Content': '<div class="infoDiv"><div class="infoHeader"><label class="headerLabel">'+d.Brewery_Name+'</label></div><div class="infoBody"><label class="bodyLabel">'+d.Brewery_Type+'</label></div><div class="infoFooter"><button onClick="getDirections('+str(d.Brewery_Latitude)+','+str(d.Brewery_Longitude)+');">See my Directions</button></div></div>'
+                'Content': '<div class="infoDiv"><div class="infoHeader"><label class="headerLabel">'+d.Brewery_Name+'</label></div><div class="infoBody"><label class="bodyLabel">'+d.Brewery_Type+'</label></div><div class="infoFooter"><button onClick="getDirections('+str(d.Brewery_Longitude)+','+str(d.Brewery_Latitude)+');">See my Directions</button></div></div>'
             }
             rtn_json.append(item)
 
@@ -96,6 +104,7 @@ def builddistjson(mysqldata, starting):
 
 # Clean distance API response
 def get_distance(start, finish):
+    now = datetime.now()
     try:
         if not isinstance(start, tuple):
             geocode_result = gmaps.geocode(start[0], start[1])
@@ -103,6 +112,7 @@ def get_distance(start, finish):
             geocode_result = (start[0], start[1])
         # approximate radius of earth in km
         R = 6373.1
+        ##
         lat1 = radians(geocode_result[0])
         lon1 = radians(geocode_result[1])
         lat2 = radians(float(finish[0]))
@@ -136,3 +146,14 @@ def contact(request):
 
     }
     return render(request, 'contact.html', context)
+
+def print_test(test_data):
+    with open("data_dump.txt", "w") as text_file:
+        text_file.write(test_data)
+        text_file.close()
+
+def read_data(file):
+    with open(file, 'r') as text_file:
+        data = text_file.read()
+        text_file.close()
+        return data

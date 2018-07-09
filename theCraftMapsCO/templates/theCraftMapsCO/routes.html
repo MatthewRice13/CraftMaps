@@ -10,133 +10,140 @@
 
     {% load static %}
     <script>
-        var starting = {{ start|safe }}
+        var latstart = {{ start.0 }};
+        var lngstart = {{ start.1 }};
         var Brewery_JSON = {{ locations|safe }};
     </script>
 
-    <!-- google api -->
-    <script src="https://maps.googleapis.com/maps/api/js?key={{key}}"></script>
-
-    <!-- Java Script files -->
-    <script src='{% static "js/routes_js_file.js" %}'></script>
-    <script src='{% static "js/new-age.min.js" %}'></script>
-    <script src='{% static "js/jquery-3.3.1.min.js" %}'></script>
-    <script src='{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
-    <script src='{% static "vendor/jquery-easing/jquery.easing.min.js" %}'></script>
-
-    <!-- Custom style -->
+    <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href='{% static "vendor/bootstrap/css/bootstrap.min.css" %}'/>
+
+    <!-- Custom fonts for this template -->
     <link rel="stylesheet" href='{% static "vendor/font-awesome/css/font-awesome.min.css" %}'/>
     <link rel="stylesheet" href='{% static "vendor/simple-line-icons/css/simple-line-icons.css" %}'/>
-    <link rel="stylesheet" href='{% static "css/new-age.css" %}'/>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+	
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href='{% static "css/new-age.css" %}'/>
+	<link rel="stylesheet" href='{% static "css/craftMaps.css" %}'/>
 </head>
 
 <body id="page-top">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <img src='{% static "img/beer_PNG.png" %}' width="28px" height="40px"/>
+        <a class="navbar-brand js-scroll-trigger" href="index.html"><font face="Goudy Stout"> CRAFT MAPS</font></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="masthead">
+    <div class="location-container">
         <div class="container">
-            <img src='{% static "img/beer_PNG.png" %}' width="28px" height="40px"/>
-            <a class="navbar-brand js-scroll-trigger" href="index.html"><font face="Goudy Stout"> CRAFT MAPS</font></a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                    aria-label="Toggle navigation"> Menu
-                <i class="fa fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <header class="masthead">
-        <div class="location-container">
-            <div class="container">
-                <a href="index.html">
-                    <button id="getDirecButton" class="btn btn-outline" type="button">
-                        Go back
-                    </button>
-                </a>
-
-                <button id="getItenDirecButton" class="btn btn-outline" type="button" onclick="displayHidden()">
-                    Direct Me to all
+                <button id="goBackButton" class="btn btn-outline" type="button">
+                    Go back
                 </button>
+			<button id="refreshButton" class="btn btn-outline" type="button">
+                    See all breweries!
+			</button>
+			<br>
+			<label id="labelInfo">For additional info about each brewery click each marker on the map below. When ready click the Direct me to All button.</label>
+        </div>
+    </div>
 
-                <div id="checkboxes">
-                    <div class="checkboxes">
-                        <small> Select the breweries you would like to visit and we guide you to them!
-                            <br>For additional
-                                info about each brewery click each marker on the map below. When ready click the Direct me to
-                                All button.
-                            </br>
-                        </small>
-                        <font face="Muli", size="3"/>
-                    </div>
-                    <ul id="listOfBreweries"/>
-                </div>
 
+    <div class="map-container">
+        <div id="brewList">
+            <label id="listTitle">Top near by breweries from you:</label>
+            <div id="listBrew">
+                <ul id="listOfBreweries"></ul>
+                <button id="getItenDirecButton" class="btn btn-outline" type="button">
+                    Direct me to these!
+			    </button>
             </div>
         </div>
-
-        <div class="map-container">
-            <div id="map"></div>
+        <div id="map"></div>
+        <div id="directionsPanel" >
+            <label id="directionLabel"> Choose the brewery/breweries you want to visit.</label>
         </div>
+    </div>
+    <section class="contact bg-primary" id="contact">
+        <div class="container">
+            <h2>We
+                <i class="fa fa-heart"></i>
+                new friends!</h2>
+            <ul class="list-inline list-social">
+                <li class="list-inline-item social-twitter">
+                    <a href="https://twitter.com/theCraftMaps1" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item social-facebook">
+                    <a href="https://www.facebook.com/thecraft.mapsco.1" target="_blank">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item social-google-plus">
+                    <a href="https://www.instagram.com/thecraftmapsco/" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-        <div id="directionsPanel" style="display:none;"></div>
+    <footer>
+        <div class="container">
+            <p>&copy; Craft Maps 2018</p>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="#">Privacy</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">Terms</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</header>
+<!-- Bootstrap core JavaScript -->
+    <script src='{% static "js/jquery-3.3.1.min.js" %}'></script>
+    <script src='{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
 
-        <section class="contact bg-primary" id="contact">
-            <div class="container">
-                <h2>We
-                    <i class="fa fa-heart"></i>
-                    new friends!</h2>
-                <ul class="list-inline list-social">
-                    <li class="list-inline-item social-twitter">
-                        <a href="https://twitter.com/theCraftMaps1">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item social-facebook">
-                        <a href="https://www.facebook.com/thecraft.mapsco.1">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item social-google-plus">
-                        <a href="https://www.instagram.com/thecraftmapsco/">
-                            <i class="fa fa-instagram"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
+    <!-- Plugin JavaScript -->
+    <script src='{% static "vendor/jquery-easing/jquery.easing.min.js" %}'></script>
 
-        <footer>
-            <div class="container">
-                <p>&copy; Craft Maps 2018</p>
-                <ul class="list-inline">
-                    <li class="list-inline-item">
-                        <a href="#">Privacy</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">Terms</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">FAQ</a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
-    </header>
+    <!-- Custom scripts for this template -->
+    <script src='{% static "js/new-age.min.js" %}'></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFK8QRiUl8jx5YYQwDMQ31GMyXwXz-et8&language=en-GB&region=IE"></script>
+	<script src='{% static "js/showModalDialog.js" %}'></script>
+    <script src='{% static "js/axios.min.js" %}'></script>
+	<script src='{% static "js/routes.js" %}'></script>
 </body>
 </html>
