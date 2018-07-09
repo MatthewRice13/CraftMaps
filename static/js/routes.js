@@ -12,7 +12,10 @@ var wayPt = [];
 var img = "Images/beer_PNG.png"
 
 //staticurl
-var staticUrl = "http://localhost:8000/";
+var currentURL = window.location.href;
+var currentProtocol = window.location.protocol;
+var currentHost = window.location.host;
+//var staticUrl = "http://127.0.0.1:8000/";
 //var img = "K:/UCD/sem 3/project/beermarkr.png"
 
 //breweries data
@@ -27,7 +30,7 @@ $(document).ready(function(){
 	//getLocation(); // will give the current position
 	initMap();
 	$("#goBackButton").on('click', function(){
-		location.href = staticUrl;
+		location.href = currentProtocol+'//'+currentHost+'/';  //staticUrl;
 	});
 	$("#getItenDirecButton").on('click', function(){
 		var listLen = $('input[class="checkboxList"]:checked').length;
@@ -41,7 +44,7 @@ $(document).ready(function(){
 		}
 	});
 	$('#refreshButton').on('click', function(){
-		location.href = staticUrl+'routes/' ;
+		location.href = currentURL;   //staticUrl+'routes/' ;
 	});
 	$("#goToMaps").on('click', function(){
 		var loc = $("#defaultAddress").val();
@@ -51,8 +54,10 @@ $(document).ready(function(){
 		getCoords(loc);
 	});
 	//modal function calling
-	/*$("#button2").on('click', function(){
-		var ret = window.showModalDialog("http://google.com", "", "dialogWidth:60%;dialogHeight:60%");
+	/*$("headerLabel").on('click', function(e){
+		var urllink= e.target.id;
+		console.log(urllink);
+		//var ret = window.showModalDialog("http://woodkeybrewing.ie/", "", "dialogWidth:80%;dialogHeight:80%");
 	});*/
 });//ready end
 
@@ -192,4 +197,9 @@ function calcItenRoute() {
 		directionsDisplay.setDirections(result);
 		}
 	});
+}
+
+function showModal(e){
+	var urllink = e.target.id;//console.log(urllink);
+	var ret = window.showModalDialog(urllink, "", "dialogWidth:80%;dialogHeight:80%");
 }
