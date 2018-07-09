@@ -140,6 +140,14 @@ def about(request):
     return render(request, 'about.html', context)
 
 
+# contact page
+def contact(request):
+    context = {
+
+    }
+    return render(request, 'about.html', context)
+
+
 #########################################################
 # support methods
 def print_test(test_data):
