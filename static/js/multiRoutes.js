@@ -61,7 +61,8 @@ function populateBreweriesList(){
 	$("#listOfBreweries").append(startPointButton);
 	for(i=0; i < breweriesJson.length; i++){
 		//listBrew = "<li><input type='checkbox' name="+breweriesJson[i].coords.lng+" class='checkboxList' value="+ breweriesJson[i].coords.lat+">"+ breweriesJson[i].name + "</li>";
-		buttonListBrew = "<button class='btn btn-outline auto-btn' type='button' onClick='showDirections("+breweriesJson[i].coords.lat+","+breweriesJson[i].coords.lng+")'>"+breweriesJson[i].name+"</button><br>";
+		var number = i+1;
+		buttonListBrew = "<button class='btn btn-outline auto-btn' type='button' onClick='showDirections("+breweriesJson[i].coords.lat+","+breweriesJson[i].coords.lng+")'>"+number+": "+breweriesJson[i].name+"</button><br>";
 		//$("#listOfBreweries").append(listBrew);
 		$("#listOfBreweries").append(buttonListBrew);
 	}
