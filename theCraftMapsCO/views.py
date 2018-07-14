@@ -42,8 +42,8 @@ def buildjson(data):
         item = {
             'name': d.Brewery_Name,
             'coords': {
-                'lat': float(d.Brewery_Longitude),
-                'lng': float(d.Brewery_Latitude)
+                'lng': float(d.Brewery_Longitude),
+                'lat': float(d.Brewery_Latitude)
             },
             'Content': '<div class="infoDiv"><div class="infoHeader"><label class="headerLabel">'+d.Brewery_Name+'</label></div><div class="infoBody"><label class="bodyLabel">'+d.Brewery_Type+'</label></div></div>'
         }
