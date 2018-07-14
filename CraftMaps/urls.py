@@ -17,8 +17,6 @@ from django.contrib import admin
 from django.conf.urls import url, include
 from django.conf import settings
 from django.conf.urls.static import static
-from theCraftMapsCO import views
-from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -27,10 +25,7 @@ urlpatterns = [
     url(r'^routes/', include('theCraftMapsCO.urls')),
     url(r'^about/', include('theCraftMapsCO.urls')),
     url(r'^contact/', include('theCraftMapsCO.urls')),
-    url(r'^signup/', views.signup, name='signup'),
-    url(r'^login/', auth_views.login, {'template_name': 'login.html'}, name='login'),
-    url(r'^logout/', auth_views.logout, {'next_page': '/'}, name='logout'),
-    url(r'^mulroutes/', include('theCraftMapsCO.urls'))
+    url(r'^multiRoutes/', include('theCraftMapsCO.urls')),
 ]
 
 if settings.DEBUG:

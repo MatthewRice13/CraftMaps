@@ -24,10 +24,10 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-	
+
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href='{% static "css/new-age.css" %}'/>
+    <link rel="stylesheet" href='{% static "css/new-age-index-multiRoutes.css" %}'/>
 	<link rel="stylesheet" href='{% static "css/craftMaps.css" %}'/>
 </head>
 
@@ -76,15 +76,15 @@
 
 
     <div class="map-container">
-        <!-- <div id="brewList">
+        <div id="brewList">
             <label id="listTitle">Top near by breweries from you:</label>
             <div id="listBrew">
-                <ul id="listOfBreweries"></ul>
-                <button id="getItenDirecButton" class="btn btn-outline" type="button">
+                <div id="listOfBreweries"></div>
+                <!-- <button id="getItenDirecButton" class="btn btn-outline" type="button">
                     Direct me to these!
-			    </button>
+			    </button> -->
             </div>
-        </div> -->
+        </div>
         <div id="map"></div>
         <div id="directionsPanel" >
             <label id="directionLabel"> Choose the brewery/breweries you want to visit.</label>
@@ -145,7 +145,7 @@
 	<!-- <script src='{% static "js/showModal.js" %}'></script> -->
 	<script src='{% static "js/showModalDialog.js" %}'></script>
     <script src='{% static "js/axios.min.js" %}'></script>
-	<script src='{% static "js/routes.js" %}'></script>
+	<script src='{% static "js/multiRoutes.js" %}'></script>
 </div>
 </body>
 </html>

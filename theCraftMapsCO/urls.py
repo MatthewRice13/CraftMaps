@@ -7,5 +7,7 @@ urlpatterns = [
     url(r'^routes/$', views.routes, name='routes'),
     url(r'^about/$', views.about, name='about'),
     url(r'^contact/$', views.contact, name='contact'),
-    url(r'^mulroutes/$', views.mulroutes, name='mulroutes')
+    url(r'^multiRoutes/$', views.multiRoutes, name='multiRoutes')
 ]
+
+#url(r'^routes/(?P<start>\w+)/$', views.routes, name='routes'),

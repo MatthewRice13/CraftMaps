@@ -12,7 +12,8 @@ var wayPt = [];
 var img = "Images/beer_PNG.png"
 
 //staticurl
-var staticUrl = "http://127.0.0.1:8000/";
+var currentURL = window.location.href;
+//var staticUrl = "http://127.0.0.1:8000/";
 //var img = "K:/UCD/sem 3/project/beermarkr.png"
 
 //breweries data
@@ -35,8 +36,16 @@ $(document).ready(function(){
 		if(loc == ""){
 		    alert('No location entered! Your default location will be "The Spire Tower"');
 		}
-		getCoords(loc);
+		getCoords(loc,"routes/");
 	});
+	$("#goToMultiMaps").on('click', function(){
+		var loc = $("#defaultAddress").val();
+		if(loc == ""){
+		    alert('No location entered! Your default location will be "The Spire Tower"');
+		}
+		getCoords(loc,"multiRoutes/");
+	});
+	
 });//ready end
 
 function populateBreweriesList(){
@@ -110,14 +119,14 @@ function addMarker(props){
 	}
 }
 
-function getCoords(address){
+/*function getCoords(address,newPage){
 	var startLng = 0.0;
 	var startLat = 0.0;
 	if(address == ""){
 		// default for spire tower
 		startLat = 53.349722;
 		startLng = -6.260278;
-		postRequest(startLat,startLng)
+		postRequest(startLat,startLng,newPage)
 
 	}
 	else{
@@ -136,12 +145,60 @@ function getCoords(address){
 					startLat = response.data.results["0"].geometry.location.lat;
 					startLng = response.data.results["0"].geometry.location.lng;
 					var locCord= startLat+','+startLng;
-					postRequest(startLat,startLng);
+					postRequest(startLat,startLng,newPage);
 
 				}
 			}
 			else{
-				alert('Geocode was not successful for the following reason: ' + response.data.status);
+				//alert('Geocode was not successful for the following reason: ' + response.data.status);
+				alert('You are not drunk yet! Please enter a valid location');
+			}
+		});
+	}
+}*/
+function getCoords(address,newPage){
+	var startLng = 0.0;
+	var startLat = 0.0;
+	if(address == ""){
+		// default for spire tower
+		startLat = 53.349722;
+		startLng = -6.260278;
+		postRequest(startLat,startLng,newPage)
+
+	}
+	else{
+		axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+			params:{
+			  address:address,
+			  key:'AIzaSyDFK8QRiUl8jx5YYQwDMQ31GMyXwXz-et8'
+			}
+		})
+		.then(function(response){
+			if(response.data.status === "OK"){
+				for(i=0; i<response.data.results["0"].address_components.length; i++){
+					if(response.data.results["0"].address_components[i].long_name == "Ireland"){
+						startLat = response.data.results["0"].geometry.location.lat;
+						startLng = response.data.results["0"].geometry.location.lng;
+						var locCord= startLat+','+startLng;
+						postRequest(startLat,startLng,newPage);
+						return;
+					}
+				}
+				alert("Enter a more detailed Irish Location");
+				/*if(response.data.results["0"].address_components[3].long_name != "Ireland"){
+					alert("Enter a more detailed Irish Location");
+				}*/
+				/*else{
+					startLat = response.data.results["0"].geometry.location.lat;
+					startLng = response.data.results["0"].geometry.location.lng;
+					var locCord= startLat+','+startLng;
+					postRequest(startLat,startLng,newPage);
+
+				}*/
+			}
+			else{
+				//alert('Geocode was not successful for the following reason: ' + response.data.status);
+				alert('You are not drunk yet! Please enter a valid location');
 			}
 		});
 	}
@@ -162,9 +219,9 @@ function getCookie(name) {
 	}
 	return cookieValue;
 }
-function postRequest(lati,longi){
+function postRequest(lati,longi,newPage){
 	var csrftoken = getCookie('csrftoken');
-	var url = staticUrl+'routes/';
+	var url = currentURL+newPage;
 	var postdata={
 		'value1':lati,
 		'value2':longi,
