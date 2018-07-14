@@ -25,6 +25,8 @@ urlpatterns = [
     url(r'^routes/', include('theCraftMapsCO.urls')),
     url(r'^about/', include('theCraftMapsCO.urls')),
     url(r'^contact/', include('theCraftMapsCO.urls')),
+    url(r'^multiRoutes/', include('theCraftMapsCO.urls')),
+    url(r'^brewery/', include('theCraftMapsCO.urls'))
 ]
 
 if settings.DEBUG:

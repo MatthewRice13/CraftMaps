@@ -24,10 +24,10 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-	
+
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href='{% static "css/new-age.css" %}'/>
+    <link rel="stylesheet" href='{% static "css/new-age-index-multiRoutes.css" %}'/>
 	<link rel="stylesheet" href='{% static "css/craftMaps.css" %}'/>
 </head>
 
@@ -67,7 +67,10 @@
                     Go back
                 </button>
 			<button id="refreshButton" class="btn btn-outline" type="button">
-                    See all breweries!
+                    Replan Your Itenary!
+			</button>
+			<button id='downloadFile' class='btn btn-outline' type='button'>
+					Download Your Itenary!
 			</button>
 			<br>
 			<label id="labelInfo">For additional info about each brewery click each marker on the map below. When ready click the Direct me to All button.</label>
@@ -76,20 +79,20 @@
 
 
     <div class="map-container">
-        <!-- <div id="brewList">
+        <div id="brewList">
             <label id="listTitle">Top near by breweries from you:</label>
             <div id="listBrew">
-                <ul id="listOfBreweries"></ul>
-                <button id="getItenDirecButton" class="btn btn-outline" type="button">
+                <div id="listOfBreweries"></div>
+                <!-- <button id="getItenDirecButton" class="btn btn-outline" type="button">
                     Direct me to these!
-			    </button>
+			    </button> -->
             </div>
-        </div> -->
+        </div>
         <div id="map"></div>
         <div id="directionsPanel" >
             <label id="directionLabel"> Choose the brewery/breweries you want to visit.</label>
         </div>
-    </div>
+    </div><!-- <div><button id="downloadFile" class="btn btn-outline" type="button">Download PDF File</button></div> -->
     <section class="contact bg-primary" id="contact">
         <div class="container">
             <h2>We
@@ -135,6 +138,7 @@
 <!-- Bootstrap core JavaScript -->
     <script src='{% static "js/jquery-3.3.1.min.js" %}'></script>
     <script src='{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src='{% static "vendor/jquery-easing/jquery.easing.min.js" %}'></script>
@@ -145,7 +149,7 @@
 	<!-- <script src='{% static "js/showModal.js" %}'></script> -->
 	<script src='{% static "js/showModalDialog.js" %}'></script>
     <script src='{% static "js/axios.min.js" %}'></script>
-	<script src='{% static "js/routes.js" %}'></script>
+	<script src='{% static "js/multiRoutes.js" %}'></script>
 </div>
 </body>
 </html>

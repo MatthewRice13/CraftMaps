@@ -16,8 +16,6 @@ var currentURL = window.location.href;
 var currentProtocol = window.location.protocol;
 var currentHost = window.location.host;
 //var staticUrl = "http://127.0.0.1:8000/";
-//var img = "K:/UCD/sem 3/project/beermarkr.png"
-
 //breweries data
 var breweriesJson = Brewery_JSON;
 //console.log(breweriesJson);
@@ -32,7 +30,7 @@ $(document).ready(function(){
 	$("#goBackButton").on('click', function(){
 		location.href = currentProtocol+'//'+currentHost+'/';  //staticUrl;
 	});
-	$("#getItenDirecButton").on('click', function(){
+	/*$("#getItenDirecButton").on('click', function(){
 		var listLen = $('input[class="checkboxList"]:checked').length;
 		console.log(listLen);
 		if(listLen <= 1)
@@ -42,16 +40,9 @@ $(document).ready(function(){
 		else{
 			makeItenary();
 		}
-	});
+	});*/
 	$('#refreshButton').on('click', function(){
 		location.href = currentURL;   //staticUrl+'routes/' ;
-	});
-	$("#goToMaps").on('click', function(){
-		var loc = $("#defaultAddress").val();
-		if(loc == ""){
-		    alert('No location entered! Your default location will be "The Spire Tower"');
-		}
-		getCoords(loc);
 	});
 	//modal function calling
 	/*$("headerLabel").on('click', function(e){
@@ -123,47 +114,64 @@ function addMarker(props){//console.log(props.coords);
 }
 
 function getDirections(lati,longi) {
-	$("#directionsPanel").empty();
-	$("#directionsPanel").css("background-color", "white");
 	directionsDisplay = new google.maps.DirectionsRenderer();
 	var directionsOptions = {
 		zoom:10,
 		center: new google.maps.LatLng(startlatitude, startlongitude)
 	}
+	calcRoute(lati,longi,"TRANSIT");
 	directionsMap = new google.maps.Map(document.getElementById('map'), directionsOptions);
 	directionsDisplay.setMap(directionsMap);
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
-	calcRoute(lati,longi);
 }
 
-function calcRoute(lati,longi) {
+function calcRoute(lati,longi,mode) {
 	$("#refreshButton").show();
 	end = {lat:lati,lng:longi};
 	var request = {
 		origin: new google.maps.LatLng(startlatitude, startlongitude),
 		destination:end,
-		travelMode: google.maps.TravelMode.TRANSIT
+		travelMode: google.maps.TravelMode[mode]
 	};
 	directionsService.route(request, function(result, status) {
 		if (status == google.maps.DirectionsStatus.OK) {
-		directionsDisplay.setDirections(result);
+			$("#directionsPanel").empty();
+			$("#directionsPanel").css("background-color", "white");
+			directionsDisplay.setDirections(result);
+		}
+		else if (status == google.maps.DirectionsStatus.ZERO_RESULTS){
+			alert('Public Transport route does not exist, Driving route will be shown');
+			getDirectionsDrive(lati,longi);
 		}
 	});
 }
 
-function makeItenary(){
+function getDirectionsDrive(lati,longi) {
+	directionsDisplay = new google.maps.DirectionsRenderer();
+	var directionsOptions = {
+		zoom:10,
+		center: new google.maps.LatLng(startlatitude, startlongitude)
+	}
+	calcRoute(lati,longi,"DRIVING");
+	directionsMap = new google.maps.Map(document.getElementById('map'), directionsOptions);
+	directionsDisplay.setMap(directionsMap);
+	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
+}
+
+/*function makeItenary(){
 	wayPt = [];
 	itenaryPoints = [];
+	//itenaryPoints.push({"location":{"lat":startlatitude,"lng":startlongitude}});
 	$('input[class="checkboxList"]:checked').each(function() {
 		var lati = parseFloat(this.value);
 		var longi = parseFloat(this.name);
 		itenaryPoints.push({"location":{"lat":lati,"lng":longi}});
-		//console.log(itenaryPoints);
 	});
+	//console.log(itenaryPoints);
 	getItenDirections();
-}
+}*/
 
-function getItenDirections() {
+/*function getItenDirections() {
 	$("#directionsPanel").empty();
 	$("#directionsPanel").css("background-color", "white");
 	directionsDisplay = new google.maps.DirectionsRenderer();
@@ -175,9 +183,9 @@ function getItenDirections() {
 	directionsDisplay.setMap(directionsMap);
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
 	calcItenRoute();
-}
+}*/
 
-function calcItenRoute() {
+/*function calcItenRoute() {
 	//console.log(itenaryPoints.length);
 	$("#refreshButton").show();
 	for(i=0; i < itenaryPoints.length-1; i++){
@@ -197,7 +205,7 @@ function calcItenRoute() {
 		directionsDisplay.setDirections(result);
 		}
 	});
-}
+}*/
 
 function showModal(e){
 	var urllink = e.target.id;//console.log(urllink);
