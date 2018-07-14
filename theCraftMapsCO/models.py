@@ -32,7 +32,7 @@ class Beer_Table(models.Model):
 class User_Table(models.Model):
     User_Id = models.IntegerField()
     User_Favorite_Brewery_Type = models.CharField(max_length=90)
-    User_Max_Distance = models.IntegerField(max_digits=10, default=20)
+    User_Max_Distance = models.IntegerField(default=20)
     User_Beer_Stout = models.BooleanField(default=false)
     User_Beer_Lager = models.BooleanField(default=false)
     User_Beer_IPA = models.BooleanField(default=false)
