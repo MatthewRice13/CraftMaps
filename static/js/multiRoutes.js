@@ -282,4 +282,5 @@ function downloadPDF(){
 		'pagesplit': true,
         'elementHandlers': specialElementHandlers
     });	
+	pdf.save("CraftMapsItenary.pdf");
 }
