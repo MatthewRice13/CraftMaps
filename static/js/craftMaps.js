@@ -34,14 +34,26 @@ $(document).ready(function(){
 	$("#goToMaps").on('click', function(){
 		var loc = $("#defaultAddress").val();
 		if(loc == ""){
-		    alert('No location entered! Your default location will be "The Spire Tower"');
+		    //alert('No location entered! Your default location will be "The Spire Tower"');
+			if(confirm('No location entered! Your default location will be "The Spire Tower"')){
+				getCoords(loc,"multiRoutes/");
+			}
+			else{
+				return;
+			}
 		}
 		getCoords(loc,"routes/");
 	});
 	$("#goToMultiMaps").on('click', function(){
 		var loc = $("#defaultAddress").val();
 		if(loc == ""){
-		    alert('No location entered! Your default location will be "The Spire Tower"');
+		    //alert('No location entered! Your default location will be "The Spire Tower"');
+			if(confirm('No location entered! Your default location will be "The Spire Tower"')){
+				getCoords(loc,"multiRoutes/");
+			}
+			else{
+				return;
+			}
 		}
 		getCoords(loc,"multiRoutes/");
 	});

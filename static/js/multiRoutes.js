@@ -23,6 +23,15 @@ var startlatitude = latstart;
 var startlongitude = lngstart;
 var currentlatitude = latstart;
 var currentlongitude = lngstart;
+var downloadText = '';
+var tripCounter = 1;
+
+//flags for itenaryPoints
+var flagone = false;
+var flagtwo = false;
+var flagthree = false;
+var flagfour = false;
+var flagfive = false;
 
 var startPoint = new google.maps.LatLng(startlatitude, startlongitude);
 //document ready function
@@ -46,6 +55,9 @@ $(document).ready(function(){
 	$('#refreshButton').on('click', function(){
 		location.href = currentURL;   //staticUrl+'routes/' ;
 	});
+	$('#downloadFile').on('click', function(){
+		downloadPDF();
+	});
 	//modal function calling
 	/*$("headerLabel").on('click', function(e){
 		var urllink= e.target.id;
@@ -62,7 +74,7 @@ function populateBreweriesList(){
 	for(i=0; i < breweriesJson.length; i++){
 		//listBrew = "<li><input type='checkbox' name="+breweriesJson[i].coords.lng+" class='checkboxList' value="+ breweriesJson[i].coords.lat+">"+ breweriesJson[i].name + "</li>";
 		var number = i+1;
-		buttonListBrew = "<button class='btn btn-outline auto-btn' type='button' onClick='showDirections("+breweriesJson[i].coords.lat+","+breweriesJson[i].coords.lng+")'>"+number+": "+breweriesJson[i].name+"</button><br>";
+		buttonListBrew = "<button class='btn btn-outline auto-btn' type='button' onClick='checkForItenary("+breweriesJson[i].coords.lat+","+breweriesJson[i].coords.lng+","+number+")'>"+number+": "+breweriesJson[i].name+"</button><br>";
 		//$("#listOfBreweries").append(listBrew);
 		$("#listOfBreweries").append(buttonListBrew);
 	}
@@ -119,121 +131,155 @@ function addMarker(props){//console.log(props.coords);
 	}
 }
 
-/*function getDirections(lati,longi) {
-	$("#directionsPanel").empty();
-	$("#directionsPanel").css("background-color", "white");
-	directionsDisplay = new google.maps.DirectionsRenderer();
-	var directionsOptions = {
-		zoom:10,
-		center: new google.maps.LatLng(startlatitude, startlongitude)
-	}
-	directionsMap = new google.maps.Map(document.getElementById('map'), directionsOptions);
-	directionsDisplay.setMap(directionsMap);
-	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
-	calcRoute(lati,longi);
-}*/
 
-/*function calcRoute(lati,longi) {
-	$("#refreshButton").show();
-	end = {lat:lati,lng:longi};
-	var request = {
-		origin: new google.maps.LatLng(startlatitude, startlongitude),
-		destination:end,
-		travelMode: google.maps.TravelMode.TRANSIT
-	};
-	directionsService.route(request, function(result, status) {
-		if (status == google.maps.DirectionsStatus.OK) {
-		directionsDisplay.setDirections(result);
-		}
-	});
-}*/
-
-/*function makeItenary(){
-	wayPt = [];
-	itenaryPoints = [];
-	itenaryPoints.push({"location":{"lat":startlatitude,"lng":startlongitude}});
-	$('input[class="checkboxList"]:checked').each(function() {
-		var lati = parseFloat(this.value);
-		var longi = parseFloat(this.name);
-		itenaryPoints.push({"location":{"lat":lati,"lng":longi}});
-		//console.log(itenaryPoints);
-	});
-	getItenDirections();
-}*/
-
-/*function getItenDirections() {
-	$("#directionsPanel").empty();
-	$("#directionsPanel").css("background-color", "white");
-	directionsDisplay = new google.maps.DirectionsRenderer();
-	var directionsOptions = {
-		zoom:10,
-		center: new google.maps.LatLng(startlatitude, startlongitude)
-	}
-	directionsMap = new google.maps.Map(document.getElementById('map'), directionsOptions);
-	directionsDisplay.setMap(directionsMap);
-	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
-	calcItenRoute();
-}*/
-
-/*function calcItenRoute() {
-	//console.log(itenaryPoints.length);
-	$("#refreshButton").show();
-	for(i=0; i < itenaryPoints.length-1; i++){
-		wayPt.push({"location":{"lat":itenaryPoints[i].location.lat,"lng":itenaryPoints[i].location.lng},"stopover":true});
-	}
-	//console.log(wayPt);
-	start = new google.maps.LatLng(startlatitude, startlongitude);
-	end = {lat:itenaryPoints[itenaryPoints.length-1].location.lat,lng:itenaryPoints[itenaryPoints.length-1].location.lng};
-	var request = {
-		origin: start,
-		destination: end,
-		waypoints: wayPt,
-		travelMode: google.maps.TravelMode.DRIVING
-	};
-	directionsService.route(request, function(result, status) {
-		if (status == google.maps.DirectionsStatus.OK) {
-		directionsDisplay.setDirections(result);
-		}
-	});
-}*/
 
 function showModal(e){
 	var urllink = e.target.id;//console.log(urllink);
 	var ret = window.showModalDialog(urllink, "", "dialogWidth:80%;dialogHeight:80%");
 }
-
+function checkForItenary(lati,longi,num){
+	if(num == 1){
+		if(flagone){
+			alert("This brewery is already added to the itenary.");
+		}
+		else{
+			showDirections(lati,longi);
+			flagone = true;
+		}
+	}
+	if(num == 2){
+		if(flagtwo){
+			alert("This brewery is already added to the itenary.");
+		}
+		else{
+			showDirections(lati,longi);
+			flagtwo = true;
+		}
+	}
+	if(num == 3){
+		if(flagthree){
+			alert("This brewery is already added to the itenary.");
+		}
+		else{
+			showDirections(lati,longi);
+			flagthree = true;
+		}
+	}
+	if(num == 4){
+		if(flagfour){
+			alert("This brewery is already added to the itenary.");
+		}
+		else{
+			showDirections(lati,longi);
+			flagfour = true;
+		}
+	}
+	if(num == 5){
+		if(flagfive){
+			alert("This brewery is already added to the itenary.");
+		}
+		else{
+			showDirections(lati,longi);
+			flagfive = true;
+		}
+	}
+}
 function showDirections(lati,longi){
 	if(lati == currentlatitude && longi == currentlongitude){
-		alert('Your destination is already the clicked position. Please clicked on another option');
+		alert('You are already on the clicked position. Please clicked on another option');
 	}
 	else{
-		$("#directionsPanel").empty();
-		$("#directionsPanel").css("background-color", "white");
 		directionsDisplay = new google.maps.DirectionsRenderer();
 		var directionsOptions = {
 			zoom:10,
 			center: new google.maps.LatLng(currentlatitude, currentlongitude)
 		}
+		showRoute(lati,longi,"TRANSIT");
 		directionsMap = new google.maps.Map(document.getElementById('map'), directionsOptions);
 		directionsDisplay.setMap(directionsMap);
 		directionsDisplay.setPanel(document.getElementById("directionsPanel"));
-		showRoute(lati,longi);
-		currentlatitude = lati;
-		currentlongitude = longi;
+		
 	}
 }
 
-function showRoute(lati,longi) {
+function showRoute(lati,longi,mode) {
 	$("#refreshButton").show();
+	$("#downloadFile").show();
+	var directionRoute;
+	var directionText = '';
 	end = {lat:lati,lng:longi};
 	var request = {
 		origin: new google.maps.LatLng(currentlatitude, currentlongitude),
 		destination:end,
-		travelMode: google.maps.TravelMode.TRANSIT
+		travelMode: google.maps.TravelMode[mode]
 	};
-	directionsService.route(request, function(result, status) {
+	directionsService.route(request, function(result, status) {//console.log(result);
 		if (status == google.maps.DirectionsStatus.OK) {
-		directionsDisplay.setDirections(result);
+			directionsDisplay.setDirections(result);
+			directionRoute = result.routes["0"].legs["0"].steps;
+			for(i=0;i<directionRoute.length;i++){
+				//console.log(directionRoute[i].instructions);  //correct
+				directionText = directionText + directionRoute[i].instructions+"\n";
+				for(var x in directionRoute[i]){
+					if(x=="steps"){
+						for(j=0;j<directionRoute[i].steps.length;j++){
+							//console.log(directionRoute[i].steps[j].instructions);  //correct
+							directionText = directionText + directionRoute[i].steps[j].instructions+"\n";
+						}
+					}
+				}
+			}
+			//var finalDirection = $('<p>'+directionText+'</p>').text();
+			prepareText(directionText);                      //finalDirection);     // directionText);
+			$("#directionsPanel").empty();
+			$("#directionsPanel").css("background-color", "white");
+			currentlatitude = lati;
+			currentlongitude = longi;
+		}
+		else if (status == google.maps.DirectionsStatus.ZERO_RESULTS){
+			alert('Public Transport route does not exist, Driving route will be shown');
+			showDirectionsDrive(lati,longi);
 		}
 	});
+}
+
+function showDirectionsDrive(lati,longi){
+	if(lati == currentlatitude && longi == currentlongitude){
+		alert('You are already on the clicked position. Please clicked on another option');
+	}
+	else{
+		directionsDisplay = new google.maps.DirectionsRenderer();
+		var directionsOptions = {
+			zoom:10,
+			center: new google.maps.LatLng(currentlatitude, currentlongitude)
+		}
+		showRoute(lati,longi,"DRIVING");
+		directionsMap = new google.maps.Map(document.getElementById('map'), directionsOptions);
+		directionsDisplay.setMap(directionsMap);
+		directionsDisplay.setPanel(document.getElementById("directionsPanel"));
+		
+	}
+}
+
+function prepareText(directions){
+	var directionDetails = "<b>TRIP "+tripCounter+":</b>"+"<div>";
+	directionDetails = directionDetails + directions+"</div>"
+	tripCounter = tripCounter+1;
+	downloadText = downloadText + directionDetails;
+	//console.log(downloadText);
+}
+function downloadPDF(){
+	var specialElementHandlers = {
+		'#editor': function (element, renderer) {
+			return true;
+		}
+	};
+	var pdf = new jsPDF('p', 'pt', 'a4');
+	
+	pdf.fromHTML(downloadText, 15, 15, {
+        'width': 500,
+		'margin': 1,
+		'pagesplit': true,
+        'elementHandlers': specialElementHandlers
+    });	
 }

@@ -576,3 +576,17 @@ padding:1%;
     background-color: #fdcc52;
     color: #222222;
 }
+
+#downloadFile {
+	display: none;
+    background-color: #222222;
+    border-color: #222222;
+    color: #fdcc52;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#downloadFile:focus, #downloadFile:hover {
+    background-color: #fdcc52;
+    color: #222222;
+}

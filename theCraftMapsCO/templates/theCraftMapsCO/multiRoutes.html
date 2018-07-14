@@ -67,7 +67,10 @@
                     Go back
                 </button>
 			<button id="refreshButton" class="btn btn-outline" type="button">
-                    See all breweries!
+                    Replan Your Itenary!
+			</button>
+			<button id='downloadFile' class='btn btn-outline' type='button'>
+					Download Your Itenary!
 			</button>
 			<br>
 			<label id="labelInfo">For additional info about each brewery click each marker on the map below. When ready click the Direct me to All button.</label>
@@ -89,7 +92,7 @@
         <div id="directionsPanel" >
             <label id="directionLabel"> Choose the brewery/breweries you want to visit.</label>
         </div>
-    </div>
+    </div><!-- <div><button id="downloadFile" class="btn btn-outline" type="button">Download PDF File</button></div> -->
     <section class="contact bg-primary" id="contact">
         <div class="container">
             <h2>We
@@ -135,6 +138,7 @@
 <!-- Bootstrap core JavaScript -->
     <script src='{% static "js/jquery-3.3.1.min.js" %}'></script>
     <script src='{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}'></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src='{% static "vendor/jquery-easing/jquery.easing.min.js" %}'></script>
