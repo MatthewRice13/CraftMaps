@@ -36,18 +36,12 @@ def home(request):
 # builds json for map
 def buildjson(data):
     rtn_json = []
-    count = 0
-    start = "<h1 class='hi'>"
-    end = "</h1>"
     for d in data:
-        if count > 17:
-            break
-        count = count+1
         item = {
             'name': d.Brewery_Name,
             'coords': {
-                'lat': float(d.Brewery_Longitude),
-                'lng': float(d.Brewery_Latitude)
+                'lng': float(d.Brewery_Longitude),
+                'lat': float(d.Brewery_Latitude)
             },
             'Content': '<div class="infoDiv"><div class="infoHeader"><label class="headerLabel">'+d.Brewery_Name+'</label></div><div class="infoBody"><label class="bodyLabel">'+d.Brewery_Type+'</label></div></div>'
         }
@@ -105,8 +99,8 @@ def builddistjson(mysqldata, starting):
             item = {
                 'name': d.Brewery_Name,
                 'coords': {
-                    'lat': float(d.Brewery_Longitude),
-                    'lng': float(d.Brewery_Latitude)
+                    'lng': float(d.Brewery_Longitude),
+                    'lat': float(d.Brewery_Latitude)
                 },
                 'Content': '<div class="infoDiv"><div class="infoHeader"><label class="headerLabel" id = "'+d.Brewery_URL+'" onClick="showModal(event);">'+d.Brewery_Name+'</label></div><div class="infoBody"><label class="bodyLabel">'+d.Brewery_Type+'</label></div><div class="infoFooter"><button onClick="getDirections('+str(d.Brewery_Longitude)+','+str(d.Brewery_Latitude)+');">See my Directions</button></div></div>'
             }
@@ -199,8 +193,8 @@ def builddistmultijson(mysqldata, starting):
             item = {
                 'name': d.Brewery_Name,
                 'coords': {
-                    'lat': float(d.Brewery_Longitude),
-                    'lng': float(d.Brewery_Latitude)
+                    'lng': float(d.Brewery_Longitude),
+                    'lat': float(d.Brewery_Latitude)
                 },
                 'Content': '<div class="infoDiv"><div class="infoHeader"><label class="headerLabel" id = "'+d.Brewery_URL+'" onClick="showModal(event);">'+d.Brewery_Name+'</label></div><div class="infoBody"><label class="bodyLabel">'+d.Brewery_Type+'</label></div><div class="infoFooter"></div></div>'
             }
