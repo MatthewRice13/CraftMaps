@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import path
+from django.conf.urls import url
 
 
 # Create your models here.
