@@ -26,13 +26,6 @@ var currentlongitude = lngstart;
 var downloadText = '';
 var tripCounter = 1;
 
-//flags for itenaryPoints
-var flagone = false;
-var flagtwo = false;
-var flagthree = false;
-var flagfour = false;
-var flagfive = false;
-
 var startPoint = new google.maps.LatLng(startlatitude, startlongitude);
 //document ready function
 $(document).ready(function(){
@@ -58,6 +51,12 @@ $(document).ready(function(){
 	$('#downloadFile').on('click', function(){
 		downloadPDF();
 	});
+	//flags for brewery numbers
+	for(b=1;b<=breweriesJson.length;b++)
+	{
+		var str = "flag"+b+"=false";
+		eval(str);
+	}
 	//modal function calling
 	/*$("headerLabel").on('click', function(e){
 		var urllink= e.target.id;
@@ -138,49 +137,16 @@ function showModal(e){
 	var ret = window.showModalDialog(urllink, "", "dialogWidth:80%;dialogHeight:80%");
 }
 function checkForItenary(lati,longi,num){
-	if(num == 1){
-		if(flagone){
-			alert("This brewery is already added to the itenary.");
-		}
-		else{
-			showDirections(lati,longi);
-			flagone = true;
-		}
-	}
-	if(num == 2){
-		if(flagtwo){
-			alert("This brewery is already added to the itenary.");
-		}
-		else{
-			showDirections(lati,longi);
-			flagtwo = true;
-		}
-	}
-	if(num == 3){
-		if(flagthree){
-			alert("This brewery is already added to the itenary.");
-		}
-		else{
-			showDirections(lati,longi);
-			flagthree = true;
-		}
-	}
-	if(num == 4){
-		if(flagfour){
-			alert("This brewery is already added to the itenary.");
-		}
-		else{
-			showDirections(lati,longi);
-			flagfour = true;
-		}
-	}
-	if(num == 5){
-		if(flagfive){
-			alert("This brewery is already added to the itenary.");
-		}
-		else{
-			showDirections(lati,longi);
-			flagfive = true;
+	for(a=1;a<=breweriesJson.length;a++){
+		if(num == a){
+			if(eval("flag"+a)){
+				alert("This brewery is already added to the itenary.");
+			}
+			else{
+				showDirections(lati,longi);
+				var str = "flag"+a+"=true";
+				eval(str);
+			}
 		}
 	}
 }
@@ -238,7 +204,14 @@ function showRoute(lati,longi,mode) {
 		}
 		else if (status == google.maps.DirectionsStatus.ZERO_RESULTS){
 			alert('Public Transport route does not exist, Driving route will be shown');
-			showDirectionsDrive(lati,longi);
+			if(mode == "TRANSIT"){
+			alert('Public Transport route does not exist, Driving route will be shown');
+			getDirectionsDrive(lati,longi);
+			}
+			if(mode == "DRIVING"){
+				alert("Sorry, No routes available");
+				location.href = currentURL;
+			}
 		}
 	});
 }
