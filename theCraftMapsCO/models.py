@@ -46,7 +46,7 @@ class User_Brewery_Ratings(models.Model):
     Brewery_Id = models.IntegerField()
     User_Id = models.IntegerField()
     User_Brewery_Rating = models.DecimalField(max_digits=4, decimal_places=2)
-    Rating_Time_Stamp = models.DateField(max_length=155)
+    Rating_Time_Stamp = models.DateField(blank=True)
     User_Do_Tour = models.BooleanField(default=False)
     User_Drink_Beer = models.BooleanField(default=False)
     User_Buy_Merch = models.BooleanField(default=False)
