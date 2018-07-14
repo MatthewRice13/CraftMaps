@@ -10,7 +10,8 @@ class Brewery_Table(models.Model):
     Brewery_Latitude = models.DecimalField(max_digits=50, decimal_places=10)
     Brewery_Longitude = models.DecimalField(max_digits=50, decimal_places=10)
     Brewery_URL = models.URLField(max_length=200, null=True, blank=True)
-
+    def __str__(self):
+        return self.Brewery_Name
 
 class Beer_Table(models.Model):
     Beer_Name = models.CharField(max_length=255)
@@ -18,3 +19,5 @@ class Beer_Table(models.Model):
     Beer_Type = models.CharField(max_length=120)
     Beer_Percent = models.DecimalField(max_digits=2, decimal_places=2)
     Beer_Rating = models.DecimalField(max_digits=2, decimal_places=2)
+    def __str__(self):
+        return self.Beer_Name
