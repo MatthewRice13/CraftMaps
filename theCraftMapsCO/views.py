@@ -15,6 +15,8 @@ from operator import itemgetter
 from math import sin, cos, sqrt, atan2, radians
 import numpy as np
 
+import twitter
+
 # Support Methods #
 googleKey = "AIzaSyDFK8QRiUl8jx5YYQwDMQ31GMyXwXz-et8"
 gmaps = googlemaps.Client(key=googleKey)
@@ -251,3 +253,54 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
+
+#########################################################
+#Build JSON for Brewery Page
+def buildBreweryJson(data):
+    rtn_json = []
+    item = {
+        'name': data.Brewery_Name,
+        'coords': {
+            'lat': float(data.Brewery_Longitude),
+            'lng': float(data.Brewery_Latitude)
+        },
+        'Content': '<div class="infoDiv"><div class="infoHeader"><label class="headerLabel">' + data.Brewery_Name + '</label></div><div class="infoBody"><label class="bodyLabel">' + data.Brewery_Town + '</label></div></div>',
+    }
+    rtn_json.append(item)
+    return simplejson.dumps(rtn_json, separators=(',', ':'))
+
+def buildBeerJson(data):
+    rtn_json = []
+    item = {
+        'name': data.Beer_Name,
+        'brewery': data.Beer_Brewery,
+        'type': data.Beer_Type,
+        'percent': data.Beer_Percent,
+        'rating': data.Beer_Rating,
+    }
+    rtn_json.append(item)
+    return simplejson.dumps(rtn_json, separators=(',', ':'))
+
+### Twitter API info ###
+consumer_key = '16iWxCzBIzdwaRusHVnUdYxLs'
+consumer_secret = 'Q677oYS73EP4UFBgJfRnG1npGTfcgd1B9xbpaxBQxocxawCW5T'
+access_token_key = '959052235815649280-GxbCZphkg4oUizZ4QeUwyksToEFaIiB'
+access_token_secret = 'NY41FPXbM1NLmhlwXircyArfSXHUTvZqBRK668BTSVTMU'
+
+#Get Twitter Profile Pic
+def getProfilePic(handle):
+    api = twitter.Api(consumer_key=consumer_key,
+                      consumer_secret=consumer_secret,
+                      access_token_key=access_token_key,
+                      access_token_secret=access_token_secret)
+    user = api.GetUser(screen_name=handle)
+    pic = user.profile_image_url.replace("_normal.jpg", ".jpg")
+    return pic
+
+# brewery page
+def brewery_page(request, Brewery_Name):
+    context = {
+        'brewery': buildBreweryJson(Brewery_Table.objects.get(Brewery_Name=Brewery_Name)),
+        'key': googleKey
+    }
+    return render(request, 'breweryPage.html', context)
