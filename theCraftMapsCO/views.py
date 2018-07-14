@@ -95,7 +95,7 @@ def builddistjson(mysqldata, starting):
 
     rtn_json = []
     for d in mysqldata:
-        if d.Brewery_Name in subset.values[:5]:
+        if d.Brewery_Name in subset.values[:10]:
             item = {
                 'name': d.Brewery_Name,
                 'coords': {
@@ -122,8 +122,8 @@ def get_distance(start, finish):
         ##
         lat1 = radians(geocode_result[0])
         lon1 = radians(geocode_result[1])
-        lat2 = radians(float(finish[0]))
-        lon2 = radians(float(finish[1]))
+        lon2 = radians(float(finish[0]))
+        lat2 = radians(float(finish[1]))
 
         dlon = lon2 - lon1
         dlat = lat2 - lat1
@@ -189,7 +189,7 @@ def builddistmultijson(mysqldata, starting):
 
     rtn_json = []
     for d in mysqldata:
-        if d.Brewery_Name in subset.values[:5]:
+        if d.Brewery_Name in subset.values[:10]:
             item = {
                 'name': d.Brewery_Name,
                 'coords': {
