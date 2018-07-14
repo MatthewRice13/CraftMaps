@@ -33,12 +33,9 @@ def home(request):
 # builds json for map
 def buildjson(data):
     rtn_json = []
-    count = 0
 
     for d in data:
-        if count > 17:
-            break
-        count = count+1
+
         item = {
             'name': d.Brewery_Name,
             'coords': {
