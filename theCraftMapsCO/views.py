@@ -48,7 +48,16 @@ def buildjson(data):
         rtn_json.append(item)
     return simplejson.dumps(rtn_json, separators=(',', ':'))
 
+def print_test(test_data):
+    with open("data_dump.txt", "w") as text_file:
+        text_file.write(test_data)
+        text_file.close()
 
+def read_data(file):
+    with open(file, 'r') as text_file:
+        data = text_file.read()
+        text_file.close()
+        return data
 ################################################################
 
 # Routes Page
@@ -86,12 +95,12 @@ def builddistjson(mysqldata, starting):
 
     rtn_json = []
     for d in mysqldata:
-        if d.Brewery_Name in subset.values[:5]:
+        if d.Brewery_Name in subset.values[:10]:
             item = {
                 'name': d.Brewery_Name,
                 'coords': {
-                    'lat': float(d.Brewery_Longitude),
-                    'lng': float(d.Brewery_Latitude)
+                    'lng': float(d.Brewery_Longitude),
+                    'lat': float(d.Brewery_Latitude)
                 },
                 'Content': '<div class="infoDiv"><div class="infoHeader"><label class="headerLabel" id = "'+d.Brewery_URL+'" onClick="showModal(event);">'+d.Brewery_Name+'</label></div><div class="infoBody"><label class="bodyLabel">'+d.Brewery_Type+'</label></div><div class="infoFooter"><button onClick="getDirections('+str(d.Brewery_Longitude)+','+str(d.Brewery_Latitude)+');">See my Directions</button></div></div>'
             }
@@ -113,8 +122,8 @@ def get_distance(start, finish):
         ##
         lat1 = radians(geocode_result[0])
         lon1 = radians(geocode_result[1])
-        lat2 = radians(float(finish[0]))
-        lon2 = radians(float(finish[1]))
+        lon2 = radians(float(finish[0]))
+        lat2 = radians(float(finish[1]))
 
         dlon = lon2 - lon1
         dlat = lat2 - lat1
@@ -145,7 +154,6 @@ def contact(request):
     }
     return render(request, 'contact.html', context)
 
-
 ################################################################
 # Routes Page
 def multiRoutes(request):
@@ -166,8 +174,6 @@ def multiRoutes(request):
                'key': googleKey
                }
     return render(request, 'multiRoutes.html', context)
-
-
 ######################################################################
 def builddistmultijson(mysqldata, starting):
     breweries = mysqldata
@@ -183,12 +189,12 @@ def builddistmultijson(mysqldata, starting):
 
     rtn_json = []
     for d in mysqldata:
-        if d.Brewery_Name in subset.values[:5]:
+        if d.Brewery_Name in subset.values[:10]:
             item = {
                 'name': d.Brewery_Name,
                 'coords': {
-                    'lat': float(d.Brewery_Longitude),
-                    'lng': float(d.Brewery_Latitude)
+                    'lng': float(d.Brewery_Longitude),
+                    'lat': float(d.Brewery_Latitude)
                 },
                 'Content': '<div class="infoDiv"><div class="infoHeader"><label class="headerLabel" id = "'+d.Brewery_URL+'" onClick="showModal(event);">'+d.Brewery_Name+'</label></div><div class="infoBody"><label class="bodyLabel">'+d.Brewery_Type+'</label></div><div class="infoFooter"></div></div>'
             }
@@ -196,19 +202,16 @@ def builddistmultijson(mysqldata, starting):
 
     return simplejson.dumps(rtn_json, separators=(',', ':'))
 
-
 def print_test(test_data):
     with open("data_dump.txt", "w") as text_file:
         text_file.write(test_data)
         text_file.close()
-
 
 def read_data(file):
     with open(file, 'r') as text_file:
         data = text_file.read()
         text_file.close()
         return data
-
 
 #########################################################
 # signup page
@@ -226,8 +229,6 @@ def signup(request):
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
 
-
-
 #########################################################
 #Build JSON for Brewery Page
 def buildBreweryJson(data):
@@ -235,28 +236,13 @@ def buildBreweryJson(data):
     item = {
         'name': data.Brewery_Name,
         'coords': {
-            'lat': float(data.Brewery_Latitude),
-            'lng': float(data.Brewery_Longitude)
+            'lat': float(data.Brewery_Longitude),
+            'lng': float(data.Brewery_Latitude)
         },
-        'address': data.Brewery_Address,
-        'type': data.Brewery_Type,
-        'rating': data.Brewery_Rating,
-        'url': data.Brewery_URL,
-        'twitter': checkSocialMedia(data.Brewery_Twitter),
-        'facebook': checkSocialMedia(data.Brewery_Facebook),
-        'pic': getProfilePic(data.Brewery_Twitter)
+        'Content': '<div class="infoDiv"><div class="infoHeader"><label class="headerLabel">' + data.Brewery_Name + '</label></div><div class="infoBody"><label class="bodyLabel">' + data.Brewery_Town + '</label></div></div>',
     }
     rtn_json.append(item)
     return simplejson.dumps(rtn_json, separators=(',', ':'))
-
-def checkSocialMedia(url):
-    if url == 'www.twitter.com':
-        reply = 'twitter.com/irecraftbeer'
-    elif url == 'www.facebook.com':
-        reply = 'facebook.com/IrelandCraftBeers'
-    else:
-        reply = url
-    return reply
 
 def buildBeerJson(data):
     rtn_json = []
@@ -270,32 +256,26 @@ def buildBeerJson(data):
     rtn_json.append(item)
     return simplejson.dumps(rtn_json, separators=(',', ':'))
 
-
 ### Twitter API info ###
 consumer_key = '16iWxCzBIzdwaRusHVnUdYxLs'
 consumer_secret = 'Q677oYS73EP4UFBgJfRnG1npGTfcgd1B9xbpaxBQxocxawCW5T'
 access_token_key = '959052235815649280-GxbCZphkg4oUizZ4QeUwyksToEFaIiB'
 access_token_secret = 'NY41FPXbM1NLmhlwXircyArfSXHUTvZqBRK668BTSVTMU'
 
-
 #Get Twitter Profile Pic
 def getProfilePic(handle):
-    url = checkSocialMedia(handle)
     api = twitter.Api(consumer_key=consumer_key,
                       consumer_secret=consumer_secret,
                       access_token_key=access_token_key,
                       access_token_secret=access_token_secret)
-    url = url.split("/")
-    user = api.GetUser(screen_name=url[1])
+    user = api.GetUser(screen_name=handle)
     pic = user.profile_image_url.replace("_normal.jpg", ".jpg")
     return pic
 
-
 # brewery page
-def brewery_page(request, name):
-    print_test(name)
+def brewery_page(request, Brewery_Name):
     context = {
-        'brewery': buildBreweryJson(Brewery_Table.objects.get(Brewery_Name=' '+name)),
+        'brewery': buildBreweryJson(Brewery_Table.objects.get(Brewery_Name=Brewery_Name)),
         'key': googleKey
     }
     return render(request, 'breweryPage.html', context)
