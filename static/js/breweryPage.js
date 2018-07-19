@@ -7,7 +7,7 @@ $(document).ready(function(){
 	//getLocation(); // will give the current position
 	initMap();
 	addTwitterFeed();
-	//addProfilePic();
+	addProfilePic();
 });
 
 function initMap(){
@@ -47,19 +47,20 @@ function addMarker(props){
 
 function populateBreweriesList(){
     var listBrew = '';
-    listBrew = "<h2>"+ breweryJson[0].Content + "</h2>";
+    listBrew = "<h2>"+ breweryJson[0].name + "</h2>"
+	+ "<br><h3>" + breweryJson[0].address + "<h3></h3>";
     $("#listOfBreweries").append(listBrew);
 }
 
 function addTwitterFeed() {
-    //var handle = breweryJson[0].handle;
-    var link = "https://twitter.com/" + "rascalsbrewing" + "?ref_src=twsrc%5Etfw";
+    var twitter = breweryJson[0].twitter;
+    var link = "https://www." + twitter + "?ref_src=twsrc%5Etfw";
     document.getElementById("twitter").setAttribute("href", link);
     $("#twitter").append(breweryJson[0].name);
 }
 
-/*
+
 function addProfilePic(){
 	var pic = breweryJson[0].pic;
 	document.getElementById("profile-pic").setAttribute("src", pic);
-}*/
+}/**/
