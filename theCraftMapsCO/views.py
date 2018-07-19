@@ -1,19 +1,16 @@
 from django.shortcuts import render, redirect
-from django.http import JsonResponse
-from django.core import serializers
-from .forms import SignUpForm
 from django.contrib.auth import login, authenticate
+from .forms import SignUpForm, UserProfileForm
+from django.contrib.auth.decorators import login_required
+from .models import User_Table, Beer_Table, Brewery_Table
 
-from .models import Brewery_Table
 import googlemaps
 import simplejson
 import pandas as pd
 
 from datetime import datetime
-from operator import itemgetter
 
 from math import sin, cos, sqrt, atan2, radians
-import numpy as np
 
 import twitter
 
@@ -239,7 +236,19 @@ def buildBreweryJson(data):
             'lat': float(data.Brewery_Longitude),
             'lng': float(data.Brewery_Latitude)
         },
-        'Content': '<div class="infoDiv"><div class="infoHeader"><label class="headerLabel">' + data.Brewery_Name + '</label></div><div class="infoBody"><label class="bodyLabel">' + data.Brewery_Town + '</label></div></div>',
+        'address': {
+            'name': data.Brewery_Name,
+            'location': data.Brewery_Address,
+            'region': data.Brewery_Region
+        },
+        'brewery_type': data.Brewery_Type,
+        'rating': data.Brewery_Rating,
+        'social': {
+            'website': data.Brewery_URL,
+            'twitter': data.Brewery_Twitter,
+            'facebook': data.Brewery_Facebook
+        },
+        'pic': getProfilePic(data.Brewery_Twitter)
     }
     rtn_json.append(item)
     return simplejson.dumps(rtn_json, separators=(',', ':'))
@@ -268,7 +277,8 @@ def getProfilePic(handle):
                       consumer_secret=consumer_secret,
                       access_token_key=access_token_key,
                       access_token_secret=access_token_secret)
-    user = api.GetUser(screen_name=handle)
+    url = handle.split("/")
+    user = api.GetUser(screen_name=url[len(url)-1])
     pic = user.profile_image_url.replace("_normal.jpg", ".jpg")
     return pic
 
@@ -276,6 +286,37 @@ def getProfilePic(handle):
 def brewery_page(request, Brewery_Name):
     context = {
         'brewery': buildBreweryJson(Brewery_Table.objects.get(Brewery_Name=Brewery_Name)),
+        'beer': buildBeerJson(Beer_Table.objects.get(Beer_Brewery=Brewery_Name)),
         'key': googleKey
     }
     return render(request, 'breweryPage.html', context)
+
+### Signup Page ###
+
+def signup(request):
+    if request.method == 'POST':
+        sign_up_form = SignUpForm(request.POST)
+        user_form = UserProfileForm(request.POST)
+        if sign_up_form.is_valid() and user_form.is_valid():
+            sign_up_form.save()
+            user_form.save()
+            username = sign_up_form.cleaned_data.get('username')
+            raw_password = sign_up_form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('home')
+    else:
+        sign_up_form = SignUpForm()
+        user_form = UserProfileForm()
+    return render(request, 'signup.html', {'sign_up_form': sign_up_form,
+                                           'user_form': user_form})
+
+### User Page ###
+@login_required()
+def user_page(request):
+    if request.user.is_authenticated:
+        user_data = User_Table.objects.get(user=request.user.id)
+        context = {
+            'user': buildBreweryJson(user_data)
+        }
+        render(request, 'user.html', context)
