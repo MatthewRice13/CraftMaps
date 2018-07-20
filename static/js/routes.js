@@ -133,7 +133,7 @@ function calcRoute(lati,longi,mode) {
 		destination:end,
 		travelMode: google.maps.TravelMode[mode]
 	};
-	directionsService.route(request, function(result, status) {
+	directionsService.route(request, function(result, status) {//console.log(result);
 		if (status == google.maps.DirectionsStatus.OK) {
 			$("#directionsPanel").empty();
 			$("#directionsPanel").css("background-color", "white");
@@ -144,7 +144,7 @@ function calcRoute(lati,longi,mode) {
 			alert('Public Transport route does not exist, Driving route will be shown');
 			getDirectionsDrive(lati,longi);
 			}
-			if(mode == "DRIVING"){
+			else if(mode == "DRIVING"){
 				alert("No routes available");
 				location.href = currentURL;
 			}

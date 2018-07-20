@@ -203,12 +203,11 @@ function showRoute(lati,longi,mode) {
 			currentlongitude = longi;
 		}
 		else if (status == google.maps.DirectionsStatus.ZERO_RESULTS){
-			alert('Public Transport route does not exist, Driving route will be shown');
 			if(mode == "TRANSIT"){
 			alert('Public Transport route does not exist, Driving route will be shown');
 			getDirectionsDrive(lati,longi);
 			}
-			if(mode == "DRIVING"){
+			else if(mode == "DRIVING"){
 				alert("Sorry, No routes available");
 				location.href = currentURL;
 			}
