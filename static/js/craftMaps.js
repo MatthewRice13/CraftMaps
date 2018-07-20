@@ -36,13 +36,15 @@ $(document).ready(function(){
 		if(loc == ""){
 		    //alert('No location entered! Your default location will be "The Spire Tower"');
 			if(confirm('No location entered! Your default location will be "The Spire Tower"')){
-				getCoords(loc,"multiRoutes/");
+				getCoords(loc,"routes/");
 			}
 			else{
 				return;
 			}
 		}
-		getCoords(loc,"routes/");
+		else{
+			getCoords(loc,"routes/");
+		}
 	});
 	$("#goToMultiMaps").on('click', function(){
 		var loc = $("#defaultAddress").val();
@@ -55,9 +57,11 @@ $(document).ready(function(){
 				return;
 			}
 		}
-		getCoords(loc,"multiRoutes/");
+		else{
+			getCoords(loc,"multiRoutes/");
+		}
 	});
-	
+
 });//ready end
 
 function populateBreweriesList(){
