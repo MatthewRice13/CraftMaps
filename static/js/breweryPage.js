@@ -19,7 +19,7 @@ function initMap(){
 		center: new google.maps.LatLng(startLat, startLng)
 	}
 	// New map
-	map = new google.maps.Map(document.getElementById('map'), options);
+	map = new google.maps.Map(document.getElementById('brewery-map'), options);
 	addMarker(breweryJson);
 	populateBreweriesList();
 }
@@ -46,14 +46,13 @@ function addMarker(props){
 }
 
 function populateBreweriesList(){
-    var listBrew = '';
-    listBrew = "<h2>"+ breweryJson[0].name + "</h2>"
-	+ "<br><h3>" + breweryJson[0].address + "<h3></h3>";
+    var listBrew = "<h2>"+ breweryJson[0].name + "</h2>"
+	+ "<br><h3>" + breweryJson[0].address.location + "<h3></h3>";
     $("#listOfBreweries").append(listBrew);
 }
 
 function addTwitterFeed() {
-    var twitter = breweryJson[0].twitter;
+    var twitter = breweryJson[0].social.twitter;
     var link = "https://www." + twitter + "?ref_src=twsrc%5Etfw";
     document.getElementById("twitter").setAttribute("href", link);
     $("#twitter").append(breweryJson[0].name);

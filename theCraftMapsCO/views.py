@@ -233,8 +233,8 @@ def buildBreweryJson(data):
     item = {
         'name': data.Brewery_Name,
         'coords': {
-            'lat': float(data.Brewery_Longitude),
-            'lng': float(data.Brewery_Latitude)
+            'lat': float(data.Brewery_Latitude),
+            'lng': float(data.Brewery_Longitude)
         },
         'address': {
             'name': data.Brewery_Name,
@@ -245,13 +245,19 @@ def buildBreweryJson(data):
         'rating': data.Brewery_Rating,
         'social': {
             'website': data.Brewery_URL,
-            'twitter': data.Brewery_Twitter,
+            'twitter': twitterCheck(data.Brewery_Twitter),
             'facebook': data.Brewery_Facebook
         },
         'pic': getProfilePic(data.Brewery_Twitter)
     }
     rtn_json.append(item)
     return simplejson.dumps(rtn_json, separators=(',', ':'))
+
+def twitterCheck(handle):
+    if handle == 'www.twitter.com':
+        return 'twitter.com/irecraftbeer'
+    else:
+        return handle
 
 def buildBeerJson(data):
     rtn_json = []
@@ -277,16 +283,22 @@ def getProfilePic(handle):
                       consumer_secret=consumer_secret,
                       access_token_key=access_token_key,
                       access_token_secret=access_token_secret)
-    url = handle.split("/")
-    user = api.GetUser(screen_name=url[len(url)-1])
+    if handle == 'www.twitter.com':
+        handle = 'IreCraftBeer'
+    else:
+        url = handle.split("/")
+        handle = url[len(url)-1]
+    user = api.GetUser(screen_name=handle)
     pic = user.profile_image_url.replace("_normal.jpg", ".jpg")
     return pic
 
 # brewery page
-def brewery_page(request, Brewery_Name):
+def brewery_page(request, name):
+    name = " " + name
+    #Add once beer data is in database
+    #'beer': buildBeerJson(Beer_Table.objects.get(Beer_Brewery=name)),
     context = {
-        'brewery': buildBreweryJson(Brewery_Table.objects.get(Brewery_Name=Brewery_Name)),
-        'beer': buildBeerJson(Beer_Table.objects.get(Beer_Brewery=Brewery_Name)),
+        'brewery': buildBreweryJson(Brewery_Table.objects.get(Brewery_Name=name)),
         'key': googleKey
     }
     return render(request, 'breweryPage.html', context)
