@@ -14,6 +14,7 @@ from operator import itemgetter
 
 from math import sin, cos, sqrt, atan2, radians
 import numpy as np
+import difflib
 
 import twitter
 
@@ -73,15 +74,26 @@ def routes(request):
 
 
 def builddistjson(mysqldata, starting):
+    # users favourite brewery type
+    user_favourite_brewery_type = "Brew Pub"
+
     breweries = mysqldata
     data = []
-    df = pd.DataFrame(data, columns=['Name', 'Distance'])
+    df = pd.DataFrame(data, columns=['Name', 'Type', 'Rating', 'Distance'])
     for dat in breweries:
         nam = dat.Brewery_Name
+        typ = dat.Brewery_Type
+        rat = dat.Brewery_Rating
         dst = get_distance(starting, (dat.Brewery_Longitude, dat.Brewery_Latitude))
-        df = df.append(pd.DataFrame([[nam, dst]], columns=['Name', 'Distance']))
+        df = df.append(pd.DataFrame([[nam, typ, rat, dst]], columns=['Name', 'Type', 'Rating', 'Distance']))
 
+    # sort based on distance
     df = df.sort_values('Distance')
+
+    # filters based on user preference
+    df = similarity_map(user_favourite_brewery_type, df)
+
+    # subset of data
     subset = df.loc[:, 'Name']
 
     rtn_json = []
@@ -102,7 +114,6 @@ def builddistjson(mysqldata, starting):
 
 # Clean distance API response
 def get_distance(start, finish):
-    now = datetime.now()
     try:
         if not isinstance(start, tuple):
             geocode_result = gmaps.geocode(start[0], start[1])
@@ -110,22 +121,37 @@ def get_distance(start, finish):
             geocode_result = (start[0], start[1])
         # approximate radius of earth in km
         R = 6373.1
-        ##
+        #
         lat1 = radians(geocode_result[0])
         lon1 = radians(geocode_result[1])
-        lat2 = radians(float(finish[0]))
-        lon2 = radians(float(finish[1]))
-
+        #
+        lon2 = radians(float(finish[0]))
+        lat2 = radians(float(finish[1]))
+        #
         dlon = lon2 - lon1
         dlat = lat2 - lat1
-
+        #
         a = sin(dlat / 2) ** 2 + cos(lat1) * cos(lat2) * sin(dlon / 2) ** 2
         c = 2 * atan2(sqrt(a), sqrt(1 - a))
-
+        #
         distance = R * c
     except googlemaps.exceptions.ApiError as err:
         print(err)
     return distance
+
+
+# classifies based on users preferred brewery type
+def similarity_map(check, data):
+    data_map = []
+    for item in data:
+        result = difflib.SequenceMatcher(None, check, item['Type']).ratio()
+        # finds best similarity
+        data_map.append(
+            {'Name': item['Name'], 'Type': item['Type'], 'Rating': item['Rating'], 'sim': result})
+    # sorts on sim and then rating
+    rtn = sorted(data_map, reverse=True, key=itemgetter('sim', 'Rating'))
+    # returns classification
+    return rtn
 
 
 #########################################################
@@ -183,12 +209,12 @@ def builddistmultijson(mysqldata, starting):
 
     rtn_json = []
     for d in mysqldata:
-        if d.Brewery_Name in subset.values[:5]:
+        if d.Brewery_Name in subset.values[:10]:
             item = {
                 'name': d.Brewery_Name,
                 'coords': {
-                    'lat': float(d.Brewery_Longitude),
-                    'lng': float(d.Brewery_Latitude)
+                    'lng': float(d.Brewery_Longitude),
+                    'lat': float(d.Brewery_Latitude)
                 },
                 'Content': '<div class="infoDiv"><div class="infoHeader"><label class="headerLabel" id = "'+d.Brewery_URL+'" onClick="showModal(event);">'+d.Brewery_Name+'</label></div><div class="infoBody"><label class="bodyLabel">'+d.Brewery_Type+'</label></div><div class="infoFooter"></div></div>'
             }
@@ -276,9 +302,9 @@ def getProfilePic(handle):
 
 
 # brewery page
-def brewery_page(request, Brewery_Name):
+def brewery_page(request, name):
     context = {
-        'brewery': buildBreweryJson(Brewery_Table.objects.get(Brewery_Name=Brewery_Name)),
+        'brewery': buildBreweryJson(Brewery_Table.objects.get(Brewery_Name=name)),
         'key': googleKey
     }
     return render(request, 'breweryPage.html', context)
