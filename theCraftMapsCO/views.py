@@ -3,6 +3,7 @@ from django.contrib.auth import login, authenticate
 from .forms import SignUpForm, UserProfileForm
 from django.contrib.auth.decorators import login_required
 from .models import User_Table, Beer_Table, Brewery_Table
+from django.contrib.auth.models import User
 
 import googlemaps
 import simplejson
@@ -323,12 +324,35 @@ def signup(request):
     return render(request, 'signup.html', {'sign_up_form': sign_up_form,
                                            'user_form': user_form})
 
+def buildUserJson(user_data, auth_data):
+    rtn_json = []
+    item = {
+        'brewery_type': user_data.User_Favorite_Brewery_Type,
+        'max_distance': user_data.User_Max_Distance,
+        'beer':{
+            'stout': user_data.User_Beer_Stout,
+            'lager': user_data.User_Beer_Lager,
+            'ipa': user_data.User_Beer_IPA,
+            'cider': user_data.User_Beer_Cider,
+            'pilsner': user_data.User_Beer_Pilsner,
+            'ale': user_data.User_Beer_Ale,
+            'weiss': user_data.User_Beer_Weiss
+        },
+        'id': auth_data.id,
+        'username': auth_data.username,
+        'email': auth_data.email,
+        'date_joined': auth_data.date_joined
+    }
+    rtn_json.append(item)
+    return simplejson.dumps(rtn_json, separators=(',', ':'))
+
 ### User Page ###
 @login_required()
 def user_page(request):
     if request.user.is_authenticated:
         user_data = User_Table.objects.get(user=request.user.id)
+        auth_data = User.objects.get(id=request.user.id)
         context = {
-            'user': buildBreweryJson(user_data)
+            'user': buildBreweryJson(user_data, auth_data)
         }
         render(request, 'user.html', context)
