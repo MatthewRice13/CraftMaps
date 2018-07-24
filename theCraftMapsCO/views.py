@@ -3,19 +3,16 @@ from django.http import JsonResponse
 from django.core import serializers
 from .forms import SignUpForm
 from django.contrib.auth import login, authenticate
-
 from .models import Brewery_Table
 import googlemaps
 import simplejson
 import pandas as pd
-
 from datetime import datetime
 from operator import itemgetter
-
 from math import sin, cos, sqrt, atan2, radians
 import numpy as np
 import difflib
-
+import operator
 import twitter
 
 # Support Methods #
@@ -51,7 +48,6 @@ def buildjson(data):
 
 
 ################################################################
-
 # Routes Page
 def routes(request):
     if request.method == 'POST':
@@ -66,54 +62,121 @@ def routes(request):
     else:
         starting_point = (53.3256826, -6.2249631)
 
-    context = {'locations': builddistjson(Brewery_Table.objects.all(), starting_point),
-               'start': list(starting_point),
-               'key': googleKey
-               }
+    # page data
+    context = {
+        'locations': builddistjson(Brewery_Table.objects.all(), starting_point),
+        'start': list(starting_point),
+        'key': googleKey
+    }
+
+    # returns data
     return render(request, 'routes.html', context)
 
 
-def builddistjson(mysqldata, starting):
-    # users favourite brewery type
-    user_favourite_brewery_type = "Brew Pub"
+# Routes Page
+def multiRoutes(request):
+    if request.method == 'POST':
+        print_test(str(request.POST.get('value1')) + "," + str(request.POST.get('value2')))
+        lat = request.POST.get('value1')
+        lng = request.POST.get('value2')
+        starting_point = (float(lat), float(lng))
+    elif request.method == 'GET':
+        start = read_data('data_dump.txt')
+        start = start.split(",")
+        starting_point = (float(start[0]), float(start[1]))
+    else:
+        starting_point = (53.3256826, -6.2249631)
 
-    breweries = mysqldata
+    k = 5
+    # context
+    context = {
+        'locations': builddistjson(Brewery_Table.objects.all(), starting_point, k),
+        'start': list(starting_point),
+        'key': googleKey
+    }
+
+    # returns data
+    return render(request, 'multiRoutes.html', context)
+
+
+def builddistjson(breweries, starting, k):
+    # users favourite brewery type
+    user_favourite_brewery_type = "Micro Brewery"
+
     data = []
-    df = pd.DataFrame(data, columns=['Name', 'Type', 'Rating', 'Distance'])
     for dat in breweries:
         nam = dat.Brewery_Name
         typ = dat.Brewery_Type
         rat = dat.Brewery_Rating
         dst = get_distance(starting, (dat.Brewery_Longitude, dat.Brewery_Latitude))
-        df = df.append(pd.DataFrame([[nam, typ, rat, dst]], columns=['Name', 'Type', 'Rating', 'Distance']))
+
+        # data
+        data.append(
+            {
+                'Name': nam,
+                'Type': typ,
+                'Rating': rat,
+                'Distance': dst
+            }
+        )
 
     # sort based on distance
-    df = df.sort_values('Distance')
+    df = sorted(data, key=operator.itemgetter('Distance'))
 
     # filters based on user preference
-    df = similarity_map(user_favourite_brewery_type, df)
+    ndf = similarity_map(user_favourite_brewery_type, df, (k+k))
 
     # subset of data
-    subset = df.loc[:, 'Name']
+    subset = []
+    for d in ndf[:k]:
+        subset.append(d['Name'])
 
     rtn_json = []
-    for d in mysqldata:
-        if d.Brewery_Name in subset.values[:5]:
+    for d in breweries:
+        if d.Brewery_Name in subset:
             item = {
                 'name': d.Brewery_Name,
                 'coords': {
-                    'lat': float(d.Brewery_Longitude),
-                    'lng': float(d.Brewery_Latitude)
+                    'lng': float(d.Brewery_Longitude),
+                    'lat': float(d.Brewery_Latitude)
                 },
                 'Content': '<div class="infoDiv"><div class="infoHeader"><label class="headerLabel" id = "'+d.Brewery_URL+'" onClick="showModal(event);">'+d.Brewery_Name+'</label></div><div class="infoBody"><label class="bodyLabel">'+d.Brewery_Type+'</label></div><div class="infoFooter"><button onClick="getDirections('+str(d.Brewery_Longitude)+','+str(d.Brewery_Latitude)+');">See my Directions</button></div></div>'
             }
             rtn_json.append(item)
 
+    # returns json
     return simplejson.dumps(rtn_json, separators=(',', ':'))
+
+
+# classifies based on users preferred brewery type
+def similarity_map(check, data, k):
+    data_map = []
+
+    # builds a similarity map based on user preference
+    for item in data[:k]:
+        result = difflib.SequenceMatcher(None, check, item['Type']).ratio()
+
+        # finds best similarity
+        data_map.append(
+            {
+                'Name': item['Name'],
+                'Type': item['Type'],
+                'Distance': item['Distance'],
+                'Rating': item['Rating'],
+                'Sim': result
+             }
+        )
+
+    # sorts on sim and then rating
+    rtn = sorted(data_map, reverse=True, key=operator.itemgetter('Sim', 'Rating'))
+
+    # returns classification
+    return rtn
 
 
 # Clean distance API response
 def get_distance(start, finish):
+    #
     try:
         if not isinstance(start, tuple):
             geocode_result = gmaps.geocode(start[0], start[1])
@@ -135,23 +198,13 @@ def get_distance(start, finish):
         c = 2 * atan2(sqrt(a), sqrt(1 - a))
         #
         distance = R * c
+
+    # return error
     except googlemaps.exceptions.ApiError as err:
         print(err)
+
+    # returns distance
     return distance
-
-
-# classifies based on users preferred brewery type
-def similarity_map(check, data):
-    data_map = []
-    for item in data:
-        result = difflib.SequenceMatcher(None, check, item['Type']).ratio()
-        # finds best similarity
-        data_map.append(
-            {'Name': item['Name'], 'Type': item['Type'], 'Rating': item['Rating'], 'sim': result})
-    # sorts on sim and then rating
-    rtn = sorted(data_map, reverse=True, key=itemgetter('sim', 'Rating'))
-    # returns classification
-    return rtn
 
 
 #########################################################
@@ -171,57 +224,7 @@ def contact(request):
     }
     return render(request, 'contact.html', context)
 
-
-################################################################
-# Routes Page
-def multiRoutes(request):
-    if request.method == 'POST':
-        print_test(str(request.POST.get('value1')) + "," + str(request.POST.get('value2')))
-        lat = request.POST.get('value1')
-        lng = request.POST.get('value2')
-        starting_point = (float(lat), float(lng))
-    elif request.method == 'GET':
-        start = read_data('data_dump.txt')
-        start = start.split(",")
-        starting_point = (float(start[0]), float(start[1]))
-    else:
-        starting_point = (53.3256826, -6.2249631)
-
-    context = {'locations': builddistmultijson(Brewery_Table.objects.all(), starting_point),
-               'start': list(starting_point),
-               'key': googleKey
-               }
-    return render(request, 'multiRoutes.html', context)
-
-
 ######################################################################
-def builddistmultijson(mysqldata, starting):
-    breweries = mysqldata
-    data = []
-    df = pd.DataFrame(data, columns=['Name', 'Distance'])
-    for dat in breweries:
-        nam = dat.Brewery_Name
-        dst = get_distance(starting, (dat.Brewery_Longitude, dat.Brewery_Latitude))
-        df = df.append(pd.DataFrame([[nam, dst]], columns=['Name', 'Distance']))
-
-    df = df.sort_values('Distance')
-    subset = df.loc[:, 'Name']
-
-    rtn_json = []
-    for d in mysqldata:
-        if d.Brewery_Name in subset.values[:10]:
-            item = {
-                'name': d.Brewery_Name,
-                'coords': {
-                    'lng': float(d.Brewery_Longitude),
-                    'lat': float(d.Brewery_Latitude)
-                },
-                'Content': '<div class="infoDiv"><div class="infoHeader"><label class="headerLabel" id = "'+d.Brewery_URL+'" onClick="showModal(event);">'+d.Brewery_Name+'</label></div><div class="infoBody"><label class="bodyLabel">'+d.Brewery_Type+'</label></div><div class="infoFooter"></div></div>'
-            }
-            rtn_json.append(item)
-
-    return simplejson.dumps(rtn_json, separators=(',', ':'))
-
 
 def print_test(test_data):
     with open("data_dump.txt", "w") as text_file:
