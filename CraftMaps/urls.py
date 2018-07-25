@@ -26,7 +26,11 @@ urlpatterns = [
     url(r'^about/', include('theCraftMapsCO.urls')),
     url(r'^contact/', include('theCraftMapsCO.urls')),
     url(r'^multiRoutes/', include('theCraftMapsCO.urls')),
-    url(r'^brewery/', include('theCraftMapsCO.urls'))
+    url(r'^brewery/', include('theCraftMapsCO.urls')),
+    url(r'^signup/', include('theCraftMapsCO.urls')),
+    url(r'^login/', include('theCraftMapsCO.urls')),
+    url(r'^logout/', include('theCraftMapsCO.urls')),
+    url(r'^user/', include('theCraftMapsCO.urls'))
 ]
 
 if settings.DEBUG:

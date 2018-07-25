@@ -1,5 +1,7 @@
 from django.db import models
-
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 # Create your models here.
 class Brewery_Table(models.Model):
@@ -30,7 +32,7 @@ class Beer_Table(models.Model):
 
 
 class User_Table(models.Model):
-    User_Id = models.IntegerField()
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
     User_Favorite_Brewery_Type = models.CharField(max_length=90)
     User_Max_Distance = models.IntegerField(default=20)
     User_Beer_Stout = models.BooleanField(default=False)
@@ -41,6 +43,10 @@ class User_Table(models.Model):
     User_Beer_Ale = models.BooleanField(default=False)
     User_Beer_Weiss = models.BooleanField(default=False)
 
+@receiver(post_save, sender=User)
+def create_profile(sender, instance, created, **kwargs):
+    if created:
+        User_Table.objects.create(user=instance)
 
 class User_Brewery_Ratings(models.Model):
     Brewery_Id = models.IntegerField()
