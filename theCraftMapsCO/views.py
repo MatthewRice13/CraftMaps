@@ -191,7 +191,8 @@ def similarity_map(data, k):
         )
 
     # sorts on sim and then rating
-    rtn = sorted(data_map, reverse=True, key=operator.itemgetter('Sim', 'Distance', 'Rating'))
+    data_map = sorted(data_map, reverse=False, key=operator.itemgetter('Distance'))
+    rtn = sorted(data_map, reverse=True, key=operator.itemgetter('Sim', 'Rating'))
 
     dump_test(rtn)
     # returns data
