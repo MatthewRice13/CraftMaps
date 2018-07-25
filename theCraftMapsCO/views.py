@@ -19,6 +19,12 @@ import twitter
 googleKey = "AIzaSyDFK8QRiUl8jx5YYQwDMQ31GMyXwXz-et8"
 gmaps = googlemaps.Client(key=googleKey)
 
+### Twitter API info ###
+consumer_key = '16iWxCzBIzdwaRusHVnUdYxLs'
+consumer_secret = 'Q677oYS73EP4UFBgJfRnG1npGTfcgd1B9xbpaxBQxocxawCW5T'
+access_token_key = '959052235815649280-GxbCZphkg4oUizZ4QeUwyksToEFaIiB'
+access_token_secret = 'NY41FPXbM1NLmhlwXircyArfSXHUTvZqBRK668BTSVTMU'
+
 
 # Create your views here.
 ###########################################################
@@ -26,14 +32,14 @@ gmaps = googlemaps.Client(key=googleKey)
 def home(request):
     context = {
         'brewery': Brewery_Table.objects.get(id=1),
-        'brewery_json': buildjson(Brewery_Table.objects.all()),
+        'brewery_json': build_home_json(Brewery_Table.objects.all()),
         'key': googleKey
     }
     return render(request, 'homepage.html', context)
 
 
 # builds json for map
-def buildjson(data):
+def build_home_json(data):
     rtn_json = []
     for d in data:
         item = {
@@ -48,19 +54,6 @@ def buildjson(data):
     return simplejson.dumps(rtn_json, separators=(',', ':'))
 
 
-def print_test(test_data):
-    with open("data_dump.txt", "w") as text_file:
-        text_file.write(test_data)
-        text_file.close()
-
-
-def read_data(file):
-    with open(file, 'r') as text_file:
-        data = text_file.read()
-        text_file.close()
-        return data
-
-
 ################################################################
 # builds single route
 def routes(request):
@@ -69,7 +62,7 @@ def routes(request):
 
     # post request
     if request.method == 'POST':
-        print_test(str(request.POST.get('value1')) + "," + str(request.POST.get('value2')))
+        data_saving_method(str(request.POST.get('value1')) + "," + str(request.POST.get('value2')))
         lat = request.POST.get('value1')
         lng = request.POST.get('value2')
         starting_point = (float(lat), float(lng))
@@ -97,7 +90,7 @@ def multiRoutes(request):
 
     # post request
     if request.method == 'POST':
-        print_test(str(request.POST.get('value1')) + "," + str(request.POST.get('value2')))
+        data_saving_method(str(request.POST.get('value1')) + "," + str(request.POST.get('value2')))
         lat = request.POST.get('value1')
         lng = request.POST.get('value2')
         starting_point = (float(lat), float(lng))
@@ -190,7 +183,7 @@ def similarity_map(data, k):
              }
         )
 
-    # sorts on sim and then rating
+    # sorts on distance in ASC, then by sim and rating in DESC
     data_map = sorted(data_map, reverse=False, key=operator.itemgetter('Distance'))
     rtn = sorted(data_map, reverse=True, key=operator.itemgetter('Sim', 'Rating'))
 
@@ -245,18 +238,14 @@ def contact(request):
 
 
 ######################################################################
-def print_test(test_data):
+# data logging methods
+def data_saving_method(test_data):
     with open("data_dump.txt", "w") as text_file:
         text_file.write(test_data)
         text_file.close()
 
 
-def dump_test(test_data):
-    with open("log_dump.txt", "w") as text_file:
-        text_file.write(str(test_data))
-        text_file.close()
-
-
+# reads file
 def read_data(file):
     with open(file, 'r') as text_file:
         data = text_file.read()
@@ -264,21 +253,12 @@ def read_data(file):
         return data
 
 
-#########################################################
-# signup page
-def signup(request):
-    if request.method == 'POST':
-        form = SignUpForm(request.POST)
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=raw_password)
-            login(request, user)
-            return redirect('/home')
-    else:
-        form = SignUpForm()
-    return render(request, 'signup.html', {'form': form})
+# log file for testing
+def dump_test(test_data):
+    with open("log_dump.txt", "w") as text_file:
+        text_file.write(str(test_data))
+        text_file.close()
+
 
 #########################################################
 #Build JSON for Brewery Page
@@ -307,6 +287,7 @@ def buildBreweryJson(data):
     rtn_json.append(item)
     return simplejson.dumps(rtn_json, separators=(',', ':'))
 
+
 def buildBeerJson(data):
     rtn_json = []
     item = {
@@ -319,11 +300,6 @@ def buildBeerJson(data):
     rtn_json.append(item)
     return simplejson.dumps(rtn_json, separators=(',', ':'))
 
-### Twitter API info ###
-consumer_key = '16iWxCzBIzdwaRusHVnUdYxLs'
-consumer_secret = 'Q677oYS73EP4UFBgJfRnG1npGTfcgd1B9xbpaxBQxocxawCW5T'
-access_token_key = '959052235815649280-GxbCZphkg4oUizZ4QeUwyksToEFaIiB'
-access_token_secret = 'NY41FPXbM1NLmhlwXircyArfSXHUTvZqBRK668BTSVTMU'
 
 #Get Twitter Profile Pic
 def getProfilePic(handle):
@@ -336,6 +312,7 @@ def getProfilePic(handle):
     pic = user.profile_image_url.replace("_normal.jpg", ".jpg")
     return pic
 
+
 # brewery page
 def brewery_page(request, Brewery_Name):
     context = {
@@ -345,8 +322,9 @@ def brewery_page(request, Brewery_Name):
     }
     return render(request, 'breweryPage.html', context)
 
-### Signup Page ###
 
+#####################################################################
+### Signup Page ###
 def signup(request):
     if request.method == 'POST':
         sign_up_form = SignUpForm(request.POST)
@@ -362,8 +340,8 @@ def signup(request):
     else:
         sign_up_form = SignUpForm()
         user_form = UserProfileForm()
-    return render(request, 'signup.html', {'sign_up_form': sign_up_form,
-                                           'user_form': user_form})
+    return render(request, 'signup.html', {'sign_up_form': sign_up_form, 'user_form': user_form})
+
 
 def buildUserJson(user_data, auth_data):
     rtn_json = []
@@ -386,6 +364,7 @@ def buildUserJson(user_data, auth_data):
     }
     rtn_json.append(item)
     return simplejson.dumps(rtn_json, separators=(',', ':'))
+
 
 ### User Page ###
 @login_required()
