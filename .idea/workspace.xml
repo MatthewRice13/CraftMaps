@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e766f725-cdee-4922-a93e-b02772476c43" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/theCraftMapsCO/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/theCraftMapsCO/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/multiRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/multiRoutes.js" afterDir="false" />
     </list>
     <ignored path="data_dump.txt" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,14 +18,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theCraftMapsCO/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="193" column="80" selection-start-line="193" selection-start-column="80" selection-end-line="193" selection-end-column="80" />
+            <state relative-caret-position="1909">
+              <caret line="241" column="22" selection-start-line="241" selection-start-column="22" selection-end-line="241" selection-end-column="22" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="multiRoutes.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/js/multiRoutes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="214" column="7" lean-forward="true" selection-start-line="214" selection-start-column="7" selection-end-line="214" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -75,6 +85,7 @@
         <option value="$PROJECT_DIR$/theCraftMapsCO/forms.py" />
         <option value="$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/signup.html" />
         <option value="$PROJECT_DIR$/theCraftMapsCO/views.py" />
+        <option value="$PROJECT_DIR$/static/js/multiRoutes.js" />
       </list>
     </option>
   </component>
@@ -384,7 +395,21 @@
       <option name="project" value="LOCAL" />
       <updated>1532541120607</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Commit: 25/07/18@18:55&#10;&#10;- updated version&#10;- Similarity metric (fixed)&#10;- cleaned views">
+      <created>1532541357621</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1532541357621</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Commit: 25/07/18@19:05&#10;&#10;- cleanup">
+      <created>1532541785994</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1532541785994</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -492,7 +517,9 @@
     <MESSAGE value="Commit - 19:42 - 19/07/18&#10;&#10;Addition of:&#10;- Login page&#10;- Signup Page&#10;- Logout Functionality" />
     <MESSAGE value="Commit - 20:34 - 19/07/18&#10;&#10;Update of:&#10;Brewery Pages JSON&#10;Beer JSON" />
     <MESSAGE value="Commit: 25/07/18@18:50&#10;&#10;- updated version&#10;- Similarity metric&#10;- cleaned views" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit: 25/07/18@18:50&#10;&#10;- updated version&#10;- Similarity metric&#10;- cleaned views" />
+    <MESSAGE value="Commit: 25/07/18@18:55&#10;&#10;- updated version&#10;- Similarity metric (fixed)&#10;- cleaned views" />
+    <MESSAGE value="Commit: 25/07/18@19:05&#10;&#10;- cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit: 25/07/18@19:05&#10;&#10;- cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -507,13 +534,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CraftMaps/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/theCraftMapsCO/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
@@ -796,11 +816,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/theCraftMapsCO/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="193" column="80" selection-start-line="193" selection-start-column="80" selection-end-line="193" selection-end-column="80" />
+        <state relative-caret-position="1909">
+          <caret line="241" column="22" selection-start-line="241" selection-start-column="22" selection-end-line="241" selection-end-column="22" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/multiRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="214" column="7" lean-forward="true" selection-start-line="214" selection-start-column="7" selection-end-line="214" selection-end-column="7" />
         </state>
       </provider>
     </entry>
