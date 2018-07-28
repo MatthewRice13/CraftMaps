@@ -205,7 +205,7 @@ function showRoute(lati,longi,mode) {
 		else if (status == google.maps.DirectionsStatus.ZERO_RESULTS){
 			if(mode == "TRANSIT"){
 			alert('Public Transport route does not exist, Driving route will be shown');
-			getDirectionsDrive(lati,longi);
+			showDirectionsDrive(lati, longi);
 			}
 			else if(mode == "DRIVING"){
 				alert("Sorry, No routes available");
