@@ -15,10 +15,10 @@ var img = "Images/beer_PNG.png"
 var currentURL = window.location.href;
 var currentProtocol = window.location.protocol;
 var currentHost = window.location.host;
-//var staticUrl = "http://127.0.0.1:8000/";
+
+
 //breweries data
 var breweriesJson = Brewery_JSON;
-//console.log(breweriesJson);
 var startlatitude = latstart;
 var startlongitude = lngstart;
 var currentlatitude = latstart;
@@ -27,6 +27,8 @@ var downloadText = '';
 var tripCounter = 1;
 
 var startPoint = new google.maps.LatLng(startlatitude, startlongitude);
+
+
 //document ready function
 $(document).ready(function(){
 	
@@ -57,13 +59,8 @@ $(document).ready(function(){
 		var str = "flag"+b+"=false";
 		eval(str);
 	}
-	//modal function calling
-	/*$("headerLabel").on('click', function(e){
-		var urllink= e.target.id;
-		console.log(urllink);
-		//var ret = window.showModalDialog("http://woodkeybrewing.ie/", "", "dialogWidth:80%;dialogHeight:80%");
-	});*/
 });//ready end
+
 
 function populateBreweriesList(){
     var listBrew = '';
@@ -78,6 +75,7 @@ function populateBreweriesList(){
 		$("#listOfBreweries").append(buttonListBrew);
 	}
 }
+
 
 function initMap(){
 	// Map options
@@ -103,6 +101,7 @@ function initMap(){
 	}
 	populateBreweriesList();
 }
+
 
 // Add Marker Function
 function addMarker(props){//console.log(props.coords);
@@ -131,11 +130,12 @@ function addMarker(props){//console.log(props.coords);
 }
 
 
-
 function showModal(e){
 	var urllink = e.target.id;//console.log(urllink);
 	var ret = window.showModalDialog(urllink, "", "dialogWidth:80%;dialogHeight:80%");
 }
+
+
 function checkForItenary(lati,longi,num){
 	for(a=1;a<=breweriesJson.length;a++){
 		if(num == a){
@@ -150,6 +150,8 @@ function checkForItenary(lati,longi,num){
 		}
 	}
 }
+
+
 function showDirections(lati,longi){
 	if(lati == currentlatitude && longi == currentlongitude){
 		alert('You are already on the clicked position. Please clicked on another option');
@@ -167,6 +169,7 @@ function showDirections(lati,longi){
 		
 	}
 }
+
 
 function showRoute(lati,longi,mode) {
 	$("#refreshButton").show();
@@ -215,6 +218,7 @@ function showRoute(lati,longi,mode) {
 	});
 }
 
+
 function showDirectionsDrive(lati,longi){
 	if(lati == currentlatitude && longi == currentlongitude){
 		alert('You are already on the clicked position. Please clicked on another option');
@@ -233,6 +237,7 @@ function showDirectionsDrive(lati,longi){
 	}
 }
 
+
 function prepareText(directions){
 	var directionDetails = "<b>TRIP "+tripCounter+":</b>"+"<div>";
 	directionDetails = directionDetails + directions+"</div>"
@@ -240,6 +245,8 @@ function prepareText(directions){
 	downloadText = downloadText + directionDetails;
 	//console.log(downloadText);
 }
+
+
 function downloadPDF(){
 	var specialElementHandlers = {
 		'#editor': function (element, renderer) {
