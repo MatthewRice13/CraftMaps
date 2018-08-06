@@ -75,6 +75,11 @@
       </div>
       <div class="location-container">
         <div class="container" id="location-container" >
+        {% if user.is_authenticated %}
+            <p>Hi {{ user.username }}!</p><a href="{% url 'logout' %}">logout</a>
+        {% else %}
+            <p>You are not logged in</p><a href="{% url 'login' %}">login</a>
+        {% endif %}
 		<p> <b> Welcome to Craft Maps! </b>  </p>
           <small class="mb-2 d-block">Starting location should be within Ireland i.e Hotel, CO. You are not sure yet? Don't worry! Just click Go and your starting point will be "The Spire"  </small>
           <div class="input-group mb-0">
