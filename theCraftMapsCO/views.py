@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from .forms import SignUpForm, UserProfileForm
 from django.contrib.auth.decorators import login_required
-from .models import User_Table, Beer_Table, Brewery_Table
+from .models import User_Table, Beer_Table, Brewery_Table, User
 
 import googlemaps
 import simplejson
