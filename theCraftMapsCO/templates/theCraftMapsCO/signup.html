@@ -139,6 +139,7 @@
     {% csrf_token %}
     {{ sign_up_form.as_p }}
     {{ user_form.as_p }}
+    {{ sign_up_form.first_name}}
     <button type="submit">Sign up</button>
   </form>
 {% endblock %}
