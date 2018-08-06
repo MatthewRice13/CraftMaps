@@ -13,6 +13,8 @@ var img = "Images/beer_PNG.png"
 
 //staticurl
 var currentURL = window.location.href;
+var currentProtocol = window.location.protocol;
+var currentHost = window.location.host;
 //var staticUrl = "http://127.0.0.1:8000/";
 //var img = "K:/UCD/sem 3/project/beermarkr.png"
 
@@ -64,7 +66,7 @@ $(document).ready(function(){
 
 });//ready end
 
-function populateBreweriesList(){
+/*function populateBreweriesList(){
     var listBrew = '';
 	for(i=0; i < breweriesJson.length; i++){
 		listBrew = "<li><input type='checkbox' name="+breweriesJson[i].coords.lng
@@ -72,7 +74,7 @@ function populateBreweriesList(){
 		    + breweriesJson[i].name + "</li>"
 		$("#listOfBreweries").append(listBrew);
 	}
-}
+}*/
 /*get current location*/
 /*function getLocation() {
 	if (navigator.geolocation) {
@@ -106,13 +108,14 @@ function initMap(){
 		// Add marker
 		addMarker(breweriesJson[i]);
 	}
-	populateBreweriesList();
+	//populateBreweriesList();
 }
 
 // Add Marker Function
 function addMarker(props){
 	var marker = new google.maps.Marker({
 		position: props.coords,
+		animation: google.maps.Animation.DROP,
 		title: props.name,
 		map: map,
 	});
@@ -128,7 +131,8 @@ function addMarker(props){
 				infoWindow.close();
 			}
 			infoWindow = new google.maps.InfoWindow({
-				content: props.Content
+				content: props.Content,
+				maxWidth: 350
 			});
 			infoWindow.open(map, marker);
 		});
@@ -237,7 +241,7 @@ function getCookie(name) {
 }
 function postRequest(lati,longi,newPage){
 	var csrftoken = getCookie('csrftoken');
-	var url = currentURL+newPage;
+	var url = currentProtocol+'//'+currentHost+'/'+newPage;
 	var postdata={
 		'value1':lati,
 		'value2':longi,

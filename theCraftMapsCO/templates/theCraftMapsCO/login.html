@@ -1,19 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+	<title>Login</title>
+	{% load static %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" src='{% static "img/favicon.ico" %}'/>
+	<link rel="stylesheet" href='{% static "vendor/bootstrap/css/bootstrap.min.css" %}'/>
+	<link rel="stylesheet" href='{% static "vendor/font-awesome/css/font-awesome.min.css" %}'/>
+	<link rel="stylesheet" href='{% static "vendor/font-awesome/css/icon-font.min.css" %}'/>
+	<link rel="stylesheet" href='{% static "vendor/bootstrap/css/animate.css" %}'/>
+	<link rel="stylesheet" href='{% static "vendor/bootstrap/css/hamburgers.min.css" %}'/>
+	<link rel="stylesheet" href='{% static "vendor/bootstrap/css/select2.min.css" %}'/>
+	<link rel="stylesheet" href='{% static "vendor/bootstrap/css/util.css" %}'/>
+	<link rel="stylesheet" href='{% static "css/login.css" %}'/>
 </head>
 <body>
-{% block content %}
+
+	<div class="limiter">
+		 <div id="backgroundContainer" class="container-login100" style="background-image: url('../static/img/WhatsApp Image 2018-07-28 at 15.30.48.jpeg');">
+			<div class="wrap-login100 p-t-310 p-b-30">
+				<form class="login100-form validate-form" method="post">
+				{% csrf_token %}
+					<div class="login100-form-avatar">
+						<a href="../home"><img src="../static/img/cm-logo-01.png"></a>
+					</div>
+
+					<span class="login100-form-title p-t-20 p-b-45">
+						Please Login
+					</span>
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
+						<input class="input100" type="text" name="username" placeholder="Username">
+						<!--{{ form.username }}-->
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
+						<input class="input100" type="password" name="pass" placeholder="Password">
+						<!--{{ form.password }}-->
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock"></i>
+						</span>
+					</div>
+
+					<div class="container-login100-form-btn p-t-10">
+						<button type="submit" class="login100-form-btn">
+							Login
+						</button>
+					</div>
+
+					<div class="text-center w-full p-t-25 p-b-230">
+						<a href="../signup" class="txt1">
+							Create new account
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+    {% block content %}
+	
   <h2>Login</h2>
   <form method="post">
     {% csrf_token %}
-      {{ form.username }}
-      {{ form.password }}
+    {{ form.as_p }}
     <button type="submit">Login</button>
   </form>
 {% endblock %}
 
+
+	<script src='{% static "js/jquery-3.3.1.min.js" %}'></script>
+	<script src='{% static "vendor/bootstrap/js/popper.js" %}'></script>
+	<script src='{% static "vendor/bootstrap/js/bootstrap.min.js" %}'></script>
+	<script src='{% static "vendor/bootstrap/js/select2.min.js" %}'></script>
+	<script src='{% static "js/login.js" %}'></script>
+	
 </body>
 </html>
