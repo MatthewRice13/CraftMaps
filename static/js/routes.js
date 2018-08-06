@@ -91,6 +91,7 @@ function initMap(){
 function addMarker(props){//console.log(props.coords);
 	var marker = new google.maps.Marker({
 		position: props.coords,
+		animation: google.maps.Animation.DROP,
 		title: props.name,
 		map: map,
 	});
@@ -136,7 +137,7 @@ function calcRoute(lati,longi,mode) {
 	directionsService.route(request, function(result, status) {//console.log(result);
 		if (status == google.maps.DirectionsStatus.OK) {
 			$("#directionsPanel").empty();
-			$("#directionsPanel").css("background-color", "white");
+			$("#directionsPanel").css("background-image", 'url("../static/img/beer-decks2.jpg")');
 			directionsDisplay.setDirections(result);
 		}
 		else if (status == google.maps.DirectionsStatus.ZERO_RESULTS){

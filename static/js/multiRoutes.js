@@ -108,6 +108,7 @@ function initMap(){
 function addMarker(props){//console.log(props.coords);
 	var marker = new google.maps.Marker({
 		position: props.coords,
+		animation: google.maps.Animation.DROP,
 		title: props.name,
 		map: map,
 	});
@@ -198,14 +199,14 @@ function showRoute(lati,longi,mode) {
 			//var finalDirection = $('<p>'+directionText+'</p>').text();
 			prepareText(directionText);                      //finalDirection);     // directionText);
 			$("#directionsPanel").empty();
-			$("#directionsPanel").css("background-color", "white");
+			$("#directionsPanel").css("background-image", 'url("../static/img/beer-decks2.jpg")');
 			currentlatitude = lati;
 			currentlongitude = longi;
 		}
 		else if (status == google.maps.DirectionsStatus.ZERO_RESULTS){
 			if(mode == "TRANSIT"){
 			alert('Public Transport route does not exist, Driving route will be shown');
-			getDirectionsDrive(lati,longi);
+			showDirectionsDrive(lati,longi);
 			}
 			else if(mode == "DRIVING"){
 				alert("Sorry, No routes available");
