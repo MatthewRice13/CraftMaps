@@ -36,8 +36,8 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-        <img src='{% static "img/beer_PNG.png" %}' width="28px" height="40px"/>
-        <a class="navbar-brand js-scroll-trigger" href="index.html"><font face="Goudy Stout"> CRAFT MAPS</font></a>
+        <img src='{% static "img/Screen Shot 2018-08-02 at 19.08.05 1.png" %}' width="40px" height="40px" />
+            <a class="navbar-brand js-scroll-trigger" href="/home"><img src='{% static "img/Screen Shot 2018-08-02 at 19.07.45.png" %}' width="140px" height="30px" /></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -47,53 +47,60 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/home">Home</a>
+                    <a class="nav-link" href="../home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/about">About</a>
+                    <a class="nav-link" href="../about">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
                 </li>
+				<li class="nav-item">
+				{% if user.is_authenticated %}
+					<a class="nav-link" href="/logout">Logout</a>
+				{% else %}
+					<a class="nav-link" href="/login">Login</a>
+				{% endif %}
+                        <!-- <a class="nav-link" href="/login">Login</a> -->
+				</li>
             </ul>
         </div>
     </div>
 </nav>
 
 <header class="masthead">
-    <div class="location-container">
+    <div class="location-container backgroundSection" style="background-image: url('../static/img/home background 1.png');">
         <div class="container">
-                <button id="goBackButton" class="btn btn-outline" type="button">
-                    Go back
-                </button>
-			<button id="refreshButton" class="btn btn-outline" type="button">
-                    Replan Your Itenary!
-			</button>
-			<button id='downloadFile' class='btn btn-outline' type='button'>
-					Download Your Itenary!
-			</button>
-			<br>
 			<label id="labelInfo">For additional info about each brewery click each marker on the map below. When ready click the Direct me to All button.</label>
         </div>
     </div>
 
 
     <div class="map-container">
-        <div id="brewList">
+        <div id="brewList" style="background-image: url('../static/img/quentin-dr-125010-unsplash1.jpg');">
             <label id="listTitle">Top near by breweries from you:</label>
             <div id="listBrew">
                 <div id="listOfBreweries"></div>
-                <!-- <button id="getItenDirecButton" class="btn btn-outline" type="button">
-                    Direct me to these!
-			    </button> -->
             </div>
         </div>
         <div id="map"></div>
-        <div id="directionsPanel" >
-            <label id="directionLabel"> Choose the brewery/breweries you want to visit.</label>
+        <div id="directionsPanel" style="background-image: url('../static/img/beer-decks1.jpg');">
         </div>
-    </div><!-- <div><button id="downloadFile" class="btn btn-outline" type="button">Download PDF File</button></div> -->
-    <section class="contact bg-primary" id="contact">
+    </div>
+	<div id="mapBottom" class="backgroundSection" style="background-image: url('../static/img/home background 1.png');">
+		<div id="divButton" class="container">
+			<button id="goBackButton" class="btn btn-outline" type="button">
+				Go back
+			</button>
+			<button id="refreshButton" class="btn btn-outline" type="button">
+					Replan Your Itenary!
+			</button>
+			<button id='downloadFile' class='btn btn-outline' type='button'>
+					Download Your Itenary!
+			</button>
+		</div>
+	</div>
+    <!-- <section class="contact bg-primary" id="contact">
         <div class="container">
             <h2>We
                 <i class="fa fa-heart"></i>
@@ -116,9 +123,9 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </section> -->
 
-    <footer>
+    <footer id="contact">
         <div class="container">
             <p>&copy; Craft Maps 2018</p>
             <ul class="list-inline">

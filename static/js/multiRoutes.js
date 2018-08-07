@@ -15,8 +15,6 @@ var img = "Images/beer_PNG.png"
 var currentURL = window.location.href;
 var currentProtocol = window.location.protocol;
 var currentHost = window.location.host;
-
-
 //breweries data
 var breweriesJson = Brewery_JSON;
 var startlatitude = latstart;
@@ -27,28 +25,15 @@ var downloadText = '';
 var tripCounter = 1;
 
 var startPoint = new google.maps.LatLng(startlatitude, startlongitude);
-
-
 //document ready function
 $(document).ready(function(){
 	
 	initMap();
 	$("#goBackButton").on('click', function(){
-		location.href = currentProtocol+'//'+currentHost+'/';  //staticUrl;
+		location.href = currentProtocol+'//'+currentHost+'/';  
 	});
-	/*$("#getItenDirecButton").on('click', function(){
-		var listLen = $('input[class="checkboxList"]:checked').length;
-		console.log(listLen);
-		if(listLen <= 1)
-		{
-			alert('Please select 2 or more breweries');
-		}
-		else{
-			makeItenary();
-		}
-	});*/
 	$('#refreshButton').on('click', function(){
-		location.href = currentURL;   //staticUrl+'routes/' ;
+		location.href = currentURL;
 	});
 	$('#downloadFile').on('click', function(){
 		downloadPDF();
@@ -61,33 +46,27 @@ $(document).ready(function(){
 	}
 });//ready end
 
-
 function populateBreweriesList(){
     var listBrew = '';
 	var buttonListBrew = '';
 	var startPointButton = "<button class='btn btn-outline auto-btn' type='button' onClick='showDirections("+startlatitude+","+startlongitude+")'>Start Point</button><br><br>";
 	$("#listOfBreweries").append(startPointButton);
 	for(i=0; i < breweriesJson.length; i++){
-		//listBrew = "<li><input type='checkbox' name="+breweriesJson[i].coords.lng+" class='checkboxList' value="+ breweriesJson[i].coords.lat+">"+ breweriesJson[i].name + "</li>";
 		var number = i+1;
 		buttonListBrew = "<button class='btn btn-outline auto-btn' type='button' onClick='checkForItenary("+breweriesJson[i].coords.lat+","+breweriesJson[i].coords.lng+","+number+")'>"+number+": "+breweriesJson[i].name+"</button><br>";
-		//$("#listOfBreweries").append(listBrew);
 		$("#listOfBreweries").append(buttonListBrew);
 	}
 }
-
 
 function initMap(){
 	// Map options
 	var options = {
 		zoom:10,
-		//center: new google.maps.LatLng(currentLat, currentLng)
 		center: new google.maps.LatLng(startlatitude, startlongitude)
 		//center: startPoint
 	}
 	// New map
 	map = new google.maps.Map(document.getElementById('map'), options);
-	//{lat: 53.3471532, lng: -6.2603187}
 	var userMarker = new google.maps.Marker({
 		position: {lat: startlatitude, lng: startlongitude},
 		title: 'You are here',
@@ -102,11 +81,11 @@ function initMap(){
 	populateBreweriesList();
 }
 
-
 // Add Marker Function
-function addMarker(props){//console.log(props.coords);
+function addMarker(props){
 	var marker = new google.maps.Marker({
 		position: props.coords,
+		animation: google.maps.Animation.DROP,
 		title: props.name,
 		map: map,
 	});
@@ -130,12 +109,11 @@ function addMarker(props){//console.log(props.coords);
 }
 
 
+
 function showModal(e){
-	var urllink = e.target.id;//console.log(urllink);
+	var urllink = e.target.id;
 	var ret = window.showModalDialog(urllink, "", "dialogWidth:80%;dialogHeight:80%");
 }
-
-
 function checkForItenary(lati,longi,num){
 	for(a=1;a<=breweriesJson.length;a++){
 		if(num == a){
@@ -150,8 +128,6 @@ function checkForItenary(lati,longi,num){
 		}
 	}
 }
-
-
 function showDirections(lati,longi){
 	if(lati == currentlatitude && longi == currentlongitude){
 		alert('You are already on the clicked position. Please clicked on another option');
@@ -170,7 +146,6 @@ function showDirections(lati,longi){
 	}
 }
 
-
 function showRoute(lati,longi,mode) {
 	$("#refreshButton").show();
 	$("#downloadFile").show();
@@ -182,33 +157,30 @@ function showRoute(lati,longi,mode) {
 		destination:end,
 		travelMode: google.maps.TravelMode[mode]
 	};
-	directionsService.route(request, function(result, status) {//console.log(result);
+	directionsService.route(request, function(result, status) {
 		if (status == google.maps.DirectionsStatus.OK) {
 			directionsDisplay.setDirections(result);
 			directionRoute = result.routes["0"].legs["0"].steps;
 			for(i=0;i<directionRoute.length;i++){
-				//console.log(directionRoute[i].instructions);  //correct
 				directionText = directionText + directionRoute[i].instructions+"\n";
 				for(var x in directionRoute[i]){
 					if(x=="steps"){
 						for(j=0;j<directionRoute[i].steps.length;j++){
-							//console.log(directionRoute[i].steps[j].instructions);  //correct
 							directionText = directionText + directionRoute[i].steps[j].instructions+"\n";
 						}
 					}
 				}
 			}
-			//var finalDirection = $('<p>'+directionText+'</p>').text();
-			prepareText(directionText);                      //finalDirection);     // directionText);
+			prepareText(directionText);
 			$("#directionsPanel").empty();
-			$("#directionsPanel").css("background-color", "white");
+			$("#directionsPanel").css("background-image", 'url("../static/img/beer-decks2.jpg")');
 			currentlatitude = lati;
 			currentlongitude = longi;
 		}
 		else if (status == google.maps.DirectionsStatus.ZERO_RESULTS){
 			if(mode == "TRANSIT"){
 			alert('Public Transport route does not exist, Driving route will be shown');
-			showDirectionsDrive(lati, longi);
+			showDirectionsDrive(lati,longi);
 			}
 			else if(mode == "DRIVING"){
 				alert("Sorry, No routes available");
@@ -217,7 +189,6 @@ function showRoute(lati,longi,mode) {
 		}
 	});
 }
-
 
 function showDirectionsDrive(lati,longi){
 	if(lati == currentlatitude && longi == currentlongitude){
@@ -237,16 +208,12 @@ function showDirectionsDrive(lati,longi){
 	}
 }
 
-
 function prepareText(directions){
 	var directionDetails = "<b>TRIP "+tripCounter+":</b>"+"<div>";
 	directionDetails = directionDetails + directions+"</div>"
 	tripCounter = tripCounter+1;
 	downloadText = downloadText + directionDetails;
-	//console.log(downloadText);
 }
-
-
 function downloadPDF(){
 	var specialElementHandlers = {
 		'#editor': function (element, renderer) {

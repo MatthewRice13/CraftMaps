@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from .forms import SignUpForm, UserProfileForm
 from django.contrib.auth.decorators import login_required
-from .models import User_Table, Beer_Table, Brewery_Table
+from .models import User_Table, Beer_Table, Brewery_Table, User
 
 import googlemaps
 import simplejson
@@ -48,7 +48,7 @@ def build_home_json(data):
                 'lng': float(d.Brewery_Longitude),
                 'lat': float(d.Brewery_Latitude)
             },
-            'Content': '<div class="infoDiv"><div class="infoHeader"><label class="headerLabel">'+d.Brewery_Name+'</label></div><div class="infoBody"><label class="bodyLabel">'+d.Brewery_Type+'</label></div></div>'
+            'Content': '<div id="iw-container" class="infoDiv"><div class="infoHeader iw-title"><label class="headerLabel">'+d.Brewery_Name+'</label></div><div class="infoBody iw-content"><label class="bodyLabel">'+d.Brewery_Type+'</label></div></div>'
         }
         rtn_json.append(item)
     return simplejson.dumps(rtn_json, separators=(',', ':'))
@@ -86,7 +86,7 @@ def routes(request):
 # builds multi route
 def multiRoutes(request):
     # number of breweries displayed
-    k_size = 5
+    k_size = 10
 
     # post request
     if request.method == 'POST':
@@ -102,7 +102,7 @@ def multiRoutes(request):
         starting_point = (53.3256826, -6.2249631)
 
     context = {
-        'locations': builddistjson(Brewery_Table.objects.all(), starting_point, k_size),
+        'locations': buildmultidistjson(Brewery_Table.objects.all(), starting_point, k_size),
         'start': list(starting_point),
         'key': googleKey
     }
@@ -148,7 +148,53 @@ def builddistjson(breweries, starting, k):
                     'lng': float(d.Brewery_Longitude),
                     'lat': float(d.Brewery_Latitude)
                 },
-                'Content': '<div class="infoDiv"><div class="infoHeader"><label class="headerLabel" id = "'+d.Brewery_URL+'" onClick="showModal(event);">'+d.Brewery_Name+'</label></div><div class="infoBody"><label class="bodyLabel">'+d.Brewery_Type+'</label></div><div class="infoFooter"><button onClick="getDirections('+str(d.Brewery_Longitude)+','+str(d.Brewery_Latitude)+');">See my Directions</button></div></div>'
+                'Content': '<div id="iw-container" class="infoDiv"><div class="infoHeader iw-title"><label class="headerLabel" id = "'+d.Brewery_URL+'" onClick="showModal(event);">'+d.Brewery_Name+'</label></div><div class="infoBody iw-content"><label class="bodyLabel">'+d.Brewery_Type+'</label></div><div class="infoFooter iw-bottom-gradient"><button class="viewButton btn btn-outline" onClick="getDirections('+str(d.Brewery_Latitude)+','+str(d.Brewery_Longitude)+');">See my Directions</button></div></div>'
+            }
+            rtn_json.append(item)
+
+    # returns json
+    return simplejson.dumps(rtn_json, separators=(',', ':'))
+
+# builds json for page
+def buildmultidistjson(breweries, starting, k):
+    data = []
+    for dat in breweries:
+        nam = dat.Brewery_Name
+        typ = dat.Brewery_Type
+        rat = dat.Brewery_Rating
+        dst = get_distance(starting, (dat.Brewery_Longitude, dat.Brewery_Latitude))
+
+        # data
+        data.append(
+            {
+                'Name': nam,
+                'Type': typ,
+                'Rating': rat,
+                'Distance': dst
+            }
+        )
+
+    # sort based on distance
+    df = sorted(data, key=operator.itemgetter('Distance'))
+
+    # filters based on user preference
+    ndf = similarity_map(df, (k+k))
+
+    # subset of data
+    subset = []
+    for d in ndf[:k]:
+        subset.append(d['Name'])
+
+    rtn_json = []
+    for d in breweries:
+        if d.Brewery_Name in subset:
+            item = {
+                'name': d.Brewery_Name,
+                'coords': {
+                    'lng': float(d.Brewery_Longitude),
+                    'lat': float(d.Brewery_Latitude)
+                },
+                'Content': '<div id="iw-container" class="infoDiv"><div class="infoHeader iw-title"><label class="headerLabel" id = "'+d.Brewery_URL+'" onClick="showModal(event);">'+d.Brewery_Name+'</label></div><div class="infoBody iw-content"><label class="bodyLabel">'+d.Brewery_Type+'</label></div></div>'
             }
             rtn_json.append(item)
 
@@ -336,7 +382,7 @@ def signup(request):
             raw_password = sign_up_form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            return redirect('home')
+            return redirect('/home')
     else:
         sign_up_form = SignUpForm()
         user_form = UserProfileForm()

@@ -35,9 +35,13 @@
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href='{% static "css/new-age.min.css" %}'/>
+    <!-- <link rel="stylesheet" href='{% static "css/new-age.min.css" %}'/> -->
     <link rel="stylesheet" href='{% static "css/new-age-index-home.css" %}'/>
     <link rel="stylesheet" href='{% static "css/craftMaps.css" %}'/>
+	<!-- Custom styles for this template -->
+    <link rel="stylesheet" href='{% static "css/full-width-pics.css" %}'>
+	<!--Custom Fonts-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
 
 
@@ -45,8 +49,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
-            <img src='{% static "img/beer_PNG.png" %}' width="28px" height="40px" />
-            <a class="navbar-brand js-scroll-trigger">CRAFT MAPS</a>
+            <img src='{% static "img/Screen Shot 2018-08-02 at 19.08.05 1.png" %}' width="40px" height="40px" />
+            <a class="navbar-brand js-scroll-trigger" href="/home"><img src='{% static "img/Screen Shot 2018-08-02 at 19.07.45.png" %}' width="140px" height="30px" /></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                     data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -64,29 +68,51 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
                     </li>
+					<li class="nav-item">
+					{% if user.is_authenticated %}
+						<a class="nav-link" href="/logout">Logout</a>
+					{% else %}
+						<a class="nav-link" href="/login">Login</a>
+					{% endif %}
+                        <!-- <a class="nav-link" href="/login">Login</a> -->
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+	
+	<!-- Header - set the background image for the header in the line below -->
+    <section class="py-5 bg-image-full" style="background-image: url('../static/img/beer-tour1.jpg');">
+      <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
+      <div style="height: 200px;"></div>
+    </section>
+	
+	<!-- Content section -->
+    <section style="background-image: url('../static/img/home background 1.png');" class="py-5 backgroundSection">
+      <div class="container">
+        <h1>Welcome to Craft Maps</h1> 
+        <p class="lead">Connecting good people with good beer on the island of Ireland since 2018.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
+      </div>
+    </section>
 
     <header class="masthead">
 	  <div class="map-container">
         <div id="map"></div>
       </div>
-      <div class="location-container">
+      <div class="location-container backgroundSection" style="background-image: url('../static/img/home background 1.png');">
         <div class="container" id="location-container" >
-		<p> <b> Welcome to Craft Maps! </b>  </p>
-          <small class="mb-2 d-block">Starting location should be within Ireland i.e Hotel, CO. You are not sure yet? Don't worry! Just click Go and your starting point will be "The Spire"  </small>
+		<!-- <p> <b> Welcome to Craft Maps! </b>  </p>
+          <small class="mb-2 d-block">Starting location should be within Ireland i.e Hotel, CO. You are not sure yet? Don't worry! Just click Go and your starting point will be "The Spire"  </small> -->
           <div class="input-group mb-0">
             <input type="text" id="defaultAddress" class="form-control location-input" placeholder="Enter your starting location" aria-label="Recipient's username" aria-describedby="basic-addon2">
           </div>
 		  <button id="goToMaps" class="btn btn-outline" type="button">Plan a Single Brewery Trip</button><button id="goToMultiMaps" class="btn btn-outline" type="button">Plan a Multi Brewery Trip</button>
           </div>
         </div>
-      </div>
     </header>
 
-    <section class="contact bg-primary" id="contact">
+    <!-- <section class="contact bg-primary" id="contact">
         <div class="container">
             <h2>We
                 <i class="fa fa-heart"></i>
@@ -109,9 +135,9 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </section> -->
 
-    <footer>
+    <footer id="contact">
         <div class="container">
             <p>&copy; Craft Maps 2018</p>
             <ul class="list-inline">
