@@ -11,20 +11,20 @@ class CustomAuthForm(AuthenticationForm):
 
 class SignUpForm(UserCreationForm):
     username = forms.CharField(max_length=30, label='',
-                               widget=forms.TextInput(attrs={'class': 'usernamefield',
+                               widget=forms.TextInput(attrs={'class': 'input100',
                                                              'placeholder': 'Username'}))
     first_name = forms.CharField(max_length=30, required=False, label='',
-                                 widget=forms.TextInput(attrs={'class': 'firstnamefield',
+                                 widget=forms.TextInput(attrs={'class': 'input100',
                                                                'placeholder': 'First Name'}))
     last_name = forms.CharField(max_length=30, required=False, label='',
-                                widget=forms.TextInput(attrs={'class': 'lastnamefield',
+                                widget=forms.TextInput(attrs={'class': 'input100',
                                                               'placeholder': 'Last Name'}))
     email = forms.EmailField(max_length=254, label=''
-                             , widget=forms.TextInput(attrs={'class': 'emailfield',
+                             , widget=forms.TextInput(attrs={'class': 'input100',
                                                              'placeholder': 'Email'}))
-    password1 = forms.CharField(label='', widget=forms.PasswordInput(attrs={'class': 'passwordfield',
+    password1 = forms.CharField(label='', widget=forms.PasswordInput(attrs={'class': 'input100',
                                                                             'placeholder': 'Password'}))
-    password2 = forms.CharField(label='', widget=forms.PasswordInput(attrs={'class': 'passwordfield',
+    password2 = forms.CharField(label='', widget=forms.PasswordInput(attrs={'class': 'input100',
                                                                             'placeholder': 'Repeat Password'}))
 
     class Meta:
@@ -33,10 +33,10 @@ class SignUpForm(UserCreationForm):
 
 class UserProfileForm(forms.ModelForm):
     User_Favorite_Brewery_Type = forms.CharField(max_length=30, label='',
-                                                 widget=forms.TextInput(attrs={'class': 'breweryfield',
+                                                 widget=forms.TextInput(attrs={'class': 'input100',
                                                                                'placeholder': 'Favourite Brewery'}))
     User_Max_Distance = forms.CharField(max_length=30, label='',
-                                        widget=forms.TextInput(attrs={'class': 'distancefield',
+                                        widget=forms.NumberInput(attrs={'class': 'input100',
                                                                       'placeholder': 'Max Distance'}))
     User_Beer_Stout = forms.BooleanField(label='Stout', required=False,
                                          widget=forms.CheckboxInput(attrs={'class': 'beerfield'}))

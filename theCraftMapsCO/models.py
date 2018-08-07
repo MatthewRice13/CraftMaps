@@ -15,6 +15,8 @@ class Brewery_Table(models.Model):
     Brewery_URL = models.URLField(max_length=255, null=True, blank=True)
     Brewery_Twitter = models.URLField(max_length=255, null=True, blank=True)
     Brewery_Facebook = models.URLField(max_length=255, null=True, blank=True)
+    Brewery_Tours = models.BooleanField(default=False)
+    Brewery_Merch = models.BooleanField(default=False)
 
     def _str_(self):
         return self.Brewery_Name
