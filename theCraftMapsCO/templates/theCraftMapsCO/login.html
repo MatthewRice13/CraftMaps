@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href='{% static "css/login.css" %}'/>
 </head>
 <body>
-
+{% block content %}
 	<div class="limiter">
 		 <div id="backgroundContainer" class="container-login100" style="background-image: url('../static/img/WhatsApp Image 2018-07-28 at 15.30.48.jpeg');">
 			<div class="wrap-login100 p-t-310 p-b-30">
@@ -31,8 +31,8 @@
 					</span>
 
 					<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
-						<input class="input100" type="text" name="username" placeholder="Username">
-						<!--{{ form.username }}-->
+						<!--<input class="input100" type="text" name="username" placeholder="Username">-->
+						{{ form.username }}
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-user"></i>
@@ -40,8 +40,8 @@
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Password">
-						<!--{{ form.password }}-->
+						<!--<input class="input100" type="password" name="pass" placeholder="Password">-->
+						{{ form.password }}
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock"></i>
@@ -53,7 +53,7 @@
 							Login
 						</button>
 					</div>
-
+{% endblock %}
 					<div class="text-center w-full p-t-25 p-b-230">
 						<a href="../signup" class="txt1">
 							Create new account
@@ -63,15 +63,6 @@
 			</div>
 		</div>
 	</div>
-    {% block content %}
-	
-  <h2>Login</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-  </form>
-{% endblock %}
 
 
 	<script src='{% static "js/jquery-3.3.1.min.js" %}'></script>

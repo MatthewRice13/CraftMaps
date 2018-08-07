@@ -86,7 +86,7 @@ def routes(request):
 # builds multi route
 def multiRoutes(request):
     # number of breweries displayed
-    k_size = 5
+    k_size = 10
 
     # post request
     if request.method == 'POST':
@@ -102,7 +102,7 @@ def multiRoutes(request):
         starting_point = (53.3256826, -6.2249631)
 
     context = {
-        'locations': builddistjson(Brewery_Table.objects.all(), starting_point, k_size),
+        'locations': buildmultidistjson(Brewery_Table.objects.all(), starting_point, k_size),
         'start': list(starting_point),
         'key': googleKey
     }
@@ -149,6 +149,52 @@ def builddistjson(breweries, starting, k):
                     'lat': float(d.Brewery_Latitude)
                 },
                 'Content': '<div id="iw-container" class="infoDiv"><div class="infoHeader iw-title"><label class="headerLabel" id = "'+d.Brewery_URL+'" onClick="showModal(event);">'+d.Brewery_Name+'</label></div><div class="infoBody iw-content"><label class="bodyLabel">'+d.Brewery_Type+'</label></div><div class="infoFooter iw-bottom-gradient"><button class="viewButton btn btn-outline" onClick="getDirections('+str(d.Brewery_Latitude)+','+str(d.Brewery_Longitude)+');">See my Directions</button></div></div>'
+            }
+            rtn_json.append(item)
+
+    # returns json
+    return simplejson.dumps(rtn_json, separators=(',', ':'))
+
+# builds json for page
+def buildmultidistjson(breweries, starting, k):
+    data = []
+    for dat in breweries:
+        nam = dat.Brewery_Name
+        typ = dat.Brewery_Type
+        rat = dat.Brewery_Rating
+        dst = get_distance(starting, (dat.Brewery_Longitude, dat.Brewery_Latitude))
+
+        # data
+        data.append(
+            {
+                'Name': nam,
+                'Type': typ,
+                'Rating': rat,
+                'Distance': dst
+            }
+        )
+
+    # sort based on distance
+    df = sorted(data, key=operator.itemgetter('Distance'))
+
+    # filters based on user preference
+    ndf = similarity_map(df, (k+k))
+
+    # subset of data
+    subset = []
+    for d in ndf[:k]:
+        subset.append(d['Name'])
+
+    rtn_json = []
+    for d in breweries:
+        if d.Brewery_Name in subset:
+            item = {
+                'name': d.Brewery_Name,
+                'coords': {
+                    'lng': float(d.Brewery_Longitude),
+                    'lat': float(d.Brewery_Latitude)
+                },
+                'Content': '<div id="iw-container" class="infoDiv"><div class="infoHeader iw-title"><label class="headerLabel" id = "'+d.Brewery_URL+'" onClick="showModal(event);">'+d.Brewery_Name+'</label></div><div class="infoBody iw-content"><label class="bodyLabel">'+d.Brewery_Type+'</label></div></div>'
             }
             rtn_json.append(item)
 
