@@ -15,17 +15,12 @@ var img = "Images/beer_PNG.png"
 var currentURL = window.location.href;
 var currentProtocol = window.location.protocol;
 var currentHost = window.location.host;
-//var staticUrl = "http://127.0.0.1:8000/";
-//var img = "K:/UCD/sem 3/project/beermarkr.png"
 
 //breweries data
 var breweriesJson = Brewery_JSON;
-//console.log(breweriesJson[0].coords.lng);
-//console.log(breweriesJson);
 
 //document ready function
 $(document).ready(function(){
-	//getLocation(); // will give the current position
 	initMap();
 	$("#getDirecButton").on('click', function(){
 		getDirections();
@@ -36,7 +31,6 @@ $(document).ready(function(){
 	$("#goToMaps").on('click', function(){
 		var loc = $("#defaultAddress").val();
 		if(loc == ""){
-		    //alert('No location entered! Your default location will be "The Spire Tower"');
 			if(confirm('No location entered! Your default location will be "The Spire Tower"')){
 				getCoords(loc,"routes/");
 			}
@@ -51,7 +45,6 @@ $(document).ready(function(){
 	$("#goToMultiMaps").on('click', function(){
 		var loc = $("#defaultAddress").val();
 		if(loc == ""){
-		    //alert('No location entered! Your default location will be "The Spire Tower"');
 			if(confirm('No location entered! Your default location will be "The Spire Tower"')){
 				getCoords(loc,"multiRoutes/");
 			}
@@ -66,37 +59,10 @@ $(document).ready(function(){
 
 });//ready end
 
-/*function populateBreweriesList(){
-    var listBrew = '';
-	for(i=0; i < breweriesJson.length; i++){
-		listBrew = "<li><input type='checkbox' name="+breweriesJson[i].coords.lng
-		    +" class='checkboxList' value="+ breweriesJson[i].coords.lat+">"
-		    + breweriesJson[i].name + "</li>"
-		$("#listOfBreweries").append(listBrew);
-	}
-}*/
-/*get current location*/
-/*function getLocation() {
-	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(showPosition);
-	} else {
-		console.log('error');
-	}
-}*/
-
-/*set start point*/
-/*function showPosition(position) {
-	currentLat = position.coords.latitude;
-	currentLng = position.coords.longitude;
-	startPoint = new google.maps.LatLng(currentLat, currentLng);
-	initMap();
-}*/
-
 function initMap(){
 	// Map options
 	var options = {
 		zoom:9,
-		//center: new google.maps.LatLng(currentLat, currentLng)
 		//setting center as the spire tower
 		center: new google.maps.LatLng(53.349722, -6.260278)
 	}
@@ -139,43 +105,6 @@ function addMarker(props){
 	}
 }
 
-/*function getCoords(address,newPage){
-	var startLng = 0.0;
-	var startLat = 0.0;
-	if(address == ""){
-		// default for spire tower
-		startLat = 53.349722;
-		startLng = -6.260278;
-		postRequest(startLat,startLng,newPage)
-
-	}
-	else{
-		axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
-			params:{
-			  address:address,
-			  key:'AIzaSyDFK8QRiUl8jx5YYQwDMQ31GMyXwXz-et8'
-			}
-		})
-		.then(function(response){
-			if(response.data.status === "OK"){
-				if(response.data.results["0"].address_components[3].long_name != "Ireland"){
-					alert("Enter a more detailed Irish Location");
-				}
-				else{
-					startLat = response.data.results["0"].geometry.location.lat;
-					startLng = response.data.results["0"].geometry.location.lng;
-					var locCord= startLat+','+startLng;
-					postRequest(startLat,startLng,newPage);
-
-				}
-			}
-			else{
-				//alert('Geocode was not successful for the following reason: ' + response.data.status);
-				alert('You are not drunk yet! Please enter a valid location');
-			}
-		});
-	}
-}*/
 function getCoords(address,newPage){
 	var startLng = 0.0;
 	var startLat = 0.0;
@@ -205,16 +134,6 @@ function getCoords(address,newPage){
 					}
 				}
 				alert("Enter a more detailed Irish Location");
-				/*if(response.data.results["0"].address_components[3].long_name != "Ireland"){
-					alert("Enter a more detailed Irish Location");
-				}*/
-				/*else{
-					startLat = response.data.results["0"].geometry.location.lat;
-					startLng = response.data.results["0"].geometry.location.lng;
-					var locCord= startLat+','+startLng;
-					postRequest(startLat,startLng,newPage);
-
-				}*/
 			}
 			else{
 				//alert('Geocode was not successful for the following reason: ' + response.data.status);
