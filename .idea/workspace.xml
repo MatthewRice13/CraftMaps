@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e766f725-cdee-4922-a93e-b02772476c43" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/database/Beer_Data.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/database/Brewery_Data_Entry.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/database/FULL_Beers.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/database/SQL_Run_CraftMaps.sql" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/database/new_database.txt" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/data_dump.txt" afterPath="$PROJECT_DIR$/data_dump.txt" />
-      <change beforePath="$PROJECT_DIR$/log_dump.txt" afterPath="$PROJECT_DIR$/log_dump.txt" />
-      <change beforePath="$PROJECT_DIR$/theCraftMapsCO/migrations/0001_initial.py" afterPath="" />
     </list>
     <ignored path="data_dump.txt" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,8 +69,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/theCraftMapsCO/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="14" column="72" lean-forward="false" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
+            <state relative-caret-position="324">
+              <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -128,7 +130,7 @@
       </map>
     </option>
     <push-targets>
-      <push-target-info target-remote="origin" target-branch="master" repo="$PROJECT_DIR$" source="RoryK" />
+      <push-target-info target-remote="origin" target-branch="RoryK" repo="$PROJECT_DIR$" source="RoryK" />
     </push-targets>
   </component>
   <component name="IdeDocumentHistory">
@@ -198,6 +200,11 @@
               <item name="CraftMaps" type="b2602c69:ProjectViewProjectNode" />
               <item name="CraftMaps" type="462c0819:PsiDirectoryNode" />
               <item name="CraftMaps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CraftMaps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CraftMaps" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CraftMaps" type="b2602c69:ProjectViewProjectNode" />
@@ -535,11 +542,19 @@
       <option name="project" value="LOCAL" />
       <updated>1533667258952</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Commit - 12:22 - 9/8/18&#10;&#10;Addition of database folder">
+      <created>1533813809589</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1533813809589</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1431" y="-4" width="1303" height="780" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993994" sideWeight="0.50269026" order="7" side_tool="true" content_ui="tabs" />
@@ -621,7 +636,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Commit 24/06/2018@20:30&#10;&#10;- Merged MatthewR&#10;- Push with json error&#10;-- working with errors for now" />
     <MESSAGE value="Commit 24/06/2018@21:30&#10;&#10;- Json fixed&#10;- map data pushed" />
     <MESSAGE value="Commit 25/06/2018@14:45&#10;&#10;- added image" />
     <MESSAGE value="Commit 25/06/2018@15:15&#10;&#10;- added image&#10;- HTML changed" />
@@ -646,7 +660,8 @@
     <MESSAGE value="Commit - 13:53 - 6/7/18&#10;&#10;New look and feel&#10;Updated login page&#10;Updated signup page" />
     <MESSAGE value="Commit - 14:32 - 7/8/18&#10;&#10;Updated homepage" />
     <MESSAGE value="Commit - 19:40 - 7/8/18&#10;&#10;Updated homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit - 19:40 - 7/8/18&#10;&#10;Updated homepage" />
+    <MESSAGE value="Commit - 12:22 - 9/8/18&#10;&#10;Addition of database folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit - 12:22 - 9/8/18&#10;&#10;Addition of database folder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -965,8 +980,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/theCraftMapsCO/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" column="72" lean-forward="false" selection-start-line="14" selection-start-column="72" selection-end-line="14" selection-end-column="72" />
+        <state relative-caret-position="324">
+          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
           <folding />
         </state>
       </provider>
