@@ -1,0 +1,46 @@
+CREATE DATABASE CraftMapsDB;
+USE CraftMapsDB;
+
+CREATE TABLE Brewery_Table(
+	Brewery_ID INT PRIMARY KEY AUTO_INCREMENT,
+	Brewery_Name VARCHAR(255) NOT NULL,
+	Brewery_Town VARCHAR(150) NOT NULL,
+	Brewery_Region VARCHAR(150) NOT NULL,
+	Brewery_Longitude VARCHAR(200),
+	Brewery_Latitude VARCHAR(200),
+	Brewery_URL VARCHAR(255)
+);
+
+CREATE TABLE Beer_Table(
+	Beer_ID INT PRIMARY KEY AUTO_INCREMENT,
+	Beer_Name VARCHAR(255) NOT NULL,
+	Beer_Brewery VARCHAR(300) NOT NULL,
+	Beer_Type VARCHAR(150) NOT NULL,
+	Beer_Percent DOUBLE NOT NULL,
+	Beer_Rating DOUBLE NOT NULL
+);
+
+CREATE TABLE Types_Table(
+	Type_ID INT PRIMARY KEY AUTO_INCREMENT,
+	Type_Name VARCHAR(150) NOT NULL
+);
+
+CREATE TABLE Brewery_Types(
+	ID INT PRIMARY KEY AUTO_INCREMENT,
+    Brewery_ID INT, 
+    FOREIGN KEY(Brewery_ID) REFERENCES Brewery_Table(Brewery_ID),
+    Type_ID INT, 
+    FOREIGN KEY(Type_ID) REFERENCES Types_Table(Type_ID)
+);
+
+CREATE TABLE Beers_In_Brewery(
+	ID INT PRIMARY KEY AUTO_INCREMENT,
+	Brewery_ID INT, 
+    FOREIGN KEY(Brewery_ID) REFERENCES Brewery_Table(Brewery_ID),
+	Beer_ID INT, 
+    FOREIGN KEY(Beer_ID) REFERENCES Beer_Table(Beer_ID)
+);
+
+CREATE USER 'UserOne'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassOne123#';
+GRANT ALL PRIVILEGES ON CraftMapsDB.* TO UserOne@localhost;
+FLUSH PRIVILEGES;

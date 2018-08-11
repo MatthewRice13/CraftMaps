@@ -53,7 +53,7 @@ function populateBreweriesList(){
 
 function addTwitterFeed() {
     var twitter = breweryJson[0].social.twitter;
-    var link = "https://www." + twitter + "?ref_src=twsrc%5Etfw";
+    var link = "https://www.twitter.com/" + twitter + "?ref_src=twsrc%5Etfw";
     document.getElementById("twitter").setAttribute("href", link);
     $("#twitter").append(breweryJson[0].name);
 }

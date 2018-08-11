@@ -325,7 +325,7 @@ def buildBreweryJson(data):
         'rating': data.Brewery_Rating,
         'social': {
             'website': data.Brewery_URL,
-            'twitter': data.Brewery_Twitter,
+            'twitter': handleCheck(data.Brewery_Twitter),
             'facebook': data.Brewery_Facebook
         },
         'pic': getProfilePic(data.Brewery_Twitter)
@@ -333,17 +333,24 @@ def buildBreweryJson(data):
     rtn_json.append(item)
     return simplejson.dumps(rtn_json, separators=(',', ':'))
 
+def handleCheck(handle):
+    if handle == "www.twitter.com":
+        return 'irecraftbeer'
+    else:
+        url = handle.split("/")
+        return url[len(url)-1]
 
 def buildBeerJson(data):
     rtn_json = []
-    item = {
-        'name': data.Beer_Name,
-        'brewery': data.Beer_Brewery,
-        'type': data.Beer_Type,
-        'percent': data.Beer_Percent,
-        'rating': data.Beer_Rating,
-    }
-    rtn_json.append(item)
+    for beer in data:
+        item = {
+            'name': beer.Beer_Name,
+            'brewery': beer.Beer_Brewery,
+            'type': beer.Beer_Type,
+            'percent': beer.Beer_Percent,
+            'rating': beer.Beer_Rating,
+        }
+        rtn_json.append(item)
     return simplejson.dumps(rtn_json, separators=(',', ':'))
 
 
@@ -353,17 +360,23 @@ def getProfilePic(handle):
                       consumer_secret=consumer_secret,
                       access_token_key=access_token_key,
                       access_token_secret=access_token_secret)
-    url = handle.split("/")
-    user = api.GetUser(screen_name=url[len(url)-1])
-    pic = user.profile_image_url.replace("_normal.jpg", ".jpg")
-    return pic
+    if handle == "www.twitter.com":
+        user = api.GetUser(screen_name='irecraftbeer')
+        pic = user.profile_image_url.replace("_normal.jpg", ".jpg")
+        return pic
+    else:
+        url = handle.split("/")
+        user = api.GetUser(screen_name=url[len(url)-1])
+        pic = user.profile_image_url.replace("_normal.jpg", ".jpg")
+        return pic
 
 
 # brewery page
-def brewery_page(request, Brewery_Name):
+def brewery_page(request, name):
+    brew_name = " " + name
     context = {
-        'brewery': buildBreweryJson(Brewery_Table.objects.get(Brewery_Name=Brewery_Name)),
-        'beer': buildBeerJson(Beer_Table.objects.get(Beer_Brewery=Brewery_Name)),
+        'brewery': buildBreweryJson(Brewery_Table.objects.get(Brewery_Name=brew_name)),
+        'beer': buildBeerJson(Beer_Table.objects.filter(Beer_Brewery=name)),
         'key': googleKey
     }
     return render(request, 'breweryPage.html', context)
