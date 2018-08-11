@@ -325,7 +325,7 @@ def buildBreweryJson(data):
         'rating': data.Brewery_Rating,
         'social': {
             'website': data.Brewery_URL,
-            'twitter': data.Brewery_Twitter,
+            'twitter': handleCheck(data.Brewery_Twitter),
             'facebook': data.Brewery_Facebook
         },
         'pic': getProfilePic(data.Brewery_Twitter)
@@ -333,6 +333,12 @@ def buildBreweryJson(data):
     rtn_json.append(item)
     return simplejson.dumps(rtn_json, separators=(',', ':'))
 
+def handleCheck(handle):
+    if handle == "www.twitter.com":
+        return 'irecraftbeer'
+    else:
+        url = handle.split("/")
+        return url[len(url)-1]
 
 def buildBeerJson(data):
     rtn_json = []
