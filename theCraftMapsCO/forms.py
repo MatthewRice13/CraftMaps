@@ -32,25 +32,25 @@ class SignUpForm(UserCreationForm):
         fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2', )
 
 class UserProfileForm(forms.ModelForm):
-    User_Favorite_Brewery_Type = forms.CharField(max_length=30, label='',
+    User_Favorite_Brewery_Type = forms.CharField(max_length=30, label='',required=False,
                                                  widget=forms.TextInput(attrs={'class': 'input100',
                                                                                'placeholder': 'Favourite Brewery'}))
-    User_Max_Distance = forms.CharField(max_length=30, label='',
+    User_Max_Distance = forms.CharField(max_length=30, label='',required=False,
                                         widget=forms.NumberInput(attrs={'class': 'input100',
                                                                       'placeholder': 'Max Distance'}))
-    User_Beer_Stout = forms.BooleanField(label='Stout',
+    User_Beer_Stout = forms.BooleanField(label='Stout',required=False,
                                          widget=forms.CheckboxInput(attrs={'class': 'beerfield'}))
-    User_Beer_Lager = forms.BooleanField(label='Lager',
+    User_Beer_Lager = forms.BooleanField(label='Lager',required=False,
                                          widget=forms.CheckboxInput(attrs={'class': 'beerfield'}))
-    User_Beer_IPA = forms.BooleanField(label='IPA',
+    User_Beer_IPA = forms.BooleanField(label='IPA',required=False,
                                        widget=forms.CheckboxInput(attrs={'class': 'beerfield'}))
-    User_Beer_Cider = forms.BooleanField(label='Cider',
+    User_Beer_Cider = forms.BooleanField(label='Cider',required=False,
                                          widget=forms.CheckboxInput(attrs={'class': 'beerfield'}))
-    User_Beer_Pilsner = forms.BooleanField(label='Pilsner',
+    User_Beer_Pilsner = forms.BooleanField(label='Pilsner',required=False,
                                            widget=forms.CheckboxInput(attrs={'class': 'beerfield'}))
-    User_Beer_Ale = forms.BooleanField(label='Ale',
+    User_Beer_Ale = forms.BooleanField(label='Ale',required=False,
                                        widget=forms.CheckboxInput(attrs={'class': 'beerfield'}))
-    User_Beer_Weiss = forms.BooleanField(label='Weiss',
+    User_Beer_Weiss = forms.BooleanField(label='Weiss',required=False,
                                          widget=forms.CheckboxInput(attrs={'class': 'beerfield'}))
     class Meta:
         model = User_Table
