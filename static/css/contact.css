@@ -469,7 +469,7 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 }
 
 .bg-primary {
-  background: #fdcc52;
+  background: transparent !important;
   background: -webkit-linear-gradient(#fdcc52, #fdc539);
   background: linear-gradient(#fdcc52, #fdc539);
 }
@@ -589,4 +589,13 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 	bottom: 10px;
 	left: 5%;
 	/*right: 18px;*/
+}
+#contact{
+    position: relative;
+    top: -80px;
+}
+#safetyLink{
+    position: relative;
+    left: 500px;
+    margin-left: -15%;
 }

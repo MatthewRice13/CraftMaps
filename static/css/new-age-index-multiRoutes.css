@@ -677,3 +677,8 @@ background-size: 100% 100%;
 .headerLabel:hover{
     cursor: pointer;
 }
+#safetyLink{
+    position: relative;
+    left: 500px;
+    margin-left: -15%;
+}

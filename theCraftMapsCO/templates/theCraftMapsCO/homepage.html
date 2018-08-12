@@ -26,7 +26,8 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href='{% static "vendor/bootstrap/css/bootstrap.min.css" %}'/>
-
+	<!--Custom Fonts-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <!-- Custom fonts for this template -->
     <link rel="stylesheet" href='{% static "vendor/font-awesome/css/font-awesome.min.css" %}'/>
     <link rel="stylesheet" href='{% static "vendor/simple-line-icons/css/simple-line-icons.css" %}'/>
@@ -40,8 +41,7 @@
     <link rel="stylesheet" href='{% static "css/craftMaps.css" %}'/>
 	<!-- Custom styles for this template -->
     <link rel="stylesheet" href='{% static "css/full-width-pics.css" %}'>
-	<!--Custom Fonts-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	
 </head>
 
 
@@ -148,7 +148,18 @@
                 </li>
                 <li class="list-inline-item">
                     <a href="#">FAQ</a>
-                </li>
+                </li><a id="safetyLink" href="https://www.drinkaware.ie"><img src='{% static "img/Drinkaware.png" %}' /></a>
+			</ul>
+			<ul class="list-inline">
+				<li class="list-inline-item">
+					<a href="https://twitter.com/theCraftMaps1"><i class="fa fa-twitter"></i></a>
+				</li>
+				<li class="list-inline-item">
+					<a href="https://www.facebook.com/thecraft.mapsco.1"><i class="fa fa-facebook"></i></a>
+				</li>
+				<li class="list-inline-item">
+					<a href="https://www.instagram.com/thecraftmapsco/"><i class="fa fa-instagram"></i></a>
+				</li>
             </ul>
         </div>
     </footer>
