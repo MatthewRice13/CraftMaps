@@ -74,7 +74,7 @@ def routes(request):
     else:
         starting_point = (53.3256826, -6.2249631)
     context = {
-        'locations': builddistjson(Brewery_Table.objects.all(), starting_point, k_size),
+        'locations': builddistjson(request, Brewery_Table.objects.all(), starting_point, k_size),
         'start': list(starting_point),
         'key': googleKey
     }
@@ -98,7 +98,7 @@ def multiRoutes(request):
     else:
         starting_point = (53.3256826, -6.2249631)
     context = {
-        'locations': builddistjson(Brewery_Table.objects.all(), starting_point, k_size),
+        'locations': builddistjson(request, Brewery_Table.objects.all(), starting_point, k_size),
         'start': list(starting_point),
         'key': googleKey
     }
@@ -106,7 +106,7 @@ def multiRoutes(request):
 
 
 # builds json for page
-def builddistjson(breweries, starting, k):
+def builddistjson(request, breweries, starting, k):
     data = []
     for dat in breweries:
         nam = dat.Brewery_Name
@@ -125,7 +125,7 @@ def builddistjson(breweries, starting, k):
     # sort based on distance
     df = sorted(data, key=operator.itemgetter('Distance'))
     # filters based on user preference
-    ndf = similarity_map(df, (k+k))
+    ndf = similarity_map(request, df, (k+k))
     # subset of data
     subset = []
     for d in ndf[:k]:
@@ -147,7 +147,7 @@ def builddistjson(breweries, starting, k):
 
 
 # classifies based on users preferred brewery type
-def similarity_map(data, k):
+def similarity_map(request, data, k):
     data_map = []
     # users favourite brewery type
     if request.user.is_authenticated:
