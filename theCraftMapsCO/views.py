@@ -107,21 +107,32 @@ def multiRoutes(request):
 
 # builds json for page
 def builddistjson(request, breweries, starting, k):
+    # user defined
+    if request.user.is_authenticated:
+        #user_data = User_Table.objects.get(id=request.user.id)
+        #distance_cutoff = user_data.User_Max_Distance
+        distance_cutoff = 10.0
+    else:
+        distance_cutoff = 15.0
+
     data = []
     for dat in breweries:
         nam = dat.Brewery_Name
         typ = dat.Brewery_Type
         rat = dat.Brewery_Rating
         dst = get_distance(starting, (dat.Brewery_Longitude, dat.Brewery_Latitude))
-        # data
-        data.append(
-            {
-                'Name': nam,
-                'Type': typ,
-                'Rating': rat,
-                'Distance': dst
-            }
-        )
+
+        if dst < distance_cutoff:
+            # data
+            data.append(
+                {
+                    'Name': nam,
+                    'Type': typ,
+                    'Rating': rat,
+                    'Distance': dst
+                }
+            )
+
     # sort based on distance
     df = sorted(data, key=operator.itemgetter('Distance'))
     # filters based on user preference
@@ -157,6 +168,7 @@ def similarity_map(request, data, k):
     # else uses generic list
     else:
         types_of_brewery = ["BrewPub", "Microbrewery", "Commercial Brewery", "Client Brewery"]
+
     # builds a similarity map based on user preference
     for item in data[:k]:
         # random selection of brewery
