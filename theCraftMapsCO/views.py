@@ -3,17 +3,16 @@ from django.contrib.auth import login, authenticate
 from .forms import SignUpForm, UserProfileForm
 from django.contrib.auth.decorators import login_required
 from .models import User_Table, Beer_Table, Brewery_Table, User
-
-import googlemaps
-import simplejson
-import pandas as pd
-
 from datetime import datetime
 from math import sin, cos, sqrt, atan2, radians
 from random import randint
+import googlemaps
+import simplejson
+import pandas as pd
 import operator
 import difflib
 import twitter
+
 
 # Support Methods #
 googleKey = "AIzaSyDFK8QRiUl8jx5YYQwDMQ31GMyXwXz-et8"
@@ -59,7 +58,6 @@ def build_home_json(data):
 def routes(request):
     # number of breweries displayed
     k_size = 10
-
     # post request
     if request.method == 'POST':
         data_saving_method(str(request.POST.get('value1')) + "," + str(request.POST.get('value2')))
@@ -74,9 +72,8 @@ def routes(request):
     # else
     else:
         starting_point = (53.3256826, -6.2249631)
-
     context = {
-        'locations': builddistjson(Brewery_Table.objects.all(), starting_point, k_size),
+        'locations': builddistjson(request, Brewery_Table.objects.all(), starting_point, k_size),
         'start': list(starting_point),
         'key': googleKey
     }
@@ -87,7 +84,6 @@ def routes(request):
 def multiRoutes(request):
     # number of breweries displayed
     k_size = 10
-
     # post request
     if request.method == 'POST':
         data_saving_method(str(request.POST.get('value1')) + "," + str(request.POST.get('value2')))
@@ -100,9 +96,8 @@ def multiRoutes(request):
         starting_point = (float(start[0]), float(start[1]))
     else:
         starting_point = (53.3256826, -6.2249631)
-
     context = {
-        'locations': buildmultidistjson(Brewery_Table.objects.all(), starting_point, k_size),
+        'locations': builddistjson(request, Brewery_Table.objects.all(), starting_point, k_size),
         'start': list(starting_point),
         'key': googleKey
     }
@@ -110,7 +105,15 @@ def multiRoutes(request):
 
 
 # builds json for page
-def builddistjson(breweries, starting, k):
+def builddistjson(request, breweries, starting, k):
+    # user defined
+    if request.user.is_authenticated:
+        #user_data = User_Table.objects.get(id=request.user.id)
+        #distance_cutoff = user_data.User_Max_Distance
+        distance_cutoff = 10.0
+    else:
+        distance_cutoff = 15.0
+
     data = []
     for dat in breweries:
         nam = dat.Brewery_Name
@@ -118,27 +121,26 @@ def builddistjson(breweries, starting, k):
         rat = dat.Brewery_Rating
         dst = get_distance(starting, (dat.Brewery_Longitude, dat.Brewery_Latitude))
 
-        # data
-        data.append(
-            {
-                'Name': nam,
-                'Type': typ,
-                'Rating': rat,
-                'Distance': dst
-            }
-        )
+        # builds on distance
+        if dst < distance_cutoff:
+            # data
+            data.append(
+                {
+                    'Name': nam,
+                    'Type': typ,
+                    'Rating': rat,
+                    'Distance': dst
+                }
+            )
 
     # sort based on distance
     df = sorted(data, key=operator.itemgetter('Distance'))
-
     # filters based on user preference
-    ndf = similarity_map(df, (k+k))
-
+    ndf = similarity_map(request, df, (k+k))
     # subset of data
     subset = []
     for d in ndf[:k]:
         subset.append(d['Name'])
-
     rtn_json = []
     for d in breweries:
         if d.Brewery_Name in subset:
@@ -203,21 +205,24 @@ def buildmultidistjson(breweries, starting, k):
 
 
 # classifies based on users preferred brewery type
-def similarity_map(data, k):
+def similarity_map(request, data, k):
     data_map = []
-
     # users favourite brewery type
-    types_of_brewery = ["Brew Pub", "Micro Brewery", "Commercial"]
+    if request.user.is_authenticated:
+        user_data = User_Table.objects.get(id=request.user.id)
+        user_brewery = user_data.User_Favorite_Brewery_Type
+        types_of_brewery = ["BrewPub", "Microbrewery", "Commercial Brewery", "Client Brewery", str(user_brewery)]
+    # else uses generic list
+    else:
+        types_of_brewery = ["BrewPub", "Microbrewery", "Commercial Brewery", "Client Brewery"]
 
     # builds a similarity map based on user preference
     for item in data[:k]:
         # random selection of brewery
         rand = randint(0, len(types_of_brewery)-1)
         check = types_of_brewery[rand]
-
         # gets similarity
         similarity_result = difflib.SequenceMatcher(None, check, item['Type']).ratio()
-
         # finds best similarity
         data_map.append(
             {
@@ -228,11 +233,9 @@ def similarity_map(data, k):
                 'Sim': similarity_result
              }
         )
-
     # sorts on distance in ASC, then by sim and rating in DESC
     data_map = sorted(data_map, reverse=False, key=operator.itemgetter('Distance'))
     rtn = sorted(data_map, reverse=True, key=operator.itemgetter('Sim', 'Rating'))
-
     dump_test(rtn)
     # returns data
     return rtn
@@ -252,13 +255,10 @@ def get_distance(start, finish):
         lon1 = radians(geocode_result[1])
         lon2 = radians(float(finish[0]))
         lat2 = radians(float(finish[1]))
-
         dlon = lon2 - lon1
         dlat = lat2 - lat1
-
         a = sin(dlat / 2) ** 2 + cos(lat1) * cos(lat2) * sin(dlon / 2) ** 2
         c = 2 * atan2(sqrt(a), sqrt(1 - a))
-
         distance = R * c
     except googlemaps.exceptions.ApiError as err:
         print(err)
@@ -269,7 +269,6 @@ def get_distance(start, finish):
 # about page
 def about(request):
     context = {
-
     }
     return render(request, 'about.html', context)
 
@@ -278,7 +277,6 @@ def about(request):
 # contacts page
 def contact(request):
     context = {
-
     }
     return render(request, 'contact.html', context)
 
@@ -333,12 +331,14 @@ def buildBreweryJson(data):
     rtn_json.append(item)
     return simplejson.dumps(rtn_json, separators=(',', ':'))
 
+
 def handleCheck(handle):
     if handle == "www.twitter.com":
         return 'irecraftbeer'
     else:
         url = handle.split("/")
         return url[len(url)-1]
+
 
 def buildBeerJson(data):
     rtn_json = []
