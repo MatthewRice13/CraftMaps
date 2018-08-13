@@ -3,17 +3,16 @@ from django.contrib.auth import login, authenticate
 from .forms import SignUpForm, UserProfileForm
 from django.contrib.auth.decorators import login_required
 from .models import User_Table, Beer_Table, Brewery_Table, User
-
-import googlemaps
-import simplejson
-import pandas as pd
-
 from datetime import datetime
 from math import sin, cos, sqrt, atan2, radians
 from random import randint
+import googlemaps
+import simplejson
+import pandas as pd
 import operator
 import difflib
 import twitter
+
 
 # Support Methods #
 googleKey = "AIzaSyDFK8QRiUl8jx5YYQwDMQ31GMyXwXz-et8"
@@ -122,6 +121,7 @@ def builddistjson(request, breweries, starting, k):
         rat = dat.Brewery_Rating
         dst = get_distance(starting, (dat.Brewery_Longitude, dat.Brewery_Latitude))
 
+        # builds on distance
         if dst < distance_cutoff:
             # data
             data.append(
