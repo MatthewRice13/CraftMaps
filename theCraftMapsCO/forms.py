@@ -37,8 +37,7 @@ class UserProfileForm(forms.ModelForm):
                                                                                'placeholder': 'Favourite Brewery'}))
     User_Max_Distance = forms.CharField(max_length=30, label='',required=False,
                                         widget=forms.NumberInput(attrs={'class': 'input100',
-                                                                      'placeholder': 'Max Distance',
-                                                                        'min': "1"}))
+                                                                      'placeholder': 'Max Distance', 'min': '1'}))
     User_Beer_Stout = forms.BooleanField(label='Stout',required=False,
                                          widget=forms.CheckboxInput(attrs={'class': 'beerfield'}))
     User_Beer_Lager = forms.BooleanField(label='Lager',required=False,
