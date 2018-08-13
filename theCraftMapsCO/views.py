@@ -154,6 +154,7 @@ def similarity_map(request, data, k):
         user_data = User_Table.objects.get(id=request.user.id)
         user_brewery = user_data.User_Favorite_Brewery_Type
         types_of_brewery = ["BrewPub", "Microbrewery", "Commercial Brewery", "Client Brewery", str(user_brewery)]
+    # else uses generic list
     else:
         types_of_brewery = ["BrewPub", "Microbrewery", "Commercial Brewery", "Client Brewery"]
     # builds a similarity map based on user preference
@@ -209,7 +210,6 @@ def get_distance(start, finish):
 # about page
 def about(request):
     context = {
-
     }
     return render(request, 'about.html', context)
 
@@ -218,7 +218,6 @@ def about(request):
 # contacts page
 def contact(request):
     context = {
-
     }
     return render(request, 'contact.html', context)
 
@@ -273,12 +272,14 @@ def buildBreweryJson(data):
     rtn_json.append(item)
     return simplejson.dumps(rtn_json, separators=(',', ':'))
 
+
 def handleCheck(handle):
     if handle == "www.twitter.com":
         return 'irecraftbeer'
     else:
         url = handle.split("/")
         return url[len(url)-1]
+
 
 def buildBeerJson(data):
     rtn_json = []
