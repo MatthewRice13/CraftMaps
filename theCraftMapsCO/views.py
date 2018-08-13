@@ -148,7 +148,7 @@ def builddistjson(breweries, starting, k):
                     'lng': float(d.Brewery_Longitude),
                     'lat': float(d.Brewery_Latitude)
                 },
-                'Content': '<div id="iw-container" class="infoDiv"><div class="infoHeader iw-title"><label class="headerLabel" id = "'+d.Brewery_URL+'" onClick="showModal(event);">'+d.Brewery_Name+'</label></div><div class="infoBody iw-content"><label class="bodyLabel">'+d.Brewery_Type+'</label></div><div class="infoFooter iw-bottom-gradient"><button class="viewButton btn btn-outline" onClick="getDirections('+str(d.Brewery_Latitude)+','+str(d.Brewery_Longitude)+');">See my Directions</button></div></div>'
+                'Content': '<div id="iw-container" class="infoDiv"><div class="infoHeader iw-title"><label class="headerLabel" id = "'+d.Brewery_Name+'" onClick="showModal(event);">'+d.Brewery_Name+'</label></div><div class="infoBody iw-content"><label class="bodyLabel">'+d.Brewery_Type+'</label></div><div class="infoFooter iw-bottom-gradient"><button class="viewButton btn btn-outline" onClick="getDirections('+str(d.Brewery_Latitude)+','+str(d.Brewery_Longitude)+');">See my Directions</button></div></div>'
             }
             rtn_json.append(item)
 
@@ -194,7 +194,7 @@ def buildmultidistjson(breweries, starting, k):
                     'lng': float(d.Brewery_Longitude),
                     'lat': float(d.Brewery_Latitude)
                 },
-                'Content': '<div id="iw-container" class="infoDiv"><div class="infoHeader iw-title"><label class="headerLabel" id = "'+d.Brewery_URL+'" onClick="showModal(event);">'+d.Brewery_Name+'</label></div><div class="infoBody iw-content"><label class="bodyLabel">'+d.Brewery_Type+'</label></div></div>'
+                'Content': '<div id="iw-container" class="infoDiv"><div class="infoHeader iw-title"><label class="headerLabel" id = "'+d.Brewery_Name+'" onClick="showModal(event);">'+d.Brewery_Name+'</label></div><div class="infoBody iw-content"><label class="bodyLabel">'+d.Brewery_Type+'</label></div></div>'
             }
             rtn_json.append(item)
 
@@ -313,8 +313,8 @@ def buildBreweryJson(data):
     item = {
         'name': data.Brewery_Name,
         'coords': {
-            'lat': float(data.Brewery_Longitude),
-            'lng': float(data.Brewery_Latitude)
+            'lng': float(data.Brewery_Longitude),
+            'lat': float(data.Brewery_Latitude)
         },
         'address': {
             'name': data.Brewery_Name,

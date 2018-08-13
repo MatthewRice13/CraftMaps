@@ -142,6 +142,9 @@ function getDirectionsDrive(lati,longi) {
 }
 
 function showModal(e){
-	var urllink = e.target.id;//console.log(urllink);
+	var breweryName = e.target.id;//console.log(urllink);
+	//breweryName = breweryName.replace(/\s/g, '');
+	breweryName = breweryName.trim();
+	var urllink = currentProtocol+'//'+currentHost+'/brewery/'+breweryName;
 	var ret = window.showModalDialog(urllink, "", "dialogWidth:80%;dialogHeight:80%");
 }
