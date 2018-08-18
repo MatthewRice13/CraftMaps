@@ -61,7 +61,6 @@
 				{% else %}
 					<a class="nav-link" href="/login">Login</a>
 				{% endif %}
-                        <!-- <a class="nav-link" href="/login">Login</a> -->
 				</li>
             </ul>
         </div>
@@ -71,14 +70,15 @@
 <header class="masthead">
     <div class="location-container backgroundSection" style="background-image: url('../static/img/home background 1.png');">
         <div class="container">
-			<label id="labelInfo">For additional info about each brewery click each marker on the map below. When ready click the Direct me to All button.</label>
+			<p id="labelInfo">
+				Check the top breweries around you.<br>Select the desired ones on your left one after another.<br>In case you want to return to your starting point after the tour, at the end click on the Start point button at your left.<br>When you are done press “DOWNLOAD YOUR ITENARY!” button to save directions to your device.<br>Not sure about your choices? Don't worry you can replan your itenary by clicking the “REPLAN YOUR ITENARY” button!
+			</p>
         </div>
     </div>
 
 
     <div class="map-container">
         <div id="brewList" style="background-image: url('../static/img/quentin-dr-125010-unsplash1.jpg');">
-            <label id="listTitle">Top near by breweries from you:</label>
             <div id="listBrew">
                 <div id="listOfBreweries"></div>
             </div>
@@ -100,30 +100,6 @@
 			</button>
 		</div>
 	</div>
-    <!-- <section class="contact bg-primary" id="contact">
-        <div class="container">
-            <h2>We
-                <i class="fa fa-heart"></i>
-                new friends!</h2>
-            <ul class="list-inline list-social">
-                <li class="list-inline-item social-twitter">
-                    <a href="https://twitter.com/theCraftMaps1" target="_blank">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item social-facebook">
-                    <a href="https://www.facebook.com/thecraft.mapsco.1" target="_blank">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item social-google-plus">
-                    <a href="https://www.instagram.com/thecraftmapsco/" target="_blank">
-                        <i class="fa fa-instagram"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section> -->
 
     <footer id="contact">
         <div class="container">
@@ -164,7 +140,6 @@
     <!-- Custom scripts for this template -->
     <script src='{% static "js/new-age.min.js" %}'></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFK8QRiUl8jx5YYQwDMQ31GMyXwXz-et8&language=en-GB&region=IE"></script>
-	<!-- <script src='{% static "js/showModal.js" %}'></script> -->
 	<script src='{% static "js/showModalDialog.js" %}'></script>
     <script src='{% static "js/axios.min.js" %}'></script>
 	<script src='{% static "js/multiRoutes.js" %}'></script>
