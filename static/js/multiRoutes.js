@@ -1,16 +1,10 @@
 var infoWindow;
-var currentLat = 0.0;
-var currentLng = 0.0;
 var map;
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var directionsMap;
 var start;
 var end;
-var itenaryPoints = [];
-var wayPt = [];
-var img = "Images/beer_PNG.png"
-
 //staticurl
 var currentURL = window.location.href;
 var currentProtocol = window.location.protocol;
@@ -46,6 +40,7 @@ $(document).ready(function(){
 	}
 });//ready end
 
+// dynamically create brewery buttons
 function populateBreweriesList(){
     var listBrew = '';
 	var buttonListBrew = '';
@@ -107,16 +102,14 @@ function addMarker(props){
 		});
 	}
 }
-
-
-
+// show modal on click of brewery name
 function showModal(e){
-	var breweryName = e.target.id;//console.log(urllink);
-	//breweryName = breweryName.replace(/\s/g, '');
+	var breweryName = e.target.id;
 	breweryName = breweryName.trim();
 	var urllink = currentProtocol+'//'+currentHost+'/brewery/'+breweryName;
 	var ret = window.showModalDialog(urllink, "", "dialogWidth:80%;dialogHeight:80%");
 }
+// function to check if the brewery is already added in the itinerary
 function checkForItenary(lati,longi,num){
 	for(a=1;a<=breweriesJson.length;a++){
 		if(num == a){
@@ -131,6 +124,7 @@ function checkForItenary(lati,longi,num){
 		}
 	}
 }
+// show directions on the right panel
 function showDirections(lati,longi){
 	if(lati == currentlatitude && longi == currentlongitude){
 		alert('You are already on the clicked position. Please clicked on another option');
@@ -149,6 +143,7 @@ function showDirections(lati,longi){
 	}
 }
 
+// show routes on the map
 function showRoute(lati,longi,mode) {
 	$("#refreshButton").show();
 	$("#downloadFile").show();
@@ -193,6 +188,7 @@ function showRoute(lati,longi,mode) {
 	});
 }
 
+//directions for driving option if public not available
 function showDirectionsDrive(lati,longi){
 	if(lati == currentlatitude && longi == currentlongitude){
 		alert('You are already on the clicked position. Please clicked on another option');
@@ -211,12 +207,14 @@ function showDirectionsDrive(lati,longi){
 	}
 }
 
+// prepare HTML text for the PDF
 function prepareText(directions){
 	var directionDetails = "<b>TRIP "+tripCounter+":</b>"+"<div>";
 	directionDetails = directionDetails + directions+"</div>"
 	tripCounter = tripCounter+1;
 	downloadText = downloadText + directionDetails;
 }
+//download the PDF file
 function downloadPDF(){
 	var specialElementHandlers = {
 		'#editor': function (element, renderer) {

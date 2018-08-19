@@ -86,7 +86,6 @@ section h2 {
 
 #mainNav .navbar-nav > li > a {
   font-size: 11px;
-  /*font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';*/
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -382,11 +381,6 @@ section.contact ul.list-social li.social-google-plus a:hover {
 }
 
 .location-input {
-  /* background-color: #ffffff;
-  border-color: #222222;
-  color: 222222;
-  outline: none !important;
-  box-shadow: none !important; */
   background-color: #343a40;
   border-color: #343a40;
   color: #ffffff;
@@ -395,9 +389,6 @@ section.contact ul.list-social li.social-google-plus a:hover {
 }
 
 .location-input:focus, .location-input:hover {
-  /* background-color: #ffffff;
-  border-color: #ffffff;
-  color: #222222; */
   background-color: #343a40;
   color: #ffffff;
   border-color: #00e24e;
@@ -454,7 +445,6 @@ section.contact ul.list-social li.social-google-plus a:hover {
   margin: auto;
   width: 100%;
   color: #ffffff;
-  /*background-color: #ffffff;*/
   padding: 68px 0;*/
 }
 
@@ -519,7 +509,6 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 
 .btn {
   border-radius: 300px;
-  /*font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';*/
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -606,12 +595,7 @@ background-size: 100% 100%;
 
 /*customize infoWindow*/
 .gm-style-iw {
-	/*width: 350px !important;
-	top: 15px !important;
-	left: 0px !important;*/
 	background-color: #444745;
-	/*background-image: url('../static/img/cm-logo-01.png');
-	background-size: cover;*/
 	box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
 	border: 1px solid #00cf61;
 	border-radius: 10px 10px 10px 10px;
@@ -625,7 +609,6 @@ background-size: 100% 100%;
 	font-size: 22px;
 	font-weight: 400;
 	padding: 10px;
-	/*background-color: #48b5e9;*/
 	margin: 0;
 	border-radius: 2px 2px 0 0;
 }
@@ -650,11 +633,9 @@ background-size: 100% 100%;
 }
 .iw-bottom-gradient {
 	position: absolute;
-	/*width: 326px;*/
 	height: 25px;
 	bottom: 10px;
 	left: 5%;
-	/*right: 18px;*/
 }
 
 .viewButton{
