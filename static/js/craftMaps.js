@@ -1,21 +1,11 @@
 var infoWindow;
-var currentLat = 0.0;
-var currentLng = 0.0;
 var map;
-var directionsDisplay;
-var directionsService = new google.maps.DirectionsService();
-var directionsMap;
 var start;
 var end;
-var itenaryPoints = [];
-var wayPt = [];
-var img = "Images/beer_PNG.png"
-
 //staticurl
 var currentURL = window.location.href;
 var currentProtocol = window.location.protocol;
 var currentHost = window.location.host;
-
 //breweries data
 var breweriesJson = Brewery_JSON;
 
@@ -74,7 +64,6 @@ function initMap(){
 		// Add marker
 		addMarker(breweriesJson[i]);
 	}
-	//populateBreweriesList();
 }
 
 // Add Marker Function
@@ -105,6 +94,7 @@ function addMarker(props){
 	}
 }
 
+//get coordinates for the entered location
 function getCoords(address,newPage){
 	var startLng = 0.0;
 	var startLat = 0.0;
@@ -136,13 +126,13 @@ function getCoords(address,newPage){
 				alert("Enter a more detailed Irish Location");
 			}
 			else{
-				//alert('Geocode was not successful for the following reason: ' + response.data.status);
 				alert('You are not drunk yet! Please enter a valid location');
 			}
 		});
 	}
 }
 
+//Django cookie requirement
 function getCookie(name) {
 	var cookieValue = null;
 	if (document.cookie && document.cookie != '') {
@@ -158,6 +148,7 @@ function getCookie(name) {
 	}
 	return cookieValue;
 }
+//request to backend with coordinates and path for new page
 function postRequest(lati,longi,newPage){
 	var csrftoken = getCookie('csrftoken');
 	var url = currentProtocol+'//'+currentHost+'/'+newPage;
