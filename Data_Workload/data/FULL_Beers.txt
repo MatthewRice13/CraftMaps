@@ -1,0 +1,1368 @@
+treaty city brewing,Treaty City Harris Pale Ale,American Pale Ale,5.0,2.94,true
+treaty city brewing,Treaty City Market Quarter Ale,Pilsener,4.2,3.0,true
+treaty city brewing,Treaty City Shannon River IPA,India Pale Ale (IPA),5.6,3.0,true
+treaty city brewing,Treaty City Siege 1690,Stout,6.5,3.06,true
+treaty city brewing,Treaty City Thomond Red Ale,Irish Ale,4.7,2.98,true
+treaty city brewing,Treaty City Hell’s Gate Lager,Pale Lager,4.2,3.02,true
+the dew drop brewing company,The Dew Drop Bushwhacked,Irish Ale,4.2,2.96,true
+the dew drop brewing company,The Dew Drop '96 Oatmeal Pale ale,Specialty Grain,4.8,3.05,true
+the dew drop brewing company,The Dew Drop Forbidden Fruit IPA,India Pale Ale (IPA),5.5,3.05,true
+the hyland brewing company,Hyland Celtic Red Branch,Irish Ale,4.5,3.0,true
+the hyland brewing company,Hyland Celtic Warrior,American Pale Ale,4.5,0.0,true
+soulwater,Soulwater Mutiny IPA,India Pale Ale (IPA),6.2,3.0,true
+soulwater,Soulwater Kojack,Sweet Stout,4.5,3.04,true
+soulwater,Soulwater Bullet Proof IPA,India Pale Ale (IPA),5.7,3.18,true
+white hag,White Hag / Honest Brew American Pale Ale,India Pale Ale (IPA),6.2,3.11,true
+white hag,White Hag Black Boar Barrel Aged 2016 ,Imperial Stout,10.2,3.79,true
+white hag,White Hag The Black Sow,Sweet Stout,5.4,3.51,true
+white hag,White Hag Brett Pale Ale,Sour/Wild Ale,4.6,3.36,true
+white hag,White Hag Red Doe,Amber Ale,5.6,3.24,true
+white hag,White Hag Meabh Rua,Irish Ale,8.2,3.06,true
+white hag,White Hag Roc Modern Pils,Pilsener,4.5,3.05,true
+white hag,White Hag The Púca Berry Hibiscus &amp; Ginger,Sour/Wild Ale,3.5,3.58,true
+white hag,White Hag Fionnabhair,Witbier,5.2,3.12,true
+white hag,White Hag / Haand Bryggeriet Hag &amp; Haand Apricot Brett Pale Ale,Fruit Beer,6.66,3.1,true
+white hag,White Hag Olcan Barrel Aged Brett IPA,India Pale Ale (IPA),6.0,3.49,true
+white hag,White Hag The White Sow,Sweet Stout,5.2,3.33,true
+white hag,White Hag Little Fawn,Session IPA,4.2,3.33,true
+white hag,White Hag Searbh Rua,Sour Red/Brown,7.9,3.07,true
+white hag,White Hag Irish IPA,India Pale Ale (IPA),7.2,2.5,true
+white hag,White Hag The White Sow (Coffee),Sweet Stout,5.2,3.45,true
+white hag,White Hag / Brewtonic In Cahoots,Sour/Wild Ale,4.8,3.26,true
+white hag,White Hag / Kinnegar The Hare and The Hag,Sweet Stout,6.3,3.63,true
+white hag,White Hag Yule Barrel Aged 2017,Spice/Herb/Vegetable,7.2,3.21,true
+white hag,White Hag Atlantean,India Pale Ale (IPA),5.4,3.42,true
+white hag,White Hag The Púca,Sour/Wild Ale,3.6,3.36,true
+white hag,White Hag Beann Gulban,Sour/Wild Ale,7.5,3.15,true
+white hag,White Hag Niamh Chinn Oir,Belgian Ale,6.8,3.06,true
+white hag,White Hag Danu,Kölsch,4.6,2.92,true
+white hag,White Hag Black Boar,Imperial Stout,10.2,3.76,true
+white hag,White Hag Yule,English Strong Ale,7.2,3.24,true
+white hag,White Hag Black Boar Barrel Aged 2015,Imperial Stout,10.2,3.32,true
+white hag,White Hag Bran &amp; Sceolan,India Pale Ale (IPA),7.2,3.54,true
+white hag,White Hag Samhain,Oktoberfest/Märzen,6.2,2.98,true
+white hag,White Hag Tuireann Bán,India Pale Ale (IPA),6.2,3.27,true
+white hag,White Hag Ninth Wave,American Pale Ale,5.4,3.26,true
+white hag,White Hag Fleadh Ale Red IPA (2015-),Session IPA,4.7,3.21,true
+white hag,White Hag The Black Pig,Dry Stout,4.2,3.04,true
+white hag,White Hag Festival Lager,Pale Lager,4.0,2.94,true
+white hag,White Hag Snakes and Scholars,Dry Stout,4.0,3.03,true
+white hag,White Hag / MacIvors Silver Branch,Sour/Wild Ale,5.0,3.38,true
+white hag,White Hag Lemon Puca,Sour/Wild Ale,3.5,3.05,true
+st jamess gate diageo,Smithwicks Long Summer,Golden Ale/Blond Ale,4.5,2.66,true
+st jamess gate diageo,Guinness Antwerpen Stout,Foreign Stout,8.0,2.5,true
+st jamess gate diageo,Guinness Draught 3.5%,Dry Stout,3.5,2.64,true
+st jamess gate diageo,The Open Gate Brewery Chocolate &amp; Vanilla Stout,Dry Stout,6.3,3.12,true
+st jamess gate diageo,The Open Gate Brewery Apple Stout,Dry Stout,6.2,2.87,true
+st jamess gate diageo,Guinness Foreign Extra Stout ,Foreign Stout,7.5,3.65,true
+st jamess gate diageo,The Open Gate Brewery Chocolate and Mint Stout,Dry Stout,6.4,2.83,true
+st jamess gate diageo,Smithwick's Ale,Irish Ale,5.0,3.02,true
+st jamess gate diageo,Guinness Extra Stout (4.1%),Dry Stout,4.1,2.5,true
+st jamess gate diageo,The Open Gate Brewery Strawberry Porter,Porter,4.3,2.92,true
+st jamess gate diageo,Guinness Rye Pale Ale,Specialty Grain,5.0,3.05,true
+st jamess gate diageo,Guinness 200th Anniversary Export Stout ,Foreign Stout,6.0,3.61,true
+st jamess gate diageo,Guinness Nitro IPA,India Pale Ale (IPA),5.8,2.72,true
+st jamess gate diageo,The Open Gate Brewery Helles Lager,Dortmunder/Helles,4.0,3.02,true
+st jamess gate diageo,Guinness Extra Stout 5.0% (Japan),Stout,5.0,2.86,true
+st jamess gate diageo,Guinness Draught ,Dry Stout,4.2,3.39,true
+st jamess gate diageo,Smithwick's Pale Ale,Irish Ale,4.5,2.91,true
+st jamess gate diageo,The Open Gate Brewery&nbsp;Golden Ale,Golden Ale/Blond Ale,4.0,2.79,true
+st jamess gate diageo,Guinness Kinrise Bright Lager,Pale Lager,4.0,2.75,true
+st jamess gate diageo,The Open Gate Brewery Imperial Dunkelweiss,Weizenbock,8.2,2.75,true
+st jamess gate diageo,Guinness Red Harvest Stout,Irish Ale,4.1,2.84,true
+st jamess gate diageo,Guinness Blonde American Lager,Premium Lager,5.0,2.69,true
+st jamess gate diageo,Smithwick's Imported Premium Irish Ale ,Irish Ale,4.5,2.5,true
+st jamess gate diageo,The Open Gate Brewery Botanical Ale,Spice/Herb/Vegetable,5.5,3.04,true
+st jamess gate diageo,The Open Gate Brewery Oktoberfest ,Oktoberfest/Märzen,5.5,2.89,true
+st jamess gate diageo,Guinness Extra Stout 5.0% (Continental Europe),Dry Stout,5.0,3.17,true
+st jamess gate diageo,Kilkenny ,Irish Ale,4.3,2.9,true
+st jamess gate diageo,St. James's Gate Pilsner,Pilsener,4.5,2.79,true
+st jamess gate diageo,The Open Gate Brewery Tropical IPA,Bitter,5.5,2.88,true
+st jamess gate diageo,Smithwick's Superior Irish Ale,Irish Ale,3.8,2.5,true
+st jamess gate diageo,Kilkenny 3.5 %,Irish Ale,3.5,2.34,true
+st jamess gate diageo,Smithwick's Red Ale,Irish Ale,3.8,2.5,true
+st jamess gate diageo,The Open Gate Brewery Citra IPA,India Pale Ale (IPA),5.5,3.2,true
+st jamess gate diageo,The Open Gate Brewery Pilsner,Pilsener,4.5,2.83,true
+st jamess gate diageo,The Open Gate Brewery Offset Rye IPA,India Pale Ale (IPA),5.5,3.02,true
+st jamess gate diageo,Guinness Hop House 13,Pale Lager,5.0,2.5,true
+st jamess gate diageo,The Open Gate Brewery Dubliner Wheat,German Hefeweizen,5.3,3.02,true
+st jamess gate diageo,Guinness Original (5% bottle),Dry Stout,5.0,2.5,true
+st jamess gate diageo,Guinness Special Export (Belgian version),Foreign Stout,8.0,3.66,true
+st jamess gate diageo,Satzenbrau Pils,Pilsener,5.0,2.25,true
+st jamess gate diageo,The Open Gate Brewery Klassiker Deutsches Pilsner,Pilsener,4.5,3.06,true
+st jamess gate diageo,The Open Gate Brewery 1516 Anniversary Pilsner ,Pilsener,4.9,3.12,true
+st jamess gate diageo,The Open Gate Brewery Boston Tea Party Ale,Spice/Herb/Vegetable,4.5,3.0,true
+st jamess gate diageo,Kilkenny Strong,Irish Ale,6.4,2.66,true
+st jamess gate diageo,Guinness Red,Irish Ale,4.1,2.44,true
+st jamess gate diageo,Harp Export Lager,Premium Lager,5.0,2.66,true
+st jamess gate diageo,The Open Gate Brewery IPA,India Pale Ale (IPA),6.8,3.02,true
+st jamess gate diageo,Harp Lager,Pale Lager,4.3,2.77,true
+st jamess gate diageo,The Open Gate Brewery Vanilla Stout,Sweet Stout,5.5,2.92,true
+st jamess gate diageo,Guinness The 1798,Imperial Stout,9.0,3.59,true
+st jamess gate diageo,The Open Gate Brewery Song of the Open Road ,Saison,5.2,3.15,true
+st jamess gate diageo,The Open Gate Brewery No Limits IPA,India Pale Ale (IPA),6.0,3.13,true
+st jamess gate diageo,Guinness Generous Ale,Irish Ale,5.6,2.97,true
+st jamess gate diageo,Guinness Dublin Porter,Porter,3.8,2.95,true
+st jamess gate diageo,Smithwick's Blonde,Golden Ale/Blond Ale,4.1,2.71,true
+st jamess gate diageo,The Open Gate Brewery Milk Stout,Sweet Stout,6.4,3.16,true
+st jamess gate diageo,Guinness Dublin Amber Pale Ale,Amber Ale,4.5,2.96,true
+st jamess gate diageo,Hop House 13 Lager,Pale Lager,5.0,2.78,true
+st jamess gate diageo,Guinness Draught Surger,Dry Stout,4.1,2.5,true
+st jamess gate diageo,The Open Gate Brewery Sea Salt &amp; Burnt Sugar,Dry Stout,6.3,2.96,true
+st jamess gate diageo,The Open Gate Brewery Nitro Coffee Stout,Dry Stout,5.5,3.11,true
+st jamess gate diageo,Guinness Rockshore ,Pale Lager,4.0,2.48,true
+st jamess gate diageo,Smithwick's Winter Spirit,Brown Ale,4.5,2.81,true
+st jamess gate diageo,Guinness Milk Stout,Sweet Stout,5.0,3.36,true
+st jamess gate diageo,Smithwicks Draught,Irish Ale,3.8,2.82,true
+st jamess gate diageo,Guinness Extra Stout,Stout,5.6,3.33,true
+st jamess gate diageo,Guinness Irish Wheat,Wheat Ale,5.3,3.12,true
+st jamess gate diageo,Guinness Original 4.2% (Ireland/UK),Stout,4.2,3.18,true
+st jamess gate diageo,Guinness Golden Ale,Bitter,4.5,2.71,true
+st jamess gate diageo,Guinness The 1759,English Strong Ale,9.0,3.3,true
+st jamess gate diageo,Guinness West Indies Porter,Porter,6.0,3.44,true
+st jamess gate diageo,Guinness Mid-Strength,Dry Stout,2.8,2.9,true
+st jamess gate diageo,Macardles Ale,Irish Ale,4.0,2.66,true
+st jamess gate diageo,Guinness Black Lager,Schwarzbier,4.5,2.72,true
+blackstairs brewing company,Blackstairs Dark Fiery Porter,Spice/Herb/Vegetable,5.0,3.35,true
+blackstairs brewing company,Blackstairs Ruby Red IPA,Amber Ale,5.0,2.97,true
+whelans brews,Whelan's Lager,Premium Lager,4.2,0.0,true
+o cleirigh brewing co,Ó Cléirigh Ojustuff,Kölsch,5.0,3.02,true
+o cleirigh brewing co,Ó Cléirigh Virginja,Spice/Herb/Vegetable,5.2,0.0,true
+west kerry brewery,Riasc Black,Porter,6.1,3.55,true
+west kerry brewery,Black Elder,Brown Ale,4.2,3.11,true
+west kerry brewery,Weasel Boy Bitter Sable,Black IPA,7.0,2.94,true
+west kerry brewery,Beal Ban,Golden Ale/Blond Ale,5.0,3.32,true
+west kerry brewery,Blue Rose,American Pale Ale,5.0,2.9,true
+west kerry brewery,Special Edition IPA (Marina Inn),India Pale Ale (IPA),5.0,2.94,true
+west kerry brewery,Uncle Columb's Mild Red Ale,Mild Ale,3.5,3.18,true
+west kerry brewery,Winter Ale,Dunkel/Tmavý,5.7,3.23,true
+west kerry brewery,Carraig Dubh ,Porter,6.0,3.43,true
+west kerry brewery,Festive IBA,Old Ale,6.0,3.34,true
+west kerry brewery,Cúl Dorcha,Irish Ale,5.0,3.47,true
+west kerry brewery,Riasc Gold,Spice/Herb/Vegetable,5.5,3.08,true
+west kerry brewery,Riasc Red,Spice/Herb/Vegetable,5.5,3.14,true
+urban brewing,Urban Brewing Aphrodisiac Stout ,Porter,5.5,3.06,true
+urban brewing,Urban Brewing Strawberries &amp; Cream,Cream Ale,4.7,2.81,true
+urban brewing,Urban Brewing Writers Bock,Imperial Pils/Strong Pale Lager,6.9,2.92,true
+urban brewing,Urban Brewing Forager's Wife,Saison,6.0,3.04,true
+urban brewing,Urban Brewing Gose,Grodziskie/Gose/Lichtenhainer,3.6,2.96,true
+urban brewing,Urban Brewing Pine Needle Saison,Saison,4.8,2.94,true
+urban brewing,Urban Brewing Eureka! Dry Hopped IPA,India Pale Ale (IPA),4.6,2.87,true
+urban brewing,Urban Brewing Double Vision IPA,Imperial IPA,7.4,3.0,true
+urban brewing,Urban Brewing Clementine and Tangerine Pale Ale,American Pale Ale,4.5,2.98,true
+urban brewing,Urban Brewing Cucumber Lime &amp; Sea Salt Palme ale,American Pale Ale,3.6,2.98,true
+urban brewing,Urban Brewing Belgian Dubbel,Belgian Ale,6.5,2.87,true
+urban brewing,Urban Brewing Spring Break,Sour/Wild Ale,5.3,3.0,true
+urban brewing,Urban Brewing Wee Heavy,Scottish Ale,6.5,3.0,true
+urban brewing,Urban Brewing Dry Hopped Kölsch,Kölsch,5.5,2.98,true
+urban brewing,Urban Brewing Biere de Table,Belgian Ale,4.9,3.04,true
+urban brewing,Urban Brewing New England IPA,India Pale Ale (IPA),4.9,3.02,true
+urban brewing,Urban Brewing Mandarina &amp; Juniper Pale Ale,American Pale Ale,4.1,2.81,true
+third circle,Third Circle Samhradh,Fruit Beer,4.5,3.12,true
+third circle,Third Circle Red,Irish Ale,5.0,3.25,true
+third circle,Third Circle Saison,Saison,5.2,3.21,true
+third circle,Third Circle Rye Stout,Dry Stout,5.5,3.26,true
+two sisters brewing,Two Sisters Brigid's Spring Ale ,English Pale Ale,5.0,3.0,true
+wood key brewing,Wood Key Single Hop Anniversary Ale,Session IPA,4.4,2.93,true
+wood key brewing,Wood Key The Pilgrim,Irish Ale,5.8,3.1,true
+wood key brewing,Wood Key The Ravens IPA,India Pale Ale (IPA),5.2,3.12,true
+wood key brewing,Wood Key The Merry Pilgrim,Irish Ale,7.0,3.25,true
+wood key brewing,Wood Key The Hunted Deer,India Pale Ale (IPA),6.2,3.07,true
+spiddal river brewery,Spiddal River Bogman Irish Craft Ale,Golden Ale/Blond Ale,4.9,2.96,true
+spiddal river brewery,Spiddal River Mild Atlantic Ale,Amber Ale,4.2,2.92,true
+12 acres,12 Acres Farmers Tan,Brown Ale,5.0,3.05,true
+12 acres,12 Acres Single Malt Lager,Pale Lager,4.2,2.84,true
+12 acres,12 Acres Golden Harvest,Golden Ale/Blond Ale,4.2,3.02,true
+12 acres,12 Acres Pale Ale,American Pale Ale,4.6,3.27,true
+12 acres,12 Acres Rye IPA,Specialty Grain,5.5,3.15,true
+kellys mountain brew,Kelly's Mountain Reality Bytes,Imperial IPA,7.0,3.08,true
+kellys mountain brew,Kelly's Mountain Revolution,Irish Ale,4.8,3.09,true
+kellys mountain brew,Kelly's Mountain Pride Pilsner,Pilsener,4.2,2.98,true
+kellys mountain brew,Kelly’s Mountain Fruitopia Rising,Fruit Beer,0.0,1.0,true
+kellys mountain brew,Kelly's Mountain Redemption ,American Pale Ale,4.8,2.96,true
+kellys mountain brew,Kelly's Mountain Justice,Irish Ale,4.5,2.97,true
+kellys mountain brew,Kelly's Mountain Brew Ultimate Revenge,Imperial Porter,7.0,3.11,true
+kellys mountain brew,Kelly's Mountain Revenge,Porter,4.5,3.25,true
+mescan brewery,Mescan Westport Extra,Abbey Tripel,9.0,3.47,true
+mescan brewery,Mescan Westport White,Witbier,5.0,3.17,true
+mescan brewery,Mescan Westport Saison,Saison,6.2,2.97,true
+mescan brewery,Mescan Westporter Stout,Stout,5.0,3.17,true
+mescan brewery,Mescan Westport Red Tripel,Belgian Strong Ale,8.0,3.44,true
+mescan brewery,Mescan Westport Blond Beer,Belgian Ale,5.5,3.09,true
+mescan brewery,Mescan Westport Kriek,Fruit Beer,5.4,3.25,true
+mescan brewery,Mescan Special Reserve,Belgian Strong Ale,8.4,3.09,true
+galway bay brewery,Galway Bay Acid Mother Gose,Grodziskie/Gose/Lichtenhainer,5.5,3.36,true
+galway bay brewery,Galway Bay Harvest Altar,Brown Ale,5.6,3.27,true
+galway bay brewery,Galway Bay Buried At Sea,Sweet Stout,4.5,3.59,true
+galway bay brewery,Galway Bay Hexed,Imperial IPA,8.5,3.63,true
+galway bay brewery,Galway Bay Althea,Session IPA,4.8,3.47,true
+galway bay brewery,Galway Bay Regular Legs,India Pale Ale (IPA),7.0,3.37,true
+galway bay brewery,Galway Bay Ale,Irish Ale,4.2,3.17,true
+galway bay brewery,Galway Bay Nuzoz Pils,Pilsener,5.9,3.18,true
+galway bay brewery,Galway Bay / Cigar City Ceasefire (Brigid),Sour/Wild Ale,4.8,3.27,true
+galway bay brewery,Galway Bay Two Hundred Fathoms (2017),Imperial Stout,10.0,3.81,true
+galway bay brewery,Galway Bay Pilot 011 - Table Amarillo/Waiiti/Citra,Session IPA,3.5,2.5,true
+galway bay brewery,Galway Bay Weights + Measures,Session IPA,3.9,3.51,true
+galway bay brewery,Galway Bay Stormy Port,Porter,5.5,2.5,true
+galway bay brewery,Galway Bay 303 - Tart Pale Ale W/Azacca Hops,Sour/Wild Ale,4.0,3.27,true
+galway bay brewery,Galway Bay Stormy Port,Porter,5.5,3.54,true
+galway bay brewery,Galway Bay Full Sail,India Pale Ale (IPA),5.8,3.52,true
+galway bay brewery,Galway Bay Regular Legs,India Pale Ale (IPA),7.0,3.11,true
+galway bay brewery,Galway Bay Godspeed,Sour/Wild Ale,5.0,3.62,true
+galway bay brewery,Galway Bay Goin' out West,Imperial IPA,7.8,3.35,true
+galway bay brewery,Galway Bay Hearts &amp; Feints,Imperial IPA,8.5,3.77,true
+galway bay brewery,Galway Bay Baby Legs,India Pale Ale (IPA),5.3,3.57,true
+galway bay brewery,Galway Bay/ Cigar City Phaethon,India Pale Ale (IPA),6.5,3.46,true
+galway bay brewery,Galway Bay Croozer,Session IPA,3.9,3.43,true
+galway bay brewery,Galway Bay Careen,Pilsener,4.8,2.89,true
+galway bay brewery,Galway Bay Trusty Chords,American Pale Ale,5.0,3.07,true
+galway bay brewery,Galway Bay Via Maris,Session IPA,3.5,3.5,true
+galway bay brewery,Galway Bay Black Forest Cherry Porter,Porter,6.2,3.1,true
+galway bay brewery,Galway Bay Of Foam and Fury Double IPA,Imperial IPA,8.5,3.85,true
+galway bay brewery,Galway Bay Rando Calrissian,Black IPA,6.0,3.12,true
+galway bay brewery,Galway Bay Strange Brew (Porter),Porter,0.0,2.5,true
+galway bay brewery,Galway Bay Mare Incognita US ,Saison,4.8,3.42,true
+galway bay brewery,Galway Bay Solemn Black,Black IPA,8.5,3.48,true
+galway bay brewery,Galway Bay Banished Sun,Imperial Porter,8.0,3.63,true
+galway bay brewery,Galway Bay Strange Brew (Irish Red),Irish Ale,0.0,2.5,true
+galway bay brewery,Galway Bay Two Hundred Fathoms (2016),Imperial Stout,10.0,3.85,true
+galway bay brewery,Galway Bay / White Frontier Change of the Guard,Imperial IPA,11.5,3.57,true
+galway bay brewery,Galway Bay Foreign Extra Stout,Foreign Stout,11.0,3.21,true
+galway bay brewery,Galway Bay Heathen,Berliner Weisse,3.0,3.48,true
+galway bay brewery,Galway Bay Saison Phi,Saison,5.0,3.23,true
+galway bay brewery,Galway Bay I ?? New England,India Pale Ale (IPA),5.0,3.12,true
+galway bay brewery,Galway Bay Subsolar,Saison,5.0,3.25,true
+galway bay brewery,Galway Bay Tartîn,Berliner Weisse,0.0,5.0,true
+galway bay brewery,Galway Bay Aikau Amber,Amber Ale,4.5,3.28,true
+galway bay brewery,Galway Bay Beneath the Brambles,India Pale Ale (IPA),6.5,3.24,true
+galway bay brewery,Galway Bay/ Begyle Brewing Goodbye Blue Monday,Specialty Grain,6.6,3.68,true
+galway bay brewery,Galway Bay / Whiplash Touching The Scald,Porter,4.0,3.16,true
+galway bay brewery,Galway Bay Pilot 014 - Dortmunder Lager ,Dortmunder/Helles,6.0,3.13,true
+galway bay brewery,Galway Bay Strange Brew (Pale Ale),English Pale Ale,4.7,2.5,true
+galway bay brewery,Galway Bay / Boundary Brewing Harmonic Convergence,Barley Wine,12.0,3.82,true
+galway bay brewery,Galway Bay / Nola Perfect Union,Imperial IPA,8.0,3.75,true
+galway bay brewery,Galway Bay Scarecrow,Saison,5.5,3.34,true
+franciscan well,Franciscan Well Spring Fusion Ale,Saison,5.0,0.0,true
+franciscan well,Franciscan Well Shandon Stout (Jameson Cask),Imperial Stout,7.8,2.5,true
+franciscan well,Franciscan Well Blarney Blonde,Kölsch,4.2,2.81,true
+franciscan well,Franciscan Well Shandon Stout,Dry Stout,4.2,3.25,true
+franciscan well,Franciscan Well Rebel Lager,Premium Lager,4.3,2.83,true
+franciscan well,Franciscan Well Summer Saison ,Saison,5.0,3.13,true
+franciscan well,Franciscan Well Chieftain IPA,India Pale Ale (IPA),5.5,3.31,true
+franciscan well,Franciscan Well Shoot The Breeze ,California Common,4.5,2.92,true
+franciscan well,Franciscan Well Friar Weisse Wheat Beer,German Hefeweizen,4.7,3.17,true
+franciscan well,Franciscan Well Jameson Premium Stout Aged In Jameson Casks,Imperial Stout,8.4,2.5,true
+franciscan well,Franciscan Well Shandon Cider,Cider,4.5,2.83,true
+franciscan well,Franciscan Well Jameson Stout,Stout,7.8,3.57,true
+franciscan well,Franciscan Well Rebel Red Ale,Irish Ale,4.3,3.11,true
+franciscan well,Franciscan Well Purgatory Pale Ale,American Pale Ale,4.5,3.11,true
+independent brewing company of ireland,Independent Connemara Summer Ale,American Pale Ale,5.4,3.25,true
+independent brewing company of ireland,Independent IPA,India Pale Ale (IPA),7.0,3.07,true
+independent brewing company of ireland,Independent Connemara Extra Stout,Stout,6.0,3.3,true
+independent brewing company of ireland,Independent Currac Dubh,Foreign Stout,7.5,3.25,true
+independent brewing company of ireland,Independent Coffee Stout,Sweet Stout,4.5,2.86,true
+independent brewing company of ireland,Independent Connemara Cherry Sour,Sour Red/Brown,4.4,3.04,true
+independent brewing company of ireland,Independent Festival IPA,India Pale Ale (IPA),7.6,3.0,true
+independent brewing company of ireland,Independent Red,Irish Ale,4.5,3.09,true
+independent brewing company of ireland,McHughs / Independent Roadtrip #2 Barrel Aged,Dry Stout,7.0,3.18,true
+independent brewing company of ireland,Independent Pale,American Pale Ale,6.0,3.46,true
+independent brewing company of ireland,Independent Coconut Porter ,Sweet Stout,3.9,3.29,true
+independent brewing company of ireland,Independent Connemara Cascade,American Pale Ale,5.4,3.24,true
+independent brewing company of ireland,Independent Gold,Golden Ale/Blond Ale,4.5,2.93,true
+independent brewing company of ireland,Independent Connemara Red IPA,India Pale Ale (IPA),5.8,2.92,true
+independent brewing company of ireland,Independent/ Wood Key Black IPA,Black IPA,6.5,3.32,true
+independent brewing company of ireland,Independent Brandy Barrel Barley Wine,Barley Wine,8.1,2.95,true
+independent brewing company of ireland,Independent Cherry Red,Fruit Beer,5.0,0.0,true
+independent brewing company of ireland,Independent Whiskey Stout,Stout,7.0,3.27,true
+independent brewing company of ireland,McHughs / Independent Roadtrip #2,Stout,6.3,3.3,true
+independent brewing company of ireland,Independent Bourbon Barrel Barley Wine,Barley Wine,8.1,3.26,true
+independent brewing company of ireland,Independent Connemara Black,Black IPA,6.0,3.27,true
+independent brewing company of ireland,Independent Strong Porter,Imperial Porter,7.0,2.87,true
+independent brewing company of ireland,Independent Stout,Sweet Stout,4.5,3.41,true
+porterhouse,Porterhouse Hopped to F#cK,Imperial IPA,8.0,3.4,true
+porterhouse,Porterhouse An Brainblásta (Braonblásta),English Strong Ale,7.0,3.27,true
+porterhouse,Porterhouse Red Ale,Irish Ale,4.2,3.11,true
+porterhouse,Porterhouse Louder,Barley Wine,11.0,3.3,true
+porterhouse,Porterhouse Dublin Pale,Bitter,4.2,3.01,true
+porterhouse,Porterhouse Bounty Hunter,Porter,5.2,2.93,true
+porterhouse,Porterhouse Celebration Stout (2010-),Imperial Stout,7.5,3.61,true
+porterhouse,Porterhouse Dark Star,Imperial Porter,11.0,3.44,true
+porterhouse,Porterhouse Dingle Dark Stark,Imperial Porter,12.0,3.26,true
+porterhouse,Porterhouse Plain Porter,Dry Stout,4.3,3.36,true
+porterhouse,Porterhouse Dublin Red ,Irish Ale,4.4,2.5,true
+porterhouse,Porterhouse Grand Day,Session IPA,4.2,3.04,true
+porterhouse,Porterhouse Hersbrucker,Czech Pilsner (Sv?tlý),5.0,2.87,true
+porterhouse,Porterhouse Chocolate Truffle Stout,Sweet Stout,5.0,3.62,true
+porterhouse,Porterhouse F#€k Witte,Witbier,5.0,3.02,true
+porterhouse,Porterhouse Rusty,Amber Lager/Vienna,4.7,3.07,true
+porterhouse,Porterhouse Temple Brau,Premium Lager,4.3,2.64,true
+porterhouse,Porterhouse Wrasslers XXXX Stout,Dry Stout,5.0,3.59,true
+porterhouse,Porterhouse TSB,Bitter,3.7,2.91,true
+porterhouse,Porterhouse Oyster Stout,Stout,5.2,3.38,true
+porterhouse,Porterhouse Chiller,Premium Lager,4.2,2.34,true
+porterhouse,Porterhouse Hop Head,American Pale Ale,4.8,3.38,true
+porterhouse,Porterhouse Pilsner,Pilsener,5.0,2.65,true
+porterhouse,Porterhouse Irish IPA,India Pale Ale (IPA),5.0,2.5,true
+porterhouse,Porterhouse Winter Stout,Stout,6.5,3.09,true
+porterhouse,Porterhouse Turners Sticklebract Bitter ,Bitter,3.7,2.5,true
+12th abbey,12th Abbey Altered Amber,Amber Ale,4.2,2.87,true
+12th abbey,12th Abbey Raven Stout,Dry Stout,4.2,2.93,true
+12th abbey,12th Abbey IPA,Premium Bitter/ESB,4.8,2.89,true
+beamish crawford sn heineken,Finbarrs Irish Stout,Dry Stout,4.1,2.5,true
+donegal brewing co,Donegal Stout,Stout,5.2,2.64,true
+donegal brewing co,Donegal West Coast Pale Ale,India Pale Ale (IPA),5.0,2.91,true
+donegal brewing co,Donegal Chocolate Stout,Stout,5.2,3.15,true
+donegal brewing co,Donegal Atlantic Amber,Amber Ale,4.5,3.05,true
+donegal brewing co,Donegal Blonde,Golden Ale/Blond Ale,4.2,2.97,true
+donegal brewing co,Donegal Espresso Stout,Stout,5.5,3.24,true
+donegal brewing co,Donegal Pale Ale,American Pale Ale,4.5,2.94,true
+donegal brewing co,Donegal Dry Hop IPA,India Pale Ale (IPA),5.7,3.04,true
+donegal brewing co,Donegal Porter,Porter,4.2,3.18,true
+donegal brewing co,Donegal Spring Session IPA,Session IPA,4.3,3.13,true
+donegal brewing co,Donegal Sea Sessions Pale Ale,American Pale Ale,4.5,3.03,true
+donegal brewing co,Donegal Mullys,Irish Ale,4.4,2.85,true
+donegal brewing co,Donegal Saison,Saison,5.5,3.01,true
+donegal brewing co,Donegal Session IPA,Session IPA,4.3,2.5,true
+connemara brewery,Connacht Pale Ale,Golden Ale/Blond Ale,4.5,2.94,true
+jw sweetman,J.W. Sweetman Winter Saison,Saison,5.8,2.85,true
+jw sweetman,J.W. Sweetman Scotch Ale,Scotch Ale,5.6,3.04,true
+jw sweetman,J.W. Sweetman West Coast Pale Ale,American Pale Ale,4.5,2.97,true
+jw sweetman,J.W. Sweetman Blonde,Golden Ale/Blond Ale,4.3,3.02,true
+jw sweetman,J.W. Sweetman Nitro Red Ale,Amber Ale,4.8,3.02,true
+jw sweetman,J.W. Sweetman Porter,Porter,4.8,3.49,true
+jw sweetman,J.W. Sweetman Pale Ale,American Pale Ale,4.5,3.5,true
+jw sweetman,J.W. Sweetman American Blonde,Golden Ale/Blond Ale,4.2,3.0,true
+jw sweetman,J.W. Sweetman Pale Ale (Cask),American Pale Ale,0.0,1.0,true
+jw sweetman,J.W. Sweetman Weiss,German Hefeweizen,5.0,3.27,true
+jw sweetman,J.W. Sweetman Red Ale,Amber Ale,4.8,2.89,true
+jw sweetman,J.W. Sweetman Dunkel Weiss,Dunkelweizen,5.0,3.21,true
+jw sweetman,J.W. Sweetman Barrel Head East Coast Pale Ale ,American Pale Ale,5.2,3.04,true
+jw sweetman,J.W. Sweetman Maracanã,Premium Lager,4.3,2.94,true
+jw sweetman,J.W. Sweetman Winter Ale,Spice/Herb/Vegetable,5.8,2.87,true
+jw sweetman,J.W. Sweetman Pilsener,Pilsener,4.5,2.96,true
+jw sweetman,J.W. Sweetman Stout,Dry Stout,5.0,3.19,true
+jw sweetman,J.W. Sweetman Kolsch,Kölsch,4.9,3.02,true
+jw sweetman,J.W. Sweetman Belgian Blonde ,Belgian Ale,6.6,2.94,true
+jw sweetman,J.W. Sweetman Golden Ale,Golden Ale/Blond Ale,4.0,3.13,true
+jw sweetman,J.W. Sweetman Irish Red Ale,Irish Ale,4.3,3.29,true
+jw sweetman,J.W. Sweetman Indian Summer,Bitter,3.8,3.05,true
+land and labour,Land And Labour Mixed Fermentation Saison,Saison,6.5,3.21,true
+land and labour,Land And Labour Mixed Fermentation Beer (100% Oak),Sour/Wild Ale,5.5,3.12,true
+land and labour,Land And Labour Brettanomyces IPA,India Pale Ale (IPA),5.3,3.19,true
+munster brewery,Munster 12 Towers,Irish Ale,4.2,2.58,true
+munster brewery,Munster Brewery Fir Bolg,Amber Lager/Vienna,4.2,2.62,true
+munster brewery,Munster Brewery Blackguard,Amber Lager/Vienna,4.9,2.81,true
+blacks kinsale craft brewery,Blacks 1601 Lager,Pale Lager,4.2,2.64,true
+blacks kinsale craft brewery,Blacks Festival Special Pils,Pilsener,5.0,2.83,true
+blacks kinsale craft brewery,Blacks Wild Thing,Sour/Wild Ale,4.0,2.96,true
+blacks kinsale craft brewery,Blacks The Session,Session IPA,3.5,3.29,true
+blacks kinsale craft brewery,Blacks High Viz,Imperial IPA,8.5,3.45,true
+blacks kinsale craft brewery,May The Schwarzbier with you,Schwarzbier,5.5,3.0,true
+blacks kinsale craft brewery,Blacks Marching Powder,India Pale Ale (IPA),6.5,3.2,true
+blacks kinsale craft brewery,Blacks Model T,Stout,6.5,3.48,true
+blacks kinsale craft brewery,Blacks The Irish Giant Barrel Aged,Barley Wine,11.0,3.02,true
+blacks kinsale craft brewery,Blacks Black IPA,Black IPA,5.0,3.45,true
+blacks kinsale craft brewery,Blacks Kinsale Pale Face Killer,India Pale Ale (IPA),4.8,0.0,true
+blacks kinsale craft brewery,Blacks Ace of Haze,India Pale Ale (IPA),5.2,2.96,true
+blacks kinsale craft brewery,Blacks Mosaic IPA,India Pale Ale (IPA),6.5,3.26,true
+blacks kinsale craft brewery,Blacks KPA Kinsale Pale Ale,American Pale Ale,5.0,3.3,true
+blacks kinsale craft brewery,Blacks Exp 431,Session IPA,4.3,3.12,true
+blacks kinsale craft brewery,Blacks Overkill,Black IPA,9.5,3.42,true
+blacks kinsale craft brewery,Blacks Equinox Rye IPA,India Pale Ale (IPA),5.5,3.05,true
+blacks kinsale craft brewery,Blacks Jester Brown,Imperial IPA,9.0,2.94,true
+blacks kinsale craft brewery,Blacks World's End,Imperial Stout,8.5,3.7,true
+blacks kinsale craft brewery,Blacks The Irish Giant,Barley Wine,11.0,3.22,true
+blacks kinsale craft brewery,Blacks Flashback Pils,Pilsener,3.8,2.96,true
+blacks kinsale craft brewery,Blacks Model T Stout (5%),Stout,5.0,3.32,true
+blacks kinsale craft brewery,Blacks Rocketship IPA,India Pale Ale (IPA),6.5,3.44,true
+blacks kinsale craft brewery,Blacks Simcoe Red IPA,Amber Ale,5.0,3.09,true
+blacks kinsale craft brewery,Blacks Worlds End Barrel Aged,Imperial Stout,8.5,3.27,true
+blacks kinsale craft brewery,Blacks El Dorado,American Pale Ale,5.0,3.0,true
+blacks kinsale craft brewery,Blacks Sour Brown Ale,Sour Red/Brown,5.0,3.09,true
+blacks kinsale craft brewery,Blacks Yellow Sub,India Pale Ale (IPA),5.0,3.25,true
+heineken ireland,Blasket Blonde,Golden Ale/Blond Ale,4.5,0.0,true
+heineken ireland,Cute Hoor Irish Pale Ale,Golden Ale/Blond Ale,5.0,2.92,true
+heineken ireland,Cute Hoor Red Head Ale,Irish Ale,4.5,2.88,true
+heineken ireland,Beamish Irish Stout,Dry Stout,4.1,3.36,true
+heineken ireland,Murphys Irish Stout,Dry Stout,4.0,3.29,true
+heineken ireland,Rising Road ,Pale Lager,5.0,2.7,true
+heineken ireland,Cute Hoor,Pale Lager,5.0,2.5,true
+heineken ireland,Murphys Irish Stout (3.5%),Dry Stout,3.5,2.69,true
+western herd brewing company,Western Herd Cliff Road,India Pale Ale (IPA),5.5,2.96,true
+western herd brewing company,Western Herd Coast Road,India Pale Ale (IPA),5.5,2.92,true
+western herd brewing company,Western Herd Danger Here,Session IPA,4.8,2.97,true
+western herd brewing company,Western Herd Siege Pale Ale,American Pale Ale,5.1,3.77,true
+western herd brewing company,Western Herd Back Beat Witbier,Witbier,5.0,3.79,true
+western herd brewing company,Western Herd Blue Jumper IPA,India Pale Ale (IPA),6.2,3.66,true
+western herd brewing company,Western Herd Foxcatcher Red Ale,Amber Ale,5.3,3.63,true
+western herd brewing company,Dooliner Irish Red Beer (Western Herd),Irish Ale,4.4,2.85,true
+western herd brewing company,Western Herd Islander,Golden Ale/Blond Ale,4.2,3.37,true
+5 lamps brewery,5 Lamps Bang Bang Bock,Heller Bock,5.7,2.96,true
+5 lamps brewery,5 Lamps Honor Bright Whiskey Barrel Aged,Irish Ale,7.0,2.93,true
+5 lamps brewery,Celtic Ard Ri Dó,Irish Ale,8.6,3.02,true
+5 lamps brewery,5 Lamps Dark IPA Whiskey Barrel Aged,Imperial IPA,10.0,3.12,true
+5 lamps brewery,5 Lamps Black Pitts Porter,Porter,4.9,3.21,true
+5 lamps brewery,5 Lamps Phoenix Dark ,Dunkel/Tmavý,6.5,2.91,true
+5 lamps brewery,5 Lamps The Tenters,Brown Ale,5.5,2.68,true
+5 lamps brewery,5 Lamps / Cheers So Brew Co Make it a double,Imperial IPA,8.0,3.07,true
+5 lamps brewery,5 Lamps Up the Dubs,Wheat Ale,5.0,2.98,true
+5 lamps brewery,5 Lamps Craft Lager,Premium Lager,5.0,2.94,true
+5 lamps brewery,5 Lamps Dublin Lager,Pale Lager,4.2,2.5,true
+5 lamps brewery,5 Lamps Monto Red Ale,Irish Ale,5.0,3.02,true
+5 lamps brewery,5 Lamps The Liberties,Bitter,4.7,3.01,true
+5 lamps brewery,5 Lamps Summer Steam,California Common,5.5,3.03,true
+5 lamps brewery,Celtic Ard Ri AON,Amber Ale,6.5,3.34,true
+5 lamps brewery,5 Lamps Black Pitts Whiskey Barrel Aged,Porter,7.7,3.32,true
+5 lamps brewery,5 Lamps Ale Mary Full of Spice,Irish Ale,5.0,3.0,true
+5 lamps brewery,5 Lamps Czech Pilsner,Czech Pilsner (Sv?tlý),4.3,2.96,true
+5 lamps brewery,5 Lamps Honor Bright,Amber Ale,5.0,2.92,true
+kinnegar brewing,Kinnegar Long Tongue Pumpkin Ginger Rye,Spice/Herb/Vegetable,5.3,2.98,true
+kinnegar brewing,Kinnegar Maddyroe Burnt IPA,India Pale Ale (IPA),5.7,3.25,true
+kinnegar brewing,Kinnegar One For Ronan,Belgian Ale,6.5,3.16,true
+kinnegar brewing,Kinnegar Lost Weekend ,India Pale Ale (IPA),6.5,3.25,true
+kinnegar brewing,Kinnegar Crossroads,India Pale Ale (IPA),6.2,3.4,true
+kinnegar brewing,Kinnegar Hilly Head Farmhouse Red Ale,Belgian Ale,6.5,3.22,true
+kinnegar brewing,Kinnegar Cage Fight,Porter,6.0,3.25,true
+kinnegar brewing,Roadtrip (Kinnegar),India Pale Ale (IPA),6.2,2.5,true
+kinnegar brewing,Kinnegar / Brown Paper Bag Project Geuzberry,Sour/Wild Ale,5.2,3.28,true
+kinnegar brewing,Kinnegar Merrytiller,Saison,5.2,3.04,true
+kinnegar brewing,Kinnegar High Glen,Sour/Wild Ale,6.3,3.37,true
+kinnegar brewing,Kinnegar Devil's Backbone,Amber Ale,4.9,3.15,true
+kinnegar brewing,Kinnegar Big Bunny,India Pale Ale (IPA),6.0,3.54,true
+kinnegar brewing,Kinnegar Walla Walla,Sour/Wild Ale,5.5,3.36,true
+kinnegar brewing,Kinnegar Cinch,Sour/Wild Ale,4.7,3.0,true
+kinnegar brewing,Kinnegar Bucket &amp; Spade,Session IPA,4.0,3.25,true
+kinnegar brewing,Kinnegar Olan's Tart,Sour/Wild Ale,5.0,3.33,true
+kinnegar brewing,Kinnegar Rustbucket Rye Ale,Specialty Grain,5.1,3.43,true
+kinnegar brewing,Kinnegar Cup &amp; Saucer Coffee Stout,Stout,6.25,3.38,true
+kinnegar brewing,Kinnegar Otway,American Pale Ale,4.2,3.32,true
+kinnegar brewing,Kinnegar Coco Joe,Porter,4.5,3.0,true
+kinnegar brewing,Kinnegar Finally,Premium Lager,5.5,3.14,true
+kinnegar brewing,Kinnegar Phunk Bucket,Sour/Wild Ale,7.0,3.27,true
+kinnegar brewing,Kinnegar White Rabbit,Wheat Ale,4.8,3.34,true
+kinnegar brewing,Kinnegar Swingletree,Saison,7.0,3.23,true
+kinnegar brewing,Kinnegar Yannaroddy Porter,Porter,4.8,3.53,true
+kinnegar brewing,Kinnegar Bucket Brigade,India Pale Ale (IPA),6.5,3.21,true
+kinnegar brewing,Kinnegar Flying Saucer,Foreign Stout,7.0,3.52,true
+kinnegar brewing,Kinnegar Brownknowe,Sour/Wild Ale,5.2,3.15,true
+kinnegar brewing,Kinnegar Inch Spit,Specialty Grain,6.0,3.14,true
+kinnegar brewing,Kinnegar Black Bucket Black Rye IPA,Black IPA,6.5,3.61,true
+kinnegar brewing,Kinnegar Freak Show,Cream Ale,5.0,3.12,true
+kinnegar brewing,Kinnegar Great Arch,Kölsch,4.9,3.39,true
+kinnegar brewing,Kinnegar Sour Grapes,Sour/Wild Ale,5.0,3.21,true
+kinnegar brewing,Kinnegar Noch Eins,Dortmunder/Helles,5.0,2.93,true
+kinnegar brewing,Kinnegar Limeburner ,Bitter,4.7,2.9,true
+kinnegar brewing,Kinnegar White Rabbit Session White IPA,India Pale Ale (IPA),4.5,2.5,true
+kinnegar brewing,Kinnegar/ Siphon 3 Bagger,Abbey Tripel,9.7,2.98,true
+kinnegar brewing,Kinnegar Scraggy Bay,India Pale Ale (IPA),5.3,3.37,true
+brewtonic,Brewtonic Haka That New Zealand IPA,India Pale Ale (IPA),5.0,3.17,true
+brewtonic,Brewtonic Nautical Boogie ,India Pale Ale (IPA),5.5,3.0,true
+brewtonic,Brewtonic The Little One,Session IPA,4.5,2.94,true
+brewtonic,Brewtonic Heart of Darkness,Porter,4.8,3.06,true
+brewtonic,Brewtonic Four 20 Hemp Ale,Spice/Herb/Vegetable,5.0,3.02,true
+brewtonic,Brewtonic Same Sex Saison,Saison,6.0,2.96,true
+brewtonic,Brewtonic Solitary Flight,Saison,5.0,3.14,true
+brewtonic,Brewtonic Sim Simma Hemp Ale,Spice/Herb/Vegetable,5.0,2.5,true
+brewtonic,Brewtonic Relax the Cacks,India Pale Ale (IPA),5.2,3.31,true
+brewtonic,Brewtonic 13 Seconds Porter,Porter,5.0,3.27,true
+brewtonic,Brewtonic Easy Rider Grisette ,Saison,3.6,2.96,true
+brewtonic,Brewtonic Hoffman's Belgian Ale,Belgian Ale,5.0,2.98,true
+brewtonic,Brewtonic Park Life,Wheat Ale,4.5,3.02,true
+brewtonic,Brewtonic 011 Black Rye Ale,Specialty Grain,5.0,3.23,true
+brewtonic,Brewtonic City of Gold,American Pale Ale,4.9,3.13,true
+jack codys,Jack Cody's Duxie Grapefruit Tea Pale Ale,India Pale Ale (IPA),5.0,3.24,true
+jack codys,Jack Cody's Curly Hole Samhain Ale,Irish Ale,4.5,3.08,true
+jack codys,Jack Cody's Lunasa Summer Saison,Belgian Ale,5.4,2.99,true
+jack codys,Jack Cody's 9 Pound Hammer,India Pale Ale (IPA),7.1,2.94,true
+jack codys,Jack Cody's Beaulieu,American Pale Ale,5.1,3.02,true
+jack codys,Jack Cody's Lazy Eye IPA,India Pale Ale (IPA),6.3,2.87,true
+jack codys,Jack Cody's Smiggy Amber Ale,Amber Ale,4.8,3.07,true
+jack codys,Jack Cody's Puck Pilsner,Pilsener,4.5,2.88,true
+jack codys,Jack Cody's Worcester Sauce,Bitter,4.2,2.95,true
+jack codys,Jack Cody's Hail Glorious St Patrick Extra Stout,Stout,5.4,3.27,true
+jack codys,Jack Cody's Hibernicus Dry Hopped IPA,India Pale Ale (IPA),5.2,3.19,true
+jack codys,Jack Cody's Black Jack (Drogheda Cream Stout),Stout,4.6,3.2,true
+rising sons,Rising Sons Cherry Bomb,Fruit Beer,0.0,1.0,true
+rising sons,Mi Daza Traditional Cork Stout,Stout,4.3,3.4,true
+rising sons,Rising Sons D'vil a Bit,Belgian Ale,7.1,3.09,true
+rising sons,Rising Sons Mayhem,Saison,5.5,3.22,true
+rising sons,Rising Sons Uprising,Black IPA,5.0,3.15,true
+rising sons,Rising Sons Steeple,Amber Ale,4.5,3.23,true
+rising sons,Rising Sons Little D'vil,Belgian Ale,6.2,3.18,true
+rising sons,Rising Sons Night Shift ,Porter,4.8,2.95,true
+rising sons,Rising Sons Redemption,Irish Ale,4.5,2.96,true
+rising sons,Rising Sons Sleigher,Spice/Herb/Vegetable,5.0,2.84,true
+rising sons,Rising Sons Grainú Ale,Witbier,4.6,3.14,true
+rising sons,Rising Sons Sunbeam Irish Lager,Pilsener,4.3,2.87,true
+rising sons,Rising Sons On the Razz,Fruit Beer,0.0,2.0,true
+rising sons,Rising Sons Pull Like a Dog,Amber Lager/Vienna,5.0,3.0,true
+rising sons,Rising Sons Changeling,American Pale Ale,4.3,3.32,true
+rising sons,Rising Sons Handsum IPA,India Pale Ale (IPA),5.0,3.17,true
+lough gill brewery,Lough Gill Lovers Blend,Porter,6.0,3.12,true
+lough gill brewery,Lough Gill Heinoweiser,Session IPA,5.5,3.19,true
+lough gill brewery,Lough Gill Irish Sloe Barleywine ,Barley Wine,9.5,3.05,true
+lough gill brewery,Lough Gill Wild Atlantic Series 2 - Wild Rosé Wheat Ale ,Sour/Wild Ale,5.0,3.04,true
+lough gill brewery,Lough Gill Rebel Stout Series #3 Imperial Chocolate Cherry Porter,Porter,10.0,3.02,true
+lough gill brewery,Lough Gill Rebel Stout Series #2 Imperial Toasted Coconut Porter,Imperial Stout,10.0,2.98,true
+lough gill brewery,Lough Gill The Irish Punch Up Series Round 2 - Hoppy Scotch,Scotch Ale,8.0,3.04,true
+lough gill brewery,Lough Gill The Irish Punch Up Series Round 3 - Double Heather Sour Ale,Sour Red/Brown,9.0,2.89,true
+lough gill brewery,Lough Gill Anderson's Ale,Irish Ale,4.0,3.05,true
+lough gill brewery,Lough Gill Round The Clock,Stout,5.2,3.12,true
+lough gill brewery,Lough Gill Mac Nutty,Brown Ale,5.5,3.22,true
+lough gill brewery,Lough Gill Poets Pen,India Pale Ale (IPA),5.5,2.89,true
+lough gill brewery,Lough Gill Wild Atlantic Series 1 - Sour Wheat Ale,Sour/Wild Ale,5.7,3.05,true
+lough gill brewery,Lough Gill Thieving Bastards,American Pale Ale,5.0,2.99,true
+lough gill brewery,Lough Gill Rebel Stout Series #1 Imperial Oatmeal Coffee Cream Stout,Imperial Stout,11.0,3.51,true
+lough gill brewery,Lough Gill Wild Atlantic Series 3 - Barrel Aged Flanders Style Ale,Sour Red/Brown,6.8,3.04,true
+irishtown brewing co,Irishtown Dublin Blonde,Pale Lager,4.4,2.94,true
+irishtown brewing co,Irishtown Dublin Red,Irish Ale,4.3,2.94,true
+black donkey brewing,Black Donkey Arigna #1,Bière de Garde,7.5,3.42,true
+black donkey brewing,Black Donkey Arigna 2017,Saison,8.0,3.06,true
+black donkey brewing,Black Donkey Bog Fire,Smoked,6.0,3.07,true
+black donkey brewing,Black Donkey Arigna 2016,Saison,8.3,3.05,true
+black donkey brewing,Black Donkey Scythe,Session IPA,4.2,3.23,true
+black donkey brewing,Black Donkey TKO,India Pale Ale (IPA),5.0,3.16,true
+black donkey brewing,Black Donkey Beyond RyePA,Specialty Grain,4.8,3.16,true
+black donkey brewing,Black Donkey Unhinged,India Pale Ale (IPA),5.2,3.0,true
+black donkey brewing,Black Donkey Western Warrior,Pale Lager,4.6,3.0,true
+black donkey brewing,Black Donkey Sheep Stealer,Saison,5.5,3.35,true
+black donkey brewing,Black Donkey Buck It,Amber Ale,4.7,3.25,true
+muckish mountain,Muckish Mountain Miner's Red,Irish Ale,0.0,2.0,true
+dowds lane brewing company bulmers ireland,Dowd's Lane 12 O'Clock Mass IPA,Session IPA,4.5,2.9,true
+dowds lane brewing company bulmers ireland,Dowd's Lane Big Vat Cider,Cider,4.9,2.98,true
+dowds lane brewing company bulmers ireland,Dowd's Lane Door Nail Red Ale,Irish Ale,4.2,3.0,true
+west cork brewing company,West Cork Stout x Stout West,Dry Stout,3.8,3.18,true
+west cork brewing company,West Cork Sherkin Lass,Golden Ale/Blond Ale,4.4,3.19,true
+west cork brewing company,West Cork Roaring Ruby Red Ale,Irish Ale,4.0,2.98,true
+stone barrel brewing co,Stone Barrel / Yellowbelly Stonebelly IPA,India Pale Ale (IPA),6.2,3.21,true
+stone barrel brewing co,Stone Barrel Boom Session IPA,Session IPA,5.0,3.0,true
+stone barrel brewing co,Stone Barrel Day Trippin',American Pale Ale,5.0,3.15,true
+stone barrel brewing co,Stone Barrel Oatmeal Amber Ale,Amber Ale,6.0,3.24,true
+stone barrel brewing co,Stone Barrel Oatmeal and Coffee Stout ,Dry Stout,6.0,3.23,true
+stone barrel brewing co,Stone Barrel Co C No Evil,India Pale Ale (IPA),6.0,3.06,true
+stone barrel brewing co,Stone Barrel SunDown,Amber Ale,4.4,3.06,true
+stone barrel brewing co,Stone Barrel Red Mist,Amber Ale,4.2,2.93,true
+stone barrel brewing co,Stone Barrel Rotation Series IPA,India Pale Ale (IPA),6.0,3.21,true
+bru brewery,Brú Ri,India Pale Ale (IPA),5.0,3.0,true
+bru brewery,Brú Ban,Wheat Ale,5.0,2.81,true
+bru brewery,Brú Darkside IPA,India Pale Ale (IPA),5.2,3.14,true
+bru brewery,Brú Pilsner,Pilsener,3.8,2.96,true
+bru brewery,Brú (Ireland),Irish Ale,4.2,3.32,true
+bru brewery,Brú Lager,Premium Lager,4.2,2.82,true
+bru brewery,Brú Mor,Saison,7.0,2.97,true
+bru brewery,Brú Winter Spiced Ale,Spice/Herb/Vegetable,5.2,2.98,true
+bru brewery,Brú Stout,Dry Stout,0.0,2.5,true
+bru brewery,Brú Red,Amber Ale,4.2,2.5,true
+bru brewery,Brú Dubh,Stout,4.2,3.28,true
+bru brewery,Brú Race to the bottom,American Pale Ale,4.8,0.0,true
+bru brewery,Brú Raspberry Wheat,Fruit Beer,5.0,2.98,true
+bru brewery,Brú Autumn Ale,Spice/Herb/Vegetable,5.0,3.01,true
+bru brewery,Brú Rua,Irish Ale,4.2,3.12,true
+dublin brewer,Dublin Brewer Blonde,Golden Ale/Blond Ale,4.5,0.0,true
+dublin brewer,Dublin Brewer Lager ,Pale Lager,4.5,2.92,true
+dublin brewer,Dublin Brewer Session IPA,Session IPA,4.2,2.94,true
+dublin brewer,Dublin Brewer IPA,India Pale Ale (IPA),6.1,3.0,true
+priory brewing,Priory Original Sin IPA,India Pale Ale (IPA),5.5,3.0,true
+corrib brewing company,Wild Bat Garage Days,American Pale Ale,5.0,3.12,true
+corrib brewing company,Wild Bat Sonic,California Common,4.3,3.22,true
+l mulligan grocer,L. Mulligan. Grocer. Light,American Pale Ale,4.3,3.0,true
+l mulligan grocer,L. Mulligan. Grocer. Dark,Dunkel/Tmavý,4.5,2.96,true
+barrelhead brewery,Barrelhead Exceptional Porter,Porter,5.0,2.95,true
+barrelhead brewery,Barrelhead Indie Amber,Amber Ale,4.8,3.35,true
+barrelhead brewery,Barrelhead Stout,Dry Stout,3.8,2.87,true
+barrelhead brewery,Barrelhead Pale Ale,American Pale Ale,4.5,3.43,true
+barrelhead brewery,Barrelhead Intergalactic Ale (IGA),India Pale Ale (IPA),6.8,3.09,true
+barrelhead brewery,Barrelhead Weissbier,German Hefeweizen,5.3,2.98,true
+barrelhead brewery,Barrelhead Blonde,Golden Ale/Blond Ale,4.5,2.96,true
+bo bristle,Bo Bristle Smokey Bacon,Smoked,6.8,2.86,true
+bo bristle,Bo Bristle Milk Chocolate Stout,Sweet Stout,7.0,3.13,true
+bo bristle,Bo Bristle Dry Hopped DIPA,Imperial IPA,7.7,3.19,true
+bo bristle,Bo Bristle Stout,Stout,4.6,3.09,true
+bo bristle,Bo Bristle Amber Ale,Amber Ale,4.5,3.05,true
+bo bristle,Bo Bristle Dry Hopped Imperial Red,Irish Ale,7.0,3.12,true
+bo bristle,Bo Bristle Wild Irish,Golden Ale/Blond Ale,4.0,3.02,true
+bo bristle,Bo Bristle Pilsner,Pilsener,5.0,3.1,true
+bo bristle,Bo Bristle IPA,India Pale Ale (IPA),5.0,2.94,true
+manor brewing company,MONT Irish Mountain Beer,Pilsener,5.1,3.04,true
+manor brewing company,Manor Bigger Than Ben Hur!,Imperial IPA,9.2,0.0,true
+manor brewing company,Manor Tall Poppy Syndrome ,Abbey Dubbel,7.2,2.96,true
+manor brewing company,Manor Triumph and Disaster,India Pale Ale (IPA),5.6,0.0,true
+manor brewing company,Manor Black is the New Orange,Schwarzbier,5.0,0.0,true
+little island brewing company,Kenmare Irish Pale Ale,American Pale Ale,5.0,2.7,true
+little island brewing company,Kenmare Irish Red Ale,Irish Ale,4.3,2.71,true
+little island brewing company,Kenmare India Pale Ale,India Pale Ale (IPA),5.1,3.06,true
+little island brewing company,Kenmare Irish Porter,Porter,4.7,3.1,true
+little island brewing company,Kenmare Irish Lager,Amber Lager/Vienna,4.3,2.41,true
+little island brewing company,Little Island Irish Apple Cider,Cider,5.1,3.14,true
+clonakilty brewing company,Clonakilty Smuggler,Porter,6.0,3.0,true
+clonakilty brewing company,Clonakilty Sour Smack,Sour/Wild Ale,5.0,2.77,true
+clonakilty brewing company,Clonakilty Inchydoney,Witbier,4.5,3.0,true
+clonakilty brewing company,Clonakilty Tojo,American Pale Ale,5.5,3.07,true
+radikale,Radikale Hopster,American Pale Ale,5.2,3.08,true
+radikale,Radikale Rubenesque,Belgian Strong Ale,7.0,2.88,true
+radikale,Radikale Curious Brew,Spice/Herb/Vegetable,6.6,3.06,true
+reel deel brewery,Reel Deel General Humbert Lager,Pale Lager,4.0,2.99,true
+reel deel brewery,Reel Deel/James Brown Orange &amp; Juniper IPA,India Pale Ale (IPA),6.5,2.76,true
+reel deel brewery,Reel Deel Jack The Lad,American Pale Ale,4.5,3.21,true
+reel deel brewery,Reel Deel Finn's Knowledge,American Pale Ale,4.5,0.0,true
+reel deel brewery,Reel Deel Irish Blond,Amber Ale,4.5,2.98,true
+reel deel brewery,Reel Deel Say Nowt Stout,Dry Stout,4.8,3.21,true
+reel deel brewery,Reel Deel Beer on The Edge,India Pale Ale (IPA),6.5,3.0,true
+crafty divils,Crafty Divils Iron Bridge Amber Ale,Amber Ale,4.3,2.96,true
+crafty divils,King Puck Irish Pale Ale,India Pale Ale (IPA),4.5,3.18,true
+metalman brewing,Metalman Windjammer,Amber Ale,4.8,3.19,true
+metalman brewing,Metalman Ironmonger,India Pale Ale (IPA),6.5,3.03,true
+metalman brewing,Metalman Smoked Zwickel,Zwickel/Keller/Landbier,5.3,3.11,true
+metalman brewing,Metalman Chameleon Garnet,Bitter,4.0,2.92,true
+metalman brewing,Metalman / Solvay Society Obliquity,Saison,6.1,3.26,true
+metalman brewing,Metalman Chameleon Solstice,Wheat Ale,4.2,2.87,true
+metalman brewing,Metalman Pale Ale,American Pale Ale,4.3,3.26,true
+metalman brewing,Metalman Razzbeer,Sour/Wild Ale,5.0,3.07,true
+metalman brewing,Metalman Unite,Session IPA,4.0,2.81,true
+metalman brewing,Metalman Chameleon Brau,Golden Ale/Blond Ale,4.3,2.84,true
+metalman brewing,Metalman Sgt. Pepper,Saison,4.8,3.3,true
+metalman brewing,Metalman Heat Sink,Porter,5.0,3.45,true
+metalman brewing,Metalman Chameleon Ginger,Spice/Herb/Vegetable,4.5,2.98,true
+metalman brewing,Metalman Pale Ale Cascade Dry Hopped,Golden Ale/Blond Ale,4.3,2.5,true
+metalman brewing,Metalman Alternator,Wheat Ale,4.5,3.14,true
+metalman brewing,Metalman / Hardknott Yerba,Spice/Herb/Vegetable,6.2,3.2,true
+metalman brewing,Metalman Equinox ,Wheat Ale,4.6,3.07,true
+metalman brewing,Metalman Orange is the new Black,Stout,4.3,3.05,true
+metalman brewing,Metalman Sahara,Amber Lager/Vienna,6.0,3.13,true
+metalman brewing,Metalman Chameleon Smokescreen,Smoked,4.3,3.18,true
+metalman brewing,Metalman Spring,Spice/Herb/Vegetable,4.2,3.09,true
+metalman brewing,Metalman Blaager,Pale Lager,4.6,2.97,true
+metalman brewing,Metalman Port Beer,Pale Lager,4.1,0.0,true
+metalman brewing,Metalman Chameleon Rubus,Golden Ale/Blond Ale,4.3,2.75,true
+metalman brewing,Metalman Moonbeam,Porter,5.0,3.12,true
+metalman brewing,Metalman Mystery #1,Amber Ale,5.6,3.0,true
+bartleys beers,Bartleys Strawbeeri,Fruit Beer,4.2,2.98,true
+actons country pub and microbrewery,Macreddin Three Wells Cloudy Wheat,German Hefeweizen,4.0,2.5,true
+actons country pub and microbrewery,Macredin Carysfort,Irish Ale,4.6,2.5,true
+blarney inn,Blarney Inn Premium Stout,Stout,0.0,1.0,true
+blarney inn,Blarney Inn Premium Ale,Irish Ale,4.5,3.02,true
+canvas brewery,Canvas,Sour/Wild Ale,4.3,0.0,true
+canvas brewery,Dry Hopped Elder Oxymoron,Witbier,4.6,0.0,true
+canvas brewery,American Tom's Imperial Stout,Imperial Stout,10.6,0.0,true
+canvas brewery,Farmhouse Ale V1: Barrel Fermented,Irish Ale,4.3,0.0,true
+canvas brewery,Red Sunday Cuddle,Belgian Strong Ale,8.2,0.0,true
+the benwiskin brewing company,The Benwiskin Rossinver,Golden Ale/Blond Ale,4.5,2.98,true
+the benwiskin brewing company,The Benwiskin Clooneen Red,Amber Ale,5.0,2.87,true
+the harbour bar,The Harbour Bar 17 Howth Stout,Dry Stout,4.5,2.98,true
+the harbour bar,The Harbour Bar Just Crafty Howth Lager,Pale Lager,4.5,3.04,true
+beaky dargus,Beaky Dargus Irish Summer,Wheat Ale,5.5,0.0,true
+beaky dargus,Beaky Dargus One Man Orchestra,Imperial Stout,10.0,0.0,true
+beaky dargus,Beaky Dargus Black Beak Juggler,Dry Stout,5.5,0.0,true
+beaky dargus,Beaky Dargus Golden Melody,English Strong Ale,7.5,0.0,true
+beaky dargus,Beaky Dargus I Am Single,Golden Ale/Blond Ale,5.0,0.0,true
+beaky dargus,Beaky Dargus Turf Cutter,English Strong Ale,8.0,0.0,true
+mountain man brewing company,Mountain Man Crazy Horse,India Pale Ale (IPA),7.5,3.49,true
+mountain man brewing company,Mountain Man Banjo'd IPA,India Pale Ale (IPA),5.0,2.79,true
+mountain man brewing company,Mountain Man No Country For Owl Men,Brown Ale,0.0,1.0,true
+mountain man brewing company,Mountain Man Sneaky Owl,Dunkel/Tmavý,4.6,3.24,true
+mountain man brewing company,Mountain Man Raised By Wolves,India Pale Ale (IPA),5.0,0.0,true
+mountain man brewing company,Mountain Man Screeching Owl Bitch,Brown Ale,0.0,1.0,true
+mountain man brewing company,Mountain Man Grand Shtuff Altogether,Irish Ale,0.0,2.5,true
+mountain man brewing company,Mountain Man Hairy Goat Nuts,Bitter,0.0,1.0,true
+mountain man brewing company,Mountain Man Green Bullet,Golden Ale/Blond Ale,4.0,2.7,true
+mountain man brewing company,Mountain Man Very Hairy Goat,American Pale Ale,6.0,2.79,true
+mountain man brewing company,Mountain Man Hairy Goat,Bitter,4.5,3.13,true
+bridewell brewery,Bridewell Blond,Golden Ale/Blond Ale,0.0,2.5,true
+wicklow brewery,Wicklow 12:12:16 Oak Barrel Aged Strong Ale ,Old Ale,7.7,3.43,true
+wicklow brewery,Wicklow Coffee and vanilla oatmeal porter,Porter,4.9,3.23,true
+wicklow brewery,Wicklow Gingerknut,Spice/Herb/Vegetable,4.7,3.08,true
+wicklow brewery,Wicklow Brewey Helles,Dortmunder/Helles,4.5,3.03,true
+wicklow brewery,Wicklow Brewey WB-40,Irish Ale,6.5,3.33,true
+wicklow brewery,Wicklow St Kevin's Red,Irish Ale,4.7,3.05,true
+wicklow brewery,Wicklow 12:12:17 American Big Brown Ale,Brown Ale,8.4,3.12,true
+wicklow brewery,Wicklow Weisse,German Hefeweizen,4.7,3.09,true
+wicklow brewery,Wicklow Hopknut,American Pale Ale,4.9,3.04,true
+wicklow brewery,Wicklow Peach &amp; Apricot Saison,Saison,5.1,3.09,true
+boghopper brewery,BogHopper ,Saison,5.7,0.0,true
+boghopper brewery,BogHopper/ Yellowbelly Cold Turkey,Brown Ale,6.9,0.0,true
+boghopper brewery,BogHopper Dirty Chick,Pilsener,5.0,2.96,true
+boghopper brewery,BogHopper Hairy Bullocks,American Pale Ale,5.0,2.81,true
+boghopper brewery,BogHopper Horny Ram,Irish Ale,4.7,2.97,true
+craftworks byob,Postcard Bailey's Folly,Abbey Tripel,7.4,3.01,true
+craftworks byob,Hyland Celtic Warrior,Golden Ale/Blond Ale,4.5,2.98,true
+craftworks byob,PostCard Silicon Docks,India Pale Ale (IPA),6.7,3.07,true
+craftworks byob,Postcard Lager,Pale Lager,5.0,2.92,true
+craftworks byob,Postcard The 40 Foot Potato Stout,Dry Stout,6.0,2.98,true
+craftworks byob,PostCard Ha'penny Bridge,American Pale Ale,5.2,2.89,true
+craftworks byob,Craftworks Batter out of Hells,Dortmunder/Helles,4.0,2.9,true
+craftworks byob,Craftworks Little Warrior ,Session IPA,3.8,2.96,true
+craftworks byob,PostCard The Spire,Premium Lager,5.2,2.95,true
+the time beer company,Time Slow Brewed Premium Lager,Pale Lager,5.0,2.49,true
+cotton ball brewing co,Cotton Ball Lynch Stout,Stout,0.0,5.0,true
+cotton ball brewing co,Cotton Ball Another Bloody IPA,India Pale Ale (IPA),5.8,3.01,true
+cotton ball brewing co,Cotton Ball Vienna,Amber Lager/Vienna,4.7,3.16,true
+cotton ball brewing co,Cotton Ball Mayfield Gold,Premium Lager,0.0,2.5,true
+cotton ball brewing co,Cotton Ball Indian Summer,American Pale Ale,4.7,3.04,true
+cotton ball brewing co,Cotton Ball Kerry Lane Pale Ale,American Pale Ale,0.0,32.0,true
+cotton ball brewing co,Cotton Ball Mayfield 5,Premium Lager,5.0,2.91,true
+wicklow wolf brewing company,Wicklow Wolf Copper Mtn. Ale,Amber Ale,5.4,0.0,true
+wicklow wolf brewing company,Wicklow Wolf Locavore 2015 - Irish Pale Ale,English Pale Ale,4.7,0.0,true
+wicklow wolf brewing company,Wicklow Wolf Sorachi Red,Amber Ale,5.1,2.91,true
+wicklow wolf brewing company,Wicklow Wolf IPA,India Pale Ale (IPA),6.3,3.33,true
+wicklow wolf brewing company,Wicklow Wolf Belgian White,Witbier,5.2,2.93,true
+wicklow wolf brewing company,Wicklow Wolf Elevation Pale Ale,American Pale Ale,4.8,3.2,true
+wicklow wolf brewing company,Wicklow Wolf Kentucky Common,Brown Ale,4.8,2.97,true
+wicklow wolf brewing company,Wicklow Wolf Easy Lover,Session IPA,3.8,2.98,true
+wicklow wolf brewing company,Wicklow Wolf Born ‘N Bread,Sweet Stout,5.5,3.21,true
+wicklow wolf brewing company,Wicklow Wolf Locavore 2016 - Golden Ale,Golden Ale/Blond Ale,5.6,2.94,true
+wicklow wolf brewing company,Wicklow Wolf Lobo IPA,India Pale Ale (IPA),5.2,2.99,true
+wicklow wolf brewing company,Wicklow Wolf Poles Apart North,Porter,6.5,3.25,true
+wicklow wolf brewing company,Wicklow Wolf Belgian Brown Ale,Belgian Ale,5.4,3.19,true
+wicklow wolf brewing company,Wicklow Wolf Wolf Kiss Golden Honey &amp; Elderflower Ale,Golden Ale/Blond Ale,6.0,3.02,true
+wicklow wolf brewing company,Wicklow Wolf Arcadia Kolsch,Kölsch,4.5,3.07,true
+wicklow wolf brewing company,Wicklow Wolf The Harbour Master - Summer Session Ale,Golden Ale/Blond Ale,4.1,2.98,true
+wicklow wolf brewing company,Wicklow Wolf American Amber,Amber Ale,4.8,3.19,true
+wicklow wolf brewing company,Wicklow Wolf Black Perle Porter,Porter,4.8,3.22,true
+wicklow wolf brewing company,Wicklow Wolf Children of the Revolution,India Pale Ale (IPA),5.7,3.29,true
+wicklow wolf brewing company,Wicklow Wolf,Imperial IPA,8.0,0.0,true
+wicklow wolf brewing company,Wicklow Wolf Summersalt Blackcurrant Gose,Grodziskie/Gose/Lichtenhainer,4.9,2.98,true
+wicklow wolf brewing company,Wicklow Wolf Zoso Smash IPA,India Pale Ale (IPA),5.2,3.23,true
+wicklow wolf brewing company,Wicklow Wolf The Sun Machine,Wheat Ale,6.0,3.03,true
+wicklow wolf brewing company,Wicklow Wolf Solar Eclipse Saison,Belgian Ale,6.5,3.25,true
+wicklow wolf brewing company,Wicklow Wolf Free Ranger IPA,India Pale Ale (IPA),6.3,3.17,true
+wicklow wolf brewing company,Wicklow Wolf Poles Apart South,India Pale Ale (IPA),5.6,3.07,true
+wicklow wolf brewing company,Wicklow Wolf A Beer Called Rwanda,Brown Ale,5.1,3.26,true
+wicklow wolf brewing company,Wicklow Wolf Bark &amp; Bite,India Pale Ale (IPA),9.0,3.18,true
+wicklow wolf brewing company,Wicklow Wolf Falconer's Flight Blonde,American Pale Ale,5.0,3.07,true
+wicklow wolf brewing company,Wicklow Wolf Brayvarian Dunkel,Dunkel/Tmavý,5.4,3.11,true
+rascals brewing co,Rascals Chardonnay Saison ,Saison,6.0,2.94,true
+rascals brewing co,Rascals Co Otherkin OK,India Pale Ale (IPA),6.0,3.15,true
+rascals brewing co,Rascals Rain Czech Pilsner,Czech Pilsner (Sv?tlý),5.0,3.13,true
+rascals brewing co,Rascals Project Sour #3 - Forest Fruit Sour,Sour/Wild Ale,5.3,2.98,true
+rascals brewing co,Molloys Fairy Ale of New York,American Pale Ale,5.0,3.0,true
+rascals brewing co,Rascals Project Sour #1 - The Hoppy One,Sour/Wild Ale,3.8,0.0,true
+rascals brewing co,Rascals Ginger Porter,Porter,4.8,3.1,true
+rascals brewing co,Rascals A Swingin' Affair Pale Ale,American Pale Ale,4.1,3.04,true
+rascals brewing co,Rascals Pinot Noir Brett Ale,Sour/Wild Ale,0.0,2.5,true
+rascals brewing co,Rascals Margarita Soured Not Shaken,Grodziskie/Gose/Lichtenhainer,4.5,2.93,true
+rascals brewing co,Rascals Something Witty,Witbier,4.0,2.98,true
+rascals brewing co,Rascals Pacific Secret,Saison,4.4,3.38,true
+rascals brewing co,Rascals Happy Days,Session IPA,4.1,3.11,true
+rascals brewing co,Rascals Yankee Doodle,Imperial IPA,7.5,3.07,true
+rascals brewing co,Rascals Chocolate &amp; Ginger Porter,Porter,4.8,2.94,true
+rascals brewing co,Rascals Big Red DIPA,Imperial IPA,8.5,3.36,true
+rascals brewing co,Rascals Flaming Red DIPA,Imperial IPA,8.5,3.29,true
+rascals brewing co,Rascals King Kumquat IPA,India Pale Ale (IPA),5.6,3.11,true
+rascals brewing co,Rascals Swankee White IPA,India Pale Ale (IPA),5.0,2.5,true
+rascals brewing co,Rascals Holy Schmidt,American Pale Ale,4.5,3.24,true
+rascals brewing co,Rascals Yankee White IPA,India Pale Ale (IPA),5.0,3.44,true
+rascals brewing co,Rascals Project Sour #4 Blood Orange Sour,Sour/Wild Ale,5.5,3.12,true
+rascals brewing co,Rascals Chardonnay Saison Barrel Aged,Saison,6.3,3.11,true
+rascals brewing co,Rascals Chardonnay White Ale,Witbier,5.5,0.0,true
+rascals brewing co,Rascals Wunderbar,India Pale Ale (IPA),6.0,3.38,true
+rascals brewing co,Rascals Strawberry Vanilla Shake,India Pale Ale (IPA),5.0,3.35,true
+rascals brewing co,Rascals Sneaky Beak,Session IPA,4.1,3.15,true
+rascals brewing co,Rascals Big Hop Red,Amber Ale,5.0,3.38,true
+rascals brewing co,Rascals 8:01,Sweet Stout,6.0,3.3,true
+rascals brewing co,Rascals Wit Woo,Witbier,4.0,3.15,true
+rascals brewing co,Rascals Kiwi Pale Ale,American Pale Ale,4.6,2.81,true
+rascals brewing co,Rascals Milkshake Stout,Stout,5.6,3.33,true
+rascals brewing co,Rascals Vacuum Boogie,India Pale Ale (IPA),6.3,3.36,true
+rascals brewing co,Rascals Brewtonic Weisse Guys,German Hefeweizen,6.0,3.18,true
+rascals brewing co,Rascals Planet of the Apricots,American Pale Ale,5.0,3.31,true
+rascals brewing co,Rascals Project Sour #2 - Seriously Saison ,Sour/Wild Ale,5.5,2.98,true
+rascals brewing co,Rascals Seven New England IPA,India Pale Ale (IPA),7.0,3.12,true
+rascals brewing co,Rascals New England IPA Seven,India Pale Ale (IPA),7.0,3.02,true
+rascals brewing co,Rascals Foggy Juice ,India Pale Ale (IPA),6.2,3.43,true
+rascals brewing co,Rascals Flanders Red,Belgian Strong Ale,7.5,3.0,true
+rascals brewing co,Rascals Bourbon Milkshake Stout,Sweet Stout,6.0,3.37,true
+james brown brews,James Brown Brews Semantic Pale Ale,American Pale Ale,4.5,2.96,true
+james brown brews,James Brown Brews Wayward Cloud,Session IPA,4.5,2.77,true
+james brown brews,James Brown Brews Rhubarb Tart IPA,India Pale Ale (IPA),7.0,3.06,true
+james brown brews,James Brown Brews Wayward Sun,American Pale Ale,4.5,3.03,true
+james brown brews,James Brown Brews Chocolate Orange Stout,Stout,5.0,3.2,true
+jack doyles,Jack Doyles Premium Stout,Dry Stout,4.2,3.0,true
+jack doyles,Jack Doyles Proper Order,Golden Ale/Blond Ale,4.2,2.91,true
+whiplash,Whiplash Surrender To The Void,Imperial IPA,8.5,3.6,true
+whiplash,Whiplash Body Riddle,American Pale Ale,4.5,3.44,true
+whiplash,Whiplash High Cotton,Fruit Beer,5.6,3.38,true
+whiplash,Whiplash Swoon,Imperial IPA,8.0,3.72,true
+whiplash,Whiplash Fatal Deviation,Imperial Stout,10.0,3.73,true
+whiplash,Whiplash / Beerbliotek What Else Is New?,Abt/Quadrupel,9.0,3.32,true
+whiplash,Whiplash True Love Waits,Pilsener,5.0,3.19,true
+whiplash,Whiplash Bone Machine,India Pale Ale (IPA),6.2,3.7,true
+whiplash,Whiplash / Otterbank Farami,Stout,6.5,3.43,true
+whiplash,Whiplash Embrace The Daylight,Black IPA,6.3,3.53,true
+whiplash,Whiplash Suckerpin,Berliner Weisse,3.2,3.16,true
+whiplash,Whiplash Let It Happen ,Imperial IPA,8.0,3.68,true
+whiplash,Whiplash Rollover,Session IPA,3.8,3.53,true
+whiplash,Whiplash Drone Logic,Imperial IPA,8.0,3.42,true
+whiplash,Whiplash Saturate,Imperial IPA,8.0,3.24,true
+whiplash,Whiplash Scaldy Split,India Pale Ale (IPA),6.5,3.44,true
+whiplash,Whiplash Scaldy Porter,Porter,5.5,3.31,true
+whiplash,Whiplash Northern Lights,Session IPA,2.8,3.57,true
+whiplash,Whiplash / Galway Bay Gravity’s Rainbow,Imperial IPA,9.0,3.68,true
+whiplash,Whiplash Fantasm Planes,American Pale Ale,5.5,3.53,true
+whiplash,Whiplash Since I've Been Loving You,Imperial IPA,8.2,3.3,true
+carlow,Carlow O'Hara's Hop Adventure Aramis,India Pale Ale (IPA),5.0,3.05,true
+carlow,Carlow Falling Apple (Dry Hopped),Cider,5.0,0.0,true
+carlow,Carlow O'Hara's 20th Anniversary Imperial Stout,Imperial Stout,10.0,3.55,true
+carlow,Carlow O'Hara's Freebird White IPA,Wheat Ale,5.0,3.23,true
+carlow,Buckley's Ale,Golden Ale/Blond Ale,4.2,2.98,true
+carlow,Carlow O'Hara's French Connection,Pale Lager,4.2,2.63,true
+carlow,Dooliner Irish Lager,Pale Lager,0.0,1.0,true
+carlow,Carlow Curim Unfiltered,Wheat Ale,4.3,2.82,true
+carlow,Carlow Slaney Lager,Pale Lager,4.0,2.83,true
+carlow,Carlow Falling Apple Seasonal Fruit Cider,Cider,5.0,0.0,true
+carlow,Carlow O'Hara's Christmas Velvet,Stout,6.0,2.5,true
+carlow,Carlow O'Hara's Dunkelweizen,Dunkelweizen,5.0,2.93,true
+carlow,Carlow Falling Apple,Cider,5.0,2.77,true
+carlow,Carlow O'Hara's Notorious Red IPA,India Pale Ale (IPA),5.0,3.19,true
+carlow,Carlow O'Hara's Irish Red,Irish Ale,4.3,3.06,true
+carlow,Carlow O'Hara's Irish Stout,Dry Stout,4.3,3.36,true
+carlow,Carlow O'Hara's 'Opsession,Session IPA,4.0,3.09,true
+carlow,Carlow O'Hara's 51st State IPA,India Pale Ale (IPA),6.0,3.17,true
+carlow,Carlow Strong Stout,Dry Stout,6.0,2.5,true
+carlow,Carlow O'Hara's Hop Heavy IPA,India Pale Ale (IPA),5.5,3.3,true
+carlow,Carlow Falling Apple Barrel Aged Cider,Cider,5.8,0.0,true
+carlow,Carlow Curim Gold,German Kristallweizen,4.3,2.77,true
+carlow,Carlow O'Hara's Hop Adventure Sorachi Ace,India Pale Ale (IPA),5.0,2.83,true
+carlow,Carlow F.X. Buckley Golden Ale,Bitter,3.8,2.5,true
+carlow,Carlow O'Hara's Leann Folláin,Dry Stout,6.0,3.59,true
+carlow,Carlow Moling's Traditional Red Ale,Irish Ale,4.3,2.5,true
+carlow,Carlow O'Hara's Amber Adventure,Amber Ale,4.1,3.09,true
+carlow,Carlow O'Hara's Festhalten,German Hefeweizen,5.0,0.0,true
+carlow,Carlow O'Hara's Winter Star,Spice/Herb/Vegetable,5.0,3.01,true
+carlow,Carlow Moling's Traditional Celtic Beer,Irish Ale,4.3,2.5,true
+carlow,Carlow O'Hara's Irish Pale Ale,American Pale Ale,5.2,3.22,true
+carlow,Carlow O'Hara's Irish Lager Helles Style,Dortmunder/Helles,4.5,2.8,true
+carlow,Carlow O'Hara's Wild Side,Barley Wine,9.6,2.86,true
+carlow,Carlow O'Hara's Hop Adventure Galaxy ,American Pale Ale,5.0,3.17,true
+carlow,Carlow O’Hara’s Hop Central,India Style Lager,4.0,3.04,true
+carlow,Pinta / O'Hara's Lublin to Dublin 2016,Foreign Stout,7.0,3.71,true
+carlow,Carlow O'Hara's Celtic Stout,Dry Stout,4.3,2.5,true
+carlow,Carlow O'Hara's Grapefruit IPA,India Pale Ale (IPA),5.0,0.0,true
+carlow,Carlow O'Hara's Barrel Aged Red,Irish Ale,5.8,0.0,true
+carlow,Carlow O'Hara's Wild Side Sour Cherry,Sour/Wild Ale,4.1,3.0,true
+carlow,Carlow O'Hara's Northern Star,Spice/Herb/Vegetable,4.3,2.5,true
+carlow,Carlow O'Hara's Natural Blonde,Golden Ale/Blond Ale,4.3,3.11,true
+carlow,Carlow O'Hara's Barrel Aged Series Barley Wine,Barley Wine,9.6,3.29,true
+carlow,Carlow O'Hara's Double IPA,Imperial IPA,7.5,3.33,true
+carlow,Carlow O'Hara's Dry Hopped Irish Red,Irish Ale,4.3,2.5,true
+carlow,Carlow O'Hara's Hop Adventure Styrian Wolf Hop,India Pale Ale (IPA),5.0,3.32,true
+carlow,Carlow O'Hara's Stormburst IPA,India Pale Ale (IPA),5.0,2.79,true
+carlow,Carlow O'Hara's Barrel Aged Series Leann Folláin (Irish Whiskey),Foreign Stout,8.1,3.54,true
+arthurstown brewing co,Arthurstown Hook NEIPA,India Pale Ale (IPA),6.0,3.06,true
+arthurstown brewing co,Arthurstown Rum &amp; Oak Aged Porter,Porter,5.7,3.22,true
+arthurstown brewing co,Arthurstown 1916 Proclamation Porter,Porter,5.0,3.32,true
+arthurstown brewing co,Arthurstown Pilsner,Pilsener,4.8,3.06,true
+arthurstown brewing co,Kevin Dundon's Kings Bay Irish Red Ale,Irish Ale,4.7,3.05,true
+arthurstown brewing co,Arthurstown Hook Baltic,Baltic Porter,8.0,3.19,true
+arthurstown brewing co,Arthurstown Hook Collab,Spice/Herb/Vegetable,4.4,2.95,true
+arthurstown brewing co,Kevin Dundons King's Bay Strawberry Lager,Fruit Beer,4.8,2.7,true
+arthurstown brewing co,Arthurstown Dunbrody Red,Irish Ale,4.7,3.01,true
+arthurstown brewing co,Kevin Dundon's Kings Bay Maple Ale,Amber Ale,4.4,2.65,true
+arthurstown brewing co,Arthurstown Hook Pilsener,Pilsener,4.8,2.98,true
+arthurstown brewing co,Arthurstown Oak-A-Cola Red Ale,Spice/Herb/Vegetable,4.7,2.91,true
+arthurstown brewing co,Arthurstown Dunbrody Pale Ale,American Pale Ale,4.7,3.15,true
+arthurstown brewing co,Kevin Dundon's Kings Bay Irish Pale Ale,American Pale Ale,4.7,3.15,true
+arthurstown brewing co,Arthurstown Amber IPA,India Pale Ale (IPA),7.0,3.13,true
+arthurstown brewing co,Arthurstown American IPA,India Pale Ale (IPA),6.0,3.0,true
+arthurstown brewing co,Arthurstown Hook Amber ,Amber Ale,5.0,0.0,true
+st mels brewing,St. Mel's Brewing Pale Ale,American Pale Ale,4.8,2.9,true
+st mels brewing,St. Mel's IPA,India Pale Ale (IPA),5.2,2.9,true
+st mels brewing,St. Mel's A New Dawn,Black IPA,5.5,3.21,true
+st mels brewing,St. Mel's Spring Bock,Dunkler Bock,5.4,2.91,true
+st mels brewing,St. Mel's Brewing Brown Ale,Brown Ale,5.2,3.26,true
+st mels brewing,St. Mel's Helles Lager,Dortmunder/Helles,5.0,3.07,true
+st mels brewing,St. Mel's Raisin &amp; Oatmeal Stout,Stout,4.5,3.33,true
+sullivans,Maltings Irish Ale (export strength),Irish Ale,5.0,0.0,true
+sullivans,Maltings Red Ale,Irish Ale,4.0,3.18,true
+sullivans,Sullivans Tap Room Brew Series Barleyeine,Barley Wine,7.0,2.92,true
+elbow lane brewhouse,Elbow Lane ,Amber Lager/Vienna,4.4,0.0,true
+elbow lane brewhouse,Elbow Lane Jawbone Pale Ale,Golden Ale/Blond Ale,5.0,0.0,true
+elbow lane brewhouse,Elbow Lane Angel Stout,Dry Stout,5.0,3.09,true
+elbow lane brewhouse,Elbow Lane Arrow Weisse,German Hefeweizen,5.0,2.95,true
+elbow lane brewhouse,Elbow Lane Liberty Porter,Porter,4.4,0.0,true
+elbow lane brewhouse,Elbow Lane Wisdom Ale,Irish Ale,5.2,2.9,true
+elbow lane brewhouse,Elbow Lane Elbow Lager,Pale Lager,4.4,2.9,true
+hardy bucks,Hardy Bucks Craft Irish Lager,Pale Lager,4.3,2.62,true
+n17,N17 Summer Ale,Golden Ale/Blond Ale,5.0,2.96,true
+n17,N17 Chili Porter,Porter,4.5,3.27,true
+n17,N17 Oatmeal Stout,Stout,6.0,3.57,true
+n17,N17 Rye Ale,Specialty Grain,5.0,3.11,true
+four provinces,Four Provinces Válsa,Amber Lager/Vienna,5.2,2.94,true
+four provinces,Four Provinces The Hurler,Bitter,4.2,3.16,true
+four provinces,Four Provinces Torc Fiáin,Imperial IPA,7.5,2.79,true
+four provinces,Four Provinces The Piper,India Pale Ale (IPA),5.0,3.1,true
+white gypsy shelta beer co,White Gypsy Edelweiss,Dunkelweizen,5.0,3.0,true
+white gypsy shelta beer co,White Gypsy Emerald Irish Pale Ale,Golden Ale/Blond Ale,5.0,2.89,true
+white gypsy shelta beer co,White Gypsy A Winters Ale,Belgian Ale,5.2,2.64,true
+white gypsy shelta beer co,White Gypsy Oktoberfest ,Oktoberfest/Märzen,4.4,2.83,true
+white gypsy shelta beer co,White Gypsy Dubhain,Dry Stout,5.2,3.1,true
+white gypsy shelta beer co,White Gypsy Woodcock,Golden Ale/Blond Ale,5.0,3.02,true
+white gypsy shelta beer co,White Gypsy Harvest Ale,Oktoberfest/Märzen,5.8,3.02,true
+white gypsy shelta beer co,White Gypsy Slo-Ale,Golden Ale/Blond Ale,5.8,2.9,true
+white gypsy shelta beer co,White Gypsy Dark Lady,Dunkel/Tmavý,5.2,3.22,true
+white gypsy shelta beer co,White Gypsy Pearl Stout,Stout,4.2,2.89,true
+white gypsy shelta beer co,White Gypsy Belgian Dubbel,Abbey Dubbel,8.0,3.12,true
+white gypsy shelta beer co,White Gypsy Scarlet,Sour Red/Brown,5.0,3.34,true
+white gypsy shelta beer co,White Gypsy Humdinger ,Golden Ale/Blond Ale,5.0,2.92,true
+white gypsy shelta beer co,White Gypsy Viktor,Czech Pilsner (Sv?tlý),4.3,2.95,true
+white gypsy shelta beer co,White Gypsy American Pale Ale,American Pale Ale,7.5,3.36,true
+white gypsy shelta beer co,White Gypsy Cream Ale,Cream Ale,5.6,2.92,true
+white gypsy shelta beer co,White Gypsy Oak Aged IPA,Sour/Wild Ale,5.0,2.97,true
+white gypsy shelta beer co,White Gypsy Rouge,Irish Ale,4.0,3.05,true
+white gypsy shelta beer co,White Gypsy Russian Imperial Stout,Imperial Stout,7.0,3.4,true
+white gypsy shelta beer co,White Gypsy Old Smoke Irish Stout,Stout,5.2,3.32,true
+white gypsy shelta beer co,White Gypsy Helles,Dortmunder/Helles,4.2,3.14,true
+white gypsy shelta beer co,White Gypsy Rye Weisse ,German Hefeweizen,5.2,2.98,true
+white gypsy shelta beer co,White Gypsy Brunette,Dunkel/Tmavý,5.0,2.91,true
+white gypsy shelta beer co,White Gypsy German Doppelbock,Doppelbock,7.5,3.15,true
+white gypsy shelta beer co,White Gypsy Bock,Heller Bock,5.8,3.04,true
+white gypsy shelta beer co,White Gypsy Carden's Wild Ale,Sour/Wild Ale,5.0,2.92,true
+white gypsy shelta beer co,White Gypsy Obelix,Belgian Strong Ale,8.0,2.77,true
+white gypsy shelta beer co,White Gypsy Dark Night,Porter,5.7,2.92,true
+white gypsy shelta beer co,White Gypsy Ruby,Irish Ale,4.6,3.17,true
+white gypsy shelta beer co,White Gypsy Yule Ól,Irish Ale,6.0,2.98,true
+white gypsy shelta beer co,White Gypsy Amber Ale,Amber Ale,5.0,3.27,true
+white gypsy shelta beer co,White Gypsy Vardo,Witbier,6.2,3.11,true
+white gypsy shelta beer co,White Gypsy The Banker,German Hefeweizen,5.0,3.0,true
+white gypsy shelta beer co,White Gypsy Blond,German Hefeweizen,4.0,3.26,true
+kinsale,Kinsale Williams Wheat,Witbier,4.3,3.1,true
+jjs,JJ's Abbey Stout,Dry Stout,4.2,2.88,true
+jjs,JJ's Balbec IPA,India Pale Ale (IPA),6.0,2.97,true
+jjs,JJ's Hugo's Pils,Pilsener,4.2,2.87,true
+kerry brewing,Kerry Gnéas Dingle IPA ,India Pale Ale (IPA),6.0,2.83,true
+kerry brewing,Kerry Gnéas Dingle Stout Porter,Porter,4.8,2.95,true
+kerry brewing,Kerry Gnéas Dingle Pale Ale,American Pale Ale,4.2,3.24,true
+kerry brewing,Kerry Gnèas Dublin Dark Ale,Mild Ale,4.2,2.84,true
+west mayo brewery,West Mayo Clew Bay Sunset,Irish Ale,0.0,7.0,true
+west mayo brewery,West Mayo 3C (Clifford's Connacht Champion),Golden Ale/Blond Ale,0.0,7.0,true
+west mayo brewery,West Mayo 3P (Paddy's Pilgrims Porter),Porter,0.0,1.0,true
+west mayo brewery,West Mayo Gráinne Úaile Atlantic Ale,Brown Ale,4.0,2.92,true
+galway hooker brewery,Galway Hooker Ban Weiss,German Hefeweizen,4.0,2.8,true
+galway hooker brewery,Galway Hooker Irish Stout,Stout,4.5,3.39,true
+galway hooker brewery,Galway Hooker Sixty Knots IPA,India Pale Ale (IPA),6.5,3.07,true
+galway hooker brewery,Galway Hooker Alt Fact,Dunkelweizen,4.8,3.15,true
+galway hooker brewery,Galway Hooker Irish Coffee Porter,Porter,5.5,3.13,true
+galway hooker brewery,Tigh Neachtain’s Nectar Ale,American Pale Ale,4.5,2.85,true
+galway hooker brewery,Galway Hooker Irish Dark Lager,Dunkel/Tmavý,4.3,2.84,true
+galway hooker brewery,Galway Hooker DIPA,Imperial IPA,8.6,3.4,true
+galway hooker brewery,Galway Hooker Irish Pale Ale,American Pale Ale,4.3,3.17,true
+galway hooker brewery,The Kings Head Blood Red Ale,Irish Ale,4.3,2.7,true
+galway hooker brewery,Galway Hooker Amber Lager,Amber Lager/Vienna,4.3,2.5,true
+hope beer,Hope Beer Limited Edition No.7 Tropical IPA,India Pale Ale (IPA),6.5,3.21,true
+hope beer,Hope Beer Limited Edition No.9 Vienna Oatmeal IPA,India Pale Ale (IPA),5.0,3.17,true
+hope beer,Hope Beer Summer Session IPA 2017,India Pale Ale (IPA),4.5,3.2,true
+hope beer,Hope Beer Grunt,Saison,4.7,3.28,true
+hope beer,Hope Beer / YellowBelly Limited Edition No.3 Peach &amp; Blueberry Sour,Sour/Wild Ale,4.5,3.38,true
+hope beer,Hope Beer Limited Edition No.10 Flat White Stout,Sweet Stout,6.0,3.07,true
+hope beer,Hope Beer Limited Edition No.2 Unfiltered Lager,Zwickel/Keller/Landbier,5.0,3.04,true
+hope beer,Hope Beer Limited Edition No.1 Session IPA,Session IPA,4.3,3.13,true
+hope beer,Hope Beer / Dot Brew Limited Edition No. 8 Imperial Stout,Imperial Stout,9.5,3.34,true
+hope beer,Hope Beer Handsome Jack,India Pale Ale (IPA),7.4,3.24,true
+hope beer,Hope Beer Limited Edition No.4 Export Stout,Foreign Stout,7.5,3.44,true
+hope beer,Hope Beer Limited Edition No.6 Tropical Sour,Sour/Wild Ale,4.5,3.14,true
+hope beer,Hope Beer Winter Session IPA,Session IPA,4.5,3.21,true
+hope beer,McHughs / Hope Beer Roadtrip #4,India Pale Ale (IPA),5.5,3.09,true
+hope beer,Hope Beer Underdog,Premium Lager,4.8,3.17,true
+hope beer,Hope Beer Limited Edition No.5 Oatmeal IPA,India Pale Ale (IPA),5.0,3.24,true
+hope beer,Hope Beer Passifyoucan,Golden Ale/Blond Ale,5.2,3.02,true
+brown paper bag project,Brown Paper Bag Project / Kompaan Black Coffee IPA,Black IPA,6.0,3.54,true
+brown paper bag project,Brown Paper Bag Project Howrye ,Specialty Grain,10.0,3.2,true
+brown paper bag project,Brown Paper Bag Project Pale Ale,American Pale Ale,5.4,2.9,true
+brown paper bag project,Fano Bryghus/ Brown Paper Bag Project Gøse,Grodziskie/Gose/Lichtenhainer,5.8,2.5,true
+brown paper bag project,Brown Paper Bag Project Lupe Garou,Premium Bitter/ESB,6.5,3.1,true
+brown paper bag project,Brown Paper Bag Project Aul Bruin Bagger,Sour Red/Brown,6.4,3.57,true
+brown paper bag project,Brown Paper Bag Project Peppercorn Rye,Spice/Herb/Vegetable,4.8,2.85,true
+carrig brewing co,Carrig Coalface Zest,Black IPA,5.5,3.09,true
+carrig brewing co,Carrig Winter Beer,English Strong Ale,6.5,2.91,true
+carrig brewing co,Leanna Rua IPA,American Pale Ale,4.7,2.94,true
+carrig brewing co,Carrig Imperial IPA,Imperial IPA,8.8,2.89,true
+carrig brewing co,Carrig Pipers Pale Ale,American Pale Ale,4.4,2.72,true
+carrig brewing co,Carrig Coalface Black IPA,Black IPA,5.5,3.26,true
+carrig brewing co,Carrig Rowers Red Ale,Irish Ale,4.3,2.81,true
+carrig brewing co,Carrig Gamechanger,Irish Ale,6.5,0.0,true
+carrig brewing co,Carrig Grand Soft Day,American Pale Ale,4.2,2.95,true
+carrig brewing co,Carrig Poachers Pale Ale,American Pale Ale,4.7,3.11,true
+carrig brewing co,Carrig Finest Irish Craft Lager,Pale Lager,4.3,2.89,true
+carrig brewing co,Carrig Summer Daze,German Hefeweizen,4.3,2.83,true
+carrig brewing co,Carrig Iron Mountain Stout,Dry Stout,4.5,2.92,true
+carrig brewing co,Carrig Craft Feile Sprsoi,Witbier,5.2,0.0,true
+carrig brewing co,Carrig Craft Shepherds Delight,Amber Ale,4.7,0.0,true
+carrig brewing co,Carrig Brazen Amber Ale,Amber Ale,4.2,2.8,true
+carrig brewing co,Carrig Pilsener ,Pilsener,4.8,2.84,true
+carlingford,Carlingford Barrel Aged Series Red Ale,Irish Ale,7.5,2.96,true
+carlingford,Carlingford Taaffe's Red,Irish Ale,4.8,2.99,true
+carlingford,Carlingford Irish Brown,Brown Ale,5.3,3.14,true
+carlingford,Carlingford Tholsel Blonde,Belgian Ale,5.0,3.14,true
+carlingford,Carlingford Friary Pale Ale,Golden Ale/Blond Ale,4.6,2.75,true
+dick macks brewhouse,Dick Mack's Session IPA,Session IPA,4.6,3.09,true
+dick macks brewhouse,Dick Mack's Coffee Stout,Stout,4.2,0.0,true
+dick macks brewhouse,Dick Mack's Amber Ale,Amber Lager/Vienna,4.6,3.06,true
+otterbank,Otterbank 2016 Golden Sour Oak Aged,Sour/Wild Ale,6.2,3.19,true
+otterbank,Otterbank 2016 Golden Sour Oak Fermented,Sour/Wild Ale,4.9,3.12,true
+otterbank,Otterbank Beta Barrel II Golden Sour (BA),Sour/Wild Ale,4.4,3.11,true
+otterbank,Otterbank Brett Trois Stout,Imperial Stout,9.9,3.25,true
+otterbank,Otterbank Brett Brux Stout,Imperial Stout,9.9,3.38,true
+otterbank,Otterbank Brewing - This Is Berlin #1,Berliner Weisse,4.6,3.09,true
+otterbank,Otterbank Blackcurrant Farmhouse,Bière de Garde,6.5,0.0,true
+otterbank,Otterbank Brewing - This Is Berlin #2 "The Vikings Are Coming",Berliner Weisse,4.9,3.15,true
+otterbank,Otterbank Beta Barrel 1 - Chardonnay Barrel Aged Golden Belgian Sour,Sour/Wild Ale,4.5,3.25,true
+brehon brewhouse,Brehon Brehon Rising 1916-2016 Special Commemorative Stout,Imperial Stout,10.0,3.25,true
+brehon brewhouse,Brehon Brehon Rising Oatmeal Stout,Stout,5.0,3.0,true
+brehon brewhouse,Brehon Crann Beatha,Imperial Stout,10.0,3.09,true
+brehon brewhouse,Brehon Drumlin,American Pale Ale,4.6,2.91,true
+brehon brewhouse,Brehon Killanny Red,Irish Ale,4.5,3.16,true
+brehon brewhouse,Brehon Fiesta,Golden Ale/Blond Ale,4.7,3.09,true
+brehon brewhouse,Brehon Shanco Dubh,Imperial Porter,7.7,3.63,true
+brehon brewhouse,Brehon Stony Grey IPA,India Pale Ale (IPA),6.0,3.16,true
+brehon brewhouse,Brehon Ulster Black Oatmeal Stout,Dry Stout,5.0,3.36,true
+brehon brewhouse,Brehon Blonde,Golden Ale/Blond Ale,4.3,2.94,true
+brehon brewhouse,Brehon Summer Ale,Amber Ale,4.6,3.1,true
+torc,Torc Expedition Ale Irish Red,Irish Ale,4.3,2.87,true
+torc,Torc India Pale Ale No. 1,India Pale Ale (IPA),7.2,3.01,true
+torc,Torc Wheat Beer,Wheat Ale,4.2,3.02,true
+torc,Torc Kingdom Porter,Porter,5.1,3.07,true
+torc,Torc Anything Gose,Grodziskie/Gose/Lichtenhainer,4.0,2.97,true
+torc,Torc Irish American Pale Ale,American Pale Ale,4.3,3.02,true
+torc,Torc Smoked German Ale,Smoked,6.0,3.14,true
+torc,Torc Amber Ale,Amber Ale,4.3,2.99,true
+torc,Torc 5 Malt Dark,Porter,4.5,3.03,true
+eight degrees brewing,Eight Degrees The Holly King,Imperial Stout,9.8,3.39,true
+eight degrees brewing,Eight Degrees Single Hop Series Citra,India Pale Ale (IPA),5.7,3.42,true
+eight degrees brewing,Eight Degrees Single Hop Series Galaxy,India Pale Ale (IPA),5.7,3.32,true
+eight degrees brewing,Eight Degrees Big River,India Pale Ale (IPA),5.3,3.55,true
+eight degrees brewing,Eight Degrees Grand Stretch,Session IPA,4.0,3.51,true
+eight degrees brewing,Eight Degrees The Bold Imperial Stout,Imperial Stout,9.9,3.62,true
+eight degrees brewing,Eight Degrees Oxymoron,Witbier,6.2,3.23,true
+eight degrees brewing,Eight Degrees Signal,Foreign Stout,6.0,3.1,true
+eight degrees brewing,Eight Degrees Sunburnt Irish Red,Irish Ale,5.0,3.19,true
+eight degrees brewing,Eight Degrees The Good Barley Wine,Barley Wine,10.9,3.2,true
+eight degrees brewing,Eight Degrees Going Out Out Kolsch,Kölsch,4.5,2.83,true
+eight degrees brewing,Eight Degrees Nailed It,India Pale Ale (IPA),5.8,3.44,true
+eight degrees brewing,Eight Degrees The Oak King,Belgian Ale,6.5,3.3,true
+eight degrees brewing,Eight Degrees Berliner Weisse ,Berliner Weisse,3.1,3.23,true
+eight degrees brewing,Eight Degrees Polar Vortex,India Pale Ale (IPA),5.8,3.36,true
+eight degrees brewing,Eight Degrees Nomad India Pale Lager,India Style Lager,5.0,3.58,true
+eight degrees brewing,Eight Degrees Wayfarer,Sour/Wild Ale,4.0,3.15,true
+eight degrees brewing,Eight Degrees Summer Days,Session IPA,4.5,3.47,true
+eight degrees brewing,Eight Degrees Supernova,Imperial IPA,8.0,3.33,true
+eight degrees brewing,Eight Degrees Vic Secret,Black IPA,6.0,3.56,true
+eight degrees brewing,Eight Degrees Bandit,Brown Ale,6.0,3.39,true
+eight degrees brewing,Eight Degrees Cumulus Lupulus,India Pale Ale (IPA),7.2,3.29,true
+eight degrees brewing,Eight Degrees Single Hop Series Amarillo ,India Pale Ale (IPA),5.7,3.36,true
+eight degrees brewing,Eight Degrees Single Hop Series Denali,India Pale Ale (IPA),5.7,3.06,true
+eight degrees brewing,Eight Degrees Single Hop Series Mandarina Bavaria,India Pale Ale (IPA),5.7,3.29,true
+eight degrees brewing,Eight Degrees Gasman Rye IPA,Imperial IPA,7.8,3.43,true
+eight degrees brewing,Eight Degrees No Way Gose,Grodziskie/Gose/Lichtenhainer,4.8,3.19,true
+eight degrees brewing,Eight Degrees Knockmealdown Irish Stout,Stout,5.0,3.51,true
+eight degrees brewing,Eight Degrees Howling Gale Ale,American Pale Ale,5.0,3.26,true
+eight degrees brewing,Eight Degrees Knockmealdown Porter,Porter,5.0,3.35,true
+eight degrees brewing,Eight Degrees Citra ,India Pale Ale (IPA),5.7,3.04,true
+eight degrees brewing,Eight Degrees Enigma Pale Ale,American Pale Ale,6.0,3.36,true
+eight degrees brewing,Eight Degrees Mòr,Barley Wine,10.2,3.54,true
+eight degrees brewing,Eight Degrees Snow Eater,India Pale Ale (IPA),6.2,3.5,true
+eight degrees brewing,Eight Degrees The Fearless Farmhouse Ale,Saison,6.4,3.47,true
+eight degrees brewing,Eight Degrees Single Hop Series Lemondrop,India Pale Ale (IPA),5.7,3.13,true
+eight degrees brewing,Eight Degrees Amber Ella,Amber Ale,5.8,3.5,true
+eight degrees brewing,Eight Degrees Ochtoberfest Bock,Dunkler Bock,6.4,3.06,true
+eight degrees brewing,Eight Degrees / Drake´s Spruce Juice,Amber Ale,5.8,3.16,true
+eight degrees brewing,Eight Degrees Trans-Pacific,India Pale Ale (IPA),5.0,3.26,true
+eight degrees brewing,Eight Degrees The Full Irish,India Pale Ale (IPA),6.0,3.59,true
+eight degrees brewing,Eight Degrees / Terrapin Retribution ,Black IPA,6.2,3.27,true
+eight degrees brewing,Eight Degrees Barefoot Bohemian Pilsner Lager,Czech Pilsner (Sv?tlý),4.0,2.9,true
+eight degrees brewing,Eight Degrees Double Irish,Imperial IPA,9.0,3.43,true
+eight degrees brewing,Eight Degrees Monsoon,India Pale Ale (IPA),5.7,3.25,true
+eight degrees brewing,Eight Degrees Hurricane IPA (5.8%),India Pale Ale (IPA),5.8,3.59,true
+eight degrees brewing,Eight Degrees Millennium,Imperial IPA,10.0,3.6,true
+midlands beer collective,Midlands Beer Collective Brethren Brown,Brown Ale,6.7,3.14,true
+achill island brewery,Achill Dearg,Irish Ale,4.0,0.0,true
+achill island brewery,Achill Slainte,Kölsch,4.2,3.0,true
+rye river brewing company,Grafters IPA,India Pale Ale (IPA),6.5,3.26,true
+rye river brewing company,The Crafty Brewing Company Golden Fields,Saison,4.8,2.77,true
+rye river brewing company,McGargles Uncle Jim's Stout,Dry Stout,4.5,3.1,true
+rye river brewing company,McGargles Francis' Big Bangin' IPA,India Pale Ale (IPA),7.1,3.58,true
+rye river brewing company,McGargles Export Stout,Foreign Stout,6.0,3.38,true
+rye river brewing company,Grafter Small Batch Kolsch,Kölsch,5.0,2.95,true
+rye river brewing company,Mcgargles Little Bangin' IPA,Session IPA,3.8,3.25,true
+rye river brewing company,The Crafty Brewing Company Irish Pale Ale,American Pale Ale,4.5,3.38,true
+rye river brewing company,Solas Irish Red Ale,Irish Ale,4.1,2.61,true
+rye river brewing company,The Crafty Brewing Company Irish Red Ale,Irish Ale,4.1,2.73,true
+rye river brewing company,The Crafty Brewing Company Irish Stout,Stout,4.5,2.5,true
+rye river brewing company,The Crafty Brewing Company Irish Lager,Pale Lager,5.0,2.86,true
+rye river brewing company,Grafters Porter,Porter,5.4,3.24,true
+rye river brewing company,McGargles Ned's Retro IPA,India Pale Ale (IPA),6.5,2.96,true
+rye river brewing company,The Crafty Brewing Company American Style Pale Wheat Ale,Wheat Ale,5.0,3.45,true
+rye river brewing company,Mcgargles Extra Stout,Dry Stout,6.5,3.11,true
+rye river brewing company,Johnnie Fox's Pale Ale,American Pale Ale,4.5,3.04,true
+rye river brewing company,McGargles Toothless Decs Brown,Brown Ale,5.0,3.02,true
+rye river brewing company,Mcgargles Double Banging IPA,Imperial IPA,8.0,3.4,true
+rye river brewing company,McGargles Trader Tommy's Apple Cider,Cider,4.5,2.3,true
+rye river brewing company,McGargles Granny Mary's Red Ale,Irish Ale,4.4,2.93,true
+rye river brewing company,Rye River Belgian Imperial Stout,Imperial Stout,8.2,2.96,true
+rye river brewing company,Solas Irish Stout,Dry Stout,4.5,2.74,true
+rye river brewing company,Grafters Pale Ale,American Pale Ale,4.5,3.15,true
+rye river brewing company,Johnnie Fox's Lager,Pale Lager,4.5,2.94,true
+rye river brewing company,McGargles Fancy Franks Lager,Premium Lager,4.5,2.69,true
+rye river brewing company,McGargles Knock Knock Ned's India Pale Ale,India Pale Ale (IPA),6.5,2.5,true
+rye river brewing company,McGargles Cousin Rosie's Pale Ale,American Pale Ale,4.8,3.22,true
+rye river brewing company,The Crafty Brewing Company American style Brown Ale,Brown Ale,5.0,3.06,true
+rye river brewing company,The Crafty Brewing Company Irish IPA,India Pale Ale (IPA),6.0,3.41,true
+desmond son brewing,Desmond Irish Red Ale Gluten Free,Irish Ale,4.5,0.0,true
+desmond son brewing,Desmond Pale Ale Gluten Free,American Pale Ale,4.5,0.0,true
+desmond son brewing,Desmond Craft Lager Gluten Free,Pale Lager,4.5,2.62,true
+trouble brewing,Trouble Brewing Hardwired Oatmeal IPA,India Pale Ale (IPA),7.4,3.4,true
+trouble brewing,Trouble Voodoo Logic,Imperial Stout,10.1,3.47,true
+trouble brewing,Trouble Brewing Jack D' RIPA,Amber Ale,5.8,3.31,true
+trouble brewing,Trouble Brewing Big Bear Brown Ale,Brown Ale,6.0,3.15,true
+trouble brewing,Trouble Brewing Stakeout,Wheat Ale,5.4,3.42,true
+trouble brewing,Trouble Brewing Gate Crasher,Bitter,4.2,2.9,true
+trouble brewing,Trouble Brewing Centennial SMASH,Golden Ale/Blond Ale,4.8,3.36,true
+trouble brewing,Trouble Brewing Whistle Blower IPA,India Pale Ale (IPA),7.6,3.36,true
+trouble brewing,Trouble Brewing Fuzzy Logic,Wheat Ale,4.7,3.08,true
+trouble brewing,Trouble Get Schwifty,India Pale Ale (IPA),5.8,3.17,true
+trouble brewing,Trouble Neon Velvet,American Pale Ale,5.0,2.98,true
+trouble brewing,Trouble Brewing Quiet Riot,American Pale Ale,5.1,3.11,true
+trouble brewing,Trouble Protect Ya Neck,India Pale Ale (IPA),5.5,3.3,true
+trouble brewing,Trouble Space Juice,Imperial IPA,8.2,2.77,true
+trouble brewing,Trouble Brewing Crosswalk,India Pale Ale (IPA),5.8,3.19,true
+trouble brewing,Trouble Brewing Sidewalk Surfer,California Common,5.0,3.05,true
+trouble brewing,Trouble Brewing Ripcord,Amber Ale,4.7,3.14,true
+trouble brewing,Trouble Brewing Know Your Enemy,Imperial IPA,7.5,3.02,true
+trouble brewing,Trouble Brewing Sabotage IPA,India Pale Ale (IPA),5.5,3.2,true
+trouble brewing,Trouble Brewing Agent Provocateur (Red Rye),Specialty Grain,6.2,3.26,true
+trouble brewing,Trouble Brewing Ambush,American Pale Ale,5.01,3.2,true
+trouble brewing,Trouble Brewing The Grapefruit Express,India Pale Ale (IPA),5.7,2.94,true
+trouble brewing,Trouble Brewing Hidden Agenda,American Pale Ale,4.5,3.09,true
+trouble brewing,Trouble Brewing Fallen Idol,Black IPA,6.3,3.38,true
+trouble brewing,Trouble Dark Mild,Mild Ale,3.7,2.95,true
+trouble brewing,Trouble Brewing Spelt Saison,Saison,6.1,2.81,true
+trouble brewing,Trouble Brewing Ambush 2.0,American Pale Ale,5.01,3.33,true
+trouble brewing,Trouble Big Top Rye IPA,India Pale Ale (IPA),6.3,3.19,true
+trouble brewing,Trouble Brewing #Team Trouble,Amber Ale,4.9,3.09,true
+trouble brewing,Trouble Brewing Silk Road Saison,Saison,5.8,3.05,true
+trouble brewing,Trouble Brewing Pumpkin Brew,Spice/Herb/Vegetable,4.7,3.32,true
+trouble brewing,Trouble Brewing Fresh Prince of Kildare DIPA,Imperial IPA,9.0,3.38,true
+trouble brewing,Trouble Brewing Ripcord 2.0,Amber Ale,4.1,2.96,true
+trouble brewing,Trouble Brewing Hard Candy,Cream Ale,4.8,3.07,true
+trouble brewing,Trouble Brewing Deception Golden Ale,Golden Ale/Blond Ale,4.3,2.87,true
+trouble brewing,Trouble Brewing Mandarin Crash,Premium Lager,5.7,3.26,true
+trouble brewing,Trouble Brewing Oh Yeah! American Black Ale,Black IPA,5.8,3.15,true
+trouble brewing,Trouble Brewing Evil Robot,Amber Ale,5.0,3.21,true
+trouble brewing,Trouble Brewing The Grove Mango DIPA,Imperial IPA,7.5,3.12,true
+trouble brewing,Trouble Brewing Parklife,Premium Lager,4.2,2.98,true
+trouble brewing,Trouble Brewing/ Stillwater killwater,Berliner Weisse,3.8,3.22,true
+trouble brewing,Trouble Brewing Owl Day Pale Stout,Specialty Grain,6.1,3.14,true
+trouble brewing,Trouble Brewing Weisse City,Berliner Weisse,3.8,3.45,true
+trouble brewing,Trouble Brewing Dead Ringer,Black IPA,4.3,3.21,true
+trouble brewing,Trouble Brewing Graffiti,Session IPA,3.6,3.47,true
+trouble brewing,Trouble Brewing Wandering Star,Golden Ale/Blond Ale,5.3,2.99,true
+trouble brewing,Trouble Brewing/O Brother Blood Brother ,Black IPA,4.6,3.36,true
+trouble brewing,Trouble Brewing Panti's Pale Ale,American Pale Ale,4.5,2.96,true
+trouble brewing,Trouble Tasty McDole Collaboration West Coast Session IPA,Session IPA,5.2,3.13,true
+trouble brewing,Trouble Brewing Dash Away Cherry Chocolate Stout,Sweet Stout,5.7,3.3,true
+trouble brewing,Trouble Walk On The Mild Side,Mild Ale,3.7,2.93,true
+trouble brewing,Trouble Brewing Stagediver ,Amber Ale,5.6,3.05,true
+trouble brewing,Trouble Brewing Remix,India Style Lager,5.0,3.36,true
+trouble brewing,Trouble Brewing Beoir #2,American Strong Ale ,7.8,3.22,true
+trouble brewing,Trouble Brewing Black Flag,Schwarzbier,4.5,3.14,true
+trouble brewing,Trouble Brewing Vietnow,India Pale Ale (IPA),5.5,3.45,true
+trouble brewing,Trouble Brewing Chasing the Dragon,Imperial IPA,8.0,3.41,true
+trouble brewing,Trouble Brewing Last Crash Passion Fruit Lager,Pale Lager,4.9,3.3,true
+trouble brewing,Trouble Brewing Lazy Sunday Saison,Saison,6.1,3.05,true
+trouble brewing,Trouble Brewing Equinox SMASH,American Pale Ale,4.8,3.31,true
+trouble brewing,Trouble Brewing Kill Lager,Amber Lager/Vienna,4.9,3.23,true
+trouble brewing,Trouble Peanut Butter Jelly Time,Stout,5.4,3.35,true
+trouble brewing,Trouble Brewing Weisse City Raspberry,Berliner Weisse,3.8,3.36,true
+trouble brewing,Trouble Brewing Ór,Golden Ale/Blond Ale,4.3,2.5,true
+trouble brewing,Trouble Brewing Dark Arts Porter,Porter,4.4,3.46,true
+trouble brewing,Trouble Brewing Amber Avenger,Amber Ale,5.5,2.93,true
+trouble brewing,Trouble Brewing Vic Secret SMASH,Amber Ale,4.8,2.96,true
+trouble brewing,Trouble Brewing Ambush 3.0,American Pale Ale,5.02,3.34,true
+trouble brewing,Trouble Rum And Raisin,Abbey Dubbel,7.5,3.17,true
+trouble brewing,Trouble Brewing Alligator IPA,India Pale Ale (IPA),5.7,3.07,true
+trouble brewing,Trouble Brewing Gunslinger,India Pale Ale (IPA),6.8,3.19,true
+trouble brewing,Trouble Brewing Simcoe Smash,American Pale Ale,4.8,2.98,true
+trouble brewing,Trouble Brewing Gung-Ho Hopfenweisse ,Wheat Ale,5.1,3.18,true
+trouble brewing,Trouble Brewing Wired IPA,India Pale Ale (IPA),5.9,3.32,true
+trouble brewing,Trouble Brewing Sharpshooter ,Session IPA,3.7,3.02,true
+trouble brewing,Trouble Brewing / Coisbo Milk Stout,Sweet Stout,5.8,3.34,true
+burren brewery,Burren Blonde,Golden Ale/Blond Ale,0.0,2.0,true
+burren brewery,Burren Black,Dry Stout,4.5,3.2,true
+burren brewery,Burren Gold,Premium Lager,5.5,3.06,true
+burren brewery,Burren Red,Irish Ale,5.5,3.05,true
+dead centre brewing,Dead Centre Marooned,India Pale Ale (IPA),5.5,3.4,true
+dead centre brewing,Dead Centre sourcecode,American Pale Ale,4.0,3.0,true
+third barrel brewing,Third Barrel Consistently Different,India Pale Ale (IPA),6.8,3.0,true
+drew fox cleverman,Cleverman Atractor Beer,Kölsch,4.5,2.99,true
+drew fox cleverman,Cleverman Little Willie Tank,American Pale Ale,4.5,3.03,true
+drew fox cleverman,Cleverman 12ft Under,Amber Ale,4.5,2.96,true
+drew fox cleverman,Cleverman Ejector Seat,Smoked,4.5,3.42,true
+killarney brewing company,Killarney Casey Bro's Stout,Dry Stout,5.0,3.07,true
+killarney brewing company,Killarney Spailpín Saison,Saison,5.8,3.01,true
+killarney brewing company,Killarney Brazen Banshee,Oktoberfest/Märzen,5.5,3.09,true
+killarney brewing company,Killarney Devil's Helles Lager,Dortmunder/Helles,4.2,3.2,true
+killarney brewing company,Killarney Winter Solstice (Christmas in Kilarney),Irish Ale,6.5,2.99,true
+killarney brewing company,Killarney Scarlet Pimpernel IPA,India Pale Ale (IPA),5.8,3.56,true
+killarney brewing company,Killarney Golden Spear Blonde Ale,Golden Ale/Blond Ale,4.8,2.98,true
+the magic hill brewery,Magic Hill Windy Gap Ale,Amber Ale,4.0,2.91,true
+two sides brewing co,Two Sides Big Mistake,India Pale Ale (IPA),6.5,0.0,true
+two sides brewing co,Two Sides Le Rubis,Amber Ale,5.5,3.0,true
+two sides brewing co,Two Sides Wakey Wakey,Porter,5.0,3.33,true
+two sides brewing co,Two Sides 620,American Pale Ale,4.5,3.27,true
+boyne brewhouse,Boyne Vienna Lager,Amber Lager/Vienna,5.0,2.97,true
+boyne brewhouse,Boyne American Pale Ale,American Pale Ale,4.5,3.22,true
+boyne brewhouse,Boyne Session IPA,Session IPA,4.0,3.18,true
+boyne brewhouse,Boyne Brewhouse Long Arm Dortmunder,Dortmunder/Helles,4.8,3.05,true
+boyne brewhouse,Boyne Brewhouse Imperial Stout Bourbon,Imperial Stout,10.8,3.3,true
+boyne brewhouse,Boyne Brewhouse Imperial Stout Sherry,Imperial Stout,10.8,3.64,true
+boyne brewhouse,Boyne Brewhouse Pagan's Pillar Sparkling Copper Ale,Irish Ale,4.8,3.11,true
+boyne brewhouse,Boyne IPA ,India Pale Ale (IPA),6.8,3.26,true
+boyne brewhouse,Boyne Oatmeal Stout,Stout,6.2,3.24,true
+boyne brewhouse,Boyne Brewhouse Pilot Series : Raspberry Sour,Sour Red/Brown,5.0,3.02,true
+boyne brewhouse,Boyne Brewhouse Imperial Saison ,Saison,7.8,3.16,true
+boyne brewhouse,Boyne Brewhouse Born in a Day APA,American Pale Ale,4.8,3.04,true
+boyne brewhouse,Boyne Saison,Saison,5.5,3.17,true
+boyne brewhouse,Boyne Amber Ale,Amber Ale,4.8,3.07,true
+boyne brewhouse,Boyne Brewhouse Imperial Stout Unoaked,Imperial Stout,9.5,3.11,true
+boyne brewhouse,Boyne Pale Ale ,Golden Ale/Blond Ale,4.8,2.5,true
+big hand brewery dublin,Big Hand Augustine Steam Lager,California Common,4.7,2.79,true
+big hand brewery dublin,Big Hand Revolution Red,Irish Ale,4.5,2.83,true
+o brother brewing,O Brother The Smasher,American Pale Ale,5.0,3.18,true
+o brother brewing,O Brother The Chancer,American Pale Ale,5.4,3.46,true
+o brother brewing,O Brother The Dreamer,Golden Ale/Blond Ale,4.3,3.04,true
+o brother brewing,O Brother The Wanderer,Pilsener,5.0,2.84,true
+o brother brewing,O Brother Max,Session IPA,4.4,2.87,true
+o brother brewing,O Brother Walt Watermelon Wheat,German Hefeweizen,4.8,2.82,true
+o brother brewing,O Brother Brutus,Imperial IPA,9.3,3.53,true
+o brother brewing,O Brother Holden,Belgian Ale,6.5,3.19,true
+o brother brewing,O Brother Huck,Saison,6.2,3.08,true
+o brother brewing,O Brother The Fixer,Amber Ale,5.5,3.36,true
+o brother brewing,O Brother The Preacher,Session IPA,4.6,3.3,true
+o brother brewing,O Brother The Dreamcatcher,Session IPA,4.5,3.23,true
+o brother brewing,O Brother The Whippersnapper,Berliner Weisse,4.0,3.04,true
+o brother brewing,O Brother The Rainmaker,India Pale Ale (IPA),7.0,3.23,true
+o brother brewing,O Brother The Nightcrawler,Sweet Stout,4.8,3.04,true
+o brother brewing,O Brother The Puppetmaster,Belgian Ale,5.7,3.13,true
+o brother brewing,O Brother Bonita,Black IPA,7.1,3.38,true
+o brother brewing,O Brother Joe Coffee Porter,Porter,6.1,3.5,true
+o brother brewing,O Brother The Sinner,India Pale Ale (IPA),6.3,3.34,true
+o brother brewing,O Brother Who What Wheat Where,Wheat Ale,5.5,3.22,true
+o brother brewing,O Brother No Joe,Porter,6.1,3.52,true
+dot brew,Dot Brew Barrel Aged Cherry Coco Bourbon Dark,American Strong Ale ,6.5,3.19,true
+dot brew,Dot Brew Session Rye Ale,Session IPA,4.0,3.24,true
+dot brew,Dot Brew Seasons of Saison - Autumn ,Saison,5.8,3.11,true
+dot brew,Dot Brew Seasons of Saison - Winter,Saison,7.2,3.12,true
+dot brew,Dot Brew Amber Ale,Amber Ale,4.5,2.86,true
+dot brew,Dot Brew Amarone Amber,Amber Ale,5.6,3.15,true
+dot brew,Dot Brew Champagne Beer,Belgian Ale,8.3,3.12,true
+dot brew,Dot Brew 09 Barrel Aged Cab Sauv Grain Rye,Specialty Grain,9.6,3.19,true
+dot brew,Dot Brew B8 D8,American Strong Ale ,7.7,3.22,true
+dot brew,Dot Brew 03 The Blend,Belgian Ale,6.7,3.05,true
+dot brew,Dot Brew 012,Amber Ale,4.6,3.09,true
+dot brew,Dot Brew 02 The Single Cask,Amber Ale,7.2,2.83,true
+dot brew,Dot Brew 012 Bourbon Amber Jamaican Rum,Amber Ale,5.9,2.91,true
+dot brew,Dot Brew 008 Barrel Aged Saison,Saison,6.6,3.09,true
+dot brew,Dot Brew American Stout,Stout,5.9,3.56,true
+dot brew,Dot Brew Seasons of Saison - Summer,Saison,6.6,3.19,true
+dot brew,Dot Brew Barrel Aged Imperial Stout,Imperial Stout,8.5,3.18,true
+dot brew,Dot Brew Batch II Single Grain Cab Sauv Session Ale,Irish Ale,4.9,3.53,true
+dot brew,Dot Brew Amarone Amber,Amber Ale,5.6,0.0,true
+dot brew,Dot Brew 01 The Origin,Amber Ale,5.9,2.96,true
+dot brew,Dot Brew 013 Belgian Blonde Barrel Aged,Belgian Ale,7.0,3.09,true
+dot brew,Dot Brew Joel's Barrel Aged Vietnamese Coffee Stout,Stout,6.9,3.13,true
+dot brew,Dot Brew Barrel Aged Roasted Oat Stout ,Stout,6.5,3.24,true
+dot brew,Dot Brew Teeny Tiny Barrel Aged Pale Ale,American Pale Ale,3.6,3.17,true
+dot brew,Dot Brew Sour Cherry Apricot Ale,Fruit Beer,4.5,2.65,true
+dot brew,Dot Brew Seasons of Saison - Spring ,Saison,5.9,3.13,true
+yellowbelly beer,YellowBelly Hopped In Space,India Pale Ale (IPA),5.9,3.32,true
+yellowbelly beer,YellowBelly Papaya Pale,American Pale Ale,3.9,3.04,true
+yellowbelly beer,YellowBelly The Red Oats are Coming,Amber Ale,6.0,0.0,true
+yellowbelly beer,YellowBelly Now In Session,American Pale Ale,4.6,3.02,true
+yellowbelly beer,YellowBelly Zee Germans,American Pale Ale,0.0,4.0,true
+yellowbelly beer,YellowBelly Queen Lizzie,Imperial IPA,8.3,3.12,true
+yellowbelly beer,YellowBelly Rosehip Schwarzbier,Schwarzbier,4.5,3.19,true
+yellowbelly beer,YellowBelly Fruit to Thrill,Sour Red/Brown,4.3,3.02,true
+yellowbelly beer,YellowBelly Barrel Aged Brown Ale No. 2 (Chardonnay Oak Barrel),Brown Ale,7.0,2.98,true
+yellowbelly beer,YellowBelly Pink Freud,Amber Lager/Vienna,5.0,3.0,true
+yellowbelly beer,YellowBelly Snooze Button,Dry Stout,5.0,3.07,true
+yellowbelly beer,YellowBelly Sweet Stout,Sweet Stout,4.8,3.09,true
+yellowbelly beer,YellowBelly Mortis,Sour/Wild Ale,3.8,3.14,true
+yellowbelly beer,YellowBelly Brown Porter,Imperial Porter,7.5,2.89,true
+yellowbelly beer,YellowBelly Sumtin Witty,Witbier,4.4,2.81,true
+yellowbelly beer,YellowBelly The Passion,Fruit Beer,4.1,3.33,true
+yellowbelly beer,YellowBelly Where's Wallonia?,Bière de Garde,5.6,3.2,true
+yellowbelly beer,YellowBelly Club Tropicana,Fruit Beer,4.0,3.28,true
+yellowbelly beer,YellowBelly Barrel Aged Barley Wine No. 1 (Pinot Noir),Barley Wine,9.9,3.18,true
+yellowbelly beer,YellowBelly Duality Pale Stout ,Stout,8.5,2.98,true
+yellowbelly beer,YellowBelly Jack Bauer's Power Shower Sour,Berliner Weisse,3.8,3.27,true
+yellowbelly beer,YellowBelly Harvest Lager,Pale Lager,3.9,2.94,true
+yellowbelly beer,YellowBelly Great For The Town,Sour/Wild Ale,4.5,3.33,true
+yellowbelly beer,YellowBelly It's Not Vodka,Imperial Stout,9.2,3.14,true
+yellowbelly beer,YellowBelly The Wexican,Porter,7.5,3.36,true
+yellowbelly beer,YellowBelly / BrewDog Kottbusser ,Traditional Ale,6.2,3.3,true
+yellowbelly beer,YellowBelly / Boundary Sticky Sitchyation,Session IPA,4.8,3.11,true
+yellowbelly beer,YellowBelly Kellerbier,Heller Bock,4.3,3.05,true
+yellowbelly beer,YellowBelly The Baron,Amber Ale,4.5,2.83,true
+yellowbelly beer,YellowBelly Weisse Versa,Dunkelweizen,4.7,2.94,true
+yellowbelly beer,YellowBelly / Brown Paper Bag Project Gorse Whisperer,Spice/Herb/Vegetable,4.6,3.05,true
+yellowbelly beer,YellowBelly Castaway,Sour/Wild Ale,4.2,3.61,true
+yellowbelly beer,YellowBelly Red Noir,Irish Ale,4.9,3.11,true
+yellowbelly beer,YellowBelly Weisse So Serious?,German Hefeweizen,4.7,3.12,true
+yellowbelly beer,YellowBelly It’s Elementary,Session IPA,4.6,3.07,true
+yellowbelly beer,YellowBelly Are You Not Entertained?,Imperial IPA,8.5,3.46,true
+yellowbelly beer,YellowBelly Gose to Leipzig,Grodziskie/Gose/Lichtenhainer,6.0,3.42,true
+yellowbelly beer,YellowBelly Honey &amp; Red Tea Ale,Spice/Herb/Vegetable,3.9,2.92,true
+yellowbelly beer,YellowBelly Sub Machine,American Pale Ale,6.5,2.98,true
+yellowbelly beer,YellowBelly The Imposter ,Session IPA,4.5,3.13,true
+yellowbelly beer,YellowBelly Citra Pale Ale,American Pale Ale,4.8,3.42,true
+yellowbelly beer,YellowBelly Frankenweisse,German Hefeweizen,5.0,3.25,true
+yellowbelly beer,YellowBelly G'Way IPA,India Pale Ale (IPA),6.7,3.19,true
+yellowbelly beer,YellowBelly American Express,American Pale Ale,6.0,0.0,true
+yellowbelly beer,YellowBelly Ursa Minor,Porter,3.5,2.98,true
+yellowbelly beer,YellowBelly Periodic,Saison,5.1,3.0,true
+yellowbelly beer,YellowBelly Post Ahopalypse,Session IPA,5.0,3.34,true
+yellowbelly beer,YellowBelly For Whom The Sour Trolls Citra Sour ,Berliner Weisse,4.3,3.59,true
+yellowbelly beer,YellowBelly SourGlass,Sour/Wild Ale,4.0,2.98,true
+yellowbelly beer,YellowBelly Fruit Bastille,Wheat Ale,5.0,3.02,true
+yellowbelly beer,YellowBelly Lager,Pale Lager,4.8,3.16,true
+yellowbelly beer,YellowBelly Fierce Mild,Mild Ale,3.7,3.09,true
+yellowbelly beer,YellowBelly Smoke &amp; Oak,Sweet Stout,5.5,3.02,true
+yellowbelly beer,YellowBelly Commotion Lotion,Fruit Beer,4.0,3.05,true
+yellowbelly beer,YellowBelly Kangaroo Jack,Foreign Stout,6.5,3.39,true
+yellowbelly beer,YellowBelly Get The Table,Saison,4.5,3.0,true
+yellowbelly beer,YellowBelly Electric Dreams,Session IPA,4.0,3.1,true
+yellowbelly beer,YellowBelly Juice Wayne,India Pale Ale (IPA),7.1,3.09,true
+yellowbelly beer,YellowBelly Summer Ale,American Pale Ale,4.5,2.58,true
+yellowbelly beer,YellowBelly On The Fritz,Session IPA,5.0,2.98,true
+yellowbelly beer,YellowBelly Kind of a Big Deal,Saison,6.0,3.09,true
+costellos,Costellos Beyond A Pale,Session IPA,4.9,2.98,true
+costellos,Costellos Spelt Dinkel,Wheat Ale,4.1,3.0,true
+costellos,Costellos Ale,Irish Ale,3.8,3.08,true
+costellos,Costellos White Rhino,India Pale Ale (IPA),6.5,3.0,true
+dingle brewing company,Dingle Tom Crean's 18/35,Pale Lager,4.6,2.65,true
+dungarvan brewing company ltd,Dungarvan Helvick Gold Blonde Ale,Golden Ale/Blond Ale,4.9,3.23,true
+dungarvan brewing company ltd,Dungarvan Rood Boy,Sour/Wild Ale,5.9,2.98,true
+dungarvan brewing company ltd,Dungarvan Comeragh Challenger Bitter,Bitter,3.8,3.38,true
+dungarvan brewing company ltd,Dungarvan Copper Coast Red Ale,Irish Ale,4.3,3.08,true
+dungarvan brewing company ltd,Dungarvan Thai Wit,Witbier,6.4,3.04,true
+dungarvan brewing company ltd,Dungarvan Magic Road Rye IPA,India Pale Ale (IPA),6.3,3.03,true
+dungarvan brewing company ltd,Dungarvan Allez Hop,American Pale Ale,6.2,0.0,true
+dungarvan brewing company ltd,Dungarvan Dark and Mild,Mild Ale,3.6,0.0,true
+dungarvan brewing company ltd,Dungarvan Gallow's Hill,Barley Wine,8.5,2.99,true
+dungarvan brewing company ltd,Dungarvan Turning Tide,Wheat Ale,4.7,2.94,true
+dungarvan brewing company ltd,Dungarvan / Nøgne Ø Seaweed Saison ,Saison,6.5,3.28,true
+dungarvan brewing company ltd,Dungarvan Coffee and Oatmeal Stout,Stout,4.7,3.25,true
+dungarvan brewing company ltd,Dungarvan Mahon Falls Rye Pale Ale,Specialty Grain,5.1,3.27,true
+dungarvan brewing company ltd,Dungarvan Black Rock Irish Stout,Dry Stout,4.3,3.45,true
+dungarvan brewing company ltd,Dungarvan Mine Head,American Pale Ale,5.5,3.14,true
+9 white deer brewery,The Shire Bilbo's Beer,American Pale Ale,4.5,2.5,true
+9 white deer brewery,The Shire Gandalf's Ale,Irish Ale,4.2,2.5,true
+9 white deer brewery,The Shire Frodo's Lager,Kölsch,4.2,2.5,true
+9 white deer brewery,9 White Deer Black Lightning,Black IPA,6.5,3.34,true
+9 white deer brewery,9 White Deer Fla,Kölsch,4.5,2.95,true
+9 white deer brewery,9 White Deer Saor,American Pale Ale,4.3,2.84,true
+9 white deer brewery,9 White Deer Stag Saor IPA,India Pale Ale (IPA),5.0,2.79,true
+9 white deer brewery,9 White Deer Stag Saor Stout,Stout,4.2,3.06,true
+9 white deer brewery,9 White Deer Stag Saor Kolsch Style,Kölsch,4.2,3.06,true
+9 white deer brewery,9 White Deer Lon Dubh,Dry Stout,4.2,3.19,true
+9 white deer brewery,9 White Deer Stag Bán,American Pale Ale,4.5,3.1,true
+9 white deer brewery,9 White Deer Stag Rua,Irish Ale,4.2,3.13,true
+ravenbrew old schoolhouse,Ravenbrew Scholar Black Stout,Dry Stout,0.0,3.0,true
