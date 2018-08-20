@@ -1,27 +1,27 @@
 var breweryJson = Brewery_JSON;
+var beerJson = Beer_JSON;
+//console.log(breweryJson);
+//console.log(beerJson);
 var startLat = breweryJson[0].coords.lat;
 var startLng = breweryJson[0].coords.lng;
 
 //document ready function
 $(document).ready(function(){
-	//getLocation(); // will give the current position
 	initMap();
-	addTwitterFeed();
 	addProfilePic();
+	populateBreweryInformation();
+	populateTable();
 });
 
 function initMap(){
 	// Map options
 	var options = {
-		zoom:11,
-		//center: new google.maps.LatLng(currentLat, currentLng)
-		//setting center as the spire tower
+		zoom:14,
 		center: new google.maps.LatLng(startLat, startLng)
 	}
 	// New map
 	map = new google.maps.Map(document.getElementById('brewery-map'), options);
 	addMarker(breweryJson);
-	populateBreweriesList();
 }
 
 // Add Marker Function
@@ -45,21 +45,45 @@ function addMarker(props){
 	}
 }
 
-function populateBreweriesList(){
-    var listBrew = "<h2>"+ breweryJson[0].name + "</h2>"
-	+ "<br><h3>" + breweryJson[0].address.location + "<h3></h3>";
-    $("#listOfBreweries").append(listBrew);
-}
-
-function addTwitterFeed() {
-    var twitter = breweryJson[0].social.twitter;
-    var link = "https://www.twitter.com/" + twitter + "?ref_src=twsrc%5Etfw";
-    document.getElementById("twitter").setAttribute("href", link);
-    $("#twitter").append(breweryJson[0].name);
-}
-
-
 function addProfilePic(){
 	var pic = breweryJson[0].pic;
 	document.getElementById("profile-pic").setAttribute("src", pic);
-}/**/
+}
+
+function populateTable(){
+	var len=beerJson.length;
+	var rowTable='';
+	for(i=0;i<len;i++){
+		rowTable='<tr class="rowHead"><td class="tabName">'+beerJson[i].name+'</td><td class="tabType">'+beerJson[i].type+'</td><td class="tabPercent">'+beerJson[i].percent+'</td><td class="tabRating">'+beerJson[i].rating+'</td></tr>'
+		$("#tabBody").append(rowTable);
+	}
+}
+function populateBreweryInformation(){
+	var name = breweryJson[0].address.name;
+	var type = breweryJson[0].brewery_type;
+	var rating = breweryJson[0].rating+'/5';
+	var address = breweryJson[0].address.region+',&nbsp;Ireland';
+	var url = breweryJson[0].social.website;
+	var twitter = breweryJson[0].social.twitter
+	var facebook = breweryJson[0].social.facebook;
+	$("#name").append(name);
+	$("#brName").append('&nbsp;'+name);
+	$("#type").append(type);
+	$("#rateNumber").append(rating);
+	$("#address").append(address);
+	if(url != "www.google.com"){
+		var temphref= 'https://www.'+url;
+		var tempurl = '<a class="aLink" href="'+temphref+'" target="_blank">'+url+'</a>';
+		$("#url").append(tempurl);
+	}
+	if(twitter != "irecraftbeer"){
+		var temphref= 'https://www.twitter.com/'+twitter;
+		var temptwitter = '<a class="aLink" href="'+temphref+'" target="_blank">twitter.com/'+twitter+'</a>';
+		$("#twitter").append(temptwitter);
+	}
+	if(facebook != "www.facebook.com"){
+		var temphref= 'https://www.'+facebook;
+		var tempfb = '<a class="aLink" href="'+temphref+'" target="_blank">'+facebook+'</a>';
+		$("#facebook").append(tempfb);
+	}
+}
