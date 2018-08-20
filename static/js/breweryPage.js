@@ -1,7 +1,6 @@
+//brewery and beer data
 var breweryJson = Brewery_JSON;
 var beerJson = Beer_JSON;
-//console.log(breweryJson);
-//console.log(beerJson);
 var startLat = breweryJson[0].coords.lat;
 var startLng = breweryJson[0].coords.lng;
 
@@ -11,7 +10,7 @@ $(document).ready(function(){
 	addProfilePic();
 	populateBreweryInformation();
 	populateTable();
-});
+});//ready ends
 
 function initMap(){
 	// Map options
@@ -44,12 +43,13 @@ function addMarker(props){
 		});
 	}
 }
-
+ // profile picture for the brewery
 function addProfilePic(){
 	var pic = breweryJson[0].pic;
 	document.getElementById("profile-pic").setAttribute("src", pic);
 }
 
+//beers table for the brewery
 function populateTable(){
 	var len=beerJson.length;
 	var rowTable='';
@@ -58,6 +58,7 @@ function populateTable(){
 		$("#tabBody").append(rowTable);
 	}
 }
+// brewery information
 function populateBreweryInformation(){
 	var name = breweryJson[0].address.name;
 	var type = breweryJson[0].brewery_type;
@@ -71,6 +72,7 @@ function populateBreweryInformation(){
 	$("#type").append(type);
 	$("#rateNumber").append(rating);
 	$("#address").append(address);
+	//show social links only when available
 	if(url != "www.google.com"){
 		var temphref= 'https://www.'+url;
 		var tempurl = '<a class="aLink" href="'+temphref+'" target="_blank">'+url+'</a>';

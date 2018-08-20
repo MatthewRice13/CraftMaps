@@ -1,15 +1,10 @@
 var infoWindow;
-var currentLat = 0.0;
-var currentLng = 0.0;
 var map;
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var directionsMap;
 var start;
 var end;
-var itenaryPoints = [];
-var wayPt = [];
-var img = "Images/beer_PNG.png"
 //staticurl
 var currentURL = window.location.href;
 var currentProtocol = window.location.protocol;
@@ -31,16 +26,6 @@ $(document).ready(function(){
 	});
 });//ready end
 
-function populateBreweriesList(){
-    var listBrew = '';
-	for(i=0; i < breweriesJson.length; i++){
-		listBrew = "<li><input type='checkbox' name="+breweriesJson[i].coords.lng
-		    +" class='checkboxList' value="+ breweriesJson[i].coords.lat+">"
-		    + breweriesJson[i].name + "</li>"
-		$("#listOfBreweries").append(listBrew);
-	}
-}
-
 function initMap(){
 	// Map options
 	var options = {
@@ -60,7 +45,6 @@ function initMap(){
 		// Add marker
 		addMarker(breweriesJson[i]);
 	}
-	populateBreweriesList();
 }
 
 // Add Marker Function
@@ -90,6 +74,7 @@ function addMarker(props){
 	}
 }
 
+//directions on the right panel
 function getDirections(lati,longi) {
 	directionsDisplay = new google.maps.DirectionsRenderer();
 	var directionsOptions = {
@@ -102,6 +87,7 @@ function getDirections(lati,longi) {
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
 }
 
+// show route on the map
 function calcRoute(lati,longi,mode) {
 	$("#refreshButton").show();
 	end = {lat:lati,lng:longi};
@@ -129,6 +115,7 @@ function calcRoute(lati,longi,mode) {
 	});
 }
 
+//get driving route if public not available
 function getDirectionsDrive(lati,longi) {
 	directionsDisplay = new google.maps.DirectionsRenderer();
 	var directionsOptions = {
@@ -141,6 +128,7 @@ function getDirectionsDrive(lati,longi) {
 	directionsDisplay.setPanel(document.getElementById("directionsPanel"));
 }
 
+//show modal on click of the name of the brewery
 function showModal(e){
 	var breweryName = e.target.id;//console.log(urllink);
 	//breweryName = breweryName.replace(/\s/g, '');

@@ -97,7 +97,7 @@ def multiRoutes(request):
     else:
         starting_point = (53.3256826, -6.2249631)
     context = {
-        'locations': builddistjson(request, Brewery_Table.objects.all(), starting_point, k_size),
+        'locations': buildmultidistjson(request, Brewery_Table.objects.all(), starting_point, k_size),
         'start': list(starting_point),
         'key': googleKey
     }
@@ -158,7 +158,15 @@ def builddistjson(request, breweries, starting, k):
     return simplejson.dumps(rtn_json, separators=(',', ':'))
 
 # builds json for page
-def buildmultidistjson(breweries, starting, k):
+def buildmultidistjson(request, breweries, starting, k):
+    # user defined
+    if request.user.is_authenticated:
+        #user_data = User_Table.objects.get(id=request.user.id)
+        #distance_cutoff = user_data.User_Max_Distance
+        distance_cutoff = 10.0
+    else:
+        distance_cutoff = 15.0
+
     data = []
     for dat in breweries:
         nam = dat.Brewery_Name
@@ -166,27 +174,26 @@ def buildmultidistjson(breweries, starting, k):
         rat = dat.Brewery_Rating
         dst = get_distance(starting, (dat.Brewery_Longitude, dat.Brewery_Latitude))
 
-        # data
-        data.append(
-            {
-                'Name': nam,
-                'Type': typ,
-                'Rating': rat,
-                'Distance': dst
-            }
-        )
+        # builds on distance
+        if dst < distance_cutoff:
+            # data
+            data.append(
+                {
+                    'Name': nam,
+                    'Type': typ,
+                    'Rating': rat,
+                    'Distance': dst
+                }
+            )
 
     # sort based on distance
     df = sorted(data, key=operator.itemgetter('Distance'))
-
     # filters based on user preference
-    ndf = similarity_map(df, (k+k))
-
+    ndf = similarity_map(request, df, (k+k))
     # subset of data
     subset = []
     for d in ndf[:k]:
         subset.append(d['Name'])
-
     rtn_json = []
     for d in breweries:
         if d.Brewery_Name in subset:
@@ -250,7 +257,6 @@ def get_distance(start, finish):
             geocode_result = (start[0], start[1])
         # approximate radius of earth in km
         R = 6373.1
-        ##
         lat1 = radians(geocode_result[0])
         lon1 = radians(geocode_result[1])
         lon2 = radians(float(finish[0]))
