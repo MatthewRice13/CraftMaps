@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e766f725-cdee-4922-a93e-b02772476c43" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Data_Workload/Beer_Data_Entry.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data_Workload/Brewery_Data_Entry.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data_Workload/data/FULL_Beers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data_Workload/data/new_database.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data_Workload/web_parse.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_dump.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data_dump.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log_dump.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log_dump.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/theCraftMapsCO/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/theCraftMapsCO/views.py" afterDir="false" />
     </list>
     <ignored path="data_dump.txt" />
@@ -29,8 +22,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/theCraftMapsCO/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-663">
-              <caret line="236" column="18" selection-start-line="236" selection-start-column="18" selection-end-line="236" selection-end-column="18" />
+            <state relative-caret-position="223">
+              <caret line="150" column="30" lean-forward="true" selection-start-line="150" selection-start-column="30" selection-end-line="150" selection-end-column="30" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -126,11 +119,6 @@
               <item name="CraftMaps" type="b2602c69:ProjectViewProjectNode" />
               <item name="CraftMaps" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="CraftMaps" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CraftMaps" type="462c0819:PsiDirectoryNode" />
-              <item name="Data_Workload" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -154,6 +142,130 @@
       <recent name="$PROJECT_DIR$/theCraftMapsCO" />
       <recent name="$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/static/js/multiRoutes.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/theCraftMapsCO/templates/theCraftMapsCO/multiRoutes.html</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Images/10Survey1of2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Images/11Survey2of2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Images/12Metricmatrix.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Images/13spreasheetfinal.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Images/1DieterZetsche.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Images/2KarenKennedy.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Images/3System_Architecture.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Images/4Signuppage.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Images/5Homepage.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Images/6singleroute(infowindow).JPG</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Images/7multiroute(markerandflagwithbuttononright).JPG</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Images/8brewerydetails.JPG</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Images/9Directionspdf.JPG</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -493,7 +605,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534184455439</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Commit - 17:55 - 13/8/18&#10;&#10;Update of Brewery Page&#10;- fix">
+      <created>1534706963299</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1534706963300</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -502,7 +621,7 @@
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1727672" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50269026" side_tool="true" weight="0.3993994" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50269026" side_tool="true" visible="true" weight="0.12559618" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32582584" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -525,23 +644,23 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13369273" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32719836" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Python Console" order="9" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50269026" side_tool="true" weight="0.3993994" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32719836" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49730977" weight="0.3993994" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="9" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -912,8 +1031,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/theCraftMapsCO/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-663">
-          <caret line="236" column="18" selection-start-line="236" selection-start-column="18" selection-end-line="236" selection-end-column="18" />
+        <state relative-caret-position="223">
+          <caret line="150" column="30" lean-forward="true" selection-start-line="150" selection-start-column="30" selection-end-line="150" selection-end-column="30" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
