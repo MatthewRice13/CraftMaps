@@ -150,10 +150,9 @@ def builddistjson(request, breweries, starting, k, is_multi):
         if d.Brewery_Name in subset:
             # if multi trip, include button
             if is_multi:
-                content_str = ""
+                content_str = '<div id="iw-container" class="infoDiv"><div class="infoHeader iw-title"><label class="headerLabel" id = "' + d.Brewery_Name + '" onClick="showModal(event);">' + d.Brewery_Name + '</label></div><div class="infoBody iw-content"><label class="bodyLabel">' + d.Brewery_Type + '</label></div><div class="infoFooter iw-bottom-gradient"><button class="viewButton btn btn-outline" onClick="getDirections(' + str(d.Brewery_Latitude) + ',' + str(d.Brewery_Longitude) + ');">See my Directions</button></div></div>'
             else:
-                content_str = '<div id="iw-container" class="infoDiv"><div class="infoHeader iw-title"><label class="headerLabel" id = "' + d.Brewery_Name + '" onClick="showModal(event);">' + d.Brewery_Name + '</label></div><div class="infoBody iw-content"><label class="bodyLabel">' + d.Brewery_Type + '</label></div><div class="infoFooter iw-bottom-gradient"><button class="viewButton btn btn-outline" onClick="getDirections(' + str(
-                    d.Brewery_Latitude) + ',' + str(d.Brewery_Longitude) + ');">See my Directions</button></div></div>'
+                content_str = '<div id="iw-container" class="infoDiv"><div class="infoHeader iw-title"><label class="headerLabel" id = "' + d.Brewery_Name + '" onClick="showModal(event);">' + d.Brewery_Name + '</label></div><div class="infoBody iw-content"><label class="bodyLabel">' + d.Brewery_Type + '</label></div></div>'
 
             item = {
                 'name': d.Brewery_Name,
